@@ -1,0 +1,10 @@
+B:\NetFoundation\Verve Kits\verve patch\Framework\Distro\XML\Security.xml
+B:\NetFoundation\Verve Kits\verve patch\Framework\Distro\Security.dll
+B:\NetFoundation\Verve Kits\verve patch\Framework\Distro\Security.pdb
+B:\NetFoundation\Verve Kits\verve patch\Framework\Distro\Security.xml
+B:\NetFoundation\Verve Kits\verve patch\Framework\Distro\Security.dll.CodeAnalysisLog.xml
+B:\NetFoundation\Verve Kits\verve patch\Framework\Distro\Security.dll.lastcodeanalysissucceeded
+B:\NetFoundation\Verve Kits\verve patch\Framework\Framework\Security\obj\Debug\Security.csprojAssemblyReference.cache
+B:\NetFoundation\Verve Kits\verve patch\Framework\Framework\Security\obj\Debug\Security.csproj.CoreCompileInputs.cache
+B:\NetFoundation\Verve Kits\verve patch\Framework\Framework\Security\obj\Debug\Security.dll
+B:\NetFoundation\Verve Kits\verve patch\Framework\Framework\Security\obj\Debug\Security.pdb

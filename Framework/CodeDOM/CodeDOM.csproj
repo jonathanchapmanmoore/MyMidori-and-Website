@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F481131F-29F0-410C-B523-CE687DF5BB3A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>System.Extensions</RootNamespace>
+    <AssemblyName>CodeDOM</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Distro\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <DocumentationFile>..\..\Distro\XML\CodeDOM.xml</DocumentationFile>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>codedom.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Releasex64|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Releasex64\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>..\..\Distro\Docs\CodeDOM.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClassDeclaration.cs" />
+    <Compile Include="CodeGenerator.cs" />
+    <Compile Include="Collections\AssemblyCollection.cs" />
+    <Compile Include="Collections\CatchClauseCollection.cs" />
+    <Compile Include="Collections\ConstructorDeclarationCollection.cs" />
+    <Compile Include="Collections\EventDeclarationCollection.cs" />
+    <Compile Include="Collections\ExpressionCollection.cs" />
+    <Compile Include="Collections\FieldDeclarationCollection.cs" />
+    <Compile Include="Collections\IndexerDeclarationCollection.cs" />
+    <Compile Include="Collections\MethodDeclarationCollection.cs" />
+    <Compile Include="Collections\ParameterDeclarationCollection.cs" />
+    <Compile Include="Collections\PropertyDeclarationCollection.cs" />
+    <Compile Include="Collections\StatementCollection.cs" />
+    <Compile Include="Collections\StringClassDeclarationDictionary.cs" />
+    <Compile Include="Collections\StringConstantDeclaration.cs" />
+    <Compile Include="Collections\StringEnumDeclarationDictionary.cs" />
+    <Compile Include="Collections\StringFieldDeclarationDictionary.cs" />
+    <Compile Include="Collections\StringNamespaceDeclarationDictionary.cs" />
+    <Compile Include="Collections\ThrowedExceptionDeclarationCollection.cs" />
+    <Compile Include="Collections\TypeCollection.cs" />
+    <Compile Include="Collections\TypeDeclarationCollection.cs" />
+    <Compile Include="Collections\TypeTypeDeclarationDictionary.cs" />
+    <Compile Include="ConstantDeclaration.cs" />
+    <Compile Include="ConstructorDeclaration.cs" />
+    <Compile Include="Declaration.cs" />
+    <Compile Include="DelegateDeclaration.cs" />
+    <Compile Include="Doc\Documentation.cs" />
+    <Compile Include="Doc\TypeFinder.cs" />
+    <Compile Include="Doc\XmlMarkup.cs" />
+    <Compile Include="EnumDeclaration.cs" />
+    <Compile Include="EventDeclaration.cs" />
+    <Compile Include="Expr.cs" />
+    <Compile Include="Expressions\ArgumentReferenceExpression.cs" />
+    <Compile Include="Expressions\BaseReferenceExpression.cs" />
+    <Compile Include="Expressions\BinaryOpOperatorExpression.cs" />
+    <Compile Include="Expressions\CastExpression.cs" />
+    <Compile Include="Expressions\EventReferenceExpression.cs" />
+    <Compile Include="Expressions\Expression.cs" />
+    <Compile Include="Expressions\FieldReferenceExpression.cs" />
+    <Compile Include="Expressions\IndexerExpression.cs" />
+    <Compile Include="Expressions\MethodInvokeExpression.cs" />
+    <Compile Include="Expressions\MethodReferenceExpression.cs" />
+    <Compile Include="Expressions\NativeExpression.cs" />
+    <Compile Include="Expressions\NativeMethodInvokeExpression.cs" />
+    <Compile Include="Expressions\NativeMethodReferenceExpression.cs" />
+    <Compile Include="Expressions\NativePropertyReferenceExpression.cs" />
+    <Compile Include="Expressions\ObjectCreationExpression.cs" />
+    <Compile Include="Expressions\PrimitiveExpression.cs" />
+    <Compile Include="Expressions\PropertyReferenceExpression.cs" />
+    <Compile Include="Expressions\PropertySetValueReferenceExpression.cs" />
+    <Compile Include="Expressions\SnippetExpression.cs" />
+    <Compile Include="Expressions\ThisReferenceExpression.cs" />
+    <Compile Include="Expressions\VariableReferenceExpression.cs" />
+    <Compile Include="FieldDeclaration.cs" />
+    <Compile Include="IClassDeclaration.cs" />
+    <Compile Include="ImplementationMemberDeclaration.cs" />
+    <Compile Include="IndexerDeclaration.cs" />
+    <Compile Include="ITypeDeclaration.cs" />
+    <Compile Include="MemberDeclaration.cs" />
+    <Compile Include="MethodDeclaration.cs" />
+    <Compile Include="MethodSignature.cs" />
+    <Compile Include="NameConformer.cs" />
+    <Compile Include="NamespaceDeclaration.cs" />
+    <Compile Include="ParameterDeclaration.cs" />
+    <Compile Include="PropertyDeclaration.cs" />
+    <Compile Include="SnippetExpression.cs" />
+    <Compile Include="SnippetStatement.cs" />
+    <Compile Include="Statements\AssignStatement.cs" />
+    <Compile Include="Statements\CatchClauseStatement.cs" />
+    <Compile Include="Statements\ConditionStatement.cs" />
+    <Compile Include="Statements\ExpressionStatement.cs" />
+    <Compile Include="Statements\ForEachStatement.cs" />
+    <Compile Include="Statements\IterationStatement.cs" />
+    <Compile Include="Statements\LabelStatement.cs" />
+    <Compile Include="Statements\MethodReturnStatement.cs" />
+    <Compile Include="Statements\NativeStatement.cs" />
+    <Compile Include="Statements\Statement.cs" />
+    <Compile Include="Statements\ThrowExceptionStatement.cs" />
+    <Compile Include="Statements\TryCatchFinallyStatement.cs" />
+    <Compile Include="Statements\VariableDeclarationStatement.cs" />
+    <Compile Include="Stm.cs" />
+    <Compile Include="ThrowedExceptionDeclaration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="codedom.snk" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

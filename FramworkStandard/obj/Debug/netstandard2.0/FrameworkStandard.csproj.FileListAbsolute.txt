@@ -1,0 +1,3 @@
+B:\_NTROOTWRK\Verve Kits\verve patch\Framework\FramworkStandard\obj\Debug\netstandard2.0\FrameworkStandard.csproj.CoreCompileInputs.cache
+B:\_NTROOTWRK\Verve Kits\verve patch\Framework\FramworkStandard\obj\Debug\netstandard2.0\FrameworkStandard.AssemblyInfoInputs.cache
+B:\_NTROOTWRK\Verve Kits\verve patch\Framework\FramworkStandard\obj\Debug\netstandard2.0\FrameworkStandard.AssemblyInfo.cs

@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5EC675E8-762D-4A84-8780-10394FB38E83}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>System.Math.Extensions</RootNamespace>
+    <AssemblyName>System.Math.Extensions</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Algorthims\LinearAlgebra\Acml\AcmlLinearAlgebraProvider.Complex.cs" />
+    <Compile Include="Algorthims\LinearAlgebra\Acml\AcmlLinearAlgebraProvider.Complex32.cs" />
+    <Compile Include="Algorthims\LinearAlgebra\Acml\AcmlLinearAlgebraProvider.double.cs" />
+    <Compile Include="Algorthims\LinearAlgebra\Acml\AcmlLinearAlgebraProvider.float.cs" />
+    <Compile Include="Algorthims\LinearAlgebra\Acml\SafeNativeMethods.cs" />
+    <Compile Include="Algorthims\LinearAlgebra\GotoBlas\GotoBlasLinearAlgebraProvider.Common.cs" />
+    <Compile Include="Algorthims\LinearAlgebra\GotoBlas\GotoBlasLinearAlgebraProvider.Complex.cs" />
+    <Compile Include="Algorthims\LinearAlgebra\GotoBlas\GotoBlasLinearAlgebraProvider.Complex32.cs" />
+    <Compile Include="Algorthims\LinearAlgebra\GotoBlas\GotoBlasLinearAlgebraProvider.double.cs" />
+    <Compile Include="Algorthims\LinearAlgebra\GotoBlas\GotoBlasLinearAlgebraProvider.float.cs" />
+    <Compile Include="Algorthims\LinearAlgebra\GotoBlas\SafeNativeMethods.cs" />
+    <Compile Include="Algorthims\LinearAlgebra\ILinearAlgebraProvider.cs" />
+    <Compile Include="Algorthims\LinearAlgebra\ILinearAlgebraProviderOfT.cs" />
+    <Compile Include="Algorthims\LinearAlgebra\ManagedLinearAlgebraProvider.Complex.cs" />
+    <Compile Include="Algorthims\LinearAlgebra\ManagedLinearAlgebraProvider.Complex32.cs" />
+    <Compile Include="Algorthims\LinearAlgebra\ManagedLinearAlgebraProvider.Double.cs" />
+    <Compile Include="Algorthims\LinearAlgebra\ManagedLinearAlgebraProvider.Single.cs" />
+    <Compile Include="Algorthims\LinearAlgebra\Mkl\MklLinearAlgebraProvider.Common.cs" />
+    <Compile Include="Algorthims\LinearAlgebra\Mkl\MklLinearAlgebraProvider.Complex.cs" />
+    <Compile Include="Algorthims\LinearAlgebra\Mkl\MklLinearAlgebraProvider.Complex32.cs" />
+    <Compile Include="Algorthims\LinearAlgebra\Mkl\MklLinearAlgebraProvider.double.cs" />
+    <Compile Include="Algorthims\LinearAlgebra\Mkl\MklLinearAlgebraProvider.float.cs" />
+    <Compile Include="Algorthims\LinearAlgebra\Mkl\SafeNativeMethods.cs" />
+    <Compile Include="ArrayExtensions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Combinatorics.cs" />
+    <Compile Include="Complex32.cs" />
+    <Compile Include="Complex64.cs" />
+    <Compile Include="ComplexExtensions.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Control.cs" />
+    <Compile Include="GlobalizationHelper.cs" />
+    <Compile Include="IPrecisionSupport.cs" />
+    <Compile Include="NonConvergenceException.cs" />
+    <Compile Include="Permutation.cs" />
+    <Compile Include="Precision.cs" />
+    <Compile Include="SerializableAttribute.cs" />
+    <Compile Include="Sorting.cs" />
+    <Compile Include="TargetedPatchingOptOutAttribute.cs" />
+    <Compile Include="Trigonometry.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

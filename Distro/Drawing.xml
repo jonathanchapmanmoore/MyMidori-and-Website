@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Drawing</name>
+    </assembly>
+    <members>
+        <member name="T:System.Extensions.Drawing.ImageExtensions">
+            <summary>
+            Utility and extension class for <see cref="T:System.Drawing.Image"/> objects.
+            </summary>
+        </member>
+        <member name="M:System.Extensions.Drawing.ImageExtensions.FromByteArray(System.Byte[])">
+            <summary>
+            Converts the specified byte array to an image.
+            </summary>
+            <param name="buffer">The byte array representation of the image.</param>
+            <returns>The <see cref="T:System.Drawing.Image"/> that was loaded from the byte array.</returns>
+        </member>
+        <member name="M:System.Extensions.Drawing.ImageExtensions.Resize(System.Drawing.Image,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Resizes an image, maintaining width:height ratios.
+            </summary>
+            <param name="image">The <see cref="T:System.Drawing.Image"/> that you wish to resize.</param>
+            <param name="width">The desired width of the resulting image.</param>
+            <param name="height">The desired height of the resulting image.</param>
+            <param name="pad">Whether the image should pad the borders to keep width/height.</param>
+            <returns>The resulting resized <see cref="T:System.Drawing.Image"/> object.</returns>
+        </member>
+        <member name="M:System.Extensions.Drawing.ImageExtensions.ToByteArray(System.Drawing.Image)">
+            <summary>
+            Converts the specified image to a byte array using format specified by the image.
+            </summary>
+            <param name="image">The <see cref="T:System.Drawing.Image"/> to convert.</param>
+            <returns>The byte array representation of the image.</returns>
+        </member>
+        <member name="M:System.Extensions.Drawing.ImageExtensions.ToByteArray(System.Drawing.Image,System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            Converts the specified image to a byte array using the specified format.
+            </summary>
+            <param name="image">The <see cref="T:System.Drawing.Image"/> to convert.</param>
+            <param name="format">The <see cref="T:System.Drawing.Imaging.ImageFormat"/> to use when serializing.</param>
+            <returns>The byte array representation of the image.</returns>
+        </member>
+        <member name="M:System.Extensions.Drawing.ImageExtensions.ToAlphaBlend(System.Drawing.Image,System.Int32,System.Drawing.Color)">
+            <summary>
+            Alpha blends an image with a background color;
+            </summary>
+            <param name="image">The <see cref="T:System.Drawing.Image"/> to alpha blend.</param>
+            <param name="alpha">The alpha value to use when blending.</param>
+            <param name="backgroundColor">The background color to blend with.</param>
+            <returns>A new <see cref="T:System.Drawing.Image"/> with the alpha blended image.</returns>
+        </member>
+        <member name="M:System.Extensions.Drawing.ImageExtensions.ToGrayscale(System.Drawing.Image)">
+            <summary>
+            Grayscales an image.
+            </summary>
+            <param name="image">The <see cref="T:System.Drawing.Image"/> that you wish to grayscale.</param>
+            <returns>A new <see cref="T:System.Drawing.Image"/> instance that represents the grayscaled image.</returns>
+        </member>
+    </members>
+</doc>

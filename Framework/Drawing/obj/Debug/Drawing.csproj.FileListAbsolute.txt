@@ -1,0 +1,8 @@
+B:\NetFoundation\Verve Kits\verve patch\Framework\Distro\XML\Drawing.xml
+B:\NetFoundation\Verve Kits\verve patch\Framework\Distro\Drawing.dll
+B:\NetFoundation\Verve Kits\verve patch\Framework\Distro\Drawing.pdb
+B:\NetFoundation\Verve Kits\verve patch\Framework\Distro\Drawing.xml
+B:\NetFoundation\Verve Kits\verve patch\Framework\Framework\Drawing\obj\Debug\Drawing.csprojAssemblyReference.cache
+B:\NetFoundation\Verve Kits\verve patch\Framework\Framework\Drawing\obj\Debug\Drawing.csproj.CoreCompileInputs.cache
+B:\NetFoundation\Verve Kits\verve patch\Framework\Framework\Drawing\obj\Debug\Drawing.dll
+B:\NetFoundation\Verve Kits\verve patch\Framework\Framework\Drawing\obj\Debug\Drawing.pdb

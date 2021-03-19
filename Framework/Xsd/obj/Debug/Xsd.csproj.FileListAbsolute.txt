@@ -1,0 +1,9 @@
+B:\NetFoundation\Verve Kits\verve patch\Framework\Distro\XML\Xsd.xml
+B:\NetFoundation\Verve Kits\verve patch\Framework\Distro\Xsd.dll
+B:\NetFoundation\Verve Kits\verve patch\Framework\Distro\Xsd.pdb
+B:\NetFoundation\Verve Kits\verve patch\Framework\Distro\Xsd.xml
+B:\NetFoundation\Verve Kits\verve patch\Framework\Framework\Xsd\obj\Debug\Xsd.csprojAssemblyReference.cache
+B:\NetFoundation\Verve Kits\verve patch\Framework\Framework\Xsd\obj\Debug\Xsd.csproj.CoreCompileInputs.cache
+B:\NetFoundation\Verve Kits\verve patch\Framework\Framework\Xsd\obj\Debug\Xsd.csproj.CopyComplete
+B:\NetFoundation\Verve Kits\verve patch\Framework\Framework\Xsd\obj\Debug\Xsd.dll
+B:\NetFoundation\Verve Kits\verve patch\Framework\Framework\Xsd\obj\Debug\Xsd.pdb

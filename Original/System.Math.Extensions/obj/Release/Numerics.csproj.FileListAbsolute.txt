@@ -1,0 +1,2 @@
+C:\Users\Jonathan_Moore\Documents\Visual Studio 2010\Projects\Windows\Runtime Experience\Extendend Framework\Extended Framework\System.Math.Extensions\obj\Release\Numerics.csprojResolveAssemblyReference.cache
+C:\Users\Jonathan_Moore\Documents\Visual Studio 2010\Projects\Windows\Runtime Experience\Extendend Framework\Extended Framework\System.Math.Extensions\obj\Release\Numerics.csproj.GenerateResource.Cache

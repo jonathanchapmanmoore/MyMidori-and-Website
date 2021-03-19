@@ -1,0 +1,10 @@
+B:\NetFoundation\Verve Kits\verve patch\Framework\Distro\XML\Collections.xml
+B:\NetFoundation\Verve Kits\verve patch\Framework\Distro\Collections.dll
+B:\NetFoundation\Verve Kits\verve patch\Framework\Distro\Collections.pdb
+B:\NetFoundation\Verve Kits\verve patch\Framework\Distro\Collections.xml
+B:\NetFoundation\Verve Kits\verve patch\Framework\Distro\Collections.dll.CodeAnalysisLog.xml
+B:\NetFoundation\Verve Kits\verve patch\Framework\Distro\Collections.dll.lastcodeanalysissucceeded
+B:\NetFoundation\Verve Kits\verve patch\Framework\Framework\Collections\obj\Debug\Collections.csprojAssemblyReference.cache
+B:\NetFoundation\Verve Kits\verve patch\Framework\Framework\Collections\obj\Debug\Collections.csproj.CoreCompileInputs.cache
+B:\NetFoundation\Verve Kits\verve patch\Framework\Framework\Collections\obj\Debug\Collections.dll
+B:\NetFoundation\Verve Kits\verve patch\Framework\Framework\Collections\obj\Debug\Collections.pdb
