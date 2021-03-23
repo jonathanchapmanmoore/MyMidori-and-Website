@@ -50,7 +50,7 @@
 							<div class="content">
 								<div class="inner">
 									<h2>Microsoft</h2>
-									<p>Jonathan Moore LLP has 24 years of Microsoft experience</p>
+									<p>Jonathan Moore LLP has 24 years of Microsoft experience, Windows NT 4.0 2003 and XP complete source from a 2006 market tender offer. And 7 Reference Source. </p>
 									<ul class="actions">
 										<li><a href="https://techcommunity.microsoft.com/t5/user/viewprofilepage/user-id/359674" class="button">Learn more</a></li>
 									</ul>
@@ -149,8 +149,8 @@
 								</section>
 								<section>
 									<span class="icon solid major fa-cog"></span>
-									<h3>Windows Pre-installation Environment</h3>
-									<p>Use the Windows SDK, EWDK, ADK and Github to create PE Versions of Windows.</p>
+									<h3>Windows</h3>
+									<p>In the Shared Source Embedded program from 2001-present. Use the Windows SDK, EWDK, ADK and Github to create PE Versions of Windows.</p>
 								</section>
 								<section>
 									<span class="icon solid major fa-desktop"></span>
