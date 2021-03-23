@@ -48,9 +48,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrameworkStandard", "Framwo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RuntimePlus_Demo", "Samples\Runtime+ Demo\RuntimePlus_Demo.csproj", "{FC488574-CC6B-434F-8672-5C3FBAB59569}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "FrameworkSetup", "Setup\Setup1.vdproj", "{4C46F64D-5DA4-44A3-A0DE-6AD2903BE05A}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup1.vdproj", "{4C46F64D-5DA4-44A3-A0DE-6AD2903BE05A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runtime+Tests", "Tests\Runtime+Tests\Runtime+Tests.csproj", "{1A32ACDC-2E43-45E7-BDC4-58370EA3BB8A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unit Tests", "Tests\Runtime+Tests\Unit Tests.csproj", "{1A32ACDC-2E43-45E7-BDC4-58370EA3BB8A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runtime+", "Original\Runtime\Runtime+.csproj", "{1B1D1BA1-5D34-4C8B-9727-8ED6E14E7CB9}"
 EndProject

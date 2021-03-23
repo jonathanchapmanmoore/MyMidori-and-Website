@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <sitemanifest>
-  <IisApp path="B:\NetFoundation\Verve Kits\verve patch\Framework\WebApplication\obj\Release\Package\PackageTmp" />
-  <setAcl path="B:\NetFoundation\Verve Kits\verve patch\Framework\WebApplication\obj\Release\Package\PackageTmp" setAclResourceType="Directory" />
-  <setAcl path="B:\NetFoundation\Verve Kits\verve patch\Framework\WebApplication\obj\Release\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
+  <IisApp path="B:\_NTROOTWRK\_Research\Framework\WebApplication\obj\Release\Package\PackageTmp" />
+  <setAcl path="B:\_NTROOTWRK\_Research\Framework\WebApplication\obj\Release\Package\PackageTmp" setAclResourceType="Directory" />
+  <setAcl path="B:\_NTROOTWRK\_Research\Framework\WebApplication\obj\Release\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
 </sitemanifest>

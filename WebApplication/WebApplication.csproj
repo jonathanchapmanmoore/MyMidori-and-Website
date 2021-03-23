@@ -1619,8 +1619,10 @@
     <Content Include="icons\TocExpanded.gif" />
     <Content Include="icons\TocOpen.gif" />
     <Content Include="icons\xna.gif" />
+    <Content Include="images\16_logo.png" />
+    <Content Include="images\adobe.jpg" />
+    <Content Include="images\cp.png" />
     <Content Include="images\PHPMailer card logo.afdesign" />
-    <Content Include="images\Thumbs.db" />
     <Content Include="icons\Thumbs.db" />
     <Content Include="fti\FTI_100.json" />
     <Content Include="fti\FTI_101.json" />
@@ -1694,6 +1696,8 @@
     <Content Include="assets\webfonts\fa-solid-900.ttf" />
     <Content Include="assets\webfonts\fa-solid-900.woff" />
     <Content Include="assets\webfonts\fa-solid-900.woff2" />
+    <Content Include="images\internet.jpg" />
+    <Content Include="images\RSA.jpg" />
     <Content Include="search.html" />
     <Content Include="styles\branding-cs-CZ.css" />
     <Content Include="styles\branding-de-DE.css" />
