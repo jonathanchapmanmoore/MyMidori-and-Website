@@ -1,9 +1,0 @@
-B:\_NTROOTWRK\_Research\sysnet\Verve Kits\runtime-plus\Windows\FramworkStandard\bin\Debug\netstandard2.0\FramworkStandard.deps.json
-B:\_NTROOTWRK\_Research\sysnet\Verve Kits\runtime-plus\Windows\FramworkStandard\bin\Debug\netstandard2.0\FramworkStandard.dll
-B:\_NTROOTWRK\_Research\sysnet\Verve Kits\runtime-plus\Windows\FramworkStandard\bin\Debug\netstandard2.0\FramworkStandard.pdb
-B:\_NTROOTWRK\_Research\sysnet\Verve Kits\runtime-plus\Windows\FramworkStandard\obj\Debug\netstandard2.0\FramworkStandard.csprojAssemblyReference.cache
-B:\_NTROOTWRK\_Research\sysnet\Verve Kits\runtime-plus\Windows\FramworkStandard\obj\Debug\netstandard2.0\FramworkStandard.csproj.CoreCompileInputs.cache
-B:\_NTROOTWRK\_Research\sysnet\Verve Kits\runtime-plus\Windows\FramworkStandard\obj\Debug\netstandard2.0\FramworkStandard.AssemblyInfoInputs.cache
-B:\_NTROOTWRK\_Research\sysnet\Verve Kits\runtime-plus\Windows\FramworkStandard\obj\Debug\netstandard2.0\FramworkStandard.AssemblyInfo.cs
-B:\_NTROOTWRK\_Research\sysnet\Verve Kits\runtime-plus\Windows\FramworkStandard\obj\Debug\netstandard2.0\FramworkStandard.dll
-B:\_NTROOTWRK\_Research\sysnet\Verve Kits\runtime-plus\Windows\FramworkStandard\obj\Debug\netstandard2.0\FramworkStandard.pdb
