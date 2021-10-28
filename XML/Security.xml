@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Security</name>
+    </assembly>
+    <members>
+        <member name="T:System.Extensions.Security.PronounceablePasswordGenerator">
+            <summary>
+            Generates passwords that are pronounceable. Original Java code from
+            http://www.multicians.org/thvv/gpw.html. This class is free to use without restrictions.
+            </summary>
+        </member>
+        <member name="M:System.Extensions.Security.PronounceablePasswordGenerator.Generate(System.Int32,System.Int32)">
+            <summary>
+            Generates a set of pronounceable passwords.
+            </summary>
+            <param name="passwordCount">The number of passwords to generate.</param>
+            <param name="passwordLength">The character length of the passwords.</param>
+            <returns>A list of passwords as strings.</returns>
+        </member>
+    </members>
+</doc>

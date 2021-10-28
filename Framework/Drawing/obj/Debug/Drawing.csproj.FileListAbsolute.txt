@@ -6,3 +6,10 @@ B:\NetFoundation\Verve Kits\verve patch\Framework\Framework\Drawing\obj\Debug\Dr
 B:\NetFoundation\Verve Kits\verve patch\Framework\Framework\Drawing\obj\Debug\Drawing.csproj.CoreCompileInputs.cache
 B:\NetFoundation\Verve Kits\verve patch\Framework\Framework\Drawing\obj\Debug\Drawing.dll
 B:\NetFoundation\Verve Kits\verve patch\Framework\Framework\Drawing\obj\Debug\Drawing.pdb
+B:\_GIT\OS\Projects\Framework-w-WebApp\Distro\XML\Drawing.xml
+B:\_GIT\OS\Projects\Framework-w-WebApp\Distro\Drawing.dll
+B:\_GIT\OS\Projects\Framework-w-WebApp\Distro\Drawing.pdb
+B:\_GIT\OS\Projects\Framework-w-WebApp\Distro\Drawing.xml
+B:\_GIT\OS\Projects\Framework-w-WebApp\Framework\Drawing\obj\Debug\Drawing.csprojResolveAssemblyReference.cache
+B:\_GIT\OS\Projects\Framework-w-WebApp\Framework\Drawing\obj\Debug\Drawing.dll
+B:\_GIT\OS\Projects\Framework-w-WebApp\Framework\Drawing\obj\Debug\Drawing.pdb

@@ -8,3 +8,11 @@ B:\NetFoundation\Verve Kits\verve patch\Framework\Framework\CodeDOM\obj\Debug\Co
 B:\NetFoundation\Verve Kits\verve patch\Framework\Framework\CodeDOM\obj\Debug\CodeDOM.csproj.CoreCompileInputs.cache
 B:\NetFoundation\Verve Kits\verve patch\Framework\Framework\CodeDOM\obj\Debug\CodeDOM.dll
 B:\NetFoundation\Verve Kits\verve patch\Framework\Framework\CodeDOM\obj\Debug\CodeDOM.pdb
+B:\_GIT\OS\Projects\Framework-w-WebApp\Distro\XML\CodeDOM.xml
+B:\_GIT\OS\Projects\Framework-w-WebApp\Distro\CodeDOM.dll
+B:\_GIT\OS\Projects\Framework-w-WebApp\Distro\CodeDOM.pdb
+B:\_GIT\OS\Projects\Framework-w-WebApp\Distro\CodeDOM.xml
+B:\_GIT\OS\Projects\Framework-w-WebApp\Distro\CodeDOM.dll.CodeAnalysisLog.xml
+B:\_GIT\OS\Projects\Framework-w-WebApp\Distro\CodeDOM.dll.lastcodeanalysissucceeded
+B:\_GIT\OS\Projects\Framework-w-WebApp\Framework\CodeDOM\obj\Debug\CodeDOM.dll
+B:\_GIT\OS\Projects\Framework-w-WebApp\Framework\CodeDOM\obj\Debug\CodeDOM.pdb

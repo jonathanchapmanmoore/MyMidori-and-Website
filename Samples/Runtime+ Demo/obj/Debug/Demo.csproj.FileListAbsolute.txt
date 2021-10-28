@@ -1,0 +1,6 @@
+B:\_GIT\OS\Projects\Framework-w-WebApp\Samples\Runtime+ Demo\bin\Debug\ConsoleApplication1.exe.config
+B:\_GIT\OS\Projects\Framework-w-WebApp\Samples\Runtime+ Demo\bin\Debug\ConsoleApplication1.exe
+B:\_GIT\OS\Projects\Framework-w-WebApp\Samples\Runtime+ Demo\bin\Debug\ConsoleApplication1.pdb
+B:\_GIT\OS\Projects\Framework-w-WebApp\Samples\Runtime+ Demo\obj\Debug\Demo.csprojResolveAssemblyReference.cache
+B:\_GIT\OS\Projects\Framework-w-WebApp\Samples\Runtime+ Demo\obj\Debug\ConsoleApplication1.exe
+B:\_GIT\OS\Projects\Framework-w-WebApp\Samples\Runtime+ Demo\obj\Debug\ConsoleApplication1.pdb

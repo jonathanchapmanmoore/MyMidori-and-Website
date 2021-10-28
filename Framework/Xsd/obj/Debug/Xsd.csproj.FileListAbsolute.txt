@@ -7,3 +7,10 @@ B:\NetFoundation\Verve Kits\verve patch\Framework\Framework\Xsd\obj\Debug\Xsd.cs
 B:\NetFoundation\Verve Kits\verve patch\Framework\Framework\Xsd\obj\Debug\Xsd.csproj.CopyComplete
 B:\NetFoundation\Verve Kits\verve patch\Framework\Framework\Xsd\obj\Debug\Xsd.dll
 B:\NetFoundation\Verve Kits\verve patch\Framework\Framework\Xsd\obj\Debug\Xsd.pdb
+B:\_GIT\OS\Projects\Framework-w-WebApp\Distro\XML\Xsd.xml
+B:\_GIT\OS\Projects\Framework-w-WebApp\Distro\Xsd.dll
+B:\_GIT\OS\Projects\Framework-w-WebApp\Distro\Xsd.pdb
+B:\_GIT\OS\Projects\Framework-w-WebApp\Distro\Xsd.xml
+B:\_GIT\OS\Projects\Framework-w-WebApp\Framework\Xsd\obj\Debug\Xsd.csprojResolveAssemblyReference.cache
+B:\_GIT\OS\Projects\Framework-w-WebApp\Framework\Xsd\obj\Debug\Xsd.dll
+B:\_GIT\OS\Projects\Framework-w-WebApp\Framework\Xsd\obj\Debug\Xsd.pdb

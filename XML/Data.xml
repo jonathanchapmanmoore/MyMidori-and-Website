@@ -1,0 +1,2102 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Data</name>
+    </assembly>
+    <members>
+        <member name="T:System.Extensions.Data.DataRowExtensions">
+            <summary>
+            Extension methods for a <see cref="T:System.Data.DataRow"/>.
+            </summary>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetBoolean(System.Data.DataRow,System.Data.DataColumn)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Boolean"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetBoolean(System.Data.DataRow,System.Int32)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Boolean"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetBoolean(System.Data.DataRow,System.String)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Boolean"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetBoolean(System.Data.DataRow,System.Data.DataColumn,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Boolean"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetBoolean(System.Data.DataRow,System.Int32,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Boolean"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetBoolean(System.Data.DataRow,System.String,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Boolean"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableBoolean(System.Data.DataRow,System.Data.DataColumn)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Boolean"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableBoolean(System.Data.DataRow,System.Int32)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Boolean"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableBoolean(System.Data.DataRow,System.String)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Boolean"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableBoolean(System.Data.DataRow,System.Data.DataColumn,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Boolean"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableBoolean(System.Data.DataRow,System.Int32,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Boolean"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableBoolean(System.Data.DataRow,System.String,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Boolean"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetByte(System.Data.DataRow,System.Data.DataColumn)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Byte"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetByte(System.Data.DataRow,System.Int32)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Byte"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetByte(System.Data.DataRow,System.String)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Byte"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetByte(System.Data.DataRow,System.Data.DataColumn,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Byte"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetByte(System.Data.DataRow,System.Int32,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Byte"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetByte(System.Data.DataRow,System.String,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Byte"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableByte(System.Data.DataRow,System.Data.DataColumn)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Byte"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableByte(System.Data.DataRow,System.Int32)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Byte"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableByte(System.Data.DataRow,System.String)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Byte"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableByte(System.Data.DataRow,System.Data.DataColumn,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Byte"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableByte(System.Data.DataRow,System.Int32,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Byte"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableByte(System.Data.DataRow,System.String,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Byte"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetBytes(System.Data.DataRow,System.Data.DataColumn)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Byte"/> array.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetBytes(System.Data.DataRow,System.Int32)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Byte"/> array.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetBytes(System.Data.DataRow,System.String)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Byte"/> array.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetBytes(System.Data.DataRow,System.Data.DataColumn,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Byte"/> array.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetBytes(System.Data.DataRow,System.Int32,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Byte"/> array.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetBytes(System.Data.DataRow,System.String,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Byte"/> array.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableBytes(System.Data.DataRow,System.Data.DataColumn)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Byte"/> array or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableBytes(System.Data.DataRow,System.Int32)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Byte"/> array or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableBytes(System.Data.DataRow,System.String)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Byte"/> array or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableBytes(System.Data.DataRow,System.Data.DataColumn,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Byte"/> array or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableBytes(System.Data.DataRow,System.Int32,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Byte"/> array or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableBytes(System.Data.DataRow,System.String,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Byte"/> array or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetChar(System.Data.DataRow,System.Data.DataColumn)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Char"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetChar(System.Data.DataRow,System.Int32)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Char"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetChar(System.Data.DataRow,System.String)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Char"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetChar(System.Data.DataRow,System.Data.DataColumn,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Char"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetChar(System.Data.DataRow,System.Int32,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Char"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetChar(System.Data.DataRow,System.String,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Char"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableChar(System.Data.DataRow,System.Data.DataColumn)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Char"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableChar(System.Data.DataRow,System.Int32)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Char"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableChar(System.Data.DataRow,System.String)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Char"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableChar(System.Data.DataRow,System.Data.DataColumn,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Char"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableChar(System.Data.DataRow,System.Int32,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Char"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableChar(System.Data.DataRow,System.String,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Char"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetChars(System.Data.DataRow,System.Data.DataColumn)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Char"/> array.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetChars(System.Data.DataRow,System.Int32)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Char"/> array.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetChars(System.Data.DataRow,System.String)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Char"/> array.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetChars(System.Data.DataRow,System.Data.DataColumn,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Char"/> array.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetChars(System.Data.DataRow,System.Int32,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Char"/> array.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetChars(System.Data.DataRow,System.String,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Char"/> array.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableChars(System.Data.DataRow,System.Data.DataColumn)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Char"/> array or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableChars(System.Data.DataRow,System.Int32)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Char"/> array or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableChars(System.Data.DataRow,System.String)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Char"/> array or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableChars(System.Data.DataRow,System.Data.DataColumn,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Char"/> array or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableChars(System.Data.DataRow,System.Int32,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Char"/> array or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableChars(System.Data.DataRow,System.String,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Char"/> array or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetDateTime(System.Data.DataRow,System.Data.DataColumn)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.DateTime"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetDateTime(System.Data.DataRow,System.Int32)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.DateTime"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetDateTime(System.Data.DataRow,System.String)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.DateTime"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetDateTime(System.Data.DataRow,System.Data.DataColumn,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.DateTime"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetDateTime(System.Data.DataRow,System.Int32,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.DateTime"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetDateTime(System.Data.DataRow,System.String,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.DateTime"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableDateTime(System.Data.DataRow,System.Data.DataColumn)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.DateTime"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableDateTime(System.Data.DataRow,System.Int32)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.DateTime"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableDateTime(System.Data.DataRow,System.String)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.DateTime"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableDateTime(System.Data.DataRow,System.Data.DataColumn,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.DateTime"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableDateTime(System.Data.DataRow,System.Int32,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.DateTime"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableDateTime(System.Data.DataRow,System.String,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.DateTime"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetDecimal(System.Data.DataRow,System.Data.DataColumn)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Decimal"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetDecimal(System.Data.DataRow,System.Int32)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Decimal"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetDecimal(System.Data.DataRow,System.String)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Decimal"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetDecimal(System.Data.DataRow,System.Data.DataColumn,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Decimal"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetDecimal(System.Data.DataRow,System.Int32,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Decimal"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetDecimal(System.Data.DataRow,System.String,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Decimal"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableDecimal(System.Data.DataRow,System.Data.DataColumn)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Decimal"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableDecimal(System.Data.DataRow,System.Int32)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Decimal"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableDecimal(System.Data.DataRow,System.String)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Decimal"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableDecimal(System.Data.DataRow,System.Data.DataColumn,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Decimal"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableDecimal(System.Data.DataRow,System.Int32,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Decimal"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableDecimal(System.Data.DataRow,System.String,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Decimal"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetDouble(System.Data.DataRow,System.Data.DataColumn)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Double"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetDouble(System.Data.DataRow,System.Int32)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Double"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetDouble(System.Data.DataRow,System.String)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Double"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetDouble(System.Data.DataRow,System.Data.DataColumn,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Double"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetDouble(System.Data.DataRow,System.Int32,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Double"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetDouble(System.Data.DataRow,System.String,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Double"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableDouble(System.Data.DataRow,System.Data.DataColumn)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Double"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableDouble(System.Data.DataRow,System.Int32)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Double"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableDouble(System.Data.DataRow,System.String)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Double"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableDouble(System.Data.DataRow,System.Data.DataColumn,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Double"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableDouble(System.Data.DataRow,System.Int32,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Double"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableDouble(System.Data.DataRow,System.String,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Double"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetGuid(System.Data.DataRow,System.Data.DataColumn)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Guid"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetGuid(System.Data.DataRow,System.Int32)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Guid"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetGuid(System.Data.DataRow,System.String)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Guid"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetGuid(System.Data.DataRow,System.Data.DataColumn,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Guid"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetGuid(System.Data.DataRow,System.Int32,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Guid"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetGuid(System.Data.DataRow,System.String,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Guid"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableGuid(System.Data.DataRow,System.Data.DataColumn)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Guid"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableGuid(System.Data.DataRow,System.Int32)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Guid"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableGuid(System.Data.DataRow,System.String)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Guid"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableGuid(System.Data.DataRow,System.Data.DataColumn,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Guid"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableGuid(System.Data.DataRow,System.Int32,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Guid"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableGuid(System.Data.DataRow,System.String,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Guid"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetInt16(System.Data.DataRow,System.Data.DataColumn)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Int16"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetInt16(System.Data.DataRow,System.Int32)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Int16"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetInt16(System.Data.DataRow,System.String)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Int16"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetInt16(System.Data.DataRow,System.Data.DataColumn,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Int16"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetInt16(System.Data.DataRow,System.Int32,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Int16"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetInt16(System.Data.DataRow,System.String,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Int16"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableInt16(System.Data.DataRow,System.Data.DataColumn)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Int16"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableInt16(System.Data.DataRow,System.Int32)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Int16"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableInt16(System.Data.DataRow,System.String)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Int16"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableInt16(System.Data.DataRow,System.Data.DataColumn,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Int16"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableInt16(System.Data.DataRow,System.Int32,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Int16"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableInt16(System.Data.DataRow,System.String,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Int16"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetInt32(System.Data.DataRow,System.Data.DataColumn)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Int32"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetInt32(System.Data.DataRow,System.Int32)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Int32"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetInt32(System.Data.DataRow,System.String)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Int32"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetInt32(System.Data.DataRow,System.Data.DataColumn,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Int32"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetInt32(System.Data.DataRow,System.Int32,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Int32"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetInt32(System.Data.DataRow,System.String,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Int32"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableInt32(System.Data.DataRow,System.Data.DataColumn)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Int32"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableInt32(System.Data.DataRow,System.Int32)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Int32"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableInt32(System.Data.DataRow,System.String)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Int32"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableInt32(System.Data.DataRow,System.Data.DataColumn,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Int32"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableInt32(System.Data.DataRow,System.Int32,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Int32"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableInt32(System.Data.DataRow,System.String,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Int32"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetInt64(System.Data.DataRow,System.Data.DataColumn)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Int64"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetInt64(System.Data.DataRow,System.Int32)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Int64"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetInt64(System.Data.DataRow,System.String)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Int64"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetInt64(System.Data.DataRow,System.Data.DataColumn,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Int64"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetInt64(System.Data.DataRow,System.Int32,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Int64"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetInt64(System.Data.DataRow,System.String,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Int64"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableInt64(System.Data.DataRow,System.Data.DataColumn)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Int64"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableInt64(System.Data.DataRow,System.Int32)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Int64"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableInt64(System.Data.DataRow,System.String)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Int64"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableInt64(System.Data.DataRow,System.Data.DataColumn,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Int64"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableInt64(System.Data.DataRow,System.Int32,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Int64"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableInt64(System.Data.DataRow,System.String,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Int64"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetSingle(System.Data.DataRow,System.Data.DataColumn)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Single"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetSingle(System.Data.DataRow,System.Int32)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Single"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetSingle(System.Data.DataRow,System.String)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Single"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetSingle(System.Data.DataRow,System.Data.DataColumn,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Single"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetSingle(System.Data.DataRow,System.Int32,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Single"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetSingle(System.Data.DataRow,System.String,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Single"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableSingle(System.Data.DataRow,System.Data.DataColumn)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Single"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableSingle(System.Data.DataRow,System.Int32)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Single"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableSingle(System.Data.DataRow,System.String)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Single"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableSingle(System.Data.DataRow,System.Data.DataColumn,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Single"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableSingle(System.Data.DataRow,System.Int32,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Single"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableSingle(System.Data.DataRow,System.String,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Single"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetString(System.Data.DataRow,System.Data.DataColumn)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.String"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetString(System.Data.DataRow,System.Int32)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.String"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetString(System.Data.DataRow,System.String)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.String"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetString(System.Data.DataRow,System.Data.DataColumn,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.String"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetString(System.Data.DataRow,System.Int32,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.String"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetString(System.Data.DataRow,System.String,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.String"/>.
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableString(System.Data.DataRow,System.Data.DataColumn)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.String"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableString(System.Data.DataRow,System.Int32)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.String"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnIndex">The zero-based index of the column.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableString(System.Data.DataRow,System.String)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.String"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableString(System.Data.DataRow,System.Data.DataColumn,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.String"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="column">The column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableString(System.Data.DataRow,System.Int32,System.Data.DataRowVersion)">
+            <summary>
+            {
+            Gets the value of the specified column as a <see cref="T:System.String"/> or null if the value is <see cref="T:System.DBNull"/>..
+            }
+            </summary>
+            {
+            <param name="row">The row to retrieve the value from.</param>
+            }
+            <param name="columnIndex">The zero-based index of the column.</param>
+            {
+            <param name="version">The version of the row you want.</param>
+            }
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.DataRowExtensions.GetNullableString(System.Data.DataRow,System.String,System.Data.DataRowVersion)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.String"/> or null if the value is <see cref="T:System.DBNull"/>..
+            </summary>
+            <param name="row">The row to retrieve the value from.</param>
+            <param name="columnName">The name of the column to retrieve.</param>
+            <param name="version">The version of the row you want.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="T:System.Extensions.Data.DataTableExtensions">
+            <summary>
+            Extension methods for a <see cref="T:System.Data.DataTable"/>.
+            </summary>
+        </member>
+        <member name="M:System.Extensions.Data.DataTableExtensions.ReadCsv(System.Data.DataTable,System.String,System.Boolean)">
+            <summary>
+            Reads CSV data into the <see cref="T:System.Data.DataTable"/> using the specified file name.
+            </summary>
+            <param name="table">The table to read the CSV data into.</param>
+            <param name="fileName">The name of the file from which to read the data.</param>
+            <param name="hasHeader">Whether the CSV document has a header row.</param>
+        </member>
+        <member name="M:System.Extensions.Data.DataTableExtensions.ReadCsv(System.Data.DataTable,System.IO.Stream,System.Boolean)">
+            <summary>
+            Reads CSV data into the <see cref="T:System.Data.DataTable"/> using the specified <see cref="T:System.IO.Stream"/>.
+            </summary>
+            <param name="table">The table to read the CSV data into.</param>
+            <param name="stream">The stream from which to read the data.</param>
+            <param name="hasHeader">Whether the CSV document has a header row.</param>
+        </member>
+        <member name="M:System.Extensions.Data.DataTableExtensions.ReadCsv(System.Data.DataTable,System.IO.TextReader,System.Boolean)">
+            <summary>
+            Reads CSV data into the <see cref="T:System.Data.DataTable"/> using the specified <see cref="T:System.IO.TextReader"/>.
+            </summary>
+            <param name="table">The table to read the CSV data into.</param>
+            <param name="reader">The reader from which to read the data.</param>
+            <param name="hasHeader">Whether the CSV document has a header row.</param>
+        </member>
+        <member name="M:System.Extensions.Data.DataTableExtensions.WriteCsv(System.Data.DataTable,System.String,System.Boolean)">
+            <summary>
+            Writes the <see cref="T:System.Data.DataTable"/> to a CSV file using the specified file name.
+            </summary>
+            <param name="table">The table that contains the data to write.</param>
+            <param name="fileName">The name of the file where the data should be written.</param>
+            <param name="hasHeader">Whether the CSV document should have a header row.</param>
+        </member>
+        <member name="M:System.Extensions.Data.DataTableExtensions.WriteCsv(System.Data.DataTable,System.IO.Stream,System.Boolean)">
+            <summary>
+            Reads CSV data into the <see cref="T:System.Data.DataTable"/> using the specified <see cref="T:System.IO.Stream"/>.
+            </summary>
+            <param name="table">The table that contains the data to write.</param>
+            <param name="stream">The stream where the data ahould be written.</param>
+            <param name="hasHeader">Whether the CSV document should have a header row.</param>
+        </member>
+        <member name="M:System.Extensions.Data.DataTableExtensions.WriteCsv(System.Data.DataTable,System.IO.TextWriter,System.Boolean)">
+            <summary>
+            Reads CSV data into the <see cref="T:System.Data.DataTable"/> using the specified <see cref="T:System.IO.TextReader"/>.
+            </summary>
+            <param name="table">The table that contains the data to write.</param>
+            <param name="writer">The <see cref="T:System.IO.TextWriter"/> where the data ahould be written.</param>
+            <param name="hasHeader">Whether the CSV document should have a header row.</param>
+        </member>
+        <member name="M:System.Extensions.Data.DataTableExtensions.QuoteText(System.Object)">
+            <summary>
+            Called to quote text so the CSV is well formatted.
+            </summary>
+            <param name="value">The value to quote.</param>
+            <returns>The quoted text.</returns>
+        </member>
+        <member name="T:System.Extensions.Data.IDataReaderExtensions">
+            <summary>
+            Extension methods for an <see cref="T:System.Data.IDataReader"/>.
+            </summary>
+        </member>
+        <member name="M:System.Extensions.Data.IDataReaderExtensions.GetBoolean(System.Data.IDataRecord,System.String)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Boolean"/>.
+            </summary>
+            <param name="reader">The reader to retrieve the value from.</param>
+            <param name="name">The name of the field to find.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDataReaderExtensions.GetNullableBoolean(System.Data.IDataRecord,System.Int32)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Boolean"/> or null of it the value is <see cref="T:System.DBNull"/>.
+            </summary>
+            <param name="reader">The reader to retrieve the value from.</param>
+            <param name="index">The zero-based column ordinal.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDataReaderExtensions.GetNullableBoolean(System.Data.IDataRecord,System.String)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Boolean"/> or null of it the value is <see cref="T:System.DBNull"/>.
+            </summary>
+            <param name="reader">The reader to retrieve the value from.</param>
+            <param name="name">The name of the field to find.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDataReaderExtensions.GetByte(System.Data.IDataRecord,System.String)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Byte"/>.
+            </summary>
+            <param name="reader">The reader to retrieve the value from.</param>
+            <param name="name">The name of the field to find.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDataReaderExtensions.GetNullableByte(System.Data.IDataRecord,System.Int32)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Byte"/> or null of it the value is <see cref="T:System.DBNull"/>.
+            </summary>
+            <param name="reader">The reader to retrieve the value from.</param>
+            <param name="index">The zero-based column ordinal.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDataReaderExtensions.GetNullableByte(System.Data.IDataRecord,System.String)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Byte"/> or null of it the value is <see cref="T:System.DBNull"/>.
+            </summary>
+            <param name="reader">The reader to retrieve the value from.</param>
+            <param name="name">The name of the field to find.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDataReaderExtensions.GetBytes(System.Data.IDataRecord,System.String,System.Int64,System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Reads a stream of bytes from the specified column offset into the buffer an array starting at the given buffer offset.
+            </summary>
+            <param name="reader">The reader to retrieve the value from.</param>
+            <param name="name">The name of the field to find.</param>
+            <param name="fieldOffset">The index within the field from which to begin the read operation.</param>
+            <param name="buffer">The buffer into which to read the stream of bytes.</param>
+            <param name="bufferOffset">The index for <em>buffer</em> to begin the write operation.</param>
+            <param name="length">The maximum length to copy into the buffer.</param>
+            <returns>The actual number of bytes read.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDataReaderExtensions.GetAllBytes(System.Data.IDataRecord,System.Int32)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Byte"/> array.
+            </summary>
+            <param name="reader">The reader to retrieve the value from.</param>
+            <param name="index">The zero-based column ordinal.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDataReaderExtensions.GetAllBytes(System.Data.IDataRecord,System.String)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Byte"/> array or null of it the value is <see cref="T:System.DBNull"/>.
+            </summary>
+            <param name="reader">The reader to retrieve the value from.</param>
+            <param name="name">The name of the field to find.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDataReaderExtensions.GetNullableBytes(System.Data.IDataRecord,System.Int32,System.Int64,System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Reads a stream of bytes from the specified column offset into the buffer an array starting at the given buffer offset.
+            </summary>
+            <param name="reader">The reader to retrieve the value from.</param>
+            <param name="index">The zero-based column ordinal.</param>
+            <param name="fieldOffset">The index within the field from which to begin the read operation.</param>
+            <param name="buffer">The buffer into which to read the stream of bytes.</param>
+            <param name="bufferOffset">The index for <em>buffer</em> to begin the write operation.</param>
+            <param name="length">The maximum length to copy into the buffer.</param>
+            <returns>The actual number of bytes read.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDataReaderExtensions.GetNullableBytes(System.Data.IDataRecord,System.String,System.Int64,System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Reads a stream of bytes from the specified column offset into the buffer an array starting at the given buffer offset.
+            </summary>
+            <param name="reader">The reader to retrieve the value from.</param>
+            <param name="name">The name of the field to find.</param>
+            <param name="fieldOffset">The index within the field from which to begin the read operation.</param>
+            <param name="buffer">The buffer into which to read the stream of bytes.</param>
+            <param name="bufferOffset">The index for <em>buffer</em> to begin the write operation.</param>
+            <param name="length">The maximum length to copy into the buffer.</param>
+            <returns>The actual number of bytes read.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDataReaderExtensions.GetNullableAllBytes(System.Data.IDataRecord,System.Int32)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Byte"/> array or null of it the value is <see cref="T:System.DBNull"/>.
+            </summary>
+            <param name="reader">The reader to retrieve the value from.</param>
+            <param name="index">The zero-based column ordinal.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDataReaderExtensions.GetNullableAllBytes(System.Data.IDataRecord,System.String)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Byte"/> array or null of it the value is <see cref="T:System.DBNull"/>.
+            </summary>
+            <param name="reader">The reader to retrieve the value from.</param>
+            <param name="name">The name of the field to find.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDataReaderExtensions.GetChar(System.Data.IDataRecord,System.String)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Char"/>.
+            </summary>
+            <param name="reader">The reader to retrieve the value from.</param>
+            <param name="name">The name of the field to find.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDataReaderExtensions.GetNullableChar(System.Data.IDataRecord,System.Int32)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Char"/> or null of it the value is <see cref="T:System.DBNull"/>.
+            </summary>
+            <param name="reader">The reader to retrieve the value from.</param>
+            <param name="index">The zero-based column ordinal.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDataReaderExtensions.GetNullableChar(System.Data.IDataRecord,System.String)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Char"/> or null of it the value is <see cref="T:System.DBNull"/>.
+            </summary>
+            <param name="reader">The reader to retrieve the value from.</param>
+            <param name="name">The name of the field to find.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDataReaderExtensions.GetChars(System.Data.IDataRecord,System.String,System.Int64,System.Char[],System.Int32,System.Int32)">
+            <summary>
+            Reads a stream of chars from the specified column offset into the buffer an array starting at the given buffer offset.
+            </summary>
+            <param name="reader">The reader to retrieve the value from.</param>
+            <param name="name">The name of the field to find.</param>
+            <param name="fieldOffset">The index within the field from which to begin the read operation.</param>
+            <param name="buffer">The buffer into which to read the stream of chars.</param>
+            <param name="bufferOffset">The index for <em>buffer</em> to begin the write operation.</param>
+            <param name="length">The maximum length to copy into the buffer.</param>
+            <returns>The actual number of chars read.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDataReaderExtensions.GetNullableChars(System.Data.IDataRecord,System.Int32,System.Int64,System.Char[],System.Int32,System.Int32)">
+            <summary>
+            Reads a stream of chars from the specified column offset into the buffer an array starting at the given buffer offset.
+            </summary>
+            <param name="reader">The reader to retrieve the value from.</param>
+            <param name="index">The zero-based column ordinal.</param>
+            <param name="fieldOffset">The index within the field from which to begin the read operation.</param>
+            <param name="buffer">The buffer into which to read the stream of chars.</param>
+            <param name="bufferOffset">The index for <em>buffer</em> to begin the write operation.</param>
+            <param name="length">The maximum length to copy into the buffer.</param>
+            <returns>The actual number of chars read.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDataReaderExtensions.GetNullableChars(System.Data.IDataRecord,System.String,System.Int64,System.Char[],System.Int32,System.Int32)">
+            <summary>
+            Reads a stream of chars from the specified column offset into the buffer an array starting at the given buffer offset.
+            </summary>
+            <param name="reader">The reader to retrieve the value from.</param>
+            <param name="name">The name of the field to find.</param>
+            <param name="fieldOffset">The index within the field from which to begin the read operation.</param>
+            <param name="buffer">The buffer into which to read the stream of chars.</param>
+            <param name="bufferOffset">The index for <em>buffer</em> to begin the write operation.</param>
+            <param name="length">The maximum length to copy into the buffer.</param>
+            <returns>The actual number of chars read.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDataReaderExtensions.GetData(System.Data.IDataRecord,System.String)">
+            <summary>
+            Gets an <see cref="T:System.Data.IDataReader"/> to be used when the field points to more remote structured data.
+            </summary>
+            <param name="reader">The reader to retrieve the value from.</param>
+            <param name="name">The name of the field to find.</param>
+            <returns>An <see cref="T:System.Data.IDataReader"/> to be used when the field points to more remote structured data.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDataReaderExtensions.GetDataTypeName(System.Data.IDataRecord,System.String)">
+            <summary>
+            Gets the name of the source data type.
+            </summary>
+            <param name="reader">The reader to retrieve the value from.</param>
+            <param name="name">The name of the field to find.</param>
+            <returns>The name of the back-end data type.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDataReaderExtensions.GetDateTime(System.Data.IDataRecord,System.String)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.DateTime"/>.
+            </summary>
+            <param name="reader">The reader to retrieve the value from.</param>
+            <param name="name">The name of the field to find.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDataReaderExtensions.GetNullableDateTime(System.Data.IDataRecord,System.Int32)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.DateTime"/> or null of it the value is <see cref="T:System.DBNull"/>.
+            </summary>
+            <param name="reader">The reader to retrieve the value from.</param>
+            <param name="index">The zero-based column ordinal.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDataReaderExtensions.GetNullableDateTime(System.Data.IDataRecord,System.String)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.DateTime"/> or null of it the value is <see cref="T:System.DBNull"/>.
+            </summary>
+            <param name="reader">The reader to retrieve the value from.</param>
+            <param name="name">The name of the field to find.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDataReaderExtensions.GetDecimal(System.Data.IDataRecord,System.String)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Decimal"/>.
+            </summary>
+            <param name="reader">The reader to retrieve the value from.</param>
+            <param name="name">The name of the field to find.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDataReaderExtensions.GetNullableDecimal(System.Data.IDataRecord,System.Int32)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Decimal"/> or null of it the value is <see cref="T:System.DBNull"/>.
+            </summary>
+            <param name="reader">The reader to retrieve the value from.</param>
+            <param name="index">The zero-based column ordinal.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDataReaderExtensions.GetNullableDecimal(System.Data.IDataRecord,System.String)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Decimal"/> or null of it the value is <see cref="T:System.DBNull"/>.
+            </summary>
+            <param name="reader">The reader to retrieve the value from.</param>
+            <param name="name">The name of the field to find.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDataReaderExtensions.GetDouble(System.Data.IDataRecord,System.String)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Double"/>.
+            </summary>
+            <param name="reader">The reader to retrieve the value from.</param>
+            <param name="name">The name of the field to find.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDataReaderExtensions.GetNullableDouble(System.Data.IDataRecord,System.Int32)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Double"/> or null of it the value is <see cref="T:System.DBNull"/>.
+            </summary>
+            <param name="reader">The reader to retrieve the value from.</param>
+            <param name="index">The zero-based column ordinal.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDataReaderExtensions.GetNullableDouble(System.Data.IDataRecord,System.String)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Double"/> or null of it the value is <see cref="T:System.DBNull"/>.
+            </summary>
+            <param name="reader">The reader to retrieve the value from.</param>
+            <param name="name">The name of the field to find.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDataReaderExtensions.GetFieldType(System.Data.IDataRecord,System.String)">
+            <summary>
+            Gets the <see cref="T:System.Type"/> that is the data type of the object.
+            </summary>
+            <param name="reader">The reader to retrieve the value from.</param>
+            <param name="name">The name of the field to find.</param>
+            <returns>The <see cref="T:System.Type"/> that is the data type of the object.  If the type does not exist on the client, in the case of a User-Defined Type (UDT) returned from the database, returns null.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDataReaderExtensions.GetFloat(System.Data.IDataRecord,System.String)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Single"/>.
+            </summary>
+            <param name="reader">The reader to retrieve the value from.</param>
+            <param name="name">The name of the field to find.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDataReaderExtensions.GetNullableFloat(System.Data.IDataRecord,System.Int32)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Single"/> or null of it the value is <see cref="T:System.DBNull"/>.
+            </summary>
+            <param name="reader">The reader to retrieve the value from.</param>
+            <param name="index">The zero-based column ordinal.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDataReaderExtensions.GetNullableFloat(System.Data.IDataRecord,System.String)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Single"/> or null of it the value is <see cref="T:System.DBNull"/>.
+            </summary>
+            <param name="reader">The reader to retrieve the value from.</param>
+            <param name="name">The name of the field to find.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDataReaderExtensions.GetGuid(System.Data.IDataRecord,System.String)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Guid"/>.
+            </summary>
+            <param name="reader">The reader to retrieve the value from.</param>
+            <param name="name">The name of the field to find.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDataReaderExtensions.GetNullableGuid(System.Data.IDataRecord,System.Int32)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Guid"/> or null of it the value is <see cref="T:System.DBNull"/>.
+            </summary>
+            <param name="reader">The reader to retrieve the value from.</param>
+            <param name="index">The zero-based column ordinal.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDataReaderExtensions.GetNullableGuid(System.Data.IDataRecord,System.String)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Guid"/> or null of it the value is <see cref="T:System.DBNull"/>.
+            </summary>
+            <param name="reader">The reader to retrieve the value from.</param>
+            <param name="name">The name of the field to find.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDataReaderExtensions.GetInt16(System.Data.IDataRecord,System.String)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Int16"/>.
+            </summary>
+            <param name="reader">The reader to retrieve the value from.</param>
+            <param name="name">The name of the field to find.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDataReaderExtensions.GetNullableInt16(System.Data.IDataRecord,System.Int32)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Int16"/> or null of it the value is <see cref="T:System.DBNull"/>.
+            </summary>
+            <param name="reader">The reader to retrieve the value from.</param>
+            <param name="index">The zero-based column ordinal.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDataReaderExtensions.GetNullableInt16(System.Data.IDataRecord,System.String)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Int16"/> or null of it the value is <see cref="T:System.DBNull"/>.
+            </summary>
+            <param name="reader">The reader to retrieve the value from.</param>
+            <param name="name">The name of the field to find.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDataReaderExtensions.GetInt32(System.Data.IDataRecord,System.String)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Int32"/>.
+            </summary>
+            <param name="reader">The reader to retrieve the value from.</param>
+            <param name="name">The name of the field to find.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDataReaderExtensions.GetNullableInt32(System.Data.IDataRecord,System.Int32)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Int32"/> or null of it the value is <see cref="T:System.DBNull"/>.
+            </summary>
+            <param name="reader">The reader to retrieve the value from.</param>
+            <param name="index">The zero-based column ordinal.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDataReaderExtensions.GetNullableInt32(System.Data.IDataRecord,System.String)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Int32"/> or null of it the value is <see cref="T:System.DBNull"/>.
+            </summary>
+            <param name="reader">The reader to retrieve the value from.</param>
+            <param name="name">The name of the field to find.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDataReaderExtensions.GetInt64(System.Data.IDataRecord,System.String)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Int64"/>.
+            </summary>
+            <param name="reader">The reader to retrieve the value from.</param>
+            <param name="name">The name of the field to find.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDataReaderExtensions.GetNullableInt64(System.Data.IDataRecord,System.Int32)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Int64"/> or null of it the value is <see cref="T:System.DBNull"/>.
+            </summary>
+            <param name="reader">The reader to retrieve the value from.</param>
+            <param name="index">The zero-based column ordinal.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDataReaderExtensions.GetNullableInt64(System.Data.IDataRecord,System.String)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.Int64"/> or null of it the value is <see cref="T:System.DBNull"/>.
+            </summary>
+            <param name="reader">The reader to retrieve the value from.</param>
+            <param name="name">The name of the field to find.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDataReaderExtensions.GetString(System.Data.IDataRecord,System.String)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.String"/>.
+            </summary>
+            <param name="reader">The reader to retrieve the value from.</param>
+            <param name="name">The name of the field to find.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDataReaderExtensions.GetNullableString(System.Data.IDataRecord,System.Int32)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.String"/> or null of it the value is <see cref="T:System.DBNull"/>.
+            </summary>
+            <param name="reader">The reader to retrieve the value from.</param>
+            <param name="index">The zero-based column ordinal.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDataReaderExtensions.GetNullableString(System.Data.IDataRecord,System.String)">
+            <summary>
+            Gets the value of the specified column as a <see cref="T:System.String"/> or null of it the value is <see cref="T:System.DBNull"/>.
+            </summary>
+            <param name="reader">The reader to retrieve the value from.</param>
+            <param name="name">The name of the field to find.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDataReaderExtensions.GetValue(System.Data.IDataRecord,System.String)">
+            <summary>
+            Gets the value of the specified column in its native format.
+            </summary>
+            <param name="reader">The reader to retrieve the value from.</param>
+            <param name="name">The name of the field to find.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDataReaderExtensions.GetNullableValue(System.Data.IDataRecord,System.Int32)">
+            <summary>
+            Gets the value of the specified column in its native format or null of it the value is <see cref="T:System.DBNull"/>.
+            </summary>
+            <param name="reader">The reader to retrieve the value from.</param>
+            <param name="index">The zero-based column ordinal.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDataReaderExtensions.GetNullableValue(System.Data.IDataRecord,System.String)">
+            <summary>
+            Gets the value of the specified column in its native format or null of it the value is <see cref="T:System.DBNull"/>.
+            </summary>
+            <param name="reader">The reader to retrieve the value from.</param>
+            <param name="name">The name of the field to find.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDataReaderExtensions.IsDBNull(System.Data.IDataRecord,System.String)">
+            <summary>
+            Gets a value that indicates whether the column contains non-existent or missing values.
+            </summary>
+            <param name="reader">The reader to retrieve the value from.</param>
+            <param name="name">The name of the field to find.</param>
+            <returns><b>True</b> if the specified column value is equivalent to <see cref="T:System.DBNull"/>; otherwise false.</returns>
+        </member>
+        <member name="T:System.Extensions.Data.IDbCommandExtensions">
+            <summary>
+            Extension methods for an <see cref="T:System.Data.IDbCommand"/>.
+            </summary>
+        </member>
+        <member name="M:System.Extensions.Data.IDbCommandExtensions.ExecuteBoolean(System.Data.IDbCommand)">
+            <summary>
+            Executes the query and returns the first column of the first row in the resultset returned by the query.
+            </summary>
+            <param name="command">The command to execute.</param>
+            <returns>The value of the field.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDbCommandExtensions.ExecuteByte(System.Data.IDbCommand)">
+            <summary>
+            Executes the query and returns the first column of the first row in the resultset returned by the query.
+            </summary>
+            <param name="command">The command to execute.</param>
+            <returns>The value of the field.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDbCommandExtensions.ExecuteBytes(System.Data.IDbCommand)">
+            <summary>
+            Executes the query and returns the first column of the first row in the resultset returned by the query.
+            </summary>
+            <param name="command">The command to execute.</param>
+            <returns>The value of the field.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDbCommandExtensions.ExecuteChar(System.Data.IDbCommand)">
+            <summary>
+            Executes the query and returns the first column of the first row in the resultset returned by the query.
+            </summary>
+            <param name="command">The command to execute.</param>
+            <returns>The value of the field.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDbCommandExtensions.ExecuteChars(System.Data.IDbCommand)">
+            <summary>
+            Executes the query and returns the first column of the first row in the resultset returned by the query.
+            </summary>
+            <param name="command">The command to execute.</param>
+            <returns>The value of the field.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDbCommandExtensions.ExecuteDateTime(System.Data.IDbCommand)">
+            <summary>
+            Executes the query and returns the first column of the first row in the resultset returned by the query.
+            </summary>
+            <param name="command">The command to execute.</param>
+            <returns>The value of the field.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDbCommandExtensions.ExecuteDecimal(System.Data.IDbCommand)">
+            <summary>
+            Executes the query and returns the first column of the first row in the resultset returned by the query.
+            </summary>
+            <param name="command">The command to execute.</param>
+            <returns>The value of the field.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDbCommandExtensions.ExecuteDouble(System.Data.IDbCommand)">
+            <summary>
+            Executes the query and returns the first column of the first row in the resultset returned by the query.
+            </summary>
+            <param name="command">The command to execute.</param>
+            <returns>The value of the field.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDbCommandExtensions.ExecuteGuid(System.Data.IDbCommand)">
+            <summary>
+            Executes the query and returns the first column of the first row in the resultset returned by the query.
+            </summary>
+            <param name="command">The command to execute.</param>
+            <returns>The value of the field.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDbCommandExtensions.ExecuteInt16(System.Data.IDbCommand)">
+            <summary>
+            Executes the query and returns the first column of the first row in the resultset returned by the query.
+            </summary>
+            <param name="command">The command to execute.</param>
+            <returns>The value of the field.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDbCommandExtensions.ExecuteInt32(System.Data.IDbCommand)">
+            <summary>
+            Executes the query and returns the first column of the first row in the resultset returned by the query.
+            </summary>
+            <param name="command">The command to execute.</param>
+            <returns>The value of the field.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDbCommandExtensions.ExecuteInt64(System.Data.IDbCommand)">
+            <summary>
+            Executes the query and returns the first column of the first row in the resultset returned by the query.
+            </summary>
+            <param name="command">The command to execute.</param>
+            <returns>The value of the field.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDbCommandExtensions.ExecuteSingle(System.Data.IDbCommand)">
+            <summary>
+            Executes the query and returns the first column of the first row in the resultset returned by the query.
+            </summary>
+            <param name="command">The command to execute.</param>
+            <returns>The value of the field.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDbCommandExtensions.ExecuteString(System.Data.IDbCommand)">
+            <summary>
+            Executes the query and returns the first column of the first row in the resultset returned by the query.
+            </summary>
+            <param name="command">The command to execute.</param>
+            <returns>The value of the field.</returns>
+        </member>
+        <member name="T:System.Extensions.Data.IDbConnectionExtensions">
+            <summary>
+            Extension methods for an <see cref="T:System.Data.IDbConnection"/>.
+            </summary>
+        </member>
+        <member name="M:System.Extensions.Data.IDbConnectionExtensions.CreateCommand(System.Data.IDbConnection,System.String)">
+            <summary>
+            Creates and returns a <see cref="T:System.Data.IDbCommand"/> object associated with the connection.
+            </summary>
+            <param name="connection">The connection to associate the command to.</param>
+            <param name="commandText">The text of the command.</param>
+            <returns>An <see cref="T:System.Data.IDbCommand"/> object associated with the connection.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDbConnectionExtensions.CreateCommand(System.Data.IDbConnection,System.String,System.Data.CommandType)">
+            <summary>
+            Creates and returns a <see cref="T:System.Data.IDbCommand"/> object associated with the connection.
+            </summary>
+            <param name="connection">The connection to associate the command to.</param>
+            <param name="commandText">The text of the command.</param>
+            <param name="commandType">The type of the command.</param>
+            <returns>An <see cref="T:System.Data.IDbCommand"/> object associated with the connection.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDbConnectionExtensions.ExecuteCommandNonQuery(System.Data.IDbConnection,System.String)">
+            <summary>
+            Creates an appropriate <see cref="T:System.Data.IDbCommand"/> and executes a statement against the connection.
+            </summary>
+            <param name="connection">The connection to execute the command against.</param>
+            <param name="commandText">The text of the command to execute.</param>
+            <returns>The number of rows affected.</returns>
+        </member>
+        <member name="M:System.Extensions.Data.IDbConnectionExtensions.ExecuteCommandNonQuery(System.Data.IDbConnection,System.String,System.Data.CommandType)">
+            <summary>
+            Creates an appropriate <see cref="T:System.Data.IDbCommand"/> and executes a statement against the connection.
+            </summary>
+            <param name="connection">The connection to execute the command against.</param>
+            <param name="commandText">The text of the command to execute.</param>
+            <param name="commandType">The type of the command to execute.</param>
+            <returns>The number of rows affected.</returns>
+        </member>
+    </members>
+</doc>

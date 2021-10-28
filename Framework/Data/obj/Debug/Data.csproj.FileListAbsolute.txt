@@ -8,3 +8,11 @@ B:\NetFoundation\Verve Kits\verve patch\Framework\Framework\Data\obj\Debug\Data.
 B:\NetFoundation\Verve Kits\verve patch\Framework\Framework\Data\obj\Debug\Data.csproj.CoreCompileInputs.cache
 B:\NetFoundation\Verve Kits\verve patch\Framework\Framework\Data\obj\Debug\Data.dll
 B:\NetFoundation\Verve Kits\verve patch\Framework\Framework\Data\obj\Debug\Data.pdb
+B:\_GIT\OS\Projects\Framework-w-WebApp\Distro\XML\Data.xml
+B:\_GIT\OS\Projects\Framework-w-WebApp\Distro\Data.dll
+B:\_GIT\OS\Projects\Framework-w-WebApp\Distro\Data.pdb
+B:\_GIT\OS\Projects\Framework-w-WebApp\Distro\Data.xml
+B:\_GIT\OS\Projects\Framework-w-WebApp\Distro\Data.dll.CodeAnalysisLog.xml
+B:\_GIT\OS\Projects\Framework-w-WebApp\Distro\Data.dll.lastcodeanalysissucceeded
+B:\_GIT\OS\Projects\Framework-w-WebApp\Framework\Data\obj\Debug\Data.dll
+B:\_GIT\OS\Projects\Framework-w-WebApp\Framework\Data\obj\Debug\Data.pdb

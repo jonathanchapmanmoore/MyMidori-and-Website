@@ -8,3 +8,11 @@ B:\NetFoundation\Verve Kits\verve patch\Framework\Framework\Security\obj\Debug\S
 B:\NetFoundation\Verve Kits\verve patch\Framework\Framework\Security\obj\Debug\Security.csproj.CoreCompileInputs.cache
 B:\NetFoundation\Verve Kits\verve patch\Framework\Framework\Security\obj\Debug\Security.dll
 B:\NetFoundation\Verve Kits\verve patch\Framework\Framework\Security\obj\Debug\Security.pdb
+B:\_GIT\OS\Projects\Framework-w-WebApp\Distro\XML\Security.xml
+B:\_GIT\OS\Projects\Framework-w-WebApp\Distro\Security.dll
+B:\_GIT\OS\Projects\Framework-w-WebApp\Distro\Security.pdb
+B:\_GIT\OS\Projects\Framework-w-WebApp\Distro\Security.xml
+B:\_GIT\OS\Projects\Framework-w-WebApp\Distro\Security.dll.CodeAnalysisLog.xml
+B:\_GIT\OS\Projects\Framework-w-WebApp\Distro\Security.dll.lastcodeanalysissucceeded
+B:\_GIT\OS\Projects\Framework-w-WebApp\Framework\Security\obj\Debug\Security.dll
+B:\_GIT\OS\Projects\Framework-w-WebApp\Framework\Security\obj\Debug\Security.pdb

@@ -15,3 +15,9 @@ B:\NetFoundation\Verve Kits\verve patch\Framework\Framework\Text\obj\Debug\Text.
 B:\NetFoundation\Verve Kits\verve patch\Framework\Framework\Text\obj\Debug\Text.csproj.CoreCompileInputs.cache
 B:\NetFoundation\Verve Kits\verve patch\Framework\Framework\Text\obj\Debug\Text.dll
 B:\NetFoundation\Verve Kits\verve patch\Framework\Framework\Text\obj\Debug\Text.pdb
+B:\_GIT\OS\Projects\Framework-w-WebApp\Distro\XML\Text.xml
+B:\_GIT\OS\Projects\Framework-w-WebApp\Distro\Text.dll
+B:\_GIT\OS\Projects\Framework-w-WebApp\Distro\Text.pdb
+B:\_GIT\OS\Projects\Framework-w-WebApp\Distro\Text.xml
+B:\_GIT\OS\Projects\Framework-w-WebApp\Framework\Text\obj\Debug\Text.dll
+B:\_GIT\OS\Projects\Framework-w-WebApp\Framework\Text\obj\Debug\Text.pdb

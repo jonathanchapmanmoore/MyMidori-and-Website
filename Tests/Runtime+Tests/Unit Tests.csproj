@@ -66,9 +66,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Samples\Runtime+ Demo\RuntimePlus_Demo.csproj">
+    <ProjectReference Include="..\..\Samples\Runtime+ Demo\Demo.csproj">
       <Project>{FC488574-CC6B-434F-8672-5C3FBAB59569}</Project>
-      <Name>RuntimePlus_Demo</Name>
+      <Name>Demo</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

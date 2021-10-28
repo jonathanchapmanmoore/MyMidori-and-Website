@@ -8,3 +8,12 @@ B:\NetFoundation\Verve Kits\verve patch\Framework\Framework\Collections\obj\Debu
 B:\NetFoundation\Verve Kits\verve patch\Framework\Framework\Collections\obj\Debug\Collections.csproj.CoreCompileInputs.cache
 B:\NetFoundation\Verve Kits\verve patch\Framework\Framework\Collections\obj\Debug\Collections.dll
 B:\NetFoundation\Verve Kits\verve patch\Framework\Framework\Collections\obj\Debug\Collections.pdb
+B:\_GIT\OS\Projects\Framework-w-WebApp\Distro\XML\Collections.xml
+B:\_GIT\OS\Projects\Framework-w-WebApp\Distro\Collections.dll
+B:\_GIT\OS\Projects\Framework-w-WebApp\Distro\Collections.pdb
+B:\_GIT\OS\Projects\Framework-w-WebApp\Distro\Collections.xml
+B:\_GIT\OS\Projects\Framework-w-WebApp\Distro\Collections.dll.CodeAnalysisLog.xml
+B:\_GIT\OS\Projects\Framework-w-WebApp\Distro\Collections.dll.lastcodeanalysissucceeded
+B:\_GIT\OS\Projects\Framework-w-WebApp\Framework\Collections\obj\Debug\Collections.csprojResolveAssemblyReference.cache
+B:\_GIT\OS\Projects\Framework-w-WebApp\Framework\Collections\obj\Debug\Collections.dll
+B:\_GIT\OS\Projects\Framework-w-WebApp\Framework\Collections\obj\Debug\Collections.pdb
