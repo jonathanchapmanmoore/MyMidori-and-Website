@@ -28,10 +28,10 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 // </copyright>
 
-namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
+namespace MathNet.Numerics.LinearAlgebra.Complex32.Factorization
 {
-    using System.Numerics;
     using Generic.Factorization;
+    using Numerics;
 
     /// <summary>
     /// <para>A class which encapsulates the functionality of a Cholesky factorization.</para>
@@ -42,16 +42,16 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
     /// The computation of the Cholesky factorization is done at construction time. If the matrix is not symmetric
     /// or positive definite, the constructor will throw an exception.
     /// </remarks>
-    public abstract class Cholesky : Cholesky<Complex>
+    public abstract class Cholesky : Cholesky<Complex32>
     {
         /// <summary>
         /// Gets the determinant of the matrix for which the Cholesky matrix was computed.
         /// </summary>
-        public override Complex Determinant
+        public override Complex32 Determinant
         {
             get
             {
-                var det = Complex.One;
+                var det = Complex32.One;
                 for (var j = 0; j < CholeskyFactor.RowCount; j++)
                 {
                     var d = CholeskyFactor.At(j, j);
@@ -65,14 +65,14 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
         /// <summary>
         /// Gets the log determinant of the matrix for which the Cholesky matrix was computed.
         /// </summary>
-        public override Complex DeterminantLn
+        public override Complex32 DeterminantLn
         {
             get
             {
-                var det = Complex.Zero;
+                var det = Complex32.Zero;
                 for (var j = 0; j < CholeskyFactor.RowCount; j++)
                 {
-                    det += 2.0 * CholeskyFactor.At(j, j).NaturalLogarithm();
+                    det += 2.0f * CholeskyFactor.At(j, j).NaturalLogarithm();
                 }
 
                 return det;

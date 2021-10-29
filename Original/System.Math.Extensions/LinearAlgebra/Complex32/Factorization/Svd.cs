@@ -28,30 +28,30 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 // </copyright>
 
-namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
+namespace MathNet.Numerics.LinearAlgebra.Complex32.Factorization
 {
     using System;
     using System.Linq;
-    using System.Numerics;
     using Generic;
     using Generic.Factorization;
+    using Numerics;
     using Properties;
 
     /// <summary>
     /// <para>A class which encapsulates the functionality of the singular value decomposition (SVD).</para>
-    /// <para>Suppose M is an m-by-n matrix whose entries are real numbers.
+    /// <para>Suppose M is an m-by-n matrix whose entries are real numbers. 
     /// Then there exists a factorization of the form M = UΣVT where:
     /// - U is an m-by-m unitary matrix;
     /// - Σ is m-by-n diagonal matrix with nonnegative real numbers on the diagonal;
-    /// - VT denotes transpose of V, an n-by-n unitary matrix;
-    /// Such a factorization is called a singular-value decomposition of M. A common convention is to order the diagonal
-    /// entries Σ(i,i) in descending order. In this case, the diagonal matrix Σ is uniquely determined
+    /// - VT denotes transpose of V, an n-by-n unitary matrix; 
+    /// Such a factorization is called a singular-value decomposition of M. A common convention is to order the diagonal 
+    /// entries Σ(i,i) in descending order. In this case, the diagonal matrix Σ is uniquely determined 
     /// by M (though the matrices U and V are not). The diagonal entries of Σ are known as the singular values of M.</para>
     /// </summary>
     /// <remarks>
     /// The computation of the singular value decomposition is done at construction time.
     /// </remarks>
-    public abstract class Svd : Svd<Complex>
+    public abstract class Svd : Svd<Complex32>
     {
         /// <summary>
         /// Gets the effective numerical matrix rank.
@@ -61,7 +61,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
         {
             get
             {
-                return VectorS.Count(t => !t.Magnitude.AlmostEqual(0.0));
+                return VectorS.Count(t => !t.Magnitude.AlmostEqual(0.0f));
             }
         }
 
@@ -69,7 +69,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
         /// Gets the two norm of the <see cref="Matrix{T}"/>.
         /// </summary>
         /// <returns>The 2-norm of the <see cref="Matrix{T}"/>.</returns>
-        public override Complex Norm2
+        public override Complex32 Norm2
         {
             get
             {
@@ -81,7 +81,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
         /// Gets the condition number <b>max(S) / min(S)</b>
         /// </summary>
         /// <returns>The condition number.</returns>
-        public override Complex ConditionNumber
+        public override Complex32 ConditionNumber
         {
             get
             {
@@ -93,7 +93,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
         /// <summary>
         /// Gets the determinant of the square matrix for which the SVD was computed.
         /// </summary>
-        public override Complex Determinant
+        public override Complex32 Determinant
         {
             get
             {
@@ -102,11 +102,11 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
                     throw new ArgumentException(Resources.ArgumentMatrixSquare);
                 }
 
-                var det = Complex.One;
+                var det = Complex32.One;
                 foreach (var value in VectorS)
                 {
                     det *= value;
-                    if (value.Magnitude.AlmostEqual(0.0))
+                    if (value.Magnitude.AlmostEqual(0.0f))
                     {
                         return 0;
                     }

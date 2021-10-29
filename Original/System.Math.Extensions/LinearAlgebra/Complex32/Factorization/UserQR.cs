@@ -30,12 +30,12 @@
 
 using MathNet.Numerics.LinearAlgebra.Generic.Factorization;
 
-namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
+namespace MathNet.Numerics.LinearAlgebra.Complex32.Factorization
 {
     using System;
     using System.Linq;
-    using System.Numerics;
     using Generic;
+    using Numerics;
     using Properties;
     using Threading;
 
@@ -57,7 +57,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
         /// <param name="matrix">The matrix to factor.</param>
         /// <param name="method">The QR factorization method to use.</param>
         /// <exception cref="ArgumentNullException">If <paramref name="matrix"/> is <c>null</c>.</exception>
-        public UserQR(Matrix<Complex> matrix, QRMethod method = QRMethod.Full)
+        public UserQR(Matrix<Complex32> matrix, QRMethod method = QRMethod.Full)
         {
             if (matrix == null)
             {
@@ -71,7 +71,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
 
             QrMethod = method;
             var minmn = Math.Min(matrix.RowCount, matrix.ColumnCount);
-            var u = new Complex[minmn][];
+            var u = new Complex32[minmn][];
 
             if (method == QRMethod.Full)
             {
@@ -131,28 +131,28 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
         /// <param name="row">The first row</param>
         /// <param name="column">Column index</param>
         /// <returns>Generated vector</returns>
-        private static Complex[] GenerateColumn(Matrix<Complex> a, int row, int column)
+        private static Complex32[] GenerateColumn(Matrix<Complex32> a, int row, int column)
         {
             var ru = a.RowCount - row;
-            var u = new Complex[ru];
+            var u = new Complex32[ru];
 
             for (var i = row; i < a.RowCount; i++)
             {
                 u[i - row] = a.At(i, column);
-                a.At(i, column, 0.0);
+                a.At(i, column, 0.0f);
             }
 
-            var norm = u.Aggregate(Complex.Zero, (current, t) => current + (t.Magnitude * t.Magnitude));
+            var norm = u.Aggregate(Complex32.Zero, (current, t) => current + (t.Magnitude * t.Magnitude));
             norm = norm.SquareRoot();
 
             if (row == a.RowCount - 1 || norm.Magnitude == 0)
             {
                 a.At(row, column, -u[0]);
-                u[0] = Math.Sqrt(2.0);
+                u[0] = (float)Math.Sqrt(2.0);
                 return u;
             }
 
-            if (u[0].Magnitude != 0.0)
+            if (u[0].Magnitude != 0.0f)
             {
                 norm = norm.Magnitude * (u[0] / u[0].Magnitude);
             }
@@ -164,9 +164,9 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
                 u[i] /= norm;
             }
 
-            u[0] += 1.0;
+            u[0] += 1.0f;
 
-            var s = (1.0 / u[0]).SquareRoot();
+            var s = (1.0f / u[0]).SquareRoot();
             for (var i = 0; i < ru; i++)
             {
                 u[i] = u[i].Conjugate() * s;
@@ -185,7 +185,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
         /// <param name="columnStart">The first column</param>
         /// <param name="columnDim">The last column</param>
         /// <param name="availableCores">Number of available CPUs</param>
-        private static void ComputeQR(Complex[] u, Matrix<Complex> a, int rowStart, int rowDim, int columnStart, int columnDim, int availableCores)
+        private static void ComputeQR(Complex32[] u, Matrix<Complex32> a, int rowStart, int rowDim, int columnStart, int columnDim, int availableCores)
         {
             if (rowDim < rowStart || columnDim < columnStart)
             {
@@ -207,7 +207,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
             {
                 for (var j = columnStart; j < columnDim; j++)
                 {
-                    var scale = Complex.Zero;
+                    var scale = Complex32.Zero;
                     for (var i = rowStart; i < rowDim; i++)
                     {
                         scale += u[i - rowStart] * a.At(i, j);
@@ -226,7 +226,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
         /// </summary>
         /// <param name="input">The right hand side <see cref="Matrix{T}"/>, <b>B</b>.</param>
         /// <param name="result">The left hand side <see cref="Matrix{T}"/>, <b>X</b>.</param>
-        public override void Solve(Matrix<Complex> input, Matrix<Complex> result)
+        public override void Solve(Matrix<Complex32> input, Matrix<Complex32> result)
         {
             // Check for proper arguments.
             if (input == null)
@@ -260,7 +260,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
             var inputCopy = input.Clone();
 
             // Compute Y = transpose(Q)*B
-            var column = new Complex[MatrixR.RowCount];
+            var column = new Complex32[MatrixR.RowCount];
             for (var j = 0; j < input.ColumnCount; j++)
             {
                 for (var k = 0; k < MatrixR.RowCount; k++)
@@ -270,7 +270,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
 
                 for (var i = 0; i < MatrixR.RowCount; i++)
                 {
-                    var s = Complex.Zero;
+                    var s = Complex32.Zero;
                     for (var k = 0; k < MatrixR.RowCount; k++)
                     {
                         s += MatrixQ.At(k, i).Conjugate() * column[k];
@@ -311,7 +311,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
         /// </summary>
         /// <param name="input">The right hand side vector, <b>b</b>.</param>
         /// <param name="result">The left hand side <see cref="Matrix{T}"/>, <b>x</b>.</param>
-        public override void Solve(Vector<Complex> input, Vector<Complex> result)
+        public override void Solve(Vector<Complex32> input, Vector<Complex32> result)
         {
             if (input == null)
             {
@@ -339,7 +339,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
             var inputCopy = input.Clone();
 
             // Compute Y = transpose(Q)*B
-            var column = new Complex[MatrixR.RowCount];
+            var column = new Complex32[MatrixR.RowCount];
             for (var k = 0; k < MatrixR.RowCount; k++)
             {
                 column[k] = inputCopy[k];
@@ -347,7 +347,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
 
             for (var i = 0; i < MatrixR.RowCount; i++)
             {
-                var s = Complex.Zero;
+                var s = Complex32.Zero;
                 for (var k = 0; k < MatrixR.RowCount; k++)
                 {
                     s += MatrixQ.At(k, i).Conjugate() * column[k];

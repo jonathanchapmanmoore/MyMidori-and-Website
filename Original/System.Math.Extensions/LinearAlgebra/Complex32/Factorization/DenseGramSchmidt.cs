@@ -30,11 +30,11 @@
 
 using MathNet.Numerics.LinearAlgebra.Generic.Factorization;
 
-namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
+namespace MathNet.Numerics.LinearAlgebra.Complex32.Factorization
 {
     using System;
-    using System.Numerics;
     using Generic;
+    using Numerics;
     using Properties;
 
     /// <summary>
@@ -83,18 +83,18 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
         /// <param name="rowsQ">Number of rows in <see cref="Matrix{T}"/> Q.</param>
         /// <param name="columnsQ">Number of columns in <see cref="Matrix{T}"/> Q.</param>
         /// <param name="r">On exit is filled by <see cref="Matrix{T}"/> R.</param>
-        private static void Factorize(Complex[] q, int rowsQ, int columnsQ, Complex[] r)
+        private static void Factorize(Complex32[] q, int rowsQ, int columnsQ, Complex32[] r)
         {
             for (var k = 0; k < columnsQ; k++)
             {
-                var norm = 0.0;
+                var norm = 0.0f;
                 for (var i = 0; i < rowsQ; i++)
                 {
                     norm += q[(k * rowsQ) + i].Magnitude * q[(k * rowsQ) + i].Magnitude;
                 }
 
-                norm = Math.Sqrt(norm);
-                if (norm == 0.0)
+                norm = (float)Math.Sqrt(norm);
+                if (norm == 0.0f)
                 {
                     throw new ArgumentException(Resources.ArgumentMatrixNotRankDeficient);
                 }
@@ -110,12 +110,12 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
                     var k1 = k;
                     var j1 = j;
 
-                    var dot = Complex.Zero;
+                    var dot = Complex32.Zero;
                     for (var index = 0; index < rowsQ; index++)
                     {
                         dot += q[(k1 * rowsQ) + index].Conjugate() * q[(j1 * rowsQ) + index];
-                    } 
-
+                    }
+                    
                     r[(j * columnsQ) + k] = dot;
                     for (var i = 0; i < rowsQ; i++)
                     {
@@ -131,7 +131,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
         /// </summary>
         /// <param name="input">The right hand side <see cref="Matrix{T}"/>, <b>B</b>.</param>
         /// <param name="result">The left hand side <see cref="Matrix{T}"/>, <b>X</b>.</param>
-        public override void Solve(Matrix<Complex> input, Matrix<Complex> result)
+        public override void Solve(Matrix<Complex32> input, Matrix<Complex32> result)
         {
             // Check for proper arguments.
             if (input == null)
@@ -182,7 +182,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
         /// </summary>
         /// <param name="input">The right hand side vector, <b>b</b>.</param>
         /// <param name="result">The left hand side <see cref="Matrix{T}"/>, <b>x</b>.</param>
-        public override void Solve(Vector<Complex> input, Vector<Complex> result)
+        public override void Solve(Vector<Complex32> input, Vector<Complex32> result)
         {
             if (input == null)
             {

@@ -24,10 +24,10 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 // </copyright>
 
-namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
+namespace MathNet.Numerics.LinearAlgebra.Complex32.Factorization
 {
-    using System.Numerics;
     using Generic.Factorization;
+    using Numerics;
 
     /// <summary>
     /// <para>A class which encapsulates the functionality of an LU factorization.</para>
@@ -39,16 +39,16 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
     /// <remarks>
     /// The computation of the LU factorization is done at construction time.
     /// </remarks>
-    public abstract class LU : LU<Complex>
+    public abstract class LU : LU<Complex32>
     {
         /// <summary>
         /// Gets the determinant of the matrix for which the LU factorization was computed.
         /// </summary>
-        public override Complex Determinant
+        public override Complex32 Determinant
         {
             get
             {
-                var det = Complex.One;
+                var det = Complex32.One;
                 for (var j = 0; j < Factors.RowCount; j++)
                 {
                     if (Pivots[j] != j)

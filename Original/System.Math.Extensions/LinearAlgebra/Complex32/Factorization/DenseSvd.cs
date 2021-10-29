@@ -27,11 +27,11 @@
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 // OTHER DEALINGS IN THE SOFTWARE.
 // </copyright>
-namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
+namespace MathNet.Numerics.LinearAlgebra.Complex32.Factorization
 {
     using System;
-    using System.Numerics;
     using Generic;
+    using Numerics;
     using Properties;
 
     /// <summary>
@@ -78,7 +78,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
         /// </summary>
         /// <param name="input">The right hand side <see cref="Matrix{T}"/>, <b>B</b>.</param>
         /// <param name="result">The left hand side <see cref="Matrix{T}"/>, <b>X</b>.</param>
-        public override void Solve(Matrix<Complex> input, Matrix<Complex> result)
+        public override void Solve(Matrix<Complex32> input, Matrix<Complex32> result)
         {
             // Check for proper arguments.
             if (input == null)
@@ -134,7 +134,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
         /// </summary>
         /// <param name="input">The right hand side vector, <b>b</b>.</param>
         /// <param name="result">The left hand side <see cref="Matrix{T}"/>, <b>x</b>.</param>
-        public override void Solve(Vector<Complex> input, Vector<Complex> result)
+        public override void Solve(Vector<Complex32> input, Vector<Complex32> result)
         {
             if (input == null)
             {

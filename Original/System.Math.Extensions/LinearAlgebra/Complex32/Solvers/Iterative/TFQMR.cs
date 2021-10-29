@@ -28,11 +28,11 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 // </copyright>
 
-namespace MathNet.Numerics.LinearAlgebra.Complex.Solvers.Iterative
+namespace MathNet.Numerics.LinearAlgebra.Complex32.Solvers.Iterative
 {
     using System;
-    using System.Numerics;
     using Generic.Solvers.Status;
+    using Numerics;
     using Preconditioners;
     using Properties;
 
@@ -240,9 +240,14 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Solvers.Iterative
                 throw new ArgumentNullException("result");
             }
 
-            if (input.Count != matrix.RowCount || result.Count != input.Count)
+            if (result.Count != input.Count)
             {
-                throw Matrix.DimensionsDontMatch<ArgumentException>(matrix, input, result);
+                throw new ArgumentException(Resources.ArgumentVectorsSameLength);
+            }
+
+            if (input.Count != matrix.RowCount)
+            {
+                throw Matrix.DimensionsDontMatch<ArgumentException>(input, matrix);
             }
 
             // Initialize the solver fields
@@ -281,12 +286,12 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Solvers.Iterative
             var startNorm = input.Norm(2);
 
             // Define the scalars
-            Complex alpha = 0;
-            Complex eta = 0;
-            double theta = 0;
+            Complex32 alpha = 0;
+            Complex32 eta = 0;
+            float theta = 0;
 
             var tau = startNorm.Real;
-            Complex rho = tau*tau;
+            Complex32 rho = tau*tau;
 
             // Calculate the initial values for v
             // M temp = yEven
@@ -345,7 +350,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Solvers.Iterative
 
                 // theta = ||pseudoResiduals||_2 / tau
                 theta = pseudoResiduals.Norm(2).Real/tau;
-                var c = 1/Math.Sqrt(1 + (theta*theta));
+                var c = 1/(float) Math.Sqrt(1 + (theta*theta));
 
                 // tau = tau * theta * c
                 tau *= theta*c;
@@ -520,7 +525,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Solvers.Iterative
 
             if (matrix.RowCount != input.RowCount || input.RowCount != result.RowCount || input.ColumnCount != result.ColumnCount)
             {
-                throw Matrix.DimensionsDontMatch<ArgumentException>(matrix, input, result);
+                throw Matrix.DimensionsDontMatch<ArgumentException>(input, matrix, result);
             }
 
             for (var column = 0; column < input.ColumnCount; column++)

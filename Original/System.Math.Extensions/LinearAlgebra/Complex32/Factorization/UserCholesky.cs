@@ -28,11 +28,11 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 // </copyright>
 
-namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
+namespace MathNet.Numerics.LinearAlgebra.Complex32.Factorization
 {
     using System;
-    using System.Numerics;
     using Generic;
+    using Numerics;
     using Properties;
     using Threading;
 
@@ -55,7 +55,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
         /// <exception cref="ArgumentNullException">If <paramref name="matrix"/> is <c>null</c>.</exception>
         /// <exception cref="ArgumentException">If <paramref name="matrix"/> is not a square matrix.</exception>
         /// <exception cref="ArgumentException">If <paramref name="matrix"/> is not positive definite.</exception>
-        public UserCholesky(Matrix<Complex> matrix)
+        public UserCholesky(Matrix<Complex32> matrix)
         {
             if (matrix == null)
             {
@@ -69,7 +69,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
 
             // Create a new matrix for the Cholesky factor, then perform factorization (while overwriting).
             CholeskyFactor = matrix.Clone();
-            var tmpColumn = new Complex[CholeskyFactor.RowCount];
+            var tmpColumn = new Complex32[CholeskyFactor.RowCount];
 
             // Main loop - along the diagonal
             for (var ij = 0; ij < CholeskyFactor.RowCount; ij++)
@@ -101,7 +101,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
 
                 for (var i = ij + 1; i < CholeskyFactor.RowCount; i++)
                 {
-                    CholeskyFactor.At(ij, i, Complex.Zero);
+                    CholeskyFactor.At(ij, i, Complex32.Zero);
                 }
             }
         }
@@ -115,7 +115,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
         /// <param name="colLimit">Total columns</param>
         /// <param name="multipliers">Multipliers calculated previously</param>
         /// <param name="availableCores">Number of available processors</param>
-        private static void DoCholeskyStep(Matrix<Complex> data, int rowDim, int firstCol, int colLimit, Complex[] multipliers, int availableCores)
+        private static void DoCholeskyStep(Matrix<Complex32> data, int rowDim, int firstCol, int colLimit, Complex32[] multipliers, int availableCores)
         {
             var tmpColCount = colLimit - firstCol;
 
@@ -146,7 +146,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
         /// </summary>
         /// <param name="input">The right hand side <see cref="Matrix{T}"/>, <b>B</b>.</param>
         /// <param name="result">The left hand side <see cref="Matrix{T}"/>, <b>X</b>.</param>
-        public override void Solve(Matrix<Complex> input, Matrix<Complex> result)
+        public override void Solve(Matrix<Complex32> input, Matrix<Complex32> result)
         {
             if (input == null)
             {
@@ -180,7 +180,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
             for (var c = 0; c < result.ColumnCount; c++)
             {
                 // Solve L*Y = B;
-                Complex sum;
+                Complex32 sum;
                 for (var i = 0; i < order; i++)
                 {
                     sum = result.At(i, c);
@@ -211,7 +211,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
         /// </summary>
         /// <param name="input">The right hand side vector, <b>b</b>.</param>
         /// <param name="result">The left hand side <see cref="Matrix{T}"/>, <b>x</b>.</param>
-        public override void Solve(Vector<Complex> input, Vector<Complex> result)
+        public override void Solve(Vector<Complex32> input, Vector<Complex32> result)
         {
             // Check for proper arguments.
             if (input == null)
@@ -239,7 +239,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
             var order = CholeskyFactor.RowCount;
 
             // Solve L*Y = B;
-            Complex sum;
+            Complex32 sum;
             for (var i = 0; i < order; i++)
             {
                 sum = result[i];

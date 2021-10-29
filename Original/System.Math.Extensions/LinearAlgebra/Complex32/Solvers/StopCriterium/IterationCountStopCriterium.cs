@@ -28,7 +28,7 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 // </copyright>
 
-namespace MathNet.Numerics.LinearAlgebra.Complex.Solvers.StopCriterium
+namespace MathNet.Numerics.LinearAlgebra.Complex32.Solvers.StopCriterium
 {
     using System;
     using System.Diagnostics;

@@ -28,15 +28,15 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 // </copyright>
 
-namespace MathNet.Numerics.LinearAlgebra.Complex.Solvers.Iterative
+namespace MathNet.Numerics.LinearAlgebra.Complex32.Solvers.Iterative
 {
     using System;
     using System.Collections.Generic;
     using System.Diagnostics;
     using System.Linq;
-    using System.Numerics;
     using Distributions;
     using Generic.Solvers.Status;
+    using Numerics;
     using Preconditioners;
     using Properties;
 
@@ -327,9 +327,14 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Solvers.Iterative
                 throw new ArgumentNullException("result");
             }
 
-            if (input.Count != matrix.RowCount || result.Count != input.Count)
+            if (result.Count != input.Count)
             {
-                throw Matrix.DimensionsDontMatch<ArgumentException>(matrix, input, result);
+                throw new ArgumentException(Resources.ArgumentVectorsSameLength);
+            }
+
+            if (input.Count != matrix.RowCount)
+            {
+                throw Matrix.DimensionsDontMatch<ArgumentException>(input, matrix);
             }
 
             // Initialize the solver fields
@@ -381,7 +386,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Solvers.Iterative
             CalculateTrueResidual(matrix, residuals, xtemp, input);
 
             // Define the temporary values
-            var c = new Complex[k];
+            var c = new Complex32[k];
 
             // Define the temporary vectors
             Vector gtemp = new DenseVector(residuals.Count);
@@ -441,7 +446,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Solvers.Iterative
                 // So set rho to 1.0 because in the next step it will turn to zero.
                 if (rho.Real.AlmostEqual(0, 1) && rho.Imaginary.AlmostEqual(0, 1))
                 {
-                    rho = 1.0;
+                    rho = 1.0f;
                 }
 
                 rho = -u.DotProduct(temp) / rho;
@@ -491,7 +496,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Solvers.Iterative
                     zw.Clear();
 
                     // FOR (s = i, ...., k-1) AND j >= 1
-                    Complex beta;
+                    Complex32 beta;
                     if (iterationNumber >= 1)
                     {
                         for (var s = i; s < k - 1; s++)
@@ -652,12 +657,12 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Solvers.Iterative
             Matrix matrix = new DenseMatrix(numberOfVariables, count);
             for (var i = 0; i < matrix.ColumnCount; i++)
             {
-                var samples = new Complex[matrix.RowCount];
+                var samples = new Complex32[matrix.RowCount];
                 var samplesRe = distribution.Samples().Take(matrix.RowCount).ToArray();
                 var samplesIm = distribution.Samples().Take(matrix.RowCount).ToArray();
                 for (int j = 0; j < matrix.RowCount; j++)
                 {
-                    samples[j] = new Complex(samplesRe[j], samplesIm[j]);
+                    samples[j] = new Complex32((float)samplesRe[j], (float)samplesIm[j]);
                 }
 
                 // Set the column
@@ -675,14 +680,14 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Solvers.Iterative
                 result.Add((Vector)orthogonalMatrix.Column(i));
                 
                 // Normalize the result vector
-                result[i].Multiply(1 / result[i].Norm(2), result[i]);
+                result[i].Multiply(1 / result[i].Norm(2).Real, result[i]);
             }
 
             return result;
         }
 
         /// <summary>
-        /// Create random vecrors array
+        /// Create random vectors array
         /// </summary>
         /// <param name="arraySize">Number of vectors</param>
         /// <param name="vectorSize">Size of each vector</param>

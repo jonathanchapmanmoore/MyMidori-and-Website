@@ -28,23 +28,23 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 // </copyright>
 
-namespace MathNet.Numerics.LinearAlgebra.Complex
+namespace MathNet.Numerics.LinearAlgebra.Complex32
 {
     using Algorithms.LinearAlgebra;
     using Distributions;
     using Generic;
+    using Numerics;
     using Properties;
     using Storage;
     using System;
     using System.Collections.Generic;
     using System.Diagnostics;
-    using System.Numerics;
 
     /// <summary>
     /// A Matrix class with dense storage. The underlying storage is a one dimensional array in column-major order (column by column).
     /// </summary>
     [Serializable]
-    [DebuggerDisplay("DenseMatrix {RowCount}x{ColumnCount}-Complex")]
+    [DebuggerDisplay("DenseMatrix {RowCount}x{ColumnCount}-Complex32")]
     public class DenseMatrix : Matrix
     {
         /// <summary>
@@ -52,20 +52,20 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// </summary>
         /// <remarks>Using this instead of the RowCount property to speed up calculating
         /// a matrix index in the data array.</remarks>
-        readonly int _rowCount;
+        private readonly int _rowCount;
 
         /// <summary>
         /// Number of columns.
         /// </summary>
         /// <remarks>Using this instead of the ColumnCount property to speed up calculating
         /// a matrix index in the data array.</remarks>
-        readonly int _columnCount;
+        private readonly int _columnCount;
 
         /// <summary>
         /// Gets the matrix's data.
         /// </summary>
         /// <value>The matrix's data.</value>
-        readonly Complex[] _values;
+        readonly Complex32[] _values;
 
         /// <summary>
         /// Create a new dense matrix straight from an initialized matrix storage instance.
@@ -73,7 +73,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// Intended for advanced scenarios where you're working directly with
         /// storage for performance or interop reasons.
         /// </summary>
-        public DenseMatrix(DenseColumnMajorMatrixStorage<Complex> storage)
+        public DenseMatrix(DenseColumnMajorMatrixStorage<Complex32> storage)
             : base(storage)
         {
             _rowCount = storage.RowCount;
@@ -88,7 +88,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// </summary>
         /// <exception cref="ArgumentException">If the order is less than one.</exception>
         public DenseMatrix(int order)
-            : this(new DenseColumnMajorMatrixStorage<Complex>(order, order))
+            : this(new DenseColumnMajorMatrixStorage<Complex32>(order, order))
         {
         }
 
@@ -99,7 +99,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// </summary>
         /// <exception cref="ArgumentException">If the row or column count is less than one.</exception>
         public DenseMatrix(int rows, int columns)
-            : this(new DenseColumnMajorMatrixStorage<Complex>(rows, columns))
+            : this(new DenseColumnMajorMatrixStorage<Complex32>(rows, columns))
         {
         }
 
@@ -109,8 +109,8 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// Very efficient, but changes to the array and the matrix will affect each other.
         /// </summary>
         /// <seealso href="http://en.wikipedia.org/wiki/Row-major_order"/>
-        public DenseMatrix(int rows, int columns, Complex[] storage)
-            : this(new DenseColumnMajorMatrixStorage<Complex>(rows, columns, storage))
+        public DenseMatrix(int rows, int columns, Complex32[] storage)
+            : this(new DenseColumnMajorMatrixStorage<Complex32>(rows, columns, storage))
         {
         }
 
@@ -119,9 +119,9 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// This new matrix will be independent from the other matrix.
         /// A new memory block will be allocated for storing the matrix.
         /// </summary>
-        public static DenseMatrix OfMatrix(Matrix<Complex> matrix)
+        public static DenseMatrix OfMatrix(Matrix<Complex32> matrix)
         {
-            return new DenseMatrix(DenseColumnMajorMatrixStorage<Complex>.OfMatrix(matrix.Storage));
+            return new DenseMatrix(DenseColumnMajorMatrixStorage<Complex32>.OfMatrix(matrix.Storage));
         }
 
         /// <summary>
@@ -129,9 +129,9 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// This new matrix will be independent from the provided array.
         /// A new memory block will be allocated for storing the matrix.
         /// </summary>
-        public static DenseMatrix OfArray(Complex[,] array)
+        public static DenseMatrix OfArray(Complex32[,] array)
         {
-            return new DenseMatrix(DenseColumnMajorMatrixStorage<Complex>.OfArray(array));
+            return new DenseMatrix(DenseColumnMajorMatrixStorage<Complex32>.OfArray(array));
         }
 
         /// <summary>
@@ -140,9 +140,9 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// This new matrix will be independent from the enumerable.
         /// A new memory block will be allocated for storing the matrix.
         /// </summary>
-        public static DenseMatrix OfIndexed(int rows, int columns, IEnumerable<Tuple<int, int, Complex>> enumerable)
+        public static DenseMatrix OfIndexed(int rows, int columns, IEnumerable<Tuple<int, int, Complex32>> enumerable)
         {
-            return new DenseMatrix(DenseColumnMajorMatrixStorage<Complex>.OfIndexedEnumerable(rows, columns, enumerable));
+            return new DenseMatrix(DenseColumnMajorMatrixStorage<Complex32>.OfIndexedEnumerable(rows, columns, enumerable));
         }
 
         /// <summary>
@@ -151,9 +151,9 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// This new matrix will be independent from the enumerable.
         /// A new memory block will be allocated for storing the matrix.
         /// </summary>
-        public static DenseMatrix OfColumnMajor(int rows, int columns, IEnumerable<Complex> columnMajor)
+        public static DenseMatrix OfColumnMajor(int rows, int columns, IEnumerable<Complex32> columnMajor)
         {
-            return new DenseMatrix(DenseColumnMajorMatrixStorage<Complex>.OfColumnMajorEnumerable(rows, columns, columnMajor));
+            return new DenseMatrix(DenseColumnMajorMatrixStorage<Complex32>.OfColumnMajorEnumerable(rows, columns, columnMajor));
         }
 
         /// <summary>
@@ -162,9 +162,9 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// This new matrix will be independent from the enumerables.
         /// A new memory block will be allocated for storing the matrix.
         /// </summary>
-        public static DenseMatrix OfColumns(int rows, int columns, IEnumerable<IEnumerable<Complex>> data)
+        public static DenseMatrix OfColumns(int rows, int columns, IEnumerable<IEnumerable<Complex32>> data)
         {
-            return new DenseMatrix(DenseColumnMajorMatrixStorage<Complex>.OfColumnEnumerables(rows, columns, data));
+            return new DenseMatrix(DenseColumnMajorMatrixStorage<Complex32>.OfColumnEnumerables(rows, columns, data));
         }
 
         /// <summary>
@@ -174,9 +174,9 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// A new memory block will be allocated for storing the matrix.
         /// </summary>
         public static DenseMatrix OfColumnsCovariant<TColumn>(int rows, int columns, IEnumerable<TColumn> data)
-            where TColumn : IEnumerable<Complex>
+            where TColumn : IEnumerable<Complex32>
         {
-            return new DenseMatrix(DenseColumnMajorMatrixStorage<Complex>.OfColumnEnumerables(rows, columns, data));
+            return new DenseMatrix(DenseColumnMajorMatrixStorage<Complex32>.OfColumnEnumerables(rows, columns, data));
         }
 
         /// <summary>
@@ -185,9 +185,9 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// This new matrix will be independent from the enumerables.
         /// A new memory block will be allocated for storing the matrix.
         /// </summary>
-        public static DenseMatrix OfRows(int rows, int columns, IEnumerable<IEnumerable<Complex>> data)
+        public static DenseMatrix OfRows(int rows, int columns, IEnumerable<IEnumerable<Complex32>> data)
         {
-            return new DenseMatrix(DenseColumnMajorMatrixStorage<Complex>.OfRowEnumerables(rows, columns, data));
+            return new DenseMatrix(DenseColumnMajorMatrixStorage<Complex32>.OfRowEnumerables(rows, columns, data));
         }
 
         /// <summary>
@@ -197,17 +197,17 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// A new memory block will be allocated for storing the matrix.
         /// </summary>
         public static DenseMatrix OfRowsCovariant<TRow>(int rows, int columns, IEnumerable<TRow> data)
-            where TRow : IEnumerable<Complex>
+            where TRow : IEnumerable<Complex32>
         {
-            return new DenseMatrix(DenseColumnMajorMatrixStorage<Complex>.OfRowEnumerables(rows, columns, data));
+            return new DenseMatrix(DenseColumnMajorMatrixStorage<Complex32>.OfRowEnumerables(rows, columns, data));
         }
 
         /// <summary>
         /// Create a new dense matrix and initialize each value using the provided init function.
         /// </summary>
-        public static DenseMatrix Create(int rows, int columns, Func<int, int, Complex> init)
+        public static DenseMatrix Create(int rows, int columns, Func<int, int, Complex32> init)
         {
-            return new DenseMatrix(DenseColumnMajorMatrixStorage<Complex>.OfInit(rows, columns, init));
+            return new DenseMatrix(DenseColumnMajorMatrixStorage<Complex32>.OfInit(rows, columns, init));
         }
 
         /// <summary>
@@ -215,8 +215,8 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// </summary>
         public static DenseMatrix CreateRandom(int rows, int columns, IContinuousDistribution distribution)
         {
-            return new DenseMatrix(DenseColumnMajorMatrixStorage<Complex>.OfInit(rows, columns,
-                (i, j) => new Complex(distribution.Sample(), distribution.Sample())));
+            return new DenseMatrix(DenseColumnMajorMatrixStorage<Complex32>.OfInit(rows, columns,
+                (i, j) => new Complex32((float) distribution.Sample(), (float) distribution.Sample())));
         }
 
         /// <summary>
@@ -226,8 +226,8 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// </summary>
         /// <exception cref="ArgumentException">If the row or column count is less than one.</exception>
         [Obsolete("Use DenseMatrix.Create instead. Scheduled for removal in v3.0.")]
-        public DenseMatrix(int rows, int columns, Complex value)
-            : this(DenseColumnMajorMatrixStorage<Complex>.OfInit(rows, columns, (i, j) => value))
+        public DenseMatrix(int rows, int columns, Complex32 value)
+            : this(DenseColumnMajorMatrixStorage<Complex32>.OfInit(rows, columns, (i, j) => value))
         {
         }
 
@@ -237,8 +237,8 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// A new memory block will be allocated for storing the matrix.
         /// </summary>
         [Obsolete("Use DenseMatrix.OfArray instead. Scheduled for removal in v3.0.")]
-        public DenseMatrix(Complex[,] array)
-            : this(DenseColumnMajorMatrixStorage<Complex>.OfArray(array))
+        public DenseMatrix(Complex32[,] array)
+            : this(DenseColumnMajorMatrixStorage<Complex32>.OfArray(array))
         {
         }
 
@@ -248,8 +248,8 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// A new memory block will be allocated for storing the matrix.
         /// </summary>
         [Obsolete("Use DenseMatrix.OfMatrix instead. Scheduled for removal in v3.0.")]
-        public DenseMatrix(Matrix<Complex> matrix)
-            : this(DenseColumnMajorMatrixStorage<Complex>.OfMatrix(matrix.Storage))
+        public DenseMatrix(Matrix<Complex32> matrix)
+            : this(DenseColumnMajorMatrixStorage<Complex32>.OfMatrix(matrix.Storage))
         {
         }
 
@@ -258,7 +258,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// </summary>
         /// <value>The matrix's data.</value>
         [Obsolete("Use Values instead. Scheduled for removal in v3.0.")]
-        public Complex[] Data
+        public Complex32[] Data
         {
             get { return _values; }
         }
@@ -267,7 +267,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// Gets the matrix's data.
         /// </summary>
         /// <value>The matrix's data.</value>
-        public Complex[] Values
+        public Complex32[] Values
         {
             get { return _values; }
         }
@@ -281,7 +281,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// <returns>
         /// A <c>DenseMatrix</c> with the given dimensions.
         /// </returns>
-        public override Matrix<Complex> CreateMatrix(int numberOfRows, int numberOfColumns, bool fullyMutable = false)
+        public override Matrix<Complex32> CreateMatrix(int numberOfRows, int numberOfColumns, bool fullyMutable = false)
         {
             return new DenseMatrix(numberOfRows, numberOfColumns);
         }
@@ -294,7 +294,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// <returns>
         /// A <see cref="Vector{T}"/> with the given dimension.
         /// </returns>
-        public override Vector<Complex> CreateVector(int size, bool fullyMutable = false)
+        public override Vector<Complex32> CreateVector(int size, bool fullyMutable = false)
         {
             return new DenseVector(size);
         }
@@ -303,7 +303,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// Returns the transpose of this matrix.
         /// </summary>
         /// <returns>The transpose of this matrix.</returns>
-        public override Matrix<Complex> Transpose()
+        public override Matrix<Complex32> Transpose()
         {
             var ret = new DenseMatrix(_columnCount, _rowCount);
             for (var j = 0; j < _columnCount; j++)
@@ -320,21 +320,21 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
 
         /// <summary>Calculates the L1 norm.</summary>
         /// <returns>The L1 norm of the matrix.</returns>
-        public override Complex L1Norm()
+        public override Complex32 L1Norm()
         {
             return Control.LinearAlgebraProvider.MatrixNorm(Norm.OneNorm, _rowCount, _columnCount, _values);
         }
 
         /// <summary>Calculates the Frobenius norm of this matrix.</summary>
         /// <returns>The Frobenius norm of this matrix.</returns>
-        public override Complex FrobeniusNorm()
+        public override Complex32 FrobeniusNorm()
         {
             return Control.LinearAlgebraProvider.MatrixNorm(Norm.FrobeniusNorm, _rowCount, _columnCount, _values);
         }
 
         /// <summary>Calculates the infinity norm of this matrix.</summary>
         /// <returns>The infinity norm of this matrix.</returns>
-        public override Complex InfinityNorm()
+        public override Complex32 InfinityNorm()
         {
             return Control.LinearAlgebraProvider.MatrixNorm(Norm.InfinityNorm, _rowCount, _columnCount, _values);
         }
@@ -354,7 +354,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
             var m = new DenseMatrix(order);
             for (var i = 0; i < order; i++)
             {
-                m._values[(i * order) + i] = 1.0;
+                m._values[(i * order) + i] = 1.0f;
             }
 
             return m;
@@ -367,7 +367,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// </summary>
         /// <param name="scalar">The scalar to multiply the matrix with.</param>
         /// <param name="result">The matrix to store the result of the multiplication.</param>
-        protected override void DoMultiply(Complex scalar, Matrix<Complex> result)
+        protected override void DoMultiply(Complex32 scalar, Matrix<Complex32> result)
         {
             var denseResult = result as DenseMatrix;
             if (denseResult == null)
@@ -385,7 +385,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// </summary>
         /// <param name="rightSide">The vector to multiply with.</param>
         /// <param name="result">The result of the multiplication.</param>
-        protected override void DoMultiply(Vector<Complex> rightSide, Vector<Complex> result)
+        protected override void DoMultiply(Vector<Complex32> rightSide, Vector<Complex32> result)
         {
             var denseRight = rightSide as DenseVector;
             var denseResult = result as DenseVector;
@@ -399,14 +399,14 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
                 Control.LinearAlgebraProvider.MatrixMultiplyWithUpdate(
                     Algorithms.LinearAlgebra.Transpose.DontTranspose,
                     Algorithms.LinearAlgebra.Transpose.DontTranspose,
-                    1.0,
+                    1.0f,
                     _values,
                     _rowCount,
                     _columnCount,
                     denseRight.Values,
                     denseRight.Count,
                     1,
-                    0.0,
+                    0.0f,
                     denseResult.Values);
             }
         }
@@ -416,7 +416,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// </summary>
         /// <param name="other">The matrix to multiply with.</param>
         /// <param name="result">The result of the multiplication.</param>
-        protected override void DoMultiply(Matrix<Complex> other, Matrix<Complex> result)
+        protected override void DoMultiply(Matrix<Complex32> other, Matrix<Complex32> result)
         {
             var denseOther = other as DenseMatrix;
             var denseResult = result as DenseMatrix;
@@ -430,14 +430,14 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
                 Control.LinearAlgebraProvider.MatrixMultiplyWithUpdate(
                     Algorithms.LinearAlgebra.Transpose.DontTranspose,
                     Algorithms.LinearAlgebra.Transpose.DontTranspose,
-                    1.0,
+                    1.0f,
                     _values,
                     _rowCount,
                     _columnCount,
                     denseOther._values,
                     denseOther._rowCount,
                     denseOther._columnCount,
-                    0.0,
+                    0.0f,
                     denseResult._values);
             }
         }
@@ -447,7 +447,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// </summary>
         /// <param name="other">The matrix to multiply with.</param>
         /// <param name="result">The result of the multiplication.</param>
-        protected override void DoTransposeAndMultiply(Matrix<Complex> other, Matrix<Complex> result)
+        protected override void DoTransposeAndMultiply(Matrix<Complex32> other, Matrix<Complex32> result)
         {
              var denseOther = other as DenseMatrix;
             var denseResult = result as DenseMatrix;
@@ -461,14 +461,14 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
                 Control.LinearAlgebraProvider.MatrixMultiplyWithUpdate(
                     Algorithms.LinearAlgebra.Transpose.DontTranspose,
                     Algorithms.LinearAlgebra.Transpose.Transpose,
-                    1.0,
+                    1.0f,
                     _values,
                     _rowCount,
                     _columnCount,
                     denseOther._values,
                     denseOther._rowCount,
                     denseOther._columnCount,
-                    0.0,
+                    0.0f,
                     denseResult._values);
             }
         }
@@ -478,7 +478,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// </summary>
         /// <param name="rightSide">The vector to multiply with.</param>
         /// <param name="result">The result of the multiplication.</param>
-        protected override void DoTransposeThisAndMultiply(Vector<Complex> rightSide, Vector<Complex> result)
+        protected override void DoTransposeThisAndMultiply(Vector<Complex32> rightSide, Vector<Complex32> result)
         {
             var denseRight = rightSide as DenseVector;
             var denseResult = result as DenseVector;
@@ -492,14 +492,14 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
                 Control.LinearAlgebraProvider.MatrixMultiplyWithUpdate(
                     Algorithms.LinearAlgebra.Transpose.Transpose,
                     Algorithms.LinearAlgebra.Transpose.DontTranspose,
-                    1.0,
+                    1.0f,
                     _values,
                     _rowCount,
                     _columnCount,
                     denseRight.Values,
                     denseRight.Count,
                     1,
-                    0.0,
+                    0.0f,
                     denseResult.Values);
             }
         }
@@ -509,7 +509,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// </summary>
         /// <param name="other">The matrix to multiply with.</param>
         /// <param name="result">The result of the multiplication.</param>
-        protected override void DoTransposeThisAndMultiply(Matrix<Complex> other, Matrix<Complex> result)
+        protected override void DoTransposeThisAndMultiply(Matrix<Complex32> other, Matrix<Complex32> result)
         {
             var denseOther = other as DenseMatrix;
             var denseResult = result as DenseMatrix;
@@ -523,14 +523,14 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
                 Control.LinearAlgebraProvider.MatrixMultiplyWithUpdate(
                     Algorithms.LinearAlgebra.Transpose.Transpose,
                     Algorithms.LinearAlgebra.Transpose.DontTranspose,
-                    1.0,
+                    1.0f,
                     _values,
                     _rowCount,
                     _columnCount,
                     denseOther._values,
                     denseOther._rowCount,
                     denseOther._columnCount,
-                    0.0,
+                    0.0f,
                     denseResult._values);
             }
         }
@@ -539,7 +539,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// Negate each element of this matrix and place the results into the result matrix.
         /// </summary>
         /// <param name="result">The result of the negation.</param>
-        protected override void DoNegate(Matrix<Complex> result)
+        protected override void DoNegate(Matrix<Complex32> result)
         {
             var denseResult = result as DenseMatrix;
 
@@ -558,7 +558,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// </summary>
         /// <param name="other">The matrix to pointwise multiply with this one.</param>
         /// <param name="result">The matrix to store the result of the pointwise multiplication.</param>
-        protected override void DoPointwiseMultiply(Matrix<Complex> other, Matrix<Complex> result)
+        protected override void DoPointwiseMultiply(Matrix<Complex32> other, Matrix<Complex32> result)
         {
             var denseOther = other as DenseMatrix;
             var denseResult = result as DenseMatrix;
@@ -578,7 +578,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// </summary>
         /// <param name="other">The matrix to pointwise divide this one by.</param>
         /// <param name="result">The matrix to store the result of the pointwise division.</param>
-        protected override void DoPointwiseDivide(Matrix<Complex> other, Matrix<Complex> result)
+        protected override void DoPointwiseDivide(Matrix<Complex32> other, Matrix<Complex32> result)
         {
             var denseOther = other as DenseMatrix;
             var denseResult = result as DenseMatrix;
@@ -600,7 +600,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// <param name="result">The matrix to store the result of add</param>
         /// <exception cref="ArgumentNullException">If the other matrix is <see langword="null"/>.</exception>
         /// <exception cref="ArgumentOutOfRangeException">If the two matrices don't have the same dimensions.</exception>
-        protected override void DoAdd(Matrix<Complex> other, Matrix<Complex> result)
+        protected override void DoAdd(Matrix<Complex32> other, Matrix<Complex32> result)
         {
             var denseOther = other as DenseMatrix;
             var denseResult = result as DenseMatrix;
@@ -619,7 +619,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// </summary>
         /// <param name="other">The matrix to subtract.</param>
         /// <param name="result">The matrix to store the result of the subtraction.</param>
-        protected override void DoSubtract(Matrix<Complex> other, Matrix<Complex> result)
+        protected override void DoSubtract(Matrix<Complex32> other, Matrix<Complex32> result)
         {
             var denseOther = other as DenseMatrix;
             var denseResult = result as DenseMatrix;
@@ -637,7 +637,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// Returns the conjugate transpose of this matrix.
         /// </summary>
         /// <returns>The conjugate transpose of this matrix.</returns>
-        public override Matrix<Complex> ConjugateTranspose()
+        public override Matrix<Complex32> ConjugateTranspose()
         {
             var ret = new DenseMatrix(_columnCount, _rowCount);
             for (var j = 0; j < _columnCount; j++)
@@ -657,14 +657,14 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// </summary>
         /// <returns>The trace of this matrix</returns>
         /// <exception cref="ArgumentException">If the matrix is not square</exception>
-        public override Complex Trace()
+        public override Complex32 Trace()
         {
             if (_rowCount != _columnCount)
             {
                 throw new ArgumentException(Resources.ArgumentMatrixSquare);
             }
 
-            var sum = Complex.Zero;
+            var sum = Complex32.Zero;
             for (var i = 0; i < _rowCount; i++)
             {
                 sum += _values[(i * _rowCount) + i];
@@ -774,7 +774,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// <param name="rightSide">The constant to multiply the matrix by.</param>
         /// <returns>The result of the multiplication.</returns>
         /// <exception cref="ArgumentNullException">If <paramref name="leftSide"/> is <see langword="null" />.</exception>
-        public static DenseMatrix operator *(DenseMatrix leftSide, Complex rightSide)
+        public static DenseMatrix operator *(DenseMatrix leftSide, Complex32 rightSide)
         {
             if (leftSide == null)
             {
@@ -791,7 +791,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// <param name="rightSide">The constant to multiply the matrix by.</param>
         /// <returns>The result of the multiplication.</returns>
         /// <exception cref="ArgumentNullException">If <paramref name="rightSide"/> is <see langword="null" />.</exception>
-        public static DenseMatrix operator *(Complex leftSide, DenseMatrix rightSide)
+        public static DenseMatrix operator *(Complex32 leftSide, DenseMatrix rightSide)
         {
             if (rightSide == null)
             {
@@ -873,7 +873,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// <param name="rightSide">The constant to multiply the matrix by.</param>
         /// <returns>The result of the multiplication.</returns>
         /// <exception cref="ArgumentNullException">If <paramref name="leftSide"/> is <see langword="null" />.</exception>
-        public static DenseMatrix operator %(DenseMatrix leftSide, Complex rightSide)
+        public static DenseMatrix operator %(DenseMatrix leftSide, Complex32 rightSide)
         {
             if (leftSide == null)
             {

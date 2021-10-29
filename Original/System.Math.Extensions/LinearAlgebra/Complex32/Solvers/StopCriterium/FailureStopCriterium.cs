@@ -28,14 +28,14 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 // </copyright>
 
-namespace MathNet.Numerics.LinearAlgebra.Complex.Solvers.StopCriterium
+namespace MathNet.Numerics.LinearAlgebra.Complex32.Solvers.StopCriterium
 {
     using System;
     using System.Diagnostics;
     using Generic.Solvers.Status;
     using Generic.Solvers.StopCriterium;
     using Properties;
-    
+
     /// <summary>
     /// Defines an <see cref="IIterationStopCriterium"/> that monitors residuals for NaN's.
     /// </summary>
@@ -108,7 +108,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Solvers.StopCriterium
             var residualNorm = residualVector.Norm(Double.PositiveInfinity);
             var solutionNorm = solutionVector.Norm(Double.PositiveInfinity);
 
-            if (Double.IsNaN(solutionNorm.Real) || Double.IsNaN(residualNorm.Real))
+            if (Single.IsNaN(solutionNorm.Real) || Single.IsNaN(residualNorm.Real))
             {
                 SetStatusToFailed();
             }

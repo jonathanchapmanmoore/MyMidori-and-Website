@@ -28,24 +28,24 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 // </copyright>
 
-namespace MathNet.Numerics.LinearAlgebra.Complex
+namespace MathNet.Numerics.LinearAlgebra.Complex32
 {
     using System;
-    using System.Numerics;
     using Generic;
     using Storage;
     using Threading;
+    using Complex32 = Numerics.Complex32;
 
     /// <summary>
-    /// <c>Complex</c> version of the <see cref="Vector{T}"/> class.
+    /// <c>Complex32</c> version of the <see cref="Vector{T}"/> class.
     /// </summary>
     [Serializable]
-    public abstract class Vector : Vector<Complex>
+    public abstract class Vector : Vector<Complex32>
     {
         /// <summary>
-        /// Initializes a new instance of the Vector class. 
+        /// Initializes a new instance of the Vector class.
         /// </summary>
-        protected Vector(VectorStorage<Complex> storage)
+        protected Vector(VectorStorage<Complex32> storage)
             : base(storage)
         {
         }
@@ -59,7 +59,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// <param name="result">
         /// The vector to store the result of the addition.
         /// </param>
-        protected override void DoAdd(Complex scalar, Vector<Complex> result)
+        protected override void DoAdd(Complex32 scalar, Vector<Complex32> result)
         {
             for (var index = 0; index < Count; index++)
             {
@@ -76,7 +76,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// <param name="result">
         /// The vector to store the result of the addition.
         /// </param>
-        protected override void DoAdd(Vector<Complex> other, Vector<Complex> result)
+        protected override void DoAdd(Vector<Complex32> other, Vector<Complex32> result)
         {
             for (var index = 0; index < Count; index++)
             {
@@ -93,7 +93,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// <param name="result">
         /// The vector to store the result of the subtraction.
         /// </param>
-        protected override void DoSubtract(Complex scalar, Vector<Complex> result)
+        protected override void DoSubtract(Complex32 scalar, Vector<Complex32> result)
         {
             DoAdd(-scalar, result);
         }
@@ -107,7 +107,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// <param name="result">
         /// The vector to store the result of the subtraction.
         /// </param>
-        protected override void DoSubtract(Vector<Complex> other, Vector<Complex> result)
+        protected override void DoSubtract(Vector<Complex32> other, Vector<Complex32> result)
         {
             for (var index = 0; index < Count; index++)
             {
@@ -124,7 +124,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// <param name="result">
         /// The vector to store the result of the multiplication.
         /// </param>
-        protected override void DoMultiply(Complex scalar, Vector<Complex> result)
+        protected override void DoMultiply(Complex32 scalar, Vector<Complex32> result)
         {
             for (var index = 0; index < Count; index++)
             {
@@ -141,7 +141,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// <param name="result">
         /// The vector to store the result of the division.
         /// </param>
-        protected override void DoDivide(Complex scalar, Vector<Complex> result)
+        protected override void DoDivide(Complex32 scalar, Vector<Complex32> result)
         {
             DoMultiply(1 / scalar, result);
         }
@@ -151,7 +151,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// </summary>
         /// <param name="scalar">The scalar to divide.</param>
         /// <param name="result">The vector to store the result of the division.</param>
-        protected override void DoDivideByThis(Complex scalar, Vector<Complex> result)
+        protected override void DoDivideByThis(Complex32 scalar, Vector<Complex32> result)
         {
             for (var index = 0; index < Count; index++)
             {
@@ -164,7 +164,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// </summary>
         /// <param name="other">The vector to pointwise multiply with this one.</param>
         /// <param name="result">The vector to store the result of the pointwise multiplication.</param>
-        protected override void DoPointwiseMultiply(Vector<Complex> other, Vector<Complex> result)
+        protected override void DoPointwiseMultiply(Vector<Complex32> other, Vector<Complex32> result)
         {
             for (var index = 0; index < Count; index++)
             {
@@ -177,7 +177,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// </summary>
         /// <param name="other">The vector to pointwise divide this one by.</param>
         /// <param name="result">The vector to store the result of the pointwise division.</param>
-        protected override void DoPointwiseDivide(Vector<Complex> other, Vector<Complex> result)
+        protected override void DoPointwiseDivide(Vector<Complex32> other, Vector<Complex32> result)
         {
             for (var index = 0; index < Count; index++)
             {
@@ -190,7 +190,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// </summary>
         /// <param name="other">The vector to pointwise modulus this one by.</param>
         /// <param name="result">The result of the modulus.</param>
-        protected override void DoPointwiseModulus(Vector<Complex> other, Vector<Complex> result)
+        protected override void DoPointwiseModulus(Vector<Complex32> other, Vector<Complex32> result)
         {
             throw new NotSupportedException();
         }
@@ -201,12 +201,12 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// <param name="other">
         /// The other vector to add.
         /// </param>
-        /// <returns>
+        /// <returns>s
         /// The result of the addition.
         /// </returns>
-        protected override Complex DoDotProduct(Vector<Complex> other)
+        protected override Complex32 DoDotProduct(Vector<Complex32> other)
         {
-            var dot = Complex.Zero;
+            var dot = Complex32.Zero;
 
             for (var i = 0; i < Count; i++)
             {
@@ -221,7 +221,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// </summary>
         /// <param name="divisor">The divisor to use.</param>
         /// <param name="result">A vector to store the results in.</param>
-        protected override void DoModulus(Complex divisor, Vector<Complex> result)
+        protected override void DoModulus(Complex32 divisor, Vector<Complex32> result)
         {
             throw new NotSupportedException();
         }
@@ -231,7 +231,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// </summary>
         /// <param name="scalar">The dividend to use.</param>
         /// <param name="result">A vector to store the results in.</param>
-        protected override void DoModulusByThis(Complex scalar, Vector<Complex> result)
+        protected override void DoModulusByThis(Complex32 scalar, Vector<Complex32> result)
         {
             throw new NotSupportedException();
         }
@@ -240,7 +240,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// Returns the value of the absolute minimum element.
         /// </summary>
         /// <returns>The value of the absolute minimum element.</returns>
-        public override Complex AbsoluteMinimum()
+        public override Complex32 AbsoluteMinimum()
         {
             return At(AbsoluteMinimumIndex()).Magnitude;
         }
@@ -248,7 +248,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// <summary>
         /// Returns the index of the absolute minimum element.
         /// </summary>
-        /// <returns>The index of absolute minimum element.</returns>   
+        /// <returns>The index of absolute minimum element.</returns>
         public override int AbsoluteMinimumIndex()
         {
             var index = 0;
@@ -270,7 +270,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// Returns the value of the absolute maximum element.
         /// </summary>
         /// <returns>The value of the absolute maximum element.</returns>
-        public override Complex AbsoluteMaximum()
+        public override Complex32 AbsoluteMaximum()
         {
             return At(AbsoluteMaximumIndex()).Magnitude;
         }
@@ -278,7 +278,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// <summary>
         /// Returns the index of the absolute maximum element.
         /// </summary>
-        /// <returns>The index of absolute maximum element.</returns>   
+        /// <returns>The index of absolute maximum element.</returns>
         public override int AbsoluteMaximumIndex()
         {
             var index = 0;
@@ -300,9 +300,9 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// Computes the sum of the vector's elements.
         /// </summary>
         /// <returns>The sum of the vector's elements.</returns>
-        public override Complex Sum()
+        public override Complex32 Sum()
         {
-            var sum = Complex.Zero;
+            var sum = Complex32.Zero;
 
             for (var i = 0; i < Count; i++)
             {
@@ -316,9 +316,9 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// Computes the sum of the absolute value of the vector's elements.
         /// </summary>
         /// <returns>The sum of the absolute value of the vector's elements.</returns>
-        public override Complex SumMagnitudes()
+        public override Complex32 SumMagnitudes()
         {
-            var sum = Complex.Zero;
+            var sum = Complex32.Zero;
 
             for (var i = 0; i < Count; i++)
             {
@@ -337,7 +337,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// <returns>
         /// <c>Scalar ret = (sum(abs(At(i))^p))^(1/p)</c>
         /// </returns>
-        public override Complex Norm(double p)
+        public override Complex32 Norm(double p)
         {
             if (p < 0.0)
             {
@@ -346,7 +346,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
 
             if (double.IsPositiveInfinity(p))
             {
-                return CommonParallel.Aggregate(0, Count, i => At(i).Magnitude, Math.Max, 0d);
+                return CommonParallel.Aggregate(0, Count, i => At(i).Magnitude, Math.Max, 0f);
             }
 
             var sum = 0.0;
@@ -356,14 +356,14 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
                 sum += Math.Pow(At(index).Magnitude, p);
             }
 
-            return Math.Pow(sum, 1.0 / p);
+            return (float)Math.Pow(sum, 1.0 / p);
         }
 
         /// <summary>
         /// Conjugates vector and save result to <paramref name="result"/>
         /// </summary>
         /// <param name="result">Target vector</param>
-        protected override void DoConjugate(Vector<Complex> result)
+        protected override void DoConjugate(Vector<Complex32> result)
         {
             for (var index = 0; index < Count; index++)
             {
@@ -375,7 +375,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// Negates vector and saves result to <paramref name="result"/>
         /// </summary>
         /// <param name="result">Target vector</param>
-        protected override void DoNegate(Vector<Complex> result)
+        protected override void DoNegate(Vector<Complex32> result)
         {
             for (var index = 0; index < Count; index++)
             {
@@ -386,7 +386,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// <summary>
         /// Returns the index of the absolute maximum element.
         /// </summary>
-        /// <returns>The index of absolute maximum element.</returns>          
+        /// <returns>The index of absolute maximum element.</returns>
         public override int MaximumIndex()
         {
             throw new NotSupportedException();
@@ -395,7 +395,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// <summary>
         /// Returns the index of the minimum element.
         /// </summary>
-        /// <returns>The index of minimum element.</returns>  
+        /// <returns>The index of minimum element.</returns>
         public override int MinimumIndex()
         {
             throw new NotSupportedException();
@@ -410,7 +410,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// <returns>
         /// This vector normalized to a unit vector with respect to the p-norm.
         /// </returns>
-        public override Vector<Complex> Normalize(double p)
+        public override Vector<Complex32> Normalize(double p)
         {
             if (p < 0.0)
             {
@@ -419,12 +419,12 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
 
             var norm = Norm(p);
             var clone = Clone();
-            if (norm.Real == 0.0)
+            if (norm.Real == 0.0f)
             {
                 return clone;
             }
 
-            clone.Multiply(1.0 / norm, clone);
+            clone.Multiply(1.0f / norm, clone);
 
             return clone;
         }

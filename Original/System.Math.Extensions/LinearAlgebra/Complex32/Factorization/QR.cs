@@ -24,11 +24,11 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 // </copyright>
 
-namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
+namespace MathNet.Numerics.LinearAlgebra.Complex32.Factorization
 {
     using System;
-    using System.Numerics;
     using Generic.Factorization;
+    using Numerics;
     using Properties;
 
     /// <summary>
@@ -43,12 +43,12 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
     /// and the R matrix is an m x n matrix. If a <seealso cref="QRMethod.Thin"/> factorization is performed, the 
     /// resulting Q matrix is an m x n matrix and the R matrix is an n x n matrix.     
     /// </remarks>
-    public abstract class QR : QR<Complex>
+    public abstract class QR : QR<Complex32>
     {
         /// <summary>
         /// Gets the absolute determinant value of the matrix for which the QR matrix was computed.
         /// </summary>
-        public override Complex Determinant
+        public override Complex32 Determinant
         {
             get
             {
@@ -57,11 +57,11 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
                     throw new ArgumentException(Resources.ArgumentMatrixSquare);
                 }
 
-                var det = Complex.One;
+                var det = Complex32.One;
                 for (var i = 0; i < MatrixR.ColumnCount; i++)
                 {
                     det *= MatrixR.At(i, i);
-                    if (MatrixR.At(i, i).Magnitude.AlmostEqual(0.0))
+                    if (MatrixR.At(i, i).Magnitude.AlmostEqual(0.0f))
                     {
                         return 0;
                     }
@@ -81,7 +81,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
             {
                 for (var i = 0; i < MatrixR.ColumnCount; i++)
                 {
-                    if (MatrixR.At(i, i).Magnitude.AlmostEqual(0.0))
+                    if (MatrixR.At(i, i).Magnitude.AlmostEqual(0.0f))
                     {
                         return false;
                     }

@@ -28,11 +28,11 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 // </copyright>
 
-namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
+namespace MathNet.Numerics.LinearAlgebra.Complex32.Factorization
 {
     using System;
-    using System.Numerics;
     using Generic;
+    using Numerics;
     using Properties;
 
     /// <summary>
@@ -52,7 +52,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
         /// <param name="matrix">The matrix to factor.</param>
         /// <exception cref="ArgumentNullException">If <paramref name="matrix"/> is <c>null</c>.</exception>
         /// <exception cref="ArgumentException">If <paramref name="matrix"/> is not a square matrix.</exception>
-        public UserLU(Matrix<Complex> matrix)
+        public UserLU(Matrix<Complex32> matrix)
         {
             if (matrix == null)
             {
@@ -75,7 +75,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
                 Pivots[i] = i;
             }
 
-            var vectorLUcolj = new Complex[order];
+            var vectorLUcolj = new Complex32[order];
             for (var j = 0; j < order; j++)
             {
                 // Make a copy of the j-th column to localize references.
@@ -88,7 +88,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
                 for (var i = 0; i < order; i++)
                 {
                     var kmax = Math.Min(i, j);
-                    var s = Complex.Zero;
+                    var s = Complex32.Zero;
                     for (var k = 0; k < kmax; k++)
                     {
                         s += Factors.At(i, k) * vectorLUcolj[k];
@@ -121,7 +121,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
                 }
 
                 // Compute multipliers.
-                if (j < order & Factors.At(j, j) != 0.0)
+                if (j < order & Factors.At(j, j) != 0.0f)
                 {
                     for (var i = j + 1; i < order; i++)
                     {
@@ -136,7 +136,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
         /// </summary>
         /// <param name="input">The right hand side <see cref="Matrix{T}"/>, <c>B</c>.</param>
         /// <param name="result">The left hand side <see cref="Matrix{T}"/>, <c>X</c>.</param>
-        public override void Solve(Matrix<Complex> input, Matrix<Complex> result)
+        public override void Solve(Matrix<Complex32> input, Matrix<Complex32> result)
         {
             // Check for proper arguments.
             if (input == null)
@@ -222,7 +222,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
         /// </summary>
         /// <param name="input">The right hand side vector, <c>b</c>.</param>
         /// <param name="result">The left hand side <see cref="Matrix{T}"/>, <c>x</c>.</param>
-        public override void Solve(Vector<Complex> input, Vector<Complex> result)
+        public override void Solve(Vector<Complex32> input, Vector<Complex32> result)
         {
             // Check for proper arguments.
             if (input == null)
@@ -287,13 +287,13 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
         /// Returns the inverse of this matrix. The inverse is calculated using LU decomposition.
         /// </summary>
         /// <returns>The inverse of this matrix.</returns>
-        public override Matrix<Complex> Inverse()
+        public override Matrix<Complex32> Inverse()
         {
             var order = Factors.RowCount;
             var inverse = Factors.CreateMatrix(order, order);
             for (var i = 0; i < order; i++)
             {
-                inverse.At(i, i, 1.0);
+                inverse.At(i, i, 1.0f);
             }
 
             return Solve(inverse);

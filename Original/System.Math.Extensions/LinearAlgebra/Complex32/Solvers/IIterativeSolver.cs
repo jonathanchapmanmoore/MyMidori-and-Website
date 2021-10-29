@@ -28,7 +28,7 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 // </copyright>
 
-namespace MathNet.Numerics.LinearAlgebra.Complex.Solvers
+namespace MathNet.Numerics.LinearAlgebra.Complex32.Solvers
 {
     using Generic.Solvers.Status;
 

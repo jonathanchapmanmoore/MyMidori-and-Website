@@ -28,11 +28,11 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 // </copyright>
 
-namespace MathNet.Numerics.LinearAlgebra.Complex.Solvers.Iterative
+namespace MathNet.Numerics.LinearAlgebra.Complex32.Solvers.Iterative
 {
     using System;
-    using System.Numerics;
     using Generic.Solvers.Status;
+    using Numerics;
     using Preconditioners;
     using Properties;
 
@@ -301,9 +301,14 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Solvers.Iterative
                 throw new ArgumentNullException("result");
             }
 
-            if (input.Count != matrix.RowCount || result.Count != input.Count)
+            if (result.Count != input.Count)
             {
-                throw Matrix.DimensionsDontMatch<ArgumentException>(matrix, input, result);
+                throw new ArgumentException(Resources.ArgumentVectorsSameLength);
+            }
+
+            if (input.Count != matrix.RowCount)
+            {
+                throw Matrix.DimensionsDontMatch<ArgumentException>(input, matrix);
             }
 
             // Initialize the solver fields
@@ -330,7 +335,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Solvers.Iterative
             CalculateTrueResidual(matrix, residuals, xtemp, input);
 
             // Define the temporary scalars
-            Complex beta = 0;
+            Complex32 beta = 0;
 
             // Define the temporary vectors
             // rDash_0 = r_0
@@ -402,7 +407,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Solvers.Iterative
                 // c.DotProduct(t) will be zero and so will c.DotProduct(y)
                 if (cdot.Real.AlmostEqual(0, 1) && cdot.Imaginary.AlmostEqual(0, 1))
                 {
-                    cdot = 1.0;
+                    cdot = 1.0f;
                 }
 
                 // Even if we don't want to do any BiCGStab steps we'll still have
@@ -410,8 +415,8 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Solvers.Iterative
                 // system, but we'll only have to take special measures
                 // if we don't do any so ...
                 var ctdot = c.DotProduct(t);
-                Complex eta;
-                Complex sigma;
+                Complex32 eta;
+                Complex32 sigma;
                 if (((_numberOfBiCgStabSteps == 0) && (iterationNumber == 0)) || ShouldRunBiCgStabSteps(iterationNumber))
                 {
                     // sigma_k = (c_k * t_k) / (c_k * c_k)
@@ -430,7 +435,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Solvers.Iterative
                     // y.DotProduct(t) will be zero and so will c.DotProduct(y)
                     if (ydot.Real.AlmostEqual(0, 1) && ydot.Imaginary.AlmostEqual(0, 1))
                     {
-                        ydot = 1.0;
+                        ydot = 1.0f;
                     }
 
                     var ytdot = y.DotProduct(t);

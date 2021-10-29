@@ -24,12 +24,12 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 // </copyright>
 
-namespace MathNet.Numerics.LinearAlgebra.Complex
+namespace MathNet.Numerics.LinearAlgebra.Complex32
 {
-    using System.Numerics;
     using Factorization;
     using Generic;
     using Generic.Factorization;
+    using Numerics;
 
     /// <summary>
     /// Extension methods which return factorizations for the various matrix classes.
@@ -41,9 +41,9 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// </summary>
         /// <param name="matrix">The matrix to factor.</param>
         /// <returns>The Cholesky decomposition object.</returns>
-        public static Cholesky Cholesky(this Matrix<Complex> matrix)
+        public static Cholesky Cholesky(this Matrix<Complex32> matrix)
         {
-            return (Cholesky)Cholesky<Complex>.Create(matrix);
+            return (Cholesky)Cholesky<Complex32>.Create(matrix);
         }
 
         /// <summary>
@@ -51,9 +51,9 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// </summary>
         /// <param name="matrix">The matrix to factor.</param>
         /// <returns>The LU decomposition object.</returns>
-        public static LU LU(this Matrix<Complex> matrix)
+        public static LU LU(this Matrix<Complex32> matrix)
         {
-            return (LU)LU<Complex>.Create(matrix);
+            return (LU)LU<Complex32>.Create(matrix);
         }
 
         /// <summary>
@@ -62,9 +62,9 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// <param name="matrix">The matrix to factor.</param>
         /// <param name="method">The type of QR factorization to perform.</param>
         /// <returns>The QR decomposition object.</returns>
-        public static QR QR(this Matrix<Complex> matrix, QRMethod method = QRMethod.Full)
+        public static QR QR(this Matrix<Complex32> matrix, QRMethod method = QRMethod.Full)
         {
-            return (QR)QR<Complex>.Create(matrix, method);
+            return (QR)QR<Complex32>.Create(matrix, method);
         }
 
         /// <summary>
@@ -72,9 +72,9 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// </summary>
         /// <param name="matrix">The matrix to factor.</param>
         /// <returns>The QR decomposition object.</returns>
-        public static GramSchmidt GramSchmidt(this Matrix<Complex> matrix)
+        public static GramSchmidt GramSchmidt(this Matrix<Complex32> matrix)
         {
-            return (GramSchmidt)GramSchmidt<Complex>.Create(matrix);
+            return (GramSchmidt)GramSchmidt<Complex32>.Create(matrix);
         }
 
         /// <summary>
@@ -83,9 +83,9 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// <param name="matrix">The matrix to factor.</param>
         /// <param name="computeVectors">Compute the singular U and VT vectors or not.</param>
         /// <returns>The SVD decomposition object.</returns>
-        public static Svd Svd(this Matrix<Complex> matrix, bool computeVectors)
+        public static Svd Svd(this Matrix<Complex32> matrix, bool computeVectors)
         {
-            return (Svd)Svd<Complex>.Create(matrix, computeVectors);
+            return (Svd)Svd<Complex32>.Create(matrix, computeVectors);
         }
 
         /// <summary>
@@ -93,9 +93,9 @@ namespace MathNet.Numerics.LinearAlgebra.Complex
         /// </summary>
         /// <param name="matrix">The matrix to factor.</param>
         /// <returns>The EVD decomposition object.</returns>
-        public static Evd Evd(this Matrix<Complex> matrix)
+        public static Evd Evd(this Matrix<Complex32> matrix)
         {
-            return (Evd)Evd<Complex>.Create(matrix);
+            return (Evd)Evd<Complex32>.Create(matrix);
         }
     }
 }

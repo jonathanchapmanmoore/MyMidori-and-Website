@@ -28,7 +28,7 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 // </copyright>
 
-namespace MathNet.Numerics.LinearAlgebra.Complex.Solvers.Iterative
+namespace MathNet.Numerics.LinearAlgebra.Complex32.Solvers.Iterative
 {
     using System;
     using System.Collections.Generic;

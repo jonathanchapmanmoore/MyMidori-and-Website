@@ -24,10 +24,12 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 // </copyright>
 
-namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
+namespace MathNet.Numerics.LinearAlgebra.Complex32.Factorization
 {
+    using System;
     using System.Numerics;
     using Generic.Factorization;
+    using Numerics;
 
     /// <summary>
     /// Eigenvalues and eigenvectors of a real matrix.
@@ -44,12 +46,12 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
     /// conditioned, or even singular, so the validity of the equation
     /// A = V*D*Inverse(V) depends upon V.Condition().
     /// </remarks>
-    public abstract class Evd : Evd<Complex>
+    public abstract class Evd : Evd<Complex32>
     {
         /// <summary>
         /// Gets the absolute value of determinant of the square matrix for which the EVD was computed.
         /// </summary>
-        public override Complex Determinant
+        public override Complex32 Determinant
         {
             get
             {
@@ -58,13 +60,13 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
                 {
                     det *= VectorEv[i];
 
-                    if (VectorEv[i].AlmostEqual(Complex.Zero))
+                    if (((Complex32)VectorEv[i]).AlmostEqual(Complex32.Zero))
                     {
                         return 0;
                     }
                 }
 
-                return det.Magnitude;
+                return new Complex32(Convert.ToSingle(det.Magnitude), 0.0f);
             }
         }
 
@@ -79,7 +81,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
                 var rank = 0;
                 for (var i = 0; i < VectorEv.Count; i++)
                 {
-                    if (VectorEv[i].AlmostEqual(Complex.Zero))
+                    if (((Complex32)VectorEv[i]).AlmostEqual(Complex32.Zero))
                     {
                         continue;
                     }

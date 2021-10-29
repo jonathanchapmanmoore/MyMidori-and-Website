@@ -28,11 +28,11 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 // </copyright>
 
-namespace MathNet.Numerics.LinearAlgebra.Complex.Solvers.Iterative
+namespace MathNet.Numerics.LinearAlgebra.Complex32.Solvers.Iterative
 {
     using System;
-    using System.Numerics;
     using Generic.Solvers.Status;
+    using Numerics;
     using Preconditioners;
     using Properties;
 
@@ -259,7 +259,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Solvers.Iterative
 
             if (input.Count != matrix.RowCount)
             {
-                throw Matrix.DimensionsDontMatch<ArgumentException>(input, result);
+                throw Matrix.DimensionsDontMatch<ArgumentException>(input, matrix);
             }
 
             // Initialize the solver fields
@@ -296,11 +296,11 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Solvers.Iterative
             Vector temp = new DenseVector(residuals.Count);
             Vector temp2 = new DenseVector(residuals.Count);
 
-            // create some temporary double variables that are needed
+            // create some temporary float variables that are needed
             // to hold values in between iterations
-            Complex currentRho = 0;
-            Complex alpha = 0;
-            Complex omega = 0;
+            Complex32 currentRho = 0;
+            Complex32 alpha = 0;
+            Complex32 omega = 0;
 
             var iterationNumber = 0;
             while (ShouldContinue(iterationNumber, result, input, residuals))
@@ -403,7 +403,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Solvers.Iterative
                 result.Add(temp, temp2);
                 temp2.CopyTo(result);
 
-                // for continuation it is necessary that omega_i != 0.0
+                // for continuation it is necessary that omega_i != 0.0f
                 // If omega is only 1 ULP from zero then we fail.
                 if (omega.Real.AlmostEqual(0, 1) && omega.Imaginary.AlmostEqual(0, 1))
                 {

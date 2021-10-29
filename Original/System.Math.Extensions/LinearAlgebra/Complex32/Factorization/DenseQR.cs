@@ -30,11 +30,11 @@
 
 using MathNet.Numerics.LinearAlgebra.Generic.Factorization;
 
-namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
+namespace MathNet.Numerics.LinearAlgebra.Complex32.Factorization
 {
     using System;
-    using System.Numerics;
     using Generic;
+    using Numerics;
     using Properties;
 
     /// <summary>
@@ -51,7 +51,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
         /// <summary>
         ///  Gets or sets Tau vector. Contains additional information on Q - used for native solver.
         /// </summary>
-        public Complex[] Tau
+        public Complex32[] Tau
         {
             get;
             set;
@@ -62,7 +62,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
         /// QR factorization when the constructor is called and cache it's factorization.
         /// </summary>
         /// <param name="matrix">The matrix to factor.</param>
-        /// <param name="method">The type of QR factorization to perform.</param>
+        /// <param name="method">The QR factorization method to use.</param>
         /// <exception cref="ArgumentNullException">If <paramref name="matrix"/> is <c>null</c>.</exception>
         /// <exception cref="ArgumentException">If <paramref name="matrix"/> row count is less then column count</exception>
         public DenseQR(DenseMatrix matrix, QRMethod method = QRMethod.Full)
@@ -78,7 +78,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
             }
 
             QrMethod = method;
-            Tau = new Complex[Math.Min(matrix.RowCount, matrix.ColumnCount)];
+            Tau = new Complex32[Math.Min(matrix.RowCount, matrix.ColumnCount)];
 
             if (method == QRMethod.Full)
             {
@@ -101,7 +101,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
         /// </summary>
         /// <param name="input">The right hand side <see cref="Matrix{T}"/>, <b>B</b>.</param>
         /// <param name="result">The left hand side <see cref="Matrix{T}"/>, <b>X</b>.</param>
-        public override void Solve(Matrix<Complex> input, Matrix<Complex> result)
+        public override void Solve(Matrix<Complex32> input, Matrix<Complex32> result)
         {
             // Check for proper arguments.
             if (input == null)
@@ -152,7 +152,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Factorization
         /// </summary>
         /// <param name="input">The right hand side vector, <b>b</b>.</param>
         /// <param name="result">The left hand side <see cref="Matrix{T}"/>, <b>x</b>.</param>
-        public override void Solve(Vector<Complex> input, Vector<Complex> result)
+        public override void Solve(Vector<Complex32> input, Vector<Complex32> result)
         {
             if (input == null)
             {

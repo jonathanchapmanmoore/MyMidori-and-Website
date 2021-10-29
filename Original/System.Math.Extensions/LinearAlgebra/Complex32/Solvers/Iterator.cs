@@ -28,7 +28,7 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 // </copyright>
 
-namespace MathNet.Numerics.LinearAlgebra.Complex.Solvers
+namespace MathNet.Numerics.LinearAlgebra.Complex32.Solvers
 {
     using System;
     using System.Collections.Generic;
@@ -311,7 +311,7 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Solvers
             return new Iterator(stopCriteria);
         }
 
-        #if !PORTABLE
+#if !PORTABLE
         /// <summary>
         /// Creates a deep clone of the current iterator.
         /// </summary>
@@ -320,6 +320,6 @@ namespace MathNet.Numerics.LinearAlgebra.Complex.Solvers
         {
             return Clone();
         }
-        #endif
+#endif
     }
 }
