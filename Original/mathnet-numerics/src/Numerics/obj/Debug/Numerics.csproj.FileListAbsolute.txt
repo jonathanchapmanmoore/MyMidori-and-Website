@@ -1,6 +1,0 @@
-C:\Users\Jonathan_Moore\mathnet-numerics\out\debug\Net40\MathNet.Numerics.dll
-C:\Users\Jonathan_Moore\mathnet-numerics\out\debug\Net40\MathNet.Numerics.pdb
-C:\Users\Jonathan_Moore\mathnet-numerics\src\Numerics\obj\Debug\MathNet.Numerics.Properties.Resources.resources
-C:\Users\Jonathan_Moore\mathnet-numerics\src\Numerics\obj\Debug\Numerics.csproj.GenerateResource.Cache
-C:\Users\Jonathan_Moore\mathnet-numerics\src\Numerics\obj\Debug\MathNet.Numerics.dll
-C:\Users\Jonathan_Moore\mathnet-numerics\src\Numerics\obj\Debug\MathNet.Numerics.pdb
