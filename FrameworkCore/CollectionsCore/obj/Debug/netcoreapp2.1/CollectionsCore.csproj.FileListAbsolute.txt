@@ -7,12 +7,3 @@ B:\NetFoundation\Verve Kits\verve patch\Framework\FrameworkCore\CollectionsCore\
 B:\NetFoundation\Verve Kits\verve patch\Framework\FrameworkCore\CollectionsCore\obj\Debug\netcoreapp2.1\CollectionsCore.AssemblyInfo.cs
 B:\NetFoundation\Verve Kits\verve patch\Framework\FrameworkCore\CollectionsCore\obj\Debug\netcoreapp2.1\CollectionsCore.dll
 B:\NetFoundation\Verve Kits\verve patch\Framework\FrameworkCore\CollectionsCore\obj\Debug\netcoreapp2.1\CollectionsCore.pdb
-D:\_work_new\Framework-w-Website\FrameworkCore\CollectionsCore\bin\Debug\netcoreapp2.1\CollectionsCore.deps.json
-D:\_work_new\Framework-w-Website\FrameworkCore\CollectionsCore\bin\Debug\netcoreapp2.1\CollectionsCore.dll
-D:\_work_new\Framework-w-Website\FrameworkCore\CollectionsCore\bin\Debug\netcoreapp2.1\CollectionsCore.pdb
-D:\_work_new\Framework-w-Website\FrameworkCore\CollectionsCore\obj\Debug\netcoreapp2.1\CollectionsCore.csprojAssemblyReference.cache
-D:\_work_new\Framework-w-Website\FrameworkCore\CollectionsCore\obj\Debug\netcoreapp2.1\CollectionsCore.csproj.CoreCompileInputs.cache
-D:\_work_new\Framework-w-Website\FrameworkCore\CollectionsCore\obj\Debug\netcoreapp2.1\CollectionsCore.AssemblyInfoInputs.cache
-D:\_work_new\Framework-w-Website\FrameworkCore\CollectionsCore\obj\Debug\netcoreapp2.1\CollectionsCore.AssemblyInfo.cs
-D:\_work_new\Framework-w-Website\FrameworkCore\CollectionsCore\obj\Debug\netcoreapp2.1\CollectionsCore.dll
-D:\_work_new\Framework-w-Website\FrameworkCore\CollectionsCore\obj\Debug\netcoreapp2.1\CollectionsCore.pdb

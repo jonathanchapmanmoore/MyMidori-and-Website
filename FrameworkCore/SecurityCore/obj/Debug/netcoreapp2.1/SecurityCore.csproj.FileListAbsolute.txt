@@ -7,12 +7,3 @@ B:\NetFoundation\Verve Kits\verve patch\Framework\FrameworkCore\SecurityCore\obj
 B:\NetFoundation\Verve Kits\verve patch\Framework\FrameworkCore\SecurityCore\obj\Debug\netcoreapp2.1\SecurityCore.AssemblyInfo.cs
 B:\NetFoundation\Verve Kits\verve patch\Framework\FrameworkCore\SecurityCore\obj\Debug\netcoreapp2.1\SecurityCore.dll
 B:\NetFoundation\Verve Kits\verve patch\Framework\FrameworkCore\SecurityCore\obj\Debug\netcoreapp2.1\SecurityCore.pdb
-D:\_work_new\Framework-w-Website\FrameworkCore\SecurityCore\bin\Debug\netcoreapp2.1\SecurityCore.deps.json
-D:\_work_new\Framework-w-Website\FrameworkCore\SecurityCore\bin\Debug\netcoreapp2.1\SecurityCore.dll
-D:\_work_new\Framework-w-Website\FrameworkCore\SecurityCore\bin\Debug\netcoreapp2.1\SecurityCore.pdb
-D:\_work_new\Framework-w-Website\FrameworkCore\SecurityCore\obj\Debug\netcoreapp2.1\SecurityCore.csprojAssemblyReference.cache
-D:\_work_new\Framework-w-Website\FrameworkCore\SecurityCore\obj\Debug\netcoreapp2.1\SecurityCore.csproj.CoreCompileInputs.cache
-D:\_work_new\Framework-w-Website\FrameworkCore\SecurityCore\obj\Debug\netcoreapp2.1\SecurityCore.AssemblyInfoInputs.cache
-D:\_work_new\Framework-w-Website\FrameworkCore\SecurityCore\obj\Debug\netcoreapp2.1\SecurityCore.AssemblyInfo.cs
-D:\_work_new\Framework-w-Website\FrameworkCore\SecurityCore\obj\Debug\netcoreapp2.1\SecurityCore.dll
-D:\_work_new\Framework-w-Website\FrameworkCore\SecurityCore\obj\Debug\netcoreapp2.1\SecurityCore.pdb
