@@ -38,7 +38,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unit Tests", "Unit Tests", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrameworkStandard", "FrameworkStandard", "{FE7C62EA-41CE-4DF0-B0A5-09E5D62CBCCE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeDOM", "Framework\CodeDOM\CodeDOM.csproj", "{F481131F-29F0-410C-B523-CE687DF5BB3A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.CodeDOM.Extentions", "Framework\CodeDOM\Microsoft.CodeDOM.Extentions.csproj", "{F481131F-29F0-410C-B523-CE687DF5BB3A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collections", "Framework\Collections\Collections.csproj", "{36AC2674-35D8-423A-B482-30547277A076}"
 EndProject

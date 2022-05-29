@@ -50,9 +50,9 @@
     <Compile Include="Xsd\XsdWrapperGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Framework\CodeDOM\CodeDOM.csproj">
+    <ProjectReference Include="..\CodeDOM\Microsoft.CodeDOM.Extentions.csproj">
       <Project>{f481131f-29f0-410c-b523-ce687df5bb3a}</Project>
-      <Name>CodeDOM</Name>
+      <Name>Microsoft.CodeDOM.Extentions</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
