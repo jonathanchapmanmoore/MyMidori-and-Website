@@ -64,11 +64,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CollectionsCore", "Framewor
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrameworkStandard", "FrameworkStandard\FrameworkStandard.csproj", "{1B673073-F4AA-42D7-866B-EF0E347C5A2B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dynamic", "Framework\Dynamic\Dynamic.csproj", "{EB66B766-6354-4208-A3D4-AACBDCB5C3B3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Dynamic", "Framework\Dynamic\Microsoft.Dynamic.csproj", "{EB66B766-6354-4208-A3D4-AACBDCB5C3B3}"
 EndProject
 Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "Documentation", "Docs\Documentation.shfbproj", "{6FA53F58-8FD6-4FAE-8F49-58BD8A5C3414}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scripting", "Framework\Scripting\Scripting.csproj", "{02FF0909-F5AD-48CF-A86A-345E721B7E40}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Scripting", "Framework\Scripting\Microsoft.Scripting.csproj", "{02FF0909-F5AD-48CF-A86A-345E721B7E40}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo", "Samples\XSD\Demo.csproj", "{FC488574-CC6B-434F-8672-5C3FBAB59569}"
 EndProject

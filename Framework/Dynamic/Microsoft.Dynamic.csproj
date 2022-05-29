@@ -511,9 +511,9 @@
       <Name>Microsoft.Scripting.Core</Name>
       <Private>False</Private>
     </ProjectReference>
-    <ProjectReference Include="..\Scripting\Scripting.csproj">
+    <ProjectReference Include="..\Scripting\Microsoft.Scripting.csproj">
       <Project>{02FF0909-F5AD-48CF-A86A-345E721B7E40}</Project>
-      <Name>Scripting</Name>
+      <Name>Microsoft.Scripting</Name>
     </ProjectReference>
     <ProjectReference Include="..\Microsoft.Scripting.Metadata\Microsoft.Scripting.Metadata.csproj" Condition=" '$(SilverlightBuild)' != 'true' ">
       <Project>{ACDD9B9E-8FE6-439C-9521-1CCBA47F6143}</Project>
