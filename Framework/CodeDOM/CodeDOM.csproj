@@ -146,6 +146,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="codedom.snk" />
+    <None Include="CodeDOM.ruleset" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
