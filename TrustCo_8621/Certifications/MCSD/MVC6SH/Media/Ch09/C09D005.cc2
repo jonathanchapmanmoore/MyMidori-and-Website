@@ -1,0 +1,160 @@
+0, Visual C++ lets you edit your program's menus 
+4, directly and visually. If you create your MFC project 
+7, with AppWizard, the wizard even supplies a set of 
+10, standard menus that you can modify rather than 
+12, starting from scratch. These starter menus include 
+15, common commands on the File, Edit, View, and Help 
+19, menus. We'll modify menus in the Demo1 application. 
+24, To edit a menu, open the menu resource in the 
+27, ResourceView pane of the Workspace window. If the 
+30, Demo1 Resources folder is closed, click the plus sign 
+33, before it to expand the folder. Then expand the 
+39, Menu folder in the same way. The standard menu 
+43, resource is named IDR_MAINFRAME. Double-click the menu 
+47, ID to open the resource for editing. Occasionally, 
+53, you might need to create a brand new menu 
+55, resource. Select Resource on the Insert menu. Then 
+62, double-click Menu in the Insert Resources dialog box. 
+70, The new menu's ID is initially IDR_MENU1. Right-click 
+74, the new resource in ResourceView and select the 
+78, Properties command. Then edit the menu as resource as you 
+94, would an existing menu. To close the Menu editor for a particular 
+102, menu resource, select Close from the File menu. 
+105, However, if you haven't edited a new menu resource, 
+109, Visual C++ discards, regardless of whether 
+111, you save it. The resource identifier disappears from 
+115, ResourceView. To prevent this, I make one minor change 
+119, in the Menu editor window. I'll make more changes 
+126, at a later time. Now, I select Close from the File menu 
+136, and click Yes in response to the question. Now, how can you 
+142, explicitly open the Properties window? To open the 
+147, Properties window for a particular menu item, you 
+149, can right-click the menu item and select Properties 
+153, from the context menu or you can left-click the 
+164, menu item and select Properties from the 
+168, View menu. Click the pushpin icon to keep the Properties 
+176, window open. As you select different menus items, 
+186, the Properties window reflects your selection. To 
+188, unpin the Properties window, click the pushpin 
+193, icon again. Let's add a new top-level menu called 
+199, Food. In the Menu editor window, click the new-item 
+202, box to the right of the Help menu. Drag the box to 
+207, the left of the Help menu. Conventionally, the 
+215, menu bar contains File, Edit, View, and Help menus 
+218, in that order. New menus usually follow View and 
+222, precede Help. Help is always the rightmost menu. Not 
+226, all applications have all of these standard 
+228, menus. To name the new menu, start typing its name: 
+233, F&ood. Typing opens the Properties window for the 
+239, menu and the text you type appears in the Caption 
+242, box. Pin the Properties window open while we work on 
+246, the menus. A menu command's name conventionally 
+254, includes a mnemonic. The mnemonic is the Alt+key 
+257, combination users can type to invoke the menu command 
+260, from the keyboard. On the menu, the mnemonic 
+263, appears underscored. To specify a mnemonic, precede 
+267, the designated letter in the menu's name with an 
+269, ampersand. In Demo1, we've placed the ampersand 
+273, before the first 'o' in Food. We didn't use the 'F' in 
+277, Food because it would clash with the mnemonic for 
+280, the File menu. Avoid duplicate mnemonics. Let's 
+289, put the ampersand before the 'F' in Food and try the 
+292, command. Right-click in the Menu editor window 
+304, and select Check Mnemonics on the context menu. This 
+311, alerts you to duplicates. If you click Yes in the 
+314, dialog box, Visual C++ highlights the menus with 
+317, duplicate mnemonics. Before we continue, let's 
+323, move the ampersand back to its original position in 
+326, Food. This removes the duplication. Now let's add a 
+338, couple of commands to the Food menu. With Food 
+343, selected, click the new-item box below it. Type 
+348, &Hamburger. Then tab to the ID box and type 
+360, ID_FOOD_HAMBURGER. This is the command ID associated 
+373, with the menu. When the user selects the menu item, 
+377, Windows sends its command ID to the appropriate window, 
+380, which provides code to handle the command. To 
+383, complete the Hamburger menu item, tab to the Prompt 
+385, box and type Order a burger. If the user pulls 
+404, down the Food menu and rests the cursor on 
+406, Hamburger, this text appears in the program's status bar 
+409, as we can see when we build and run Demo1. Look at the 
+418, status bar at the bottom of the application window. 
+426, If I open the Edit menu, note that its menu items 
+430, are dimmed. That's because we haven't written any 
+432, code yet for those commands. Once you add 
+435, a handler for the command, Visual C++ enables the 
+438, command on the menu. The Hamburger command on the 
+441, Food menu is enabled because I earlier added a 
+445, handler for it. Let's try out the Hamburger command. 
+453, That completes the Hamburger menu command. Adding a 
+455, Hot Dog command is similar. Place the Hot Dog 
+458, command below Hamburger and place the mnemonic 
+460, ampersand before the 'D' in Dog so this command doesn't 
+463, clash with Hamburger. Mnemonic clashes are possible 
+490, only on the same level of the menus. Let's also 
+497, alert the user than the Hamburger command has an 
+500, associated accelerator key combination. An 
+503, accelerator is a key combination that, unlike a mnemonic, 
+506, executes the command without involving the menu at 
+508, all. For example, in Windows applications, the 
+511, standard accelerator combination for the Open command 
+514, on the File menu is Ctrl+O. We display the 
+520, accelerator on the menu as a convenient reminder to the 
+522, user. Displaying the accelerator's key combination 
+525, on the menu does not create the accelerator. 
+527, That's a separate process. In Demo1, select the 
+533, Hamburger command and type \tCtrl+H after the Hamburger 
+543, menu's name in the Caption box. The backslash 
+547, separates the accelerator text from the menu name and 
+550, aligns it with other accelerators in the same 
+552, menu. Use a unique key combination for each 
+555, accelerator. We'll create the actual accelerator resource in 
+559, a separate demonstration. Next, we will add a Salad 
+563, command above the Hamburger command, with a 
+566, separator line between Salad and Hamburger, showing 
+568, that salad is in a different food category on the 
+571, menu. Click the new-item box below Hot Dog and drag 
+575, it above Hamburger. A guide shows where to insert 
+582, the box. Type &Salad in the Caption box, Order a 
+597, salad in the Prompt box, and ID_FOOD_SALAD in the ID 
+609, box. Notice that if you type the Prompt first, 
+617, then tab to the ID box, Visual C++ makes a guess for 
+621, the ID. You can keep it or change it. Tabbing in 
+625, the Properties window can be tricky. If you tab 
+627, forward to reach the ID box, Visual C++ in some 
+631, cases supplies an ID based on the menu names, for 
+634, example, ID_FOOD_SALAD. If that ID isn't what you 
+638, want, or if no ID appears, you can instead tab 
+642, backwards, by holding down the Shift key while you press 
+644, Tab, or simply click the ID box and type the ID to 
+648, avoid Visual C++'s best guess. Now drag the 
+655, new-item box up again, dropping it below Salad. In the 
+664, Properties window, select the Separator box. This 
+672, puts a separator between the menu items. Now let's 
+681, add another top-level menu item, called Order, 
+684, just to the right of Food. Then we will move the 
+692, entire Food menu onto the Order menu (we might later 
+695, create a Drink submenu under Order as well). To move 
+698, Food under Order, point to Food and drag it onto 
+701, the Order menu name. Then continue dragging down 
+706, the Order menu and drop Food where you want it to 
+708, appear under Order. Guides show you where Food 
+714, would appear if you dropped it at any given point. 
+719, Because Food has submenus of its own, it becomes a 
+722, hierarchical or cascading menu. A right-facing 
+725, arrowhead to the right of Food indicates that it has 
+728, submenus. You can try out the menu's behavior. Click 
+732, outside the open Order menu, then click Order, then  
+739, click Food. Suppose you don't plan to implement a 
+743, particular command in your program--such as the 
+747, Cut command that AppWizard puts on the Edit menu. 
+749, You can remove the command from the menu. Select the 
+751, command and press Delete. You can change a menu's 
+765, caption, ID, or prompt string at any time. Let's 
+769, change the Hamburger menu's prompt. Select 
+771, Hamburger. In the Properties window, type Order a hamburger 
+788, in the Prompt box. When you finish editing your 
+791, program's menus, select Save on the File menu. You 
+801, can always return to the Menu editor to add new 
+803, menus and make adjustments to old ones.
+806, END

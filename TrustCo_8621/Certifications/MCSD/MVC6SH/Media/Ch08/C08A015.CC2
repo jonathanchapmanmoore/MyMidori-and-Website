@@ -1,0 +1,34 @@
+0, This animation will explain the interaction of the 
+3, components that facilitate documents and views. 
+7, The framework uses document templates to manage the 
+9, complex process of creating documents with their 
+12, associated views and frame windows. Talking about 
+16, the document/view architecture leads to a 
+17, discussion of three primary objects: the document, the 
+22, frame window, and the view. The document object 
+25, maintains a list or collection of views and provides a 
+29, set of access functions, such as 
+31, GetFirstViewPosition and GetNextView, to iterate through that list. 
+37, One of the most important functions of the 
+39, document is to walk through this list to notify all 
+42, views that the document data has changed and that they 
+46, may need to repaint themselves. The primary 
+49, function of the view object is to allow the user to 
+52, view and interact with the document's data in 
+54, different ways. Each view class maintains a pointer to 
+59, its associated document object, which can be 
+61, retrieved with the GetDocument function. The primary 
+65, purpose of this pointer is to allow the view to 
+68, request data from the document and then to notify the 
+71, document when the data has changed. In certain 
+74, situations, the frame window may need to interact with 
+77, the current view, whose pointer can be obtained 
+80, with GetActiveView. The current document is defined 
+84, as the document associated with the active view. 
+88, The frame window has access to this current 
+90, document with GetActiveDocument. This animation has shown 
+94, how the document/view architecture in the 
+97, Microsoft Foundation Classes provides for a well-defined 
+100, relationship between these objects: the document, 
+104, the frame window, and the view.
+107, END

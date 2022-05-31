@@ -1,0 +1,70 @@
+0, In this animation you will see how Windows 
+3, messages are routed to MFC objects such as documents, 
+7, views, and frame windows using MFC's message maps. 
+13, Picture a Windows application as a group of 
+15, objects. When the program runs and events occur, Windows 
+19, sends messages to the objects. On receiving a 
+22, message, an object carries out its task. Events that 
+26, generate messages include actions, such as 
+29, selecting from a menu, clicking a button, or typing a 
+32, character. Let's look closer at how an MFC application 
+36, routes messages to their destinations. First, 
+40, Windows determines which application the message is 
+42, for and places the message in the application's 
+45, message queue. Under Win32, each application has its 
+50, own message queue which stores all messages 
+53, received but not yet processed. Second, in its message 
+57, loop the application retrieves the next message 
+60, from the queue and determines which of its objects 
+63, will process or handle the message. The receiving 
+67, objects determine whether they can handle a message 
+70, by looking in their message maps. A message map is a 
+73, table in the object that correlates messages with 
+76, the names of handler functions. All objects with 
+80, message maps are derived indirectly from class 
+83, CCommandTarget. Such objects are called Command 
+87, Targets. If the message is anything but WMCommand, it 
+93, goes immediately to the appropriate window object. 
+97, Only window objects can handle most Windows 
+99, messages. WMCommand messages, such as those generated 
+104, by menus and buttons, are handled differently. MFC 
+109, allows you to handle commands in the most 
+111, appropriate object. You decide which object will handle a 
+114, particular command by writing a handler function in 
+117, that object's class. Because MFC doesn't know 
+120, which object contains a handler for a message, the 
+123, message is passed from object to object along a 
+125, standard route. Each object on the route contains a 
+129, message map. Suppose the user selects an Options 
+133, menu command? Initially, the Frame window object 
+138, gets the command message. Before seeing if it can 
+141, handle the message itself, the window gives its 
+144, embedded View object a chance. The View object checks 
+148, its own message map. Suppose it finds a connection 
+152, there between the command message and an OnOptions 
+155, handler function? It calls OnOptions. The message 
+160, has been handled. But, suppose the View object 
+164, lacked a handler for the Options menu message? Where 
+167, would the message go next? From the View the 
+171, message go to the view's associated Document object 
+175, and then, if necessary, to the Document Template 
+177, object associated with the document. Eventually, if 
+183, no object claims the message, it arrives at the 
+186, Application object. If that object has no handler, it 
+190, passes the message back to Windows for default 
+192, handling. By the way, while checking its own message 
+197, map, each object also checks message maps in its 
+200, base classes. That's because MyView is a CView and 
+205, is a CWin. MyView derives from the MFC class 
+210, hierarchy and the view's base classes also have 
+214, message maps for any handlers they contain. The View 
+218, object checks its own message map, then the message 
+221, map of class CView, then the map of class CWin, and 
+226, so on, up the class hierarchy through 
+228, CCommandTarget. In this way, all possible message maps 
+234, can be searched. Those inside MFC classes as well as 
+238, those in your own classes. But as soon as a handler 
+242, is found, the routing stops. This animation has 
+246, shown you how MFC applications receive Windows 
+249, messages and route them to the best object for handling. 
+253, END

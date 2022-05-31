@@ -1,0 +1,37 @@
+0, This animation explains how messages are routed 
+3, and handled by MFC window objects. MFC architecture 
+7, handles standard Windows messages through the CWnd 
+10, class and its derivatives. Windows messages are 
+14, sent to the application's frame window and can only 
+17, be handled by the window object. Messages, in 
+21, general, are delivered to a window. In MFC, windows 
+25, belong to a class. The class implements a message 
+29, map, which maps a message to a message handler. 
+32, When a message is delivered to a window, the window 
+35, procedure searches the message map in the window 
+37, class for a specific handler for that message. If a 
+42, message map entry is found, the handler is called 
+45, with the appropriate parameters. This is possible 
+48, because the message map also stores the prototype 
+51, of the handler; that is, it knows how to break 
+54, apart the message structure and pass the relevant 
+56, information to the handler. In most cases, the window 
+60, belongs to a derived class of CWnd. The message 
+64, map is first searched in the derived class. If not 
+68, handled there, it is passed to the base class. The 
+72, hierarchy of the window class is known because of 
+75, the implementation of the message map macro, 
+77, BeginMessageMap. The BeginMessageMap macro, located in 
+82, the implementation file, lists the derived class 
+85, and its associated base class. If the message is 
+88, not handled in the base class, it is passed on to 
+91, the next base class, and so forth, until either a 
+95, message handler is found or no more base classes 
+98, exist. In this case, the message is passed on to 
+102, DefWindowProc for handling. DefWindowProc is the 
+106, handler that provides Windows with a default behavior, 
+109, including painting, moving, resizing, and so 
+112, forth. In this animation, you have seen how a Windows 
+116, message is routed and appropriately handled by an 
+119, MFC window object.
+121, END

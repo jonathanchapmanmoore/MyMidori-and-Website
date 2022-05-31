@@ -1,0 +1,86 @@
+0, The Microsoft Foundation Class Library, known as 
+8, MFC, is an application framework. This animation 
+12, shows the general principles for using an 
+14, application framework. What is an application framework? 
+18, An application framework is a kind of skeleton, with 
+21, quite a few muscles already on the bones. The 
+25, framework already contains code to do many common 
+27, actions. For example, the framework has code to  
+31, manage a set of standard menus: the ones that almost 
+34, every Windows application has. The framework also 
+37, includes code for storing data to a file and 
+40, reading it back in; code for basic printing; and code 
+45, for managing things like toolbars and dialog boxes. 
+48, Such a collection of generic code is only useful, 
+52, though, if you can customize it. Because of the 
+54, way it was written, MFC is highly customizable. You 
+58, can tailor it to work for many kinds of applications. 
+63, MFC was written using the C++ programming 
+65, language, especially C++ classes. Each piece of the 
+70, application framework is a class. There is an 
+74, application class, representing the application as a 
+76, whole, a frame window class for the application's 
+80, main window, a document class for storing the 
+84, application's data, and a view class for displaying the 
+88, data inside the window. All told, there are over 200 
+92, classes in MFC, but most of your work with the 
+95, framework involves only a handful of them. The rest 
+99, are there for special needs, such as database 
+101, programming or Internet programming. Your role in 
+105, relation to the application framework is to customize 
+108, it, using object-oriented programming techniques. 
+112, By deriving your own versions of a few key classes, 
+115, you can tailor what each of those classes does. 
+118, For example, MFC provides class CWinApp, the 
+123, application class. CWinApp already has a lot of 
+127, abilities, but it's also quite generic. However, in the 
+131, class that you derive from CWinApp, you can override 
+135, certain CWinApp member functions so they do 
+138, things your way. The most common function to override 
+142, is the InitInstance function. This function creates 
+146, your application's main window object and, 
+148, usually, also a document and view. InitInstance also 
+153, initializes many features of MFC and processes 
+157, command-line arguments. If you want, you can completely 
+161, rewrite what the generic InitInstance does. When 
+165, the program runs, MFC calls your version of 
+170, InitInstance rather than its own default version. In this 
+173, way, you've tailored how the framework operates. 
+177, Eventually, your program becomes a combination of 
+180, the original lightly muscled MFC skeleton with a 
+183, lot of new application-specific muscles added in 
+187, appropriate places. Think of customizing MFC this 
+191, way. Given a task you want to accomplish in your 
+194, program, locate the MFC class associated with that 
+198, kind of behavior. For example, suppose you want to 
+202, do some drawing in your program's window. In MFC, 
+206, class CView controls displaying data, so you derive 
+210, your own class CMyView from CView. Most drawing 
+215, in MFC is done by the view's OnDraw member 
+218, function. So you override that function and add your 
+222, drawing code to it. The most commonly derived classes 
+226, are CWinApp, the application class; CFrameWnd, the 
+232, main window class; CDocument, the class for 
+235, storing data; and CView, the class for displaying data. 
+241, Some of these classes contain functions such as 
+243, InitInstance and OnDraw that you'll override for 
+246, every new application you write. All of the classes 
+250, contain many useful functions that you can override 
+253, to satisfy particular needs of each application. 
+258, To get you started, the MFC AppWizard creates a 
+262, set of files in which it has already derived your 
+264, own versions of the most commonly derived classes. 
+268, You can begin overriding functions in those classes 
+270, immediately. The secret to working with an 
+273, application framework like MFC is knowing enough about 
+277, which class does what. With a good general 
+280, understanding of the main MFC classes, you can begin 
+284, making confident decisions about which functions to 
+286, override and where to add your application-specific 
+290, code. This course, the MFC documentation, and the 
+294, books listed in Chapter 21 will help you start 
+297, building your grasp of how MFC works. This animation 
+302, has shown you the basic structure of the MFC 
+304, application framework and explained your general 
+307, role in using it. 
+308, END

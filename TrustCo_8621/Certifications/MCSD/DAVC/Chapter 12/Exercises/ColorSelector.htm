@@ -1,0 +1,77 @@
+<!-- ColorSelector.htm -->
+<HTML><HEAD></HEAD>
+<BODY style="border:2px solid black; 
+             color:white; background-color:white "
+	  ondblclick = passthru()>
+
+<DIV ID=d1 style="position:relative; border:1px solid black;
+top:5; left:5; width:130; height:50">
+</DIV >
+
+<P ID=p1 style="position:relative; left:13" > 
+<BUTTON ID=BackButton onclick = cycle("back") > < </BUTTON>.   
+<BUTTON ID=ForwardButton onclick = cycle("forward")> > </BUTTON>.....
+<BUTTON ID=SelectButton onclick = doSelect() > Select </BUTTON>
+</P>
+
+</BODY>
+
+<SCRIPT LANGUAGE="JavaScript">
+public_description = new colorselector();
+var colors = new Array("white", "red", "green", "blue", "black") ;
+var numcolors = colors.length;
+var curcolor = 0;
+
+// Object description
+function colorselector() 
+{
+   this.get_color = getcolor;
+}
+
+// Public property access function
+function getcolor(){
+   return colors[ curcolor ];
+}
+
+// Events
+// Standard...
+function passthru()
+{
+   if(!window.external.frozen )
+       window.external.bubbleEvent();
+}
+
+// Custom...
+function doSelect()
+{
+   if(!window.external.frozen )
+       window.external.raiseEvent( "onClickSelect", 
+									colors[ curcolor ] );
+}
+
+
+// Private methods
+function cycle( direction )
+{
+   if( direction == "back" ) 
+   {
+      curcolor -- ;
+      if( curcolor < 0 )
+         curcolor = numcolors-1;
+
+   }
+
+   if( direction == "forward" )
+   {
+      curcolor++;
+      if( curcolor >= numcolors )
+         curcolor = 0;
+   }
+
+   d1.style.backgroundColor = colors[ curcolor ];
+}
+
+
+</SCRIPT>
+</HTML>
+

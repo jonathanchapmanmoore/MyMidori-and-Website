@@ -1,0 +1,110 @@
+0, Windows programs use dialog boxes to communicate 
+4, with the user. Each dialog box is based on a dialog 
+7, resource, which you can edit with the Dialog 
+9, editor. We'll create a simple dialog resource for the 
+12, Demo1 program. When you create your MFC project 
+15, with AppWizard, the wizard creates one dialog 
+18, resource for your program's About dialog box. You will
+21, almost certainly want to add other dialog boxes.
+24, Let's create a dialog resource that contains 
+26, several controls. On the Insert menu, select 
+29, Resource. In the Insert Resource dialog box, 
+35, double-click Dialog. A new dialog resource opens in a Dialog 
+40, editor window. The resource contains an OK button 
+43, and a Cancel button. Before we add controls, let's 
+46, resize and reshape the dialog resource. But before I do 
+50,  that, I will close the workspace window. Just drag 
+55, the dialog until its dimensions are right. Near 
+57, the right side of the status bar, Visual C++ 
+60, displays the current dimensions. We will drag the right 
+63, side of the dialog to set its width to 280 units, 
+75, and then drag the bottom of the dialog to set its height 
+77, to 100 units. Now let's add some controls. When 
+85, the Dialog editor opens, it displays the Controls 
+87, toolbar as a floating window on the right side. If 
+90, you point to one of the controls on this toolbar, 
+94, a tooltip gives the control's type, for example, 
+97, Static Text. Drag a Static Text control from the 
+100, toolbar onto the dialog resource. Type the control's 
+106, Caption--the text it displays. The control 
+117, expands to display all of the text you type, and the 
+120, Properties window for the control appears. The text 
+122, you typed appears in the Caption box. You can also 
+126, change the ID if you wish, but usually the default 
+128, ID is fine, especially for Static Text controls, 
+131, because often you won't need to use the ID for 
+133, anything. If you plan to refer to the control by ID 
+137, in your code, you should give the control a unique 
+139, ID. You can also set various other properties for 
+142, the control, and you can always return to edit the 
+145, controls further. Now drag an Edit Box control 
+151, from the toolbar to the dialog resource. Then drag 
+160, the control's borders to adjust its size. When the 
+166, program runs and the dialog is displayed, you can 
+169, use code to set the edit box's initial text, if 
+171, any, and to retrieve any text the user types in the 
+174, box. MFC provides a mechanism called DDX to 
+178, simplify this process. Before proceeding, move the Static 
+183, Text control and the Edit Box up. Next, drag a Group Box control 
+199, from the toolbar to the dialog resource and adjust 
+202, its width. Type the control's caption. At this 
+227, point you could place other controls, such as Radio 
+229, Buttons, Check Boxes, and Combo Boxes, inside the 
+232, Group Box, which simply groups controls visually. 
+235, We will add only one more control for this 
+237, demonstration. Drag a Check Box control from the toolbar to 
+241, the dialog resource; drop it inside the Group Box. 
+250, Type the control's caption. In the Properties 
+261, window, you can change the ID of the check box if you 
+264, need to. When your program runs, users can press 
+280, the Tab key to move the focus from one control in a 
+283, dialog box to another. We will set the tab order so 
+286, the correct control is focused initially, and 
+288, further tabbing follows an order that is most useful 
+290, for the user. On the Layout menu, select Tab 
+294, Order. Small numbers appear beside all of the controls 
+300, in the dialog resource. To set the tab order, 
+304, click the controls in the order you want for tabbing. 
+312, As you click a control, its number changes. 
+318, Test the tab order with the Test 
+319, command on the Layout menu. The focus is initially on 
+326, the Edit Box, as you can see by the blinking caret 
+328, inside the box. Then as we tab, the focus moves to 
+332, the Check Box, then to the OK button, then to the 
+337, Cancel button, and finally back to the Edit Box. 
+341, Click OK to close the test dialog box. Some 
+346, controls won't be fully functional in the test dialog, 
+348, but you can judge the dialog box's appearance and 
+350, tabbing behavior. Now let's use commands on the 
+355, Layout menu to tidy up the dialog box layout. Select 
+358, the first control you want to align. It serves as 
+362, a base, defining the point on which to align. Then 
+365, hold down the Shift key while selecting the other 
+367, controls to align. On the Layout menu, select 
+371, Align. On the submenu, select the dimension on which 
+377, to align. We will align our selected controls on the 
+380, Left. To deselect the controls, click in the 
+384, dialog resource but outside of any control. The Layout 
+390, menu appears only when the Dialog editor is open. 
+393, It contains many commands for adjusting the 
+395, appearance of your dialog box. Many of those same 
+400, commands are available on the Layout toolbar along the 
+402, bottom edge of the Dialog editor. You can aid your 
+409, work with the Guide Settings command on the 
+411, Layout menu. This command displays the Guide Settings 
+416, dialog box, which lets you display or hide the 
+419, rulers along the top and left sides of the dialog 
+421, resource. Or you can select Grid. When you add or move 
+432, a control with the Grid turned on, the control 
+434, "snaps" to the nearest grid lines. This can be 
+444, useful in placing controls accurately. Feel free to 
+447, experiment with the other commands on the Layout 
+449, menu. Save the dialog resource and close the Dialog 
+453, editor window. For MFC programs, you can attach a 
+467, class derived from CDialog to your dialog resource. 
+470, Then you can add data members to the dialog class 
+472, to represent controls whose data you want to set 
+475, or retrieve. Chapter 19 explains these tasks and 
+479, how to display and manipulate the dialog box in your 
+482, program.
+483, END

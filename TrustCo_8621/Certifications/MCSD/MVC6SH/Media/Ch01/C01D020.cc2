@@ -1,0 +1,41 @@
+0, In this lab, you will learn to use the ClassView 
+5, pane in the Workspace window. ClassView has three 
+9, uses: adding classes, member functions, and other 
+12, elements to your project; observing information 
+15, about your classes; and navigating to the source 
+19, code for your classes and functions. You'll learn 
+21, about C++ classes and their member functions later 
+25, in this course. To access many of ClassView's 
+29, powers, right-click a class name in the ClassView 
+33, pane. This displays a context menu. You can add a 
+39, member function, add a member variable, add a virtual 
+44, function override, or add a Windows message handler. 
+49, Let's add a handler function for the WM_LBUTTONDOWN 
+52, message, received when the user clicks the left 
+54, mouse button. On the context menu, select Add Windows 
+57, Message Handler. In the dialog box, double-click 
+67, WM_LBUTTONDOWN in the New Windows Messages/Events 
+70, box. Click the Edit Existing button to go to the 
+76, new function so you can fill in its code. You can 
+82, also add member functions, virtual function overrides, 
+86, and Windows  message handlers using the WizardBar 
+89, toolbar. Later in the course, you'll practice both 
+97, ClassView and WizardBar techniques. When you right-click 
+105, a class name in ClassView, you can use the References, 
+111, Derived Classes, or Base Classes commands to 
+115, gain useful information about the selected class. 
+118, Let's look at the information about the CDemo1View 
+120, class to answer the question "What is its immediate 
+123, base class?"  By clicking on Base Classes you see 
+129, that class CView is the immediate base class 
+132, of CDemo1View. Finally, let's use ClassView 
+139, to navigate to the OnDraw member function in 
+141, class CDemo1View. In ClassView, click the plus sign 
+145, in front of class CDemo1View. This expands a list 
+153, of the class's members. Double-click the OnDraw 
+156, function; Visual C++ opens the appropriate source 
+163, code file at the definition of the OnDraw function. 
+168, Rather than scanning through numerous source files, 
+170, use ClassView's shortcuts to work with your 
+173, classes. 
+173, END

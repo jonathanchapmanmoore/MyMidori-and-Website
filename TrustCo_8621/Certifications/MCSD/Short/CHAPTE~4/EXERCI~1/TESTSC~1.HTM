@@ -1,0 +1,40 @@
+<!-- TestScriptlet.htm -->
+<HTML>
+<HEAD>
+<TITLE>
+Scriptlet Test
+</TITLE>
+</HEAD>
+<BODY>
+<H1> Scriptlet Test
+</H1>
+<P>
+<OBJECT ID="MyScriptlet" TYPE="text/x-scriptlet" DATA="ColorSelector.htm" >
+</OBJECT>
+</P>
+<P>
+<BUTTON ID="Btn1" onclick="UseScriptlet()"> Display </BUTTON>
+</P>
+</BODY>
+
+<SCRIPT LANGUAGE="JavaScript">
+function UseScriptlet()
+{
+    alert( MyScriptlet.color );
+}
+</SCRIPT>
+
+<SCRIPT LANGUAGE="JavaScript"
+	FOR="MyScriptlet"
+	EVENT="onscriptletevent( event, obj )">
+	if( event == "onClickSelect" )
+		document.body.bgColor = obj;
+</SCRIPT>
+
+<SCRIPT LANGUAGE="JavaScript"
+	FOR="MyScriptlet"
+	EVENT=ondblclick>
+	alert( "double-clicked in scriptlet" );
+</SCRIPT>
+
+</HTML>

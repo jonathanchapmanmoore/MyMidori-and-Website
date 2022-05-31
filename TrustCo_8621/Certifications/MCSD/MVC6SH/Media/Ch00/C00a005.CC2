@@ -1,0 +1,43 @@
+0, The Microsoft Press Starts Here titles enable you 
+4, to learn about and more effectively use Microsoft 
+7, Visual Tools in developing Microsoft Windows-based 
+11, applications. This entry-level course, "Microsoft 
+15, Visual C++ 6.0 Starts Here," was designed 
+19, for people with some programming experience 
+21, who would like to broaden their knowledge 
+23, to include the Microsoft Foundation Class Library 
+27, (or MFC) and Developer Studio.This course gives you 
+31, enough understanding of MFC and Developer Studio to 
+34, develop simple single-document interface 
+37, applications.You will learn how to: create and debug an 
+42, MFC-based application in the Developer Studio 
+45, environment; handle Windows and command messages; 
+50, output text and graphics; add user-interface features, 
+54, such as menus, toolbars, and status bars; build 
+57, Windows-compliant user interfaces, including dialog 
+60, boxes and property sheets; and store state and 
+63, application data. This review will provide the 
+67, foundation to start learning MFC Fundamentals so you can 
+70, create your own Visual C++ applications using the 
+73, MFC Library. The Microsoft Foundation Class Library 
+78, is a collection of C++ classes which extends the 
+81, C++ language by providing some of the most basic 
+84, structural elements used to create applications. 
+88, This framework facilitates the handling of data and 
+91, implements much of the user interface that is 
+94, characteristic of Windows-based applications, such as 
+96, menus, toolbars, status bars, and dialog boxes. 
+102, Learning how to effectively make use of these 
+104, predefined classes is an essential part of this course. 
+108, The development environment for Microsoft Visual 
+110, C++ is the Microsoft Developer Studio. Besides 
+115, providing an integrated, flexible environment, 
+118, Developer Studio offers class navigation tools that are 
+121, designed to simplify object-oriented programming 
+124, for Windows. You will gain experience with 
+128, Developer Studio by using the tools and utilities it 
+130, provides throughout the course. This course will give 
+133, you a thorough understanding of the fundamentals of 
+136, MFC. After completing the course, you will be able 
+139, to develop your own MFC applications.
+142, END

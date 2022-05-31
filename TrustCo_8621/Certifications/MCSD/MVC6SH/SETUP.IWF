@@ -1,0 +1,1207 @@
+#define TITLEDISPLAYNAME "Microsoft Visual C++ 6.0 Starts Here"
+
+setup
+{
+	general {MainWindowBackgroundBitmap:banner.bmp;
+		PrimaryApplication:MVC6SH.EXE;
+		ApplicationDisplayName:TITLEDISPLAYNAME;
+		Company:Microsoft;
+		MainWindowCaption:TITLEDISPLAYNAME;
+		MainWindowBackgroundText:TITLEDISPLAYNAME;
+		AddRemoveProgramsText: Microsoft Visual C++ 6.0 Starts Here;
+		LicenseAgreement:media\license.txt;
+		DatabaseLocation:Harddrive;
+		DatabaseName:MVC6SH.MDB;
+		MediaViewFileName:MVC6SH.m14;
+		MediaSourcePath:Media;
+		InstallActiveMovie:Yes;
+		ActiveMovieSetup:AMovie.exe;
+		ShowActiveMovieStep:No;
+		MarissaUninstallKey:Marissa Viewer}
+
+	registry{CompanyKey:Software\Microsoft;
+		ProductKey:Microsoft Press;
+		TitleKey:Microsoft Visual C++ 6.0 Starts Here;
+		PrimaryLocationKey:MVC6SH;
+		PrimaryLocationVersionKey:1.0;
+		PrimaryLocationValueName:Location;
+		MediaViewValueName:MediaView File Path;
+		MediaPathValueName:Media Path;
+		ListsPathValueName:List Path;
+		DatabaseValueName:Database Name}
+}
+
+billboards
+{
+	1	{Bitmap:media\billbrd5.bmp; MinimumDisplayTime: 4}
+	
+}
+
+
+configurations
+{
+
+
+	Typical		{Name:&Minimum;
+			Description:Installs Microsoft Visual C++ 6.0 Starts Here. Requires up to 13 MB of disk space.;
+			Bitmap:typical.bmp;
+			Group:Install;
+			Group:Main;
+			Group:Fonts;
+			Group:DLLS;
+			Group:OCXs;
+		//	Group:Labs
+	}
+
+
+	Complete	{Name:&Complete;
+			Description:Installs Microsoft Visual C++ 6.0 Starts Here including example code files. Requires up to 16 MB of disk space.;
+			Bitmap:complete.bmp;
+			Group:Install;
+			Group:Main;
+			Group:Fonts;
+			Group:DLLS;
+			Group:OCXs;
+			Group:Examples}
+
+}
+groups
+{
+	Install	{Name:Install; Description:Uncompressed files for the install process}
+	Main	{Name:Main; Description:The primary group of files}
+	Examples {Implicit:No; SourceDirectory:Examples; ReadOnly:-; Remove:Never; Destination:MVC6SH}
+	
+	//Labs	{Implicit:No; SourceDirectory:Labs; ReadOnly:-; Remove:Never; Destination:MVC6SH}
+	Fonts	{}
+	DLLs	{}
+	OCXs	{}
+	NotInstalled	{Description:Files that setup needs to register, but are not installed}
+}
+
+Install
+{
+	setup.exe	{Remove:Never}
+	iwclean.exe	{Destination:JetstreamShared; Remove:Never}
+	banner.bmp	{Destination:FilePrimary; Remove:Always}
+	typical.bmp	{Destination:FilePrimary; Remove:Always}
+	complete.bmp	{Destination:FilePrimary; Remove:Always}
+
+}
+
+Main
+{
+	MVC6SH.EXE	{Remove:Always}
+	MVC6SH.CNT	{Remove:Always}
+	MVC6SH.FTS	{Remove:Always}
+	MVC6SH.GID	{Remove:Always}
+	MVC6SH.HLP	{Remove:Always}
+	MVC6SH.MDB	{Remove:Always; ReadOnly:-}
+	README.TXT	{Remove:Always}
+
+}
+
+//These files stay on the CD and are listed here to help setup dynamically locate them.
+
+NotInstalled
+{
+	MVC6SH.m14	{}
+}
+
+Fonts
+{
+	System\ARIALNB.TTF	{Dest: Fonts; FontName:Arial Narrow Bold; Remove:Never}
+	System\ARIALN.TTF	{Dest: Fonts; FontName:Arial Narrow; Remove:Never}
+	System\WINGDNG2.TTF	{Dest: Fonts; FontName:WingDings 2; Remove:Never}
+	System\WINGDNG3.TTF	{Dest: Fonts; FontName:WingDings 3; Remove:Never}
+}
+
+DLLs
+{
+	System\DAO350.DLL	{Dest:DAO; SelfRegistering:Yes; ReferenceCounting:Yes; Remove:Never; ReadOnly:-}
+	System\OLEAUT32.DLL	{Dest:System; SelfRegistering:Yes; ReferenceCounting:No; Remove:Never; ReadOnly:-}
+	System\DMEM.DLL		{Dest:System; ReferenceCounting:Yes; Remove:Ask; ReadOnly:-}
+	System\MARISSA.DLL	{Dest:System; SelfRegistering:Yes; ReferenceCounting:Yes; Remove:Ask; ReadOnly:-}
+	System\MFC40.DLL	{Dest:System; SelfRegistering:Yes; ReferenceCounting:No; Remove:Never; ReadOnly:-}
+	System\MSJET35.DLL	{Dest:System; SelfRegistering:Yes; ReferenceCounting:No; Remove:Never; ReadOnly:-}
+	System\MSJINT35.DLL	{Dest:System; ReferenceCounting:No; Remove:Never; ReadOnly:-}
+	System\MSJTER35.DLL	{Dest:System; ReferenceCounting:No; Remove:Never; ReadOnly:-}
+	System\MSREPL35.DLL	{Dest:System; ReferenceCounting:No; Remove:Never; ReadOnly:-}
+	System\MSVBVM50.DLL	{Dest:System; SelfRegistering:Yes; ReferenceCounting: No; Remove:Never; ReadOnly:-}
+	System\MSVCRT.DLL	{Dest:System; ReferenceCounting:No; Remove:Never; ReadOnly:-}
+	System\MSVCRT40.DLL	{Dest:System; ReferenceCounting:No; Remove:Never; ReadOnly:-}
+	System\OLEPRO32.DLL	{Dest:System; SelfRegistering:Yes; ReferenceCounting: No; Remove:Never; ReadOnly:-}
+	System\VB5DB.DLL	{Dest:System; ReferenceCounting:Yes; Remove:Ask; ReadOnly:-}
+	System\VBAJET32.DLL	{Dest:System; ReferenceCounting:No; Remove:Never; ReadOnly:-}
+}
+
+OCXs
+{
+	System\COMCTL32.OCX	{Dest:System; SelfRegistering:Yes; ReferenceCounting:No; Remove:Never; ReadOnly:-}
+	System\COMDLG32.OCX	{Dest:System; SelfRegistering:Yes; ReferenceCounting:No; Remove:Never; ReadOnly:-}
+	System\DBLIST32.OCX	{Dest:System; SelfRegistering:Yes; ReferenceCounting:Yes; Remove:Ask; ReadOnly:-}
+	System\MV141KN.OCX	{Dest:System; SelfRegistering:Yes; ReferenceCounting:Yes; Remove:Ask; ReadOnly:-}
+	System\THREED32.OCX	{Dest:System; SelfRegistering:Yes; ReferenceCounting:Yes; Remove:Ask; ReadOnly:-}
+	System\HHCTRL.OCX		{Dest:System; SelfRegistering:Yes; ReferenceCounting:No; Remove:Never; ReadOnly:-}
+}
+
+//LABS
+//{
+//}
+
+Examples
+{
+//Chap01
+Examples\learnvcn\Chap01\First\FIRST.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap01\First\FIRST.CPP}
+Examples\learnvcn\Chap01\First\FIRST.DSP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap01\First\FIRST.DSP}
+Examples\learnvcn\Chap01\First\FIRST.DSW	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap01\First\FIRST.DSW}
+Examples\learnvcn\Chap01\First\STDAFX.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap01\First\STDAFX.CPP}
+Examples\learnvcn\Chap01\First\STDAFX.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap01\First\STDAFX.H}
+
+//Chap02
+Examples\learnvcn\Chap02\arPtrs\arPtrs.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap02\arPtrs\arPtrs.cpp}
+Examples\learnvcn\Chap02\arPtrs\arPtrs.dsp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap02\arPtrs\arPtrs.dsp}
+Examples\learnvcn\Chap02\arPtrs\arPtrs.dsw	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap02\arPtrs\arPtrs.dsw}
+Examples\learnvcn\Chap02\arPtrs\StdAfx.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap02\arPtrs\StdAfx.cpp}
+Examples\learnvcn\Chap02\arPtrs\StdAfx.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap02\arPtrs\StdAfx.h}
+
+Examples\learnvcn\Chap02\Hello\Hello.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap02\Hello\Hello.cpp}
+Examples\learnvcn\Chap02\Hello\Hello.dsp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap02\Hello\Hello.dsp}
+Examples\learnvcn\Chap02\Hello\Hello.dsw	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap02\Hello\Hello.dsw}
+Examples\learnvcn\Chap02\Hello\StdAfx.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap02\Hello\StdAfx.cpp}
+Examples\learnvcn\Chap02\Hello\StdAfx.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap02\Hello\StdAfx.h}
+
+Examples\learnvcn\Chap02\Sizes\SIZES.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap02\Sizes\SIZES.CPP}
+Examples\learnvcn\Chap02\Sizes\Sizes.dsp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap02\Sizes\Sizes.dsp}
+Examples\learnvcn\Chap02\Sizes\Sizes.dsw	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap02\Sizes\Sizes.dsw}
+
+//Chap03
+Examples\learnvcn\Chap03\ARRAY\ARRAY.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\ARRAY\ARRAY.CPP}
+Examples\learnvcn\Chap03\ARRAY\ARRAY.DSP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\ARRAY\ARRAY.DSP}
+Examples\learnvcn\Chap03\ARRAY\ARRAY.DSW	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\ARRAY\ARRAY.DSW}
+Examples\learnvcn\Chap03\ARRAY\STDAFX.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\ARRAY\STDAFX.CPP}
+Examples\learnvcn\Chap03\ARRAY\STDAFX.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\ARRAY\STDAFX.H}
+
+Examples\learnvcn\Chap03\CH3EX1\Ch3ex1.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\CH3EX1\Ch3ex1.cpp}
+Examples\learnvcn\Chap03\CH3EX1\Ch3ex1.dsp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\CH3EX1\Ch3ex1.dsp}
+Examples\learnvcn\Chap03\CH3EX1\CH3EX1.DSW	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\CH3EX1\CH3EX1.DSW}
+Examples\learnvcn\Chap03\CH3EX1\STDAFX.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\CH3EX1\STDAFX.CPP}
+Examples\learnvcn\Chap03\CH3EX1\STDAFX.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\CH3EX1\STDAFX.H}
+
+Examples\learnvcn\Chap03\CH3EX2\Ch3ex2.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\CH3EX2\Ch3ex2.cpp}
+Examples\learnvcn\Chap03\CH3EX2\Ch3ex2.dsp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\CH3EX2\Ch3ex2.dsp}
+Examples\learnvcn\Chap03\CH3EX2\CH3EX2.DSW	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\CH3EX2\CH3EX2.DSW}
+Examples\learnvcn\Chap03\CH3EX2\STDAFX.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\CH3EX2\STDAFX.CPP}
+Examples\learnvcn\Chap03\CH3EX2\STDAFX.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\CH3EX2\STDAFX.H}
+
+Examples\learnvcn\Chap03\POINTER\Pointer.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\POINTER\Pointer.cpp}
+Examples\learnvcn\Chap03\POINTER\POINTER.DSP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\POINTER\POINTER.DSP}
+Examples\learnvcn\Chap03\POINTER\POINTER.DSW	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\POINTER\POINTER.DSW}
+Examples\learnvcn\Chap03\POINTER\STDAFX.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\POINTER\STDAFX.CPP}
+Examples\learnvcn\Chap03\POINTER\STDAFX.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\POINTER\STDAFX.H}
+
+Examples\learnvcn\Chap03\REFER1\Refer1.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\REFER1\Refer1.cpp}
+Examples\learnvcn\Chap03\REFER1\REFER1.DSP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\REFER1\REFER1.DSP}
+Examples\learnvcn\Chap03\REFER1\REFER1.DSW	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\REFER1\REFER1.DSW}
+Examples\learnvcn\Chap03\REFER1\STDAFX.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\REFER1\STDAFX.CPP}
+Examples\learnvcn\Chap03\REFER1\STDAFX.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\REFER1\STDAFX.H}
+
+Examples\learnvcn\Chap03\REFER2\Refer2.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\REFER2\Refer2.cpp}
+Examples\learnvcn\Chap03\REFER2\REFER2.DSP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\REFER2\REFER2.DSP}
+Examples\learnvcn\Chap03\REFER2\REFER2.DSW	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\REFER2\REFER2.DSW}
+Examples\learnvcn\Chap03\REFER2\STDAFX.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\REFER2\STDAFX.CPP}
+Examples\learnvcn\Chap03\REFER2\STDAFX.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\REFER2\STDAFX.H}
+
+Examples\learnvcn\Chap03\REFER3\Refer3.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\REFER3\Refer3.cpp}
+Examples\learnvcn\Chap03\REFER3\REFER3.DSP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\REFER3\REFER3.DSP}
+Examples\learnvcn\Chap03\REFER3\REFER3.DSW	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\REFER3\REFER3.DSW}
+Examples\learnvcn\Chap03\REFER3\STDAFX.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\REFER3\STDAFX.CPP}
+Examples\learnvcn\Chap03\REFER3\STDAFX.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\REFER3\STDAFX.H}
+
+Examples\learnvcn\Chap03\REFER4\Refer4.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\REFER4\Refer4.cpp}
+Examples\learnvcn\Chap03\REFER4\Refer4.dsp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\REFER4\Refer4.dsp}
+Examples\learnvcn\Chap03\REFER4\REFER4.DSW	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\REFER4\REFER4.DSW}
+Examples\learnvcn\Chap03\REFER4\Refer4.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\REFER4\Refer4.h}
+Examples\learnvcn\Chap03\REFER4\STDAFX.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\REFER4\STDAFX.CPP}
+Examples\learnvcn\Chap03\REFER4\STDAFX.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\REFER4\STDAFX.H}
+
+Examples\learnvcn\Chap03\SCOPE1\Scope1.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\SCOPE1\Scope1.cpp}
+Examples\learnvcn\Chap03\SCOPE1\SCOPE1.DSP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\SCOPE1\SCOPE1.DSP}
+Examples\learnvcn\Chap03\SCOPE1\SCOPE1.DSW	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\SCOPE1\SCOPE1.DSW}
+Examples\learnvcn\Chap03\SCOPE1\SCOPE1.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\SCOPE1\SCOPE1.H}
+Examples\learnvcn\Chap03\SCOPE1\STDAFX.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\SCOPE1\STDAFX.CPP}
+Examples\learnvcn\Chap03\SCOPE1\STDAFX.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\SCOPE1\STDAFX.H}
+
+Examples\learnvcn\Chap03\SCOPE2\CPP2.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\SCOPE2\CPP2.CPP}
+Examples\learnvcn\Chap03\SCOPE2\H.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\SCOPE2\H.H}
+Examples\learnvcn\Chap03\SCOPE2\SCOPE2.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\SCOPE2\SCOPE2.CPP}
+Examples\learnvcn\Chap03\SCOPE2\SCOPE2.DSP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\SCOPE2\SCOPE2.DSP}
+Examples\learnvcn\Chap03\SCOPE2\SCOPE2.DSW	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\SCOPE2\SCOPE2.DSW}
+Examples\learnvcn\Chap03\SCOPE2\STDAFX.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\SCOPE2\STDAFX.CPP}
+Examples\learnvcn\Chap03\SCOPE2\STDAFX.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\SCOPE2\STDAFX.H}
+
+Examples\learnvcn\Chap03\SCOPE3\Cpp3.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\SCOPE3\Cpp3.cpp}
+Examples\learnvcn\Chap03\SCOPE3\Scope3.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\SCOPE3\Scope3.cpp}
+Examples\learnvcn\Chap03\SCOPE3\scope3.dsp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\SCOPE3\scope3.dsp}
+Examples\learnvcn\Chap03\SCOPE3\SCOPE3.DSW	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\SCOPE3\SCOPE3.DSW}
+Examples\learnvcn\Chap03\SCOPE3\STDAFX.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\SCOPE3\STDAFX.CPP}
+Examples\learnvcn\Chap03\SCOPE3\STDAFX.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\SCOPE3\STDAFX.H}
+
+Examples\learnvcn\Chap03\STRING\STDAFX.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\STRING\STDAFX.CPP}
+Examples\learnvcn\Chap03\STRING\STDAFX.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\STRING\STDAFX.H}
+Examples\learnvcn\Chap03\STRING\String.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\STRING\String.cpp}
+Examples\learnvcn\Chap03\STRING\STRING.DSP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\STRING\STRING.DSP}
+Examples\learnvcn\Chap03\STRING\STRING.DSW	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap03\STRING\STRING.DSW}
+
+//Chap04
+Examples\learnvcn\Chap04\FRIEND\Friend.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap04\FRIEND\Friend.cpp}
+Examples\learnvcn\Chap04\FRIEND\FRIEND.DSP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap04\FRIEND\FRIEND.DSP}
+Examples\learnvcn\Chap04\FRIEND\FRIEND.DSW	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap04\FRIEND\FRIEND.DSW}
+Examples\learnvcn\Chap04\FRIEND\STDAFX.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap04\FRIEND\STDAFX.CPP}
+Examples\learnvcn\Chap04\FRIEND\STDAFX.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap04\FRIEND\STDAFX.H}
+
+Examples\learnvcn\Chap04\SHAPE1\CPoint.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap04\SHAPE1\CPoint.h}
+Examples\learnvcn\Chap04\SHAPE1\CRect.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap04\SHAPE1\CRect.h}
+Examples\learnvcn\Chap04\SHAPE1\Shape.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap04\SHAPE1\Shape.h}
+Examples\learnvcn\Chap04\SHAPE1\Shape1.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap04\SHAPE1\Shape1.cpp}
+Examples\learnvcn\Chap04\SHAPE1\Shape1.dsp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap04\SHAPE1\Shape1.dsp}
+Examples\learnvcn\Chap04\SHAPE1\SHAPE1.DSW	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap04\SHAPE1\SHAPE1.DSW}
+Examples\learnvcn\Chap04\SHAPE1\STDAFX.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap04\SHAPE1\STDAFX.CPP}
+Examples\learnvcn\Chap04\SHAPE1\STDAFX.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap04\SHAPE1\STDAFX.H}
+
+Examples\learnvcn\Chap04\SHAPE2\CPoint.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap04\SHAPE2\CPoint.h}
+Examples\learnvcn\Chap04\SHAPE2\CRect.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap04\SHAPE2\CRect.h}
+Examples\learnvcn\Chap04\SHAPE2\Shape.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap04\SHAPE2\Shape.h}
+Examples\learnvcn\Chap04\SHAPE2\Shape2.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap04\SHAPE2\Shape2.cpp}
+Examples\learnvcn\Chap04\SHAPE2\SHAPE2.DSP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap04\SHAPE2\SHAPE2.DSP}
+Examples\learnvcn\Chap04\SHAPE2\SHAPE2.DSW	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap04\SHAPE2\SHAPE2.DSW}
+Examples\learnvcn\Chap04\SHAPE2\STDAFX.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap04\SHAPE2\STDAFX.CPP}
+Examples\learnvcn\Chap04\SHAPE2\STDAFX.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap04\SHAPE2\STDAFX.H}
+
+//Chap05
+Examples\learnvcn\Chap05\CH5EX1\Ch5ex1.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap05\CH5EX1\Ch5ex1.cpp}
+Examples\learnvcn\Chap05\CH5EX1\CH5EX1.DSP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap05\CH5EX1\CH5EX1.DSP}
+Examples\learnvcn\Chap05\CH5EX1\CH5EX1.DSW	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap05\CH5EX1\CH5EX1.DSW}
+Examples\learnvcn\Chap05\CH5EX1\STDAFX.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap05\CH5EX1\STDAFX.CPP}
+Examples\learnvcn\Chap05\CH5EX1\STDAFX.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap05\CH5EX1\STDAFX.H}
+
+Examples\learnvcn\Chap05\CH5EX2\Ch5ex2.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap05\CH5EX2\Ch5ex2.cpp}
+Examples\learnvcn\Chap05\CH5EX2\CH5EX2.DSP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap05\CH5EX2\CH5EX2.DSP}
+Examples\learnvcn\Chap05\CH5EX2\CH5EX2.DSW	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap05\CH5EX2\CH5EX2.DSW}
+Examples\learnvcn\Chap05\CH5EX2\Ch5ex2.ncb	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap05\CH5EX2\Ch5ex2.ncb}
+Examples\learnvcn\Chap05\CH5EX2\STDAFX.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap05\CH5EX2\STDAFX.CPP}
+Examples\learnvcn\Chap05\CH5EX2\STDAFX.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap05\CH5EX2\STDAFX.H}
+
+Examples\learnvcn\Chap05\CopyProb\CopyProb.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap05\CopyProb\CopyProb.cpp}
+Examples\learnvcn\Chap05\CopyProb\CopyProb.dsp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap05\CopyProb\CopyProb.dsp}
+Examples\learnvcn\Chap05\CopyProb\CopyProb.dsw	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap05\CopyProb\CopyProb.dsw}
+Examples\learnvcn\Chap05\CopyProb\StdAfx.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap05\CopyProb\StdAfx.cpp}
+Examples\learnvcn\Chap05\CopyProb\StdAfx.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap05\CopyProb\StdAfx.h}
+
+Examples\learnvcn\Chap05\InitList\InitList.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap05\InitList\InitList.cpp}
+Examples\learnvcn\Chap05\InitList\InitList.dsp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap05\InitList\InitList.dsp}
+Examples\learnvcn\Chap05\InitList\InitList.dsw	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap05\InitList\InitList.dsw}
+Examples\learnvcn\Chap05\InitList\StdAfx.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap05\InitList\StdAfx.cpp}
+Examples\learnvcn\Chap05\InitList\StdAfx.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap05\InitList\StdAfx.h}
+
+Examples\learnvcn\Chap05\SHAPE3\CPOINT.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap05\SHAPE3\CPOINT.H}
+Examples\learnvcn\Chap05\SHAPE3\CRECT.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap05\SHAPE3\CRECT.H}
+Examples\learnvcn\Chap05\SHAPE3\Shape.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap05\SHAPE3\Shape.cpp}
+Examples\learnvcn\Chap05\SHAPE3\Shape.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap05\SHAPE3\Shape.h}
+Examples\learnvcn\Chap05\SHAPE3\Shape3.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap05\SHAPE3\Shape3.cpp}
+Examples\learnvcn\Chap05\SHAPE3\SHAPE3.DSP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap05\SHAPE3\SHAPE3.DSP}
+Examples\learnvcn\Chap05\SHAPE3\SHAPE3.DSW	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap05\SHAPE3\SHAPE3.DSW}
+Examples\learnvcn\Chap05\SHAPE3\STDAFX.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap05\SHAPE3\STDAFX.CPP}
+Examples\learnvcn\Chap05\SHAPE3\STDAFX.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap05\SHAPE3\STDAFX.H}
+
+Examples\learnvcn\Chap05\VIRTUAL\STDAFX.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap05\VIRTUAL\STDAFX.CPP}
+Examples\learnvcn\Chap05\VIRTUAL\STDAFX.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap05\VIRTUAL\STDAFX.H}
+Examples\learnvcn\Chap05\VIRTUAL\Virtual.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap05\VIRTUAL\Virtual.cpp}
+Examples\learnvcn\Chap05\VIRTUAL\VIRTUAL.DSP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap05\VIRTUAL\VIRTUAL.DSP}
+Examples\learnvcn\Chap05\VIRTUAL\VIRTUAL.DSW	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap05\VIRTUAL\VIRTUAL.DSW}
+
+//Chap07
+Examples\learnvcn\Chap07\EXPLORE\CHILDFRM.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\EXPLORE\CHILDFRM.CPP}
+Examples\learnvcn\Chap07\EXPLORE\CHILDFRM.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\EXPLORE\CHILDFRM.H}
+Examples\learnvcn\Chap07\EXPLORE\EXPLDOC.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\EXPLORE\EXPLDOC.CPP}
+Examples\learnvcn\Chap07\EXPLORE\EXPLDOC.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\EXPLORE\EXPLDOC.H}
+Examples\learnvcn\Chap07\EXPLORE\EXPLORE.CLW	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\EXPLORE\EXPLORE.CLW}
+Examples\learnvcn\Chap07\EXPLORE\EXPLORE.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\EXPLORE\EXPLORE.CPP}
+Examples\learnvcn\Chap07\EXPLORE\EXPLORE.DSP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\EXPLORE\EXPLORE.DSP}
+Examples\learnvcn\Chap07\EXPLORE\EXPLORE.DSW	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\EXPLORE\EXPLORE.DSW}
+Examples\learnvcn\Chap07\EXPLORE\EXPLORE.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\EXPLORE\EXPLORE.H}
+Examples\learnvcn\Chap07\EXPLORE\EXPLORE.RC	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\EXPLORE\EXPLORE.RC}
+Examples\learnvcn\Chap07\EXPLORE\EXPLVIEW.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\EXPLORE\EXPLVIEW.CPP}
+Examples\learnvcn\Chap07\EXPLORE\EXPLVIEW.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\EXPLORE\EXPLVIEW.H}
+Examples\learnvcn\Chap07\EXPLORE\LEFTVIEW.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\EXPLORE\LEFTVIEW.CPP}
+Examples\learnvcn\Chap07\EXPLORE\LEFTVIEW.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\EXPLORE\LEFTVIEW.H}
+Examples\learnvcn\Chap07\EXPLORE\MAINFRM.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\EXPLORE\MAINFRM.CPP}
+Examples\learnvcn\Chap07\EXPLORE\MAINFRM.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\EXPLORE\MAINFRM.H}
+Examples\learnvcn\Chap07\EXPLORE\README.TXT	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\EXPLORE\README.TXT}
+Examples\learnvcn\Chap07\EXPLORE\RESOURCE.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\EXPLORE\RESOURCE.H}
+Examples\learnvcn\Chap07\EXPLORE\STDAFX.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\EXPLORE\STDAFX.CPP}
+Examples\learnvcn\Chap07\EXPLORE\STDAFX.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\EXPLORE\STDAFX.H}
+
+Examples\learnvcn\Chap07\EXPLORE\RES\EXPLDOC.ICO	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\EXPLORE\RES\EXPLDOC.ICO}
+Examples\learnvcn\Chap07\EXPLORE\RES\EXPLORE.ICO	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\EXPLORE\RES\EXPLORE.ICO}
+Examples\learnvcn\Chap07\EXPLORE\RES\EXPLORE.RC2	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\EXPLORE\RES\EXPLORE.RC2}
+Examples\learnvcn\Chap07\EXPLORE\RES\TOOLBAR.BMP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\EXPLORE\RES\TOOLBAR.BMP}
+
+Examples\learnvcn\Chap07\MYDLG\MYDLG.CLW	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MYDLG\MYDLG.CLW}
+Examples\learnvcn\Chap07\MYDLG\MYDLG.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MYDLG\MYDLG.CPP}
+Examples\learnvcn\Chap07\MYDLG\MYDLG.DSP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MYDLG\MYDLG.DSP}
+Examples\learnvcn\Chap07\MYDLG\MYDLG.DSW	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MYDLG\MYDLG.DSW}
+Examples\learnvcn\Chap07\MYDLG\MYDLG.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MYDLG\MYDLG.H}
+Examples\learnvcn\Chap07\MYDLG\MYDLG.RC	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MYDLG\MYDLG.RC}
+Examples\learnvcn\Chap07\MYDLG\MYDLGDLG.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MYDLG\MYDLGDLG.CPP}
+Examples\learnvcn\Chap07\MYDLG\MYDLGDLG.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MYDLG\MYDLGDLG.H}
+Examples\learnvcn\Chap07\MYDLG\README.TXT	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MYDLG\README.TXT}
+Examples\learnvcn\Chap07\MYDLG\RESOURCE.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MYDLG\RESOURCE.H}
+Examples\learnvcn\Chap07\MYDLG\STDAFX.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MYDLG\STDAFX.CPP}
+Examples\learnvcn\Chap07\MYDLG\STDAFX.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MYDLG\STDAFX.H}
+
+Examples\learnvcn\Chap07\MYDLG\RES\MYDLG.ICO	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MYDLG\RES\MYDLG.ICO}
+Examples\learnvcn\Chap07\MYDLG\RES\MYDLG.RC2	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MYDLG\RES\MYDLG.RC2}
+
+Examples\learnvcn\Chap07\MyDraw0\DrawDoc.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MyDraw0\DrawDoc.cpp}
+Examples\learnvcn\Chap07\MyDraw0\DrawDoc.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MyDraw0\DrawDoc.h}
+Examples\learnvcn\Chap07\MyDraw0\DrawVw.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MyDraw0\DrawVw.cpp}
+Examples\learnvcn\Chap07\MyDraw0\DrawVw.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MyDraw0\DrawVw.h}
+Examples\learnvcn\Chap07\MyDraw0\MainFrm.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MyDraw0\MainFrm.cpp}
+Examples\learnvcn\Chap07\MyDraw0\MainFrm.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MyDraw0\MainFrm.h}
+Examples\learnvcn\Chap07\MyDraw0\MyDraw.clw	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MyDraw0\MyDraw.clw}
+Examples\learnvcn\Chap07\MyDraw0\MyDraw.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MyDraw0\MyDraw.cpp}
+Examples\learnvcn\Chap07\MyDraw0\MyDraw.dsp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MyDraw0\MyDraw.dsp}
+Examples\learnvcn\Chap07\MyDraw0\MyDraw.dsw	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MyDraw0\MyDraw.dsw}
+Examples\learnvcn\Chap07\MyDraw0\MyDraw.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MyDraw0\MyDraw.h}
+Examples\learnvcn\Chap07\MyDraw0\MyDraw.rc	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MyDraw0\MyDraw.rc}
+Examples\learnvcn\Chap07\MyDraw0\Resource.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MyDraw0\Resource.h}
+Examples\learnvcn\Chap07\MyDraw0\StdAfx.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MyDraw0\StdAfx.cpp}
+Examples\learnvcn\Chap07\MyDraw0\StdAfx.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MyDraw0\StdAfx.h}
+
+Examples\learnvcn\Chap07\MyDraw0\res\DrawDoc.ico	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MyDraw0\res\DrawDoc.ico}
+Examples\learnvcn\Chap07\MyDraw0\res\MyDraw.ico	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MyDraw0\res\MyDraw.ico}
+Examples\learnvcn\Chap07\MyDraw0\res\MyDraw.rc2	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MyDraw0\res\MyDraw.rc2}
+Examples\learnvcn\Chap07\MyDraw0\res\Toolbar.bmp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MyDraw0\res\Toolbar.bmp}
+
+Examples\learnvcn\Chap07\MYHI\MAINFRM.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MYHI\MAINFRM.CPP}
+Examples\learnvcn\Chap07\MYHI\MAINFRM.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MYHI\MAINFRM.H}
+Examples\learnvcn\Chap07\MYHI\MYHI.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MYHI\MYHI.CPP}
+Examples\learnvcn\Chap07\MYHI\MYHI.DSP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MYHI\MYHI.DSP}
+Examples\learnvcn\Chap07\MYHI\MYHI.DSW	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MYHI\MYHI.DSW}
+Examples\learnvcn\Chap07\MYHI\MYHI.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MYHI\MYHI.H}
+Examples\learnvcn\Chap07\MYHI\MYHI.RC	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MYHI\MYHI.RC}
+Examples\learnvcn\Chap07\MYHI\MYHIDOC.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MYHI\MYHIDOC.CPP}
+Examples\learnvcn\Chap07\MYHI\MYHIDOC.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MYHI\MYHIDOC.H}
+Examples\learnvcn\Chap07\MYHI\MYHIVIEW.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MYHI\MYHIVIEW.CPP}
+Examples\learnvcn\Chap07\MYHI\MYHIVIEW.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MYHI\MYHIVIEW.H}
+Examples\learnvcn\Chap07\MYHI\RESOURCE.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MYHI\RESOURCE.H}
+Examples\learnvcn\Chap07\MYHI\STDAFX.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MYHI\STDAFX.CPP}
+Examples\learnvcn\Chap07\MYHI\STDAFX.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MYHI\STDAFX.H}
+
+Examples\learnvcn\Chap07\MYHI\RES\MYHI.ICO	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MYHI\RES\MYHI.ICO}
+Examples\learnvcn\Chap07\MYHI\RES\MYHI.RC2	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MYHI\RES\MYHI.RC2}
+Examples\learnvcn\Chap07\MYHI\RES\MYHIDOC.ICO	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MYHI\RES\MYHIDOC.ICO}
+Examples\learnvcn\Chap07\MYHI\RES\TOOLBAR.BMP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MYHI\RES\TOOLBAR.BMP}
+
+Examples\learnvcn\Chap07\MYMDI\CHILDFRM.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MYMDI\CHILDFRM.CPP}
+Examples\learnvcn\Chap07\MYMDI\CHILDFRM.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MYMDI\CHILDFRM.H}
+Examples\learnvcn\Chap07\MYMDI\MAINFRM.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MYMDI\MAINFRM.CPP}
+Examples\learnvcn\Chap07\MYMDI\MAINFRM.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MYMDI\MAINFRM.H}
+Examples\learnvcn\Chap07\MYMDI\MYMDI.CLW	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MYMDI\MYMDI.CLW}
+Examples\learnvcn\Chap07\MYMDI\MYMDI.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MYMDI\MYMDI.CPP}
+Examples\learnvcn\Chap07\MYMDI\MYMDI.DSP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MYMDI\MYMDI.DSP}
+Examples\learnvcn\Chap07\MYMDI\MYMDI.DSW	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MYMDI\MYMDI.DSW}
+Examples\learnvcn\Chap07\MYMDI\MYMDI.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MYMDI\MYMDI.H}
+Examples\learnvcn\Chap07\MYMDI\MYMDI.RC	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MYMDI\MYMDI.RC}
+Examples\learnvcn\Chap07\MYMDI\MYMDIDOC.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MYMDI\MYMDIDOC.CPP}
+Examples\learnvcn\Chap07\MYMDI\MYMDIDOC.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MYMDI\MYMDIDOC.H}
+Examples\learnvcn\Chap07\MYMDI\MYMDIVW.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MYMDI\MYMDIVW.CPP}
+Examples\learnvcn\Chap07\MYMDI\MYMDIVW.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MYMDI\MYMDIVW.H}
+Examples\learnvcn\Chap07\MYMDI\README.TXT	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MYMDI\README.TXT}
+Examples\learnvcn\Chap07\MYMDI\RESOURCE.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MYMDI\RESOURCE.H}
+Examples\learnvcn\Chap07\MYMDI\STDAFX.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MYMDI\STDAFX.CPP}
+Examples\learnvcn\Chap07\MYMDI\STDAFX.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MYMDI\STDAFX.H}
+
+Examples\learnvcn\Chap07\MYMDI\RES\MYMDI.ICO	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MYMDI\RES\MYMDI.ICO}
+Examples\learnvcn\Chap07\MYMDI\RES\MYMDI.RC2	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MYMDI\RES\MYMDI.RC2}
+Examples\learnvcn\Chap07\MYMDI\RES\MYMDIDOC.ICO	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MYMDI\RES\MYMDIDOC.ICO}
+Examples\learnvcn\Chap07\MYMDI\RES\TOOLBAR.BMP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap07\MYMDI\RES\TOOLBAR.BMP}
+
+//Chap08
+Examples\learnvcn\Chap08\MDIHI\CHILDFRM.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap08\MDIHI\CHILDFRM.CPP}
+Examples\learnvcn\Chap08\MDIHI\CHILDFRM.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap08\MDIHI\CHILDFRM.H}
+Examples\learnvcn\Chap08\MDIHI\MAINFRM.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap08\MDIHI\MAINFRM.CPP}
+Examples\learnvcn\Chap08\MDIHI\MAINFRM.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap08\MDIHI\MAINFRM.H}
+Examples\learnvcn\Chap08\MDIHI\MDIHI.CLW	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap08\MDIHI\MDIHI.CLW}
+Examples\learnvcn\Chap08\MDIHI\MDIHI.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap08\MDIHI\MDIHI.CPP}
+Examples\learnvcn\Chap08\MDIHI\MDIHI.DSP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap08\MDIHI\MDIHI.DSP}
+Examples\learnvcn\Chap08\MDIHI\MDIHI.DSW	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap08\MDIHI\MDIHI.DSW}
+Examples\learnvcn\Chap08\MDIHI\MDIHI.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap08\MDIHI\MDIHI.H}
+Examples\learnvcn\Chap08\MDIHI\MDIHI.RC	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap08\MDIHI\MDIHI.RC}
+Examples\learnvcn\Chap08\MDIHI\MDIHIDOC.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap08\MDIHI\MDIHIDOC.CPP}
+Examples\learnvcn\Chap08\MDIHI\MDIHIDOC.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap08\MDIHI\MDIHIDOC.H}
+Examples\learnvcn\Chap08\MDIHI\MDIHIVW.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap08\MDIHI\MDIHIVW.CPP}
+Examples\learnvcn\Chap08\MDIHI\MDIHIVW.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap08\MDIHI\MDIHIVW.H}
+Examples\learnvcn\Chap08\MDIHI\RESOURCE.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap08\MDIHI\RESOURCE.H}
+Examples\learnvcn\Chap08\MDIHI\STDAFX.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap08\MDIHI\STDAFX.CPP}
+Examples\learnvcn\Chap08\MDIHI\STDAFX.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap08\MDIHI\STDAFX.H}
+
+Examples\learnvcn\Chap08\MDIHI\RES\MDIHI.ICO	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap08\MDIHI\RES\MDIHI.ICO}
+Examples\learnvcn\Chap08\MDIHI\RES\MDIHI.RC2	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap08\MDIHI\RES\MDIHI.RC2}
+Examples\learnvcn\Chap08\MDIHI\RES\MDIHIDOC.ICO	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap08\MDIHI\RES\MDIHIDOC.ICO}
+Examples\learnvcn\Chap08\MDIHI\RES\TOOLBAR.BMP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap08\MDIHI\RES\TOOLBAR.BMP}
+
+Examples\learnvcn\Chap08\NODV\CHILDVW.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap08\NODV\CHILDVW.CPP}
+Examples\learnvcn\Chap08\NODV\CHILDVW.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap08\NODV\CHILDVW.H}
+Examples\learnvcn\Chap08\NODV\MAINFRM.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap08\NODV\MAINFRM.CPP}
+Examples\learnvcn\Chap08\NODV\MAINFRM.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap08\NODV\MAINFRM.H}
+Examples\learnvcn\Chap08\NODV\NODV.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap08\NODV\NODV.CPP}
+Examples\learnvcn\Chap08\NODV\NODV.DSP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap08\NODV\NODV.DSP}
+Examples\learnvcn\Chap08\NODV\NODV.DSW	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap08\NODV\NODV.DSW}
+Examples\learnvcn\Chap08\NODV\NODV.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap08\NODV\NODV.H}
+Examples\learnvcn\Chap08\NODV\NODV.RC	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap08\NODV\NODV.RC}
+Examples\learnvcn\Chap08\NODV\RESOURCE.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap08\NODV\RESOURCE.H}
+Examples\learnvcn\Chap08\NODV\STDAFX.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap08\NODV\STDAFX.CPP}
+Examples\learnvcn\Chap08\NODV\STDAFX.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap08\NODV\STDAFX.H}
+
+Examples\learnvcn\Chap08\NODV\RES\NODV.ICO	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap08\NODV\RES\NODV.ICO}
+Examples\learnvcn\Chap08\NODV\RES\NODV.RC2	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap08\NODV\RES\NODV.RC2}
+Examples\learnvcn\Chap08\NODV\RES\TOOLBAR.BMP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap08\NODV\RES\TOOLBAR.BMP}
+
+Examples\learnvcn\Chap08\WINSIM\STDAFX.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap08\WINSIM\STDAFX.CPP}
+Examples\learnvcn\Chap08\WINSIM\STDAFX.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap08\WINSIM\STDAFX.H}
+Examples\learnvcn\Chap08\WINSIM\WINSIM.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap08\WINSIM\WINSIM.CPP}
+Examples\learnvcn\Chap08\WINSIM\WINSIM.DSP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap08\WINSIM\WINSIM.DSP}
+Examples\learnvcn\Chap08\WINSIM\WINSIM.DSW	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap08\WINSIM\WINSIM.DSW}
+
+//Chap09
+Examples\learnvcn\Chap09\MyDraw1\DrawDoc.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap09\MyDraw1\DrawDoc.cpp}
+Examples\learnvcn\Chap09\MyDraw1\DrawDoc.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap09\MyDraw1\DrawDoc.h}
+Examples\learnvcn\Chap09\MyDraw1\DrawVw.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap09\MyDraw1\DrawVw.cpp}
+Examples\learnvcn\Chap09\MyDraw1\DrawVw.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap09\MyDraw1\DrawVw.h}
+Examples\learnvcn\Chap09\MyDraw1\MainFrm.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap09\MyDraw1\MainFrm.cpp}
+Examples\learnvcn\Chap09\MyDraw1\MainFrm.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap09\MyDraw1\MainFrm.h}
+Examples\learnvcn\Chap09\MyDraw1\MyDraw.clw	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap09\MyDraw1\MyDraw.clw}
+Examples\learnvcn\Chap09\MyDraw1\MyDraw.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap09\MyDraw1\MyDraw.cpp}
+Examples\learnvcn\Chap09\MyDraw1\MyDraw.dsp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap09\MyDraw1\MyDraw.dsp}
+Examples\learnvcn\Chap09\MyDraw1\MyDraw.dsw	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap09\MyDraw1\MyDraw.dsw}
+Examples\learnvcn\Chap09\MyDraw1\MyDraw.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap09\MyDraw1\MyDraw.h}
+Examples\learnvcn\Chap09\MyDraw1\MyDraw.rc	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap09\MyDraw1\MyDraw.rc}
+Examples\learnvcn\Chap09\MyDraw1\resource.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap09\MyDraw1\resource.h}
+Examples\learnvcn\Chap09\MyDraw1\StdAfx.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap09\MyDraw1\StdAfx.cpp}
+Examples\learnvcn\Chap09\MyDraw1\StdAfx.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap09\MyDraw1\StdAfx.h}
+
+Examples\learnvcn\Chap09\MyDraw1\res\DrawDoc.ico	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap09\MyDraw1\res\DrawDoc.ico}
+Examples\learnvcn\Chap09\MyDraw1\res\MyDraw.ico	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap09\MyDraw1\res\MyDraw.ico}
+Examples\learnvcn\Chap09\MyDraw1\res\MyDraw.rc2	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap09\MyDraw1\res\MyDraw.rc2}
+Examples\learnvcn\Chap09\MyDraw1\res\Toolbar.bmp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap09\MyDraw1\res\Toolbar.bmp}
+
+//Chap10
+Examples\learnvcn\Chap10\MyDraw1\DrawDoc.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap10\MyDraw1\DrawDoc.cpp}
+Examples\learnvcn\Chap10\MyDraw1\DrawDoc.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap10\MyDraw1\DrawDoc.h}
+Examples\learnvcn\Chap10\MyDraw1\DrawVw.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap10\MyDraw1\DrawVw.cpp}
+Examples\learnvcn\Chap10\MyDraw1\DrawVw.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap10\MyDraw1\DrawVw.h}
+Examples\learnvcn\Chap10\MyDraw1\MainFrm.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap10\MyDraw1\MainFrm.cpp}
+Examples\learnvcn\Chap10\MyDraw1\MainFrm.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap10\MyDraw1\MainFrm.h}
+Examples\learnvcn\Chap10\MyDraw1\MyDraw.clw	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap10\MyDraw1\MyDraw.clw}
+Examples\learnvcn\Chap10\MyDraw1\MyDraw.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap10\MyDraw1\MyDraw.cpp}
+Examples\learnvcn\Chap10\MyDraw1\MyDraw.dsp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap10\MyDraw1\MyDraw.dsp}
+Examples\learnvcn\Chap10\MyDraw1\MyDraw.dsw	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap10\MyDraw1\MyDraw.dsw}
+Examples\learnvcn\Chap10\MyDraw1\MyDraw.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap10\MyDraw1\MyDraw.h}
+Examples\learnvcn\Chap10\MyDraw1\MyDraw.rc	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap10\MyDraw1\MyDraw.rc}
+Examples\learnvcn\Chap10\MyDraw1\resource.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap10\MyDraw1\resource.h}
+Examples\learnvcn\Chap10\MyDraw1\StdAfx.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap10\MyDraw1\StdAfx.cpp}
+Examples\learnvcn\Chap10\MyDraw1\StdAfx.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap10\MyDraw1\StdAfx.h}
+
+Examples\learnvcn\Chap10\MyDraw1\res\DrawDoc.ico	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap10\MyDraw1\res\DrawDoc.ico}
+Examples\learnvcn\Chap10\MyDraw1\res\MyDraw.ico	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap10\MyDraw1\res\MyDraw.ico}
+Examples\learnvcn\Chap10\MyDraw1\res\MyDraw.rc2	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap10\MyDraw1\res\MyDraw.rc2}
+Examples\learnvcn\Chap10\MyDraw1\res\Toolbar.bmp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap10\MyDraw1\res\Toolbar.bmp}
+
+//Chap11
+Examples\learnvcn\Chap11\MyDraw2\DrawDoc.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap11\MyDraw2\DrawDoc.cpp}
+Examples\learnvcn\Chap11\MyDraw2\DrawDoc.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap11\MyDraw2\DrawDoc.h}
+Examples\learnvcn\Chap11\MyDraw2\DrawVw.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap11\MyDraw2\DrawVw.cpp}
+Examples\learnvcn\Chap11\MyDraw2\DrawVw.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap11\MyDraw2\DrawVw.h}
+Examples\learnvcn\Chap11\MyDraw2\MainFrm.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap11\MyDraw2\MainFrm.cpp}
+Examples\learnvcn\Chap11\MyDraw2\MainFrm.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap11\MyDraw2\MainFrm.h}
+Examples\learnvcn\Chap11\MyDraw2\MyDraw.clw	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap11\MyDraw2\MyDraw.clw}
+Examples\learnvcn\Chap11\MyDraw2\MyDraw.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap11\MyDraw2\MyDraw.cpp}
+Examples\learnvcn\Chap11\MyDraw2\MyDraw.dsp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap11\MyDraw2\MyDraw.dsp}
+Examples\learnvcn\Chap11\MyDraw2\MyDraw.dsw	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap11\MyDraw2\MyDraw.dsw}
+Examples\learnvcn\Chap11\MyDraw2\MyDraw.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap11\MyDraw2\MyDraw.h}
+Examples\learnvcn\Chap11\MyDraw2\MyDraw.rc	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap11\MyDraw2\MyDraw.rc}
+Examples\learnvcn\Chap11\MyDraw2\resource.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap11\MyDraw2\resource.h}
+Examples\learnvcn\Chap11\MyDraw2\StdAfx.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap11\MyDraw2\StdAfx.cpp}
+Examples\learnvcn\Chap11\MyDraw2\StdAfx.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap11\MyDraw2\StdAfx.h}
+
+Examples\learnvcn\Chap11\MyDraw2\res\DrawDoc.ico	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap11\MyDraw2\res\DrawDoc.ico}
+Examples\learnvcn\Chap11\MyDraw2\res\MyDraw.ico	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap11\MyDraw2\res\MyDraw.ico}
+Examples\learnvcn\Chap11\MyDraw2\res\MyDraw.rc2	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap11\MyDraw2\res\MyDraw.rc2}
+Examples\learnvcn\Chap11\MyDraw2\res\Toolbar.bmp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap11\MyDraw2\res\Toolbar.bmp}
+
+//Chap12
+Examples\learnvcn\Chap12\MenuEdit.doc	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap12\MenuEdit.doc}
+
+Examples\learnvcn\Chap12\MyDraw3\DrawDoc.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap12\MyDraw3\DrawDoc.cpp}
+Examples\learnvcn\Chap12\MyDraw3\DrawDoc.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap12\MyDraw3\DrawDoc.h}
+Examples\learnvcn\Chap12\MyDraw3\DrawVw.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap12\MyDraw3\DrawVw.cpp}
+Examples\learnvcn\Chap12\MyDraw3\DrawVw.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap12\MyDraw3\DrawVw.h}
+Examples\learnvcn\Chap12\MyDraw3\MainFrm.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap12\MyDraw3\MainFrm.cpp}
+Examples\learnvcn\Chap12\MyDraw3\MainFrm.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap12\MyDraw3\MainFrm.h}
+Examples\learnvcn\Chap12\MyDraw3\MyDraw.clw	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap12\MyDraw3\MyDraw.clw}
+Examples\learnvcn\Chap12\MyDraw3\MyDraw.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap12\MyDraw3\MyDraw.cpp}
+Examples\learnvcn\Chap12\MyDraw3\MyDraw.dsp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap12\MyDraw3\MyDraw.dsp}
+Examples\learnvcn\Chap12\MyDraw3\MyDraw.dsw	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap12\MyDraw3\MyDraw.dsw}
+Examples\learnvcn\Chap12\MyDraw3\MyDraw.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap12\MyDraw3\MyDraw.h}
+Examples\learnvcn\Chap12\MyDraw3\MyDraw.rc	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap12\MyDraw3\MyDraw.rc}
+Examples\learnvcn\Chap12\MyDraw3\resource.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap12\MyDraw3\resource.h}
+Examples\learnvcn\Chap12\MyDraw3\StdAfx.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap12\MyDraw3\StdAfx.cpp}
+Examples\learnvcn\Chap12\MyDraw3\StdAfx.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap12\MyDraw3\StdAfx.h}
+
+Examples\learnvcn\Chap12\MyDraw3\res\DrawDoc.ico	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap12\MyDraw3\res\DrawDoc.ico}
+Examples\learnvcn\Chap12\MyDraw3\res\MyDraw.ico	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap12\MyDraw3\res\MyDraw.ico}
+Examples\learnvcn\Chap12\MyDraw3\res\MyDraw.rc2	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap12\MyDraw3\res\MyDraw.rc2}
+Examples\learnvcn\Chap12\MyDraw3\res\Toolbar.bmp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap12\MyDraw3\res\Toolbar.bmp}
+
+//Chap13
+Examples\learnvcn\Chap13\Diagnost.doc	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap13\Diagnost.doc}
+Examples\learnvcn\Chap13\Readme.txt	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap13\Readme.txt}
+
+
+//Chap14
+Examples\learnvcn\Chap14\Diagnost.doc	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\Diagnost.doc}
+
+Examples\learnvcn\Chap14\BBALL\BBALL.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\BBALL\BBALL.CPP}
+Examples\learnvcn\Chap14\BBALL\BBALL.DSP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\BBALL\BBALL.DSP}
+Examples\learnvcn\Chap14\BBALL\BBALL.DSW	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\BBALL\BBALL.DSW}
+Examples\learnvcn\Chap14\BBALL\BBALL.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\BBALL\BBALL.H}
+Examples\learnvcn\Chap14\BBALL\bball.rc	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\BBALL\bball.rc}
+Examples\learnvcn\Chap14\BBALL\BBALLDOC.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\BBALL\BBALLDOC.CPP}
+Examples\learnvcn\Chap14\BBALL\BBALLDOC.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\BBALL\BBALLDOC.H}
+Examples\learnvcn\Chap14\BBALL\BBALLVW.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\BBALL\BBALLVW.CPP}
+Examples\learnvcn\Chap14\BBALL\BBALLVW.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\BBALL\BBALLVW.H}
+Examples\learnvcn\Chap14\BBALL\MAINFRM.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\BBALL\MAINFRM.CPP}
+Examples\learnvcn\Chap14\BBALL\MAINFRM.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\BBALL\MAINFRM.H}
+Examples\learnvcn\Chap14\BBALL\NOWINS.TXT	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\BBALL\NOWINS.TXT}
+Examples\learnvcn\Chap14\BBALL\Readme.txt	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\BBALL\Readme.txt}
+Examples\learnvcn\Chap14\BBALL\RESOURCE.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\BBALL\RESOURCE.H}
+Examples\learnvcn\Chap14\BBALL\STDAFX.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\BBALL\STDAFX.CPP}
+Examples\learnvcn\Chap14\BBALL\STDAFX.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\BBALL\STDAFX.H}
+Examples\learnvcn\Chap14\BBALL\TEAMS.TXT	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\BBALL\TEAMS.TXT}
+Examples\learnvcn\Chap14\BBALL\WINNERS.TXT	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\BBALL\WINNERS.TXT}
+
+Examples\learnvcn\Chap14\BBALL\RES\BBALL.ICO	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\BBALL\RES\BBALL.ICO}
+Examples\learnvcn\Chap14\BBALL\RES\BBALL.RC2	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\BBALL\RES\BBALL.RC2}
+Examples\learnvcn\Chap14\BBALL\RES\BBALLDOC.ICO	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\BBALL\RES\BBALLDOC.ICO}
+Examples\learnvcn\Chap14\BBALL\RES\TOOLBAR.BMP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\BBALL\RES\TOOLBAR.BMP}
+
+Examples\learnvcn\Chap14\CH14EX1\DRAWDOC.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\CH14EX1\DRAWDOC.CPP}
+Examples\learnvcn\Chap14\CH14EX1\DRAWDOC.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\CH14EX1\DRAWDOC.H}
+Examples\learnvcn\Chap14\CH14EX1\Drawvw.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\CH14EX1\Drawvw.cpp}
+Examples\learnvcn\Chap14\CH14EX1\DRAWVW.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\CH14EX1\DRAWVW.H}
+Examples\learnvcn\Chap14\CH14EX1\MAINFRM.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\CH14EX1\MAINFRM.CPP}
+Examples\learnvcn\Chap14\CH14EX1\MAINFRM.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\CH14EX1\MAINFRM.H}
+Examples\learnvcn\Chap14\CH14EX1\MYDRAW.CLW	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\CH14EX1\MYDRAW.CLW}
+Examples\learnvcn\Chap14\CH14EX1\MYDRAW.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\CH14EX1\MYDRAW.CPP}
+Examples\learnvcn\Chap14\CH14EX1\MYDRAW.DSP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\CH14EX1\MYDRAW.DSP}
+Examples\learnvcn\Chap14\CH14EX1\MYDRAW.DSW	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\CH14EX1\MYDRAW.DSW}
+Examples\learnvcn\Chap14\CH14EX1\MYDRAW.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\CH14EX1\MYDRAW.H}
+Examples\learnvcn\Chap14\CH14EX1\MYDRAW.RC	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\CH14EX1\MYDRAW.RC}
+Examples\learnvcn\Chap14\CH14EX1\RESOURCE.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\CH14EX1\RESOURCE.H}
+Examples\learnvcn\Chap14\CH14EX1\SHAPE.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\CH14EX1\SHAPE.CPP}
+Examples\learnvcn\Chap14\CH14EX1\SHAPE.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\CH14EX1\SHAPE.H}
+Examples\learnvcn\Chap14\CH14EX1\STDAFX.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\CH14EX1\STDAFX.CPP}
+Examples\learnvcn\Chap14\CH14EX1\STDAFX.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\CH14EX1\STDAFX.H}
+
+Examples\learnvcn\Chap14\CH14EX1\RES\DRAWDOC.ICO	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\CH14EX1\RES\DRAWDOC.ICO}
+Examples\learnvcn\Chap14\CH14EX1\RES\MYDRAW.ICO	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\CH14EX1\RES\MYDRAW.ICO}
+Examples\learnvcn\Chap14\CH14EX1\RES\MYDRAW.RC2	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\CH14EX1\RES\MYDRAW.RC2}
+Examples\learnvcn\Chap14\CH14EX1\RES\TOOLBAR.BMP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\CH14EX1\RES\TOOLBAR.BMP}
+
+Examples\learnvcn\Chap14\CH14EX2\CH14EX2.CLW	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\CH14EX2\CH14EX2.CLW}
+Examples\learnvcn\Chap14\CH14EX2\CH14EX2.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\CH14EX2\CH14EX2.CPP}
+Examples\learnvcn\Chap14\CH14EX2\CH14EX2.DSP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\CH14EX2\CH14EX2.DSP}
+Examples\learnvcn\Chap14\CH14EX2\CH14EX2.DSW	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\CH14EX2\CH14EX2.DSW}
+Examples\learnvcn\Chap14\CH14EX2\CH14EX2.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\CH14EX2\CH14EX2.H}
+Examples\learnvcn\Chap14\CH14EX2\CH14EX2.RC	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\CH14EX2\CH14EX2.RC}
+Examples\learnvcn\Chap14\CH14EX2\CHILDVW.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\CH14EX2\CHILDVW.CPP}
+Examples\learnvcn\Chap14\CH14EX2\CHILDVW.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\CH14EX2\CHILDVW.H}
+Examples\learnvcn\Chap14\CH14EX2\MAINFRM.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\CH14EX2\MAINFRM.CPP}
+Examples\learnvcn\Chap14\CH14EX2\MAINFRM.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\CH14EX2\MAINFRM.H}
+Examples\learnvcn\Chap14\CH14EX2\README.TXT	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\CH14EX2\README.TXT}
+Examples\learnvcn\Chap14\CH14EX2\RESOURCE.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\CH14EX2\RESOURCE.H}
+Examples\learnvcn\Chap14\CH14EX2\STDAFX.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\CH14EX2\STDAFX.CPP}
+Examples\learnvcn\Chap14\CH14EX2\STDAFX.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\CH14EX2\STDAFX.H}
+
+Examples\learnvcn\Chap14\CH14EX2\RES\CH14EX2.ICO	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\CH14EX2\RES\CH14EX2.ICO}
+Examples\learnvcn\Chap14\CH14EX2\RES\CH14EX2.RC2	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\CH14EX2\RES\CH14EX2.RC2}
+Examples\learnvcn\Chap14\CH14EX2\RES\TOOLBAR.BMP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\CH14EX2\RES\TOOLBAR.BMP}
+
+Examples\learnvcn\Chap14\MyDraw4\DrawDoc.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\MyDraw4\DrawDoc.cpp}
+Examples\learnvcn\Chap14\MyDraw4\DrawDoc.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\MyDraw4\DrawDoc.h}
+Examples\learnvcn\Chap14\MyDraw4\DrawVw.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\MyDraw4\DrawVw.cpp}
+Examples\learnvcn\Chap14\MyDraw4\DrawVw.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\MyDraw4\DrawVw.h}
+Examples\learnvcn\Chap14\MyDraw4\MainFrm.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\MyDraw4\MainFrm.cpp}
+Examples\learnvcn\Chap14\MyDraw4\MainFrm.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\MyDraw4\MainFrm.h}
+Examples\learnvcn\Chap14\MyDraw4\MyDraw.clw	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\MyDraw4\MyDraw.clw}
+Examples\learnvcn\Chap14\MyDraw4\MyDraw.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\MyDraw4\MyDraw.cpp}
+Examples\learnvcn\Chap14\MyDraw4\MyDraw.dsp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\MyDraw4\MyDraw.dsp}
+Examples\learnvcn\Chap14\MyDraw4\MyDraw.dsw	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\MyDraw4\MyDraw.dsw}
+Examples\learnvcn\Chap14\MyDraw4\MyDraw.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\MyDraw4\MyDraw.h}
+Examples\learnvcn\Chap14\MyDraw4\MyDraw.rc	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\MyDraw4\MyDraw.rc}
+Examples\learnvcn\Chap14\MyDraw4\resource.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\MyDraw4\resource.h}
+Examples\learnvcn\Chap14\MyDraw4\Shape.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\MyDraw4\Shape.cpp}
+Examples\learnvcn\Chap14\MyDraw4\Shape.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\MyDraw4\Shape.h}
+Examples\learnvcn\Chap14\MyDraw4\StdAfx.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\MyDraw4\StdAfx.cpp}
+Examples\learnvcn\Chap14\MyDraw4\StdAfx.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\MyDraw4\StdAfx.h}
+
+Examples\learnvcn\Chap14\MyDraw4\res\DrawDoc.ico	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\MyDraw4\res\DrawDoc.ico}
+Examples\learnvcn\Chap14\MyDraw4\res\MyDraw.ico	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\MyDraw4\res\MyDraw.ico}
+Examples\learnvcn\Chap14\MyDraw4\res\MyDraw.rc2	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\MyDraw4\res\MyDraw.rc2}
+Examples\learnvcn\Chap14\MyDraw4\res\Toolbar.bmp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap14\MyDraw4\res\Toolbar.bmp}
+
+//Chap15
+Examples\learnvcn\Chap15\FONTS.DOC	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\FONTS.DOC}
+Examples\learnvcn\Chap15\KEYBOARD.DOC	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\KEYBOARD.DOC}
+
+Examples\learnvcn\Chap15\MyDraw5\DrawDoc.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\MyDraw5\DrawDoc.cpp}
+Examples\learnvcn\Chap15\MyDraw5\DrawDoc.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\MyDraw5\DrawDoc.h}
+Examples\learnvcn\Chap15\MyDraw5\DrawVw.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\MyDraw5\DrawVw.cpp}
+Examples\learnvcn\Chap15\MyDraw5\DrawVw.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\MyDraw5\DrawVw.h}
+Examples\learnvcn\Chap15\MyDraw5\MainFrm.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\MyDraw5\MainFrm.cpp}
+Examples\learnvcn\Chap15\MyDraw5\MainFrm.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\MyDraw5\MainFrm.h}
+Examples\learnvcn\Chap15\MyDraw5\MyDraw.clw	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\MyDraw5\MyDraw.clw}
+Examples\learnvcn\Chap15\MyDraw5\MyDraw.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\MyDraw5\MyDraw.cpp}
+Examples\learnvcn\Chap15\MyDraw5\MyDraw.dsp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\MyDraw5\MyDraw.dsp}
+Examples\learnvcn\Chap15\MyDraw5\MyDraw.dsw	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\MyDraw5\MyDraw.dsw}
+Examples\learnvcn\Chap15\MyDraw5\MyDraw.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\MyDraw5\MyDraw.h}
+Examples\learnvcn\Chap15\MyDraw5\MyDraw.rc	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\MyDraw5\MyDraw.rc}
+Examples\learnvcn\Chap15\MyDraw5\resource.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\MyDraw5\resource.h}
+Examples\learnvcn\Chap15\MyDraw5\Shape.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\MyDraw5\Shape.cpp}
+Examples\learnvcn\Chap15\MyDraw5\Shape.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\MyDraw5\Shape.h}
+Examples\learnvcn\Chap15\MyDraw5\StdAfx.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\MyDraw5\StdAfx.cpp}
+Examples\learnvcn\Chap15\MyDraw5\StdAfx.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\MyDraw5\StdAfx.h}
+
+Examples\learnvcn\Chap15\MyDraw5\res\DrawDoc.ico	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\MyDraw5\res\DrawDoc.ico}
+Examples\learnvcn\Chap15\MyDraw5\res\MyDraw.ico	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\MyDraw5\res\MyDraw.ico}
+Examples\learnvcn\Chap15\MyDraw5\res\MyDraw.rc2	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\MyDraw5\res\MyDraw.rc2}
+Examples\learnvcn\Chap15\MyDraw5\res\Toolbar.bmp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\MyDraw5\res\Toolbar.bmp}
+
+Examples\learnvcn\Chap15\MYTEXT\FONTS.DOC	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\MYTEXT\FONTS.DOC}
+Examples\learnvcn\Chap15\MYTEXT\KEYBOARD.DOC	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\MYTEXT\KEYBOARD.DOC}
+Examples\learnvcn\Chap15\MYTEXT\MAINFRM.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\MYTEXT\MAINFRM.CPP}
+Examples\learnvcn\Chap15\MYTEXT\MAINFRM.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\MYTEXT\MAINFRM.H}
+Examples\learnvcn\Chap15\MYTEXT\MYTEXT.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\MYTEXT\MYTEXT.CPP}
+Examples\learnvcn\Chap15\MYTEXT\MYTEXT.DSP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\MYTEXT\MYTEXT.DSP}
+Examples\learnvcn\Chap15\MYTEXT\MYTEXT.DSW	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\MYTEXT\MYTEXT.DSW}
+Examples\learnvcn\Chap15\MYTEXT\MYTEXT.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\MYTEXT\MYTEXT.H}
+Examples\learnvcn\Chap15\MYTEXT\MYTEXT.RC	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\MYTEXT\MYTEXT.RC}
+Examples\learnvcn\Chap15\MYTEXT\RESOURCE.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\MYTEXT\RESOURCE.H}
+Examples\learnvcn\Chap15\MYTEXT\STDAFX.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\MYTEXT\STDAFX.CPP}
+Examples\learnvcn\Chap15\MYTEXT\STDAFX.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\MYTEXT\STDAFX.H}
+Examples\learnvcn\Chap15\MYTEXT\TEXTDOC.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\MYTEXT\TEXTDOC.CPP}
+Examples\learnvcn\Chap15\MYTEXT\TEXTDOC.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\MYTEXT\TEXTDOC.H}
+Examples\learnvcn\Chap15\MYTEXT\TEXTVW.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\MYTEXT\TEXTVW.CPP}
+Examples\learnvcn\Chap15\MYTEXT\TEXTVW.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\MYTEXT\TEXTVW.H}
+
+Examples\learnvcn\Chap15\MYTEXT\RES\MYTEXT.ICO	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\MYTEXT\RES\MYTEXT.ICO}
+Examples\learnvcn\Chap15\MYTEXT\RES\MYTEXT.RC2	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\MYTEXT\RES\MYTEXT.RC2}
+Examples\learnvcn\Chap15\MYTEXT\RES\TEXTDOC.ICO	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\MYTEXT\RES\TEXTDOC.ICO}
+Examples\learnvcn\Chap15\MYTEXT\RES\TOOLBAR.BMP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\MYTEXT\RES\TOOLBAR.BMP}
+
+Examples\learnvcn\Chap15\TABS\MAINFRM.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\TABS\MAINFRM.CPP}
+Examples\learnvcn\Chap15\TABS\MAINFRM.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\TABS\MAINFRM.H}
+Examples\learnvcn\Chap15\TABS\RESOURCE.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\TABS\RESOURCE.H}
+Examples\learnvcn\Chap15\TABS\STDAFX.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\TABS\STDAFX.CPP}
+Examples\learnvcn\Chap15\TABS\STDAFX.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\TABS\STDAFX.H}
+Examples\learnvcn\Chap15\TABS\TABS.CLW	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\TABS\TABS.CLW}
+Examples\learnvcn\Chap15\TABS\TABS.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\TABS\TABS.CPP}
+Examples\learnvcn\Chap15\TABS\TABS.DSP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\TABS\TABS.DSP}
+Examples\learnvcn\Chap15\TABS\TABS.DSW	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\TABS\TABS.DSW}
+Examples\learnvcn\Chap15\TABS\TABS.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\TABS\TABS.H}
+Examples\learnvcn\Chap15\TABS\TABS.RC	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\TABS\TABS.RC}
+Examples\learnvcn\Chap15\TABS\TABSDOC.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\TABS\TABSDOC.CPP}
+Examples\learnvcn\Chap15\TABS\TABSDOC.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\TABS\TABSDOC.H}
+Examples\learnvcn\Chap15\TABS\Tabsview.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\TABS\Tabsview.cpp}
+Examples\learnvcn\Chap15\TABS\TABSVIEW.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\TABS\TABSVIEW.H}
+
+Examples\learnvcn\Chap15\TABS\RES\TABS.ICO	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\TABS\RES\TABS.ICO}
+Examples\learnvcn\Chap15\TABS\RES\TABS.RC2	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\TABS\RES\TABS.RC2}
+Examples\learnvcn\Chap15\TABS\RES\TABSDOC.ICO	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\TABS\RES\TABSDOC.ICO}
+Examples\learnvcn\Chap15\TABS\RES\TOOLBAR.BMP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap15\TABS\RES\TOOLBAR.BMP}
+
+//Chap16
+Examples\learnvcn\Chap16\CH16EX2.DOC	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\CH16EX2.DOC}
+Examples\learnvcn\Chap16\Diagnost.doc	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\Diagnost.doc}
+
+Examples\learnvcn\Chap16\BBALL\BBALL.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\BBALL\BBALL.CPP}
+Examples\learnvcn\Chap16\BBALL\BBALL.DSP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\BBALL\BBALL.DSP}
+Examples\learnvcn\Chap16\BBALL\BBALL.DSW	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\BBALL\BBALL.DSW}
+Examples\learnvcn\Chap16\BBALL\BBALL.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\BBALL\BBALL.H}
+Examples\learnvcn\Chap16\BBALL\BBALL.RC	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\BBALL\BBALL.RC}
+Examples\learnvcn\Chap16\BBALL\BBALLD_1.TXT	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\BBALL\BBALLD_1.TXT}
+Examples\learnvcn\Chap16\BBALL\BBALLDOC.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\BBALL\BBALLDOC.CPP}
+Examples\learnvcn\Chap16\BBALL\BBALLDOC.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\BBALL\BBALLDOC.H}
+Examples\learnvcn\Chap16\BBALL\BBALLVW.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\BBALL\BBALLVW.CPP}
+Examples\learnvcn\Chap16\BBALL\BBALLVW.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\BBALL\BBALLVW.H}
+Examples\learnvcn\Chap16\BBALL\MAINFRM.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\BBALL\MAINFRM.CPP}
+Examples\learnvcn\Chap16\BBALL\MAINFRM.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\BBALL\MAINFRM.H}
+Examples\learnvcn\Chap16\BBALL\NOWINS.TXT	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\BBALL\NOWINS.TXT}
+Examples\learnvcn\Chap16\BBALL\RESOURCE.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\BBALL\RESOURCE.H}
+Examples\learnvcn\Chap16\BBALL\STDAFX.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\BBALL\STDAFX.CPP}
+Examples\learnvcn\Chap16\BBALL\STDAFX.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\BBALL\STDAFX.H}
+Examples\learnvcn\Chap16\BBALL\TEAMS.TXT	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\BBALL\TEAMS.TXT}
+Examples\learnvcn\Chap16\BBALL\WINNERS.TXT	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\BBALL\WINNERS.TXT}
+
+Examples\learnvcn\Chap16\BBALL\RES\BBALL.ICO	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\BBALL\RES\BBALL.ICO}
+Examples\learnvcn\Chap16\BBALL\RES\BBALL.RC2	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\BBALL\RES\BBALL.RC2}
+Examples\learnvcn\Chap16\BBALL\RES\BBALLDOC.ICO	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\BBALL\RES\BBALLDOC.ICO}
+Examples\learnvcn\Chap16\BBALL\RES\TOOLBAR.BMP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\BBALL\RES\TOOLBAR.BMP}
+
+Examples\learnvcn\Chap16\CH16EX2\C16X2DOC.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\CH16EX2\C16X2DOC.CPP}
+Examples\learnvcn\Chap16\CH16EX2\C16X2DOC.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\CH16EX2\C16X2DOC.H}
+Examples\learnvcn\Chap16\CH16EX2\CH16EX2.CLW	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\CH16EX2\CH16EX2.CLW}
+Examples\learnvcn\Chap16\CH16EX2\CH16EX2.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\CH16EX2\CH16EX2.CPP}
+Examples\learnvcn\Chap16\CH16EX2\CH16EX2.DSP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\CH16EX2\CH16EX2.DSP}
+Examples\learnvcn\Chap16\CH16EX2\CH16EX2.DSW	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\CH16EX2\CH16EX2.DSW}
+Examples\learnvcn\Chap16\CH16EX2\CH16EX2.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\CH16EX2\CH16EX2.H}
+Examples\learnvcn\Chap16\CH16EX2\CH16EX2.RC	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\CH16EX2\CH16EX2.RC}
+Examples\learnvcn\Chap16\CH16EX2\CH16X2VW.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\CH16EX2\CH16X2VW.CPP}
+Examples\learnvcn\Chap16\CH16EX2\CH16X2VW.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\CH16EX2\CH16X2VW.H}
+Examples\learnvcn\Chap16\CH16EX2\MAINFRM.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\CH16EX2\MAINFRM.CPP}
+Examples\learnvcn\Chap16\CH16EX2\MAINFRM.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\CH16EX2\MAINFRM.H}
+Examples\learnvcn\Chap16\CH16EX2\RESOURCE.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\CH16EX2\RESOURCE.H}
+Examples\learnvcn\Chap16\CH16EX2\STDAFX.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\CH16EX2\STDAFX.CPP}
+Examples\learnvcn\Chap16\CH16EX2\STDAFX.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\CH16EX2\STDAFX.H}
+
+Examples\learnvcn\Chap16\CH16EX2\RES\C16X2DOC.ICO	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\CH16EX2\RES\C16X2DOC.ICO}
+Examples\learnvcn\Chap16\CH16EX2\RES\CH16EX2.ICO	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\CH16EX2\RES\CH16EX2.ICO}
+Examples\learnvcn\Chap16\CH16EX2\RES\CH16EX2.RC2	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\CH16EX2\RES\CH16EX2.RC2}
+Examples\learnvcn\Chap16\CH16EX2\RES\TOOLBAR.BMP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\CH16EX2\RES\TOOLBAR.BMP}
+
+Examples\learnvcn\Chap16\MyDraw6\DrawDoc.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\MyDraw6\DrawDoc.cpp}
+Examples\learnvcn\Chap16\MyDraw6\DrawDoc.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\MyDraw6\DrawDoc.h}
+Examples\learnvcn\Chap16\MyDraw6\DrawVw.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\MyDraw6\DrawVw.cpp}
+Examples\learnvcn\Chap16\MyDraw6\DrawVw.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\MyDraw6\DrawVw.h}
+Examples\learnvcn\Chap16\MyDraw6\MainFrm.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\MyDraw6\MainFrm.cpp}
+Examples\learnvcn\Chap16\MyDraw6\MainFrm.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\MyDraw6\MainFrm.h}
+Examples\learnvcn\Chap16\MyDraw6\MyDraw.clw	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\MyDraw6\MyDraw.clw}
+Examples\learnvcn\Chap16\MyDraw6\MyDraw.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\MyDraw6\MyDraw.cpp}
+Examples\learnvcn\Chap16\MyDraw6\MyDraw.dsp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\MyDraw6\MyDraw.dsp}
+Examples\learnvcn\Chap16\MyDraw6\MyDraw.dsw	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\MyDraw6\MyDraw.dsw}
+Examples\learnvcn\Chap16\MyDraw6\MyDraw.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\MyDraw6\MyDraw.h}
+Examples\learnvcn\Chap16\MyDraw6\MyDraw.rc	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\MyDraw6\MyDraw.rc}
+Examples\learnvcn\Chap16\MyDraw6\resource.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\MyDraw6\resource.h}
+Examples\learnvcn\Chap16\MyDraw6\Shape.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\MyDraw6\Shape.cpp}
+Examples\learnvcn\Chap16\MyDraw6\Shape.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\MyDraw6\Shape.h}
+Examples\learnvcn\Chap16\MyDraw6\StdAfx.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\MyDraw6\StdAfx.cpp}
+Examples\learnvcn\Chap16\MyDraw6\StdAfx.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\MyDraw6\StdAfx.h}
+
+Examples\learnvcn\Chap16\MyDraw6\res\DrawDoc.ico	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\MyDraw6\res\DrawDoc.ico}
+Examples\learnvcn\Chap16\MyDraw6\res\MyDraw.ico	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\MyDraw6\res\MyDraw.ico}
+Examples\learnvcn\Chap16\MyDraw6\res\MyDraw.rc2	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\MyDraw6\res\MyDraw.rc2}
+Examples\learnvcn\Chap16\MyDraw6\res\Toolbar.bmp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap16\MyDraw6\res\Toolbar.bmp}
+
+//Chap17
+Examples\learnvcn\Chap17\MyDraw7\DrawDoc.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap17\MyDraw7\DrawDoc.cpp}
+Examples\learnvcn\Chap17\MyDraw7\DrawDoc.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap17\MyDraw7\DrawDoc.h}
+Examples\learnvcn\Chap17\MyDraw7\DrawVw.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap17\MyDraw7\DrawVw.cpp}
+Examples\learnvcn\Chap17\MyDraw7\DrawVw.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap17\MyDraw7\DrawVw.h}
+Examples\learnvcn\Chap17\MyDraw7\MainFrm.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap17\MyDraw7\MainFrm.cpp}
+Examples\learnvcn\Chap17\MyDraw7\MainFrm.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap17\MyDraw7\MainFrm.h}
+Examples\learnvcn\Chap17\MyDraw7\MyDraw.clw	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap17\MyDraw7\MyDraw.clw}
+Examples\learnvcn\Chap17\MyDraw7\MyDraw.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap17\MyDraw7\MyDraw.cpp}
+Examples\learnvcn\Chap17\MyDraw7\MyDraw.dsp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap17\MyDraw7\MyDraw.dsp}
+Examples\learnvcn\Chap17\MyDraw7\MyDraw.dsw	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap17\MyDraw7\MyDraw.dsw}
+Examples\learnvcn\Chap17\MyDraw7\MyDraw.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap17\MyDraw7\MyDraw.h}
+Examples\learnvcn\Chap17\MyDraw7\MyDraw.rc	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap17\MyDraw7\MyDraw.rc}
+Examples\learnvcn\Chap17\MyDraw7\resource.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap17\MyDraw7\resource.h}
+Examples\learnvcn\Chap17\MyDraw7\Shape.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap17\MyDraw7\Shape.cpp}
+Examples\learnvcn\Chap17\MyDraw7\Shape.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap17\MyDraw7\Shape.h}
+Examples\learnvcn\Chap17\MyDraw7\StdAfx.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap17\MyDraw7\StdAfx.cpp}
+Examples\learnvcn\Chap17\MyDraw7\StdAfx.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap17\MyDraw7\StdAfx.h}
+
+Examples\learnvcn\Chap17\MyDraw7\res\DrawDoc.ico	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap17\MyDraw7\res\DrawDoc.ico}
+Examples\learnvcn\Chap17\MyDraw7\res\MyDraw.ico	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap17\MyDraw7\res\MyDraw.ico}
+Examples\learnvcn\Chap17\MyDraw7\res\MyDraw.rc2	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap17\MyDraw7\res\MyDraw.rc2}
+Examples\learnvcn\Chap17\MyDraw7\res\Toolbar.bmp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap17\MyDraw7\res\Toolbar.bmp}
+
+Examples\learnvcn\Chap17\YCoord\ChildFrm.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap17\YCoord\ChildFrm.cpp}
+Examples\learnvcn\Chap17\YCoord\ChildFrm.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap17\YCoord\ChildFrm.h}
+Examples\learnvcn\Chap17\YCoord\MainFrm.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap17\YCoord\MainFrm.cpp}
+Examples\learnvcn\Chap17\YCoord\MainFrm.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap17\YCoord\MainFrm.h}
+Examples\learnvcn\Chap17\YCoord\ReadMe.txt	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap17\YCoord\ReadMe.txt}
+Examples\learnvcn\Chap17\YCoord\Resource.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap17\YCoord\Resource.h}
+Examples\learnvcn\Chap17\YCoord\StdAfx.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap17\YCoord\StdAfx.cpp}
+Examples\learnvcn\Chap17\YCoord\StdAfx.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap17\YCoord\StdAfx.h}
+Examples\learnvcn\Chap17\YCoord\YCOORD_2.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap17\YCoord\YCOORDVIEW.H}
+Examples\learnvcn\Chap17\YCoord\YCOORD_2.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap17\YCoord\YCOORDVIEW.CPP}
+Examples\learnvcn\Chap17\YCoord\YCOORD_1.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap17\YCoord\YCOORDDOC.H}
+Examples\learnvcn\Chap17\YCoord\YCOORD_1.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap17\YCoord\YCOORDDOC.CPP}
+Examples\learnvcn\Chap17\YCoord\YCoord.clw	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap17\YCoord\YCoord.clw}
+Examples\learnvcn\Chap17\YCoord\YCoord.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap17\YCoord\YCoord.cpp}
+Examples\learnvcn\Chap17\YCoord\YCoord.dsp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap17\YCoord\YCoord.dsp}
+Examples\learnvcn\Chap17\YCoord\YCoord.dsw	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap17\YCoord\YCoord.dsw}
+Examples\learnvcn\Chap17\YCoord\YCoord.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap17\YCoord\YCoord.h}
+Examples\learnvcn\Chap17\YCoord\YCoord.rc	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap17\YCoord\YCoord.rc}
+
+Examples\learnvcn\Chap17\YCoord\res\Toolbar.bmp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap17\YCoord\res\Toolbar.bmp}
+Examples\learnvcn\Chap17\YCoord\res\YCOORD_1.ICO	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap17\YCoord\res\YCOORDDOC.ICO}
+Examples\learnvcn\Chap17\YCoord\res\YCoord.ico	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap17\YCoord\res\YCoord.ico}
+Examples\learnvcn\Chap17\YCoord\res\YCoord.rc2	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap17\YCoord\res\YCoord.rc2}
+
+//Chap18
+Examples\learnvcn\Chap18\MyDraw8\DrawDoc.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap18\MyDraw8\DrawDoc.cpp}
+Examples\learnvcn\Chap18\MyDraw8\DrawDoc.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap18\MyDraw8\DrawDoc.h}
+Examples\learnvcn\Chap18\MyDraw8\DrawVw.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap18\MyDraw8\DrawVw.cpp}
+Examples\learnvcn\Chap18\MyDraw8\DrawVw.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap18\MyDraw8\DrawVw.h}
+Examples\learnvcn\Chap18\MyDraw8\MainFrm.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap18\MyDraw8\MainFrm.cpp}
+Examples\learnvcn\Chap18\MyDraw8\MainFrm.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap18\MyDraw8\MainFrm.h}
+Examples\learnvcn\Chap18\MyDraw8\MyDraw.clw	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap18\MyDraw8\MyDraw.clw}
+Examples\learnvcn\Chap18\MyDraw8\MyDraw.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap18\MyDraw8\MyDraw.cpp}
+Examples\learnvcn\Chap18\MyDraw8\MyDraw.dsp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap18\MyDraw8\MyDraw.dsp}
+Examples\learnvcn\Chap18\MyDraw8\MyDraw.dsw	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap18\MyDraw8\MyDraw.dsw}
+Examples\learnvcn\Chap18\MyDraw8\MyDraw.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap18\MyDraw8\MyDraw.h}
+Examples\learnvcn\Chap18\MyDraw8\MyDraw.rc	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap18\MyDraw8\MyDraw.rc}
+Examples\learnvcn\Chap18\MyDraw8\resource.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap18\MyDraw8\resource.h}
+Examples\learnvcn\Chap18\MyDraw8\Shape.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap18\MyDraw8\Shape.cpp}
+Examples\learnvcn\Chap18\MyDraw8\Shape.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap18\MyDraw8\Shape.h}
+Examples\learnvcn\Chap18\MyDraw8\StdAfx.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap18\MyDraw8\StdAfx.cpp}
+Examples\learnvcn\Chap18\MyDraw8\StdAfx.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap18\MyDraw8\StdAfx.h}
+
+Examples\learnvcn\Chap18\MyDraw8\res\DrawDoc.ico	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap18\MyDraw8\res\DrawDoc.ico}
+Examples\learnvcn\Chap18\MyDraw8\res\MyDraw.ico	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap18\MyDraw8\res\MyDraw.ico}
+Examples\learnvcn\Chap18\MyDraw8\res\MyDraw.rc2	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap18\MyDraw8\res\MyDraw.rc2}
+Examples\learnvcn\Chap18\MyDraw8\res\Toolbar.bmp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap18\MyDraw8\res\Toolbar.bmp}
+Examples\learnvcn\Chap18\MyDraw8\res\toolbar1.bmp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap18\MyDraw8\res\toolbar1.bmp}
+
+//Chap19
+Examples\learnvcn\Chap19\MyDraw9\Dialogs.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap19\MyDraw9\Dialogs.cpp}
+Examples\learnvcn\Chap19\MyDraw9\Dialogs.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap19\MyDraw9\Dialogs.h}
+Examples\learnvcn\Chap19\MyDraw9\DrawDoc.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap19\MyDraw9\DrawDoc.cpp}
+Examples\learnvcn\Chap19\MyDraw9\DrawDoc.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap19\MyDraw9\DrawDoc.h}
+Examples\learnvcn\Chap19\MyDraw9\DrawVw.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap19\MyDraw9\DrawVw.cpp}
+Examples\learnvcn\Chap19\MyDraw9\DrawVw.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap19\MyDraw9\DrawVw.h}
+Examples\learnvcn\Chap19\MyDraw9\MainFrm.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap19\MyDraw9\MainFrm.cpp}
+Examples\learnvcn\Chap19\MyDraw9\MainFrm.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap19\MyDraw9\MainFrm.h}
+Examples\learnvcn\Chap19\MyDraw9\MyDraw.clw	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap19\MyDraw9\MyDraw.clw}
+Examples\learnvcn\Chap19\MyDraw9\MyDraw.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap19\MyDraw9\MyDraw.cpp}
+Examples\learnvcn\Chap19\MyDraw9\MyDraw.dsp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap19\MyDraw9\MyDraw.dsp}
+Examples\learnvcn\Chap19\MyDraw9\MyDraw.dsw	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap19\MyDraw9\MyDraw.dsw}
+Examples\learnvcn\Chap19\MyDraw9\MyDraw.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap19\MyDraw9\MyDraw.h}
+Examples\learnvcn\Chap19\MyDraw9\MyDraw.rc	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap19\MyDraw9\MyDraw.rc}
+Examples\learnvcn\Chap19\MyDraw9\resource.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap19\MyDraw9\resource.h}
+Examples\learnvcn\Chap19\MyDraw9\Shape.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap19\MyDraw9\Shape.cpp}
+Examples\learnvcn\Chap19\MyDraw9\Shape.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap19\MyDraw9\Shape.h}
+Examples\learnvcn\Chap19\MyDraw9\StdAfx.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap19\MyDraw9\StdAfx.cpp}
+Examples\learnvcn\Chap19\MyDraw9\StdAfx.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap19\MyDraw9\StdAfx.h}
+
+Examples\learnvcn\Chap19\MyDraw9\res\DrawDoc.ico	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap19\MyDraw9\res\DrawDoc.ico}
+Examples\learnvcn\Chap19\MyDraw9\res\MyDraw.ico	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap19\MyDraw9\res\MyDraw.ico}
+Examples\learnvcn\Chap19\MyDraw9\res\MyDraw.rc2	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap19\MyDraw9\res\MyDraw.rc2}
+Examples\learnvcn\Chap19\MyDraw9\res\Toolbar.bmp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap19\MyDraw9\res\Toolbar.bmp}
+Examples\learnvcn\Chap19\MyDraw9\res\toolbar1.bmp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap19\MyDraw9\res\toolbar1.bmp}
+
+//Chap20
+Examples\learnvcn\Chap20\MyDraw10\Dialogs.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\MyDraw10\Dialogs.cpp}
+Examples\learnvcn\Chap20\MyDraw10\Dialogs.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\MyDraw10\Dialogs.h}
+Examples\learnvcn\Chap20\MyDraw10\DrawDoc.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\MyDraw10\DrawDoc.cpp}
+Examples\learnvcn\Chap20\MyDraw10\DrawDoc.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\MyDraw10\DrawDoc.h}
+Examples\learnvcn\Chap20\MyDraw10\DrawVw.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\MyDraw10\DrawVw.cpp}
+Examples\learnvcn\Chap20\MyDraw10\DrawVw.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\MyDraw10\DrawVw.h}
+Examples\learnvcn\Chap20\MyDraw10\MainFrm.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\MyDraw10\MainFrm.cpp}
+Examples\learnvcn\Chap20\MyDraw10\MainFrm.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\MyDraw10\MainFrm.h}
+Examples\learnvcn\Chap20\MyDraw10\MyDraw.clw	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\MyDraw10\MyDraw.clw}
+Examples\learnvcn\Chap20\MyDraw10\MyDraw.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\MyDraw10\MyDraw.cpp}
+Examples\learnvcn\Chap20\MyDraw10\MyDraw.dsp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\MyDraw10\MyDraw.dsp}
+Examples\learnvcn\Chap20\MyDraw10\MyDraw.dsw	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\MyDraw10\MyDraw.dsw}
+Examples\learnvcn\Chap20\MyDraw10\MyDraw.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\MyDraw10\MyDraw.h}
+Examples\learnvcn\Chap20\MyDraw10\MyDraw.rc	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\MyDraw10\MyDraw.rc}
+Examples\learnvcn\Chap20\MyDraw10\resource.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\MyDraw10\resource.h}
+Examples\learnvcn\Chap20\MyDraw10\Shape.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\MyDraw10\Shape.cpp}
+Examples\learnvcn\Chap20\MyDraw10\Shape.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\MyDraw10\Shape.h}
+Examples\learnvcn\Chap20\MyDraw10\StdAfx.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\MyDraw10\StdAfx.cpp}
+Examples\learnvcn\Chap20\MyDraw10\StdAfx.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\MyDraw10\StdAfx.h}
+
+Examples\learnvcn\Chap20\MyDraw10\res\DrawDoc.ico	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\MyDraw10\res\DrawDoc.ico}
+Examples\learnvcn\Chap20\MyDraw10\res\icon1.ico	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\MyDraw10\res\icon1.ico}
+Examples\learnvcn\Chap20\MyDraw10\res\MyDraw.ico	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\MyDraw10\res\MyDraw.ico}
+Examples\learnvcn\Chap20\MyDraw10\res\MyDraw.rc2	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\MyDraw10\res\MyDraw.rc2}
+Examples\learnvcn\Chap20\MyDraw10\res\Toolbar.bmp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\MyDraw10\res\Toolbar.bmp}
+Examples\learnvcn\Chap20\MyDraw10\res\toolbar1.bmp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\MyDraw10\res\toolbar1.bmp}
+
+Examples\learnvcn\Chap20\Nwnd\CHILDFRM.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\Nwnd\CHILDFRM.CPP}
+Examples\learnvcn\Chap20\Nwnd\CHILDFRM.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\Nwnd\CHILDFRM.H}
+Examples\learnvcn\Chap20\Nwnd\MAINFRM.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\Nwnd\MAINFRM.CPP}
+Examples\learnvcn\Chap20\Nwnd\MAINFRM.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\Nwnd\MAINFRM.H}
+Examples\learnvcn\Chap20\Nwnd\NWND.CLW	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\Nwnd\NWND.CLW}
+Examples\learnvcn\Chap20\Nwnd\NWND.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\Nwnd\NWND.CPP}
+Examples\learnvcn\Chap20\Nwnd\NWND.DSP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\Nwnd\NWND.DSP}
+Examples\learnvcn\Chap20\Nwnd\NWND.DSW	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\Nwnd\NWND.DSW}
+Examples\learnvcn\Chap20\Nwnd\NWND.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\Nwnd\NWND.H}
+Examples\learnvcn\Chap20\Nwnd\NWND.RC	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\Nwnd\NWND.RC}
+Examples\learnvcn\Chap20\Nwnd\NWNDDOC.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\Nwnd\NWNDDOC.CPP}
+Examples\learnvcn\Chap20\Nwnd\NWNDDOC.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\Nwnd\NWNDDOC.H}
+Examples\learnvcn\Chap20\Nwnd\NWNDVIEW.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\Nwnd\NWNDVIEW.CPP}
+Examples\learnvcn\Chap20\Nwnd\NWNDVIEW.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\Nwnd\NWNDVIEW.H}
+Examples\learnvcn\Chap20\Nwnd\RESOURCE.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\Nwnd\RESOURCE.H}
+Examples\learnvcn\Chap20\Nwnd\STDAFX.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\Nwnd\STDAFX.CPP}
+Examples\learnvcn\Chap20\Nwnd\STDAFX.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\Nwnd\STDAFX.H}
+
+Examples\learnvcn\Chap20\Nwnd\res\NWND.ICO	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\Nwnd\res\NWND.ICO}
+Examples\learnvcn\Chap20\Nwnd\res\NWND.RC2	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\Nwnd\res\NWND.RC2}
+Examples\learnvcn\Chap20\Nwnd\res\NWNDDOC.ICO	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\Nwnd\res\NWNDDOC.ICO}
+Examples\learnvcn\Chap20\Nwnd\res\TOOLBAR.BMP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\Nwnd\res\TOOLBAR.BMP}
+
+Examples\learnvcn\Chap20\STAT\Mainfrm.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\STAT\Mainfrm.cpp}
+Examples\learnvcn\Chap20\STAT\MAINFRM.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\STAT\MAINFRM.H}
+Examples\learnvcn\Chap20\STAT\README.TXT	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\STAT\README.TXT}
+Examples\learnvcn\Chap20\STAT\RESOURCE.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\STAT\RESOURCE.H}
+Examples\learnvcn\Chap20\STAT\STAT.CLW	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\STAT\STAT.CLW}
+Examples\learnvcn\Chap20\STAT\STAT.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\STAT\STAT.CPP}
+Examples\learnvcn\Chap20\STAT\STAT.DSP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\STAT\STAT.DSP}
+Examples\learnvcn\Chap20\STAT\STAT.DSW	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\STAT\STAT.DSW}
+Examples\learnvcn\Chap20\STAT\STAT.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\STAT\STAT.H}
+Examples\learnvcn\Chap20\STAT\STAT.RC	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\STAT\STAT.RC}
+Examples\learnvcn\Chap20\STAT\STATDOC.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\STAT\STATDOC.CPP}
+Examples\learnvcn\Chap20\STAT\STATDOC.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\STAT\STATDOC.H}
+Examples\learnvcn\Chap20\STAT\STATFORM.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\STAT\STATFORM.CPP}
+Examples\learnvcn\Chap20\STAT\STATFORM.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\STAT\STATFORM.H}
+Examples\learnvcn\Chap20\STAT\STATVW.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\STAT\STATVW.CPP}
+Examples\learnvcn\Chap20\STAT\STATVW.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\STAT\STATVW.H}
+Examples\learnvcn\Chap20\STAT\STDAFX.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\STAT\STDAFX.CPP}
+Examples\learnvcn\Chap20\STAT\STDAFX.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\STAT\STDAFX.H}
+
+Examples\learnvcn\Chap20\STAT\RES\STAT.ICO	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\STAT\RES\STAT.ICO}
+Examples\learnvcn\Chap20\STAT\RES\STAT.RC2	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\STAT\RES\STAT.RC2}
+Examples\learnvcn\Chap20\STAT\RES\STATDOC.ICO	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\STAT\RES\STATDOC.ICO}
+Examples\learnvcn\Chap20\STAT\RES\TOOLBAR.BMP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap20\STAT\RES\TOOLBAR.BMP}
+
+//Chap21
+Examples\learnvcn\Chap21\Diagnost.doc	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap21\Diagnost.doc}
+Examples\learnvcn\Chap21\Gallery.doc	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap21\Gallery.doc}
+Examples\learnvcn\Chap21\MyDrawF.doc	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap21\MyDrawF.doc}
+
+Examples\learnvcn\Chap21\MyDraw10\Dialogs.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap21\MyDraw10\Dialogs.cpp}
+Examples\learnvcn\Chap21\MyDraw10\Dialogs.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap21\MyDraw10\Dialogs.h}
+Examples\learnvcn\Chap21\MyDraw10\DrawDoc.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap21\MyDraw10\DrawDoc.cpp}
+Examples\learnvcn\Chap21\MyDraw10\DrawDoc.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap21\MyDraw10\DrawDoc.h}
+Examples\learnvcn\Chap21\MyDraw10\DrawVw.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap21\MyDraw10\DrawVw.cpp}
+Examples\learnvcn\Chap21\MyDraw10\DrawVw.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap21\MyDraw10\DrawVw.h}
+Examples\learnvcn\Chap21\MyDraw10\MainFrm.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap21\MyDraw10\MainFrm.cpp}
+Examples\learnvcn\Chap21\MyDraw10\MainFrm.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap21\MyDraw10\MainFrm.h}
+Examples\learnvcn\Chap21\MyDraw10\MyDraw.clw	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap21\MyDraw10\MyDraw.clw}
+Examples\learnvcn\Chap21\MyDraw10\MyDraw.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap21\MyDraw10\MyDraw.cpp}
+Examples\learnvcn\Chap21\MyDraw10\MyDraw.dsp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap21\MyDraw10\MyDraw.dsp}
+Examples\learnvcn\Chap21\MyDraw10\MyDraw.dsw	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap21\MyDraw10\MyDraw.dsw}
+Examples\learnvcn\Chap21\MyDraw10\MyDraw.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap21\MyDraw10\MyDraw.h}
+Examples\learnvcn\Chap21\MyDraw10\MyDraw.rc	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap21\MyDraw10\MyDraw.rc}
+Examples\learnvcn\Chap21\MyDraw10\resource.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap21\MyDraw10\resource.h}
+Examples\learnvcn\Chap21\MyDraw10\Shape.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap21\MyDraw10\Shape.cpp}
+Examples\learnvcn\Chap21\MyDraw10\Shape.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap21\MyDraw10\Shape.h}
+Examples\learnvcn\Chap21\MyDraw10\StdAfx.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap21\MyDraw10\StdAfx.cpp}
+Examples\learnvcn\Chap21\MyDraw10\StdAfx.h	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap21\MyDraw10\StdAfx.h}
+
+Examples\learnvcn\Chap21\MyDraw10\res\DrawDoc.ico	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap21\MyDraw10\res\DrawDoc.ico}
+Examples\learnvcn\Chap21\MyDraw10\res\icon1.ico	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap21\MyDraw10\res\icon1.ico}
+Examples\learnvcn\Chap21\MyDraw10\res\MyDraw.ico	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap21\MyDraw10\res\MyDraw.ico}
+Examples\learnvcn\Chap21\MyDraw10\res\MyDraw.rc2	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap21\MyDraw10\res\MyDraw.rc2}
+Examples\learnvcn\Chap21\MyDraw10\res\Toolbar.bmp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap21\MyDraw10\res\Toolbar.bmp}
+Examples\learnvcn\Chap21\MyDraw10\res\toolbar1.bmp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap21\MyDraw10\res\toolbar1.bmp}
+
+Examples\learnvcn\Chap21\MydrawF\DIALOGS.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap21\MydrawF\DIALOGS.CPP}
+Examples\learnvcn\Chap21\MydrawF\DIALOGS.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap21\MydrawF\DIALOGS.H}
+Examples\learnvcn\Chap21\MydrawF\Drawdoc.cpp	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap21\MydrawF\Drawdoc.cpp}
+Examples\learnvcn\Chap21\MydrawF\DRAWDOC.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap21\MydrawF\DRAWDOC.H}
+Examples\learnvcn\Chap21\MydrawF\DRAWVW.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap21\MydrawF\DRAWVW.CPP}
+Examples\learnvcn\Chap21\MydrawF\DRAWVW.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap21\MydrawF\DRAWVW.H}
+Examples\learnvcn\Chap21\MydrawF\MAINFRM.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap21\MydrawF\MAINFRM.CPP}
+Examples\learnvcn\Chap21\MydrawF\MAINFRM.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap21\MydrawF\MAINFRM.H}
+Examples\learnvcn\Chap21\MydrawF\MYDRAW.CLW	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap21\MydrawF\MYDRAW.CLW}
+Examples\learnvcn\Chap21\MydrawF\MYDRAW.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap21\MydrawF\MYDRAW.CPP}
+Examples\learnvcn\Chap21\MydrawF\MYDRAW.DSP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap21\MydrawF\MYDRAW.DSP}
+Examples\learnvcn\Chap21\MydrawF\MYDRAW.DSW	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap21\MydrawF\MYDRAW.DSW}
+Examples\learnvcn\Chap21\MydrawF\MYDRAW.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap21\MydrawF\MYDRAW.H}
+Examples\learnvcn\Chap21\MydrawF\MyDraw.rc	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap21\MydrawF\MyDraw.rc}
+Examples\learnvcn\Chap21\MydrawF\RESOURCE.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap21\MydrawF\RESOURCE.H}
+Examples\learnvcn\Chap21\MydrawF\SHAPE.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap21\MydrawF\SHAPE.CPP}
+Examples\learnvcn\Chap21\MydrawF\SHAPE.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap21\MydrawF\SHAPE.H}
+Examples\learnvcn\Chap21\MydrawF\STDAFX.CPP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap21\MydrawF\STDAFX.CPP}
+Examples\learnvcn\Chap21\MydrawF\STDAFX.H	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap21\MydrawF\STDAFX.H}
+
+Examples\learnvcn\Chap21\MydrawF\RES\DRAWDOC.ICO	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap21\MydrawF\RES\DRAWDOC.ICO}
+Examples\learnvcn\Chap21\MydrawF\RES\ICON1.ICO	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap21\MydrawF\RES\ICON1.ICO}
+Examples\learnvcn\Chap21\MydrawF\RES\MYDRAW.ICO	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap21\MydrawF\RES\MYDRAW.ICO}
+Examples\learnvcn\Chap21\MydrawF\RES\MYDRAW.RC2	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap21\MydrawF\RES\MYDRAW.RC2}
+Examples\learnvcn\Chap21\MydrawF\RES\TOOLBAR.BMP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap21\MydrawF\RES\TOOLBAR.BMP}
+Examples\learnvcn\Chap21\MydrawF\RES\TOOLBAR1.BMP	{Dest:MVC6SH; ReadOnly:-; Remove:Never;RenameTo:learnvcn\Chap21\MydrawF\RES\TOOLBAR1.BMP}
+
+
+
+
+
+
+}
+
+shortcuts
+{
+	MVC6SH.EXE {Caption:Microsoft Visual C++ 6.0 Starts Here; IconIndex:0}
+//	MVC6SH.EXE {Caption:VC6 Starts Here; Destination:desktop; IconIndex:1}
+}
+
+destinations
+{
+	FilePrimary			{Parent:ProgramFiles; Subdirectory:MSPress\MVC6SH}
+	ShortcutPrimary		{Parent:CommonStartMenuPrograms; Subdirectory:Microsoft Press; Remove:IfEmpty}
+	MVC6SH				{Parent:None; Subdirectory:MVC6SH}
+	MSShared			{Parent:CommonFiles; Subdirectory:Microsoft Shared}
+	DAO					{Parent:MSShared; Subdirectory:DAO}
+	Lists				{Parent:FilePrimary; Subdirectory:Lists; Install:Always}
+	NewMedia			{Parent:FilePrimary; Subdirectory:New}
+	JetstreamShared		{Parent:CommonFiles; Subdirectory:Jetstream Shared}
+}
+
+source disks
+{
+	1 {Label:MVC6SH CD; Description:Microsoft Visual C++ 6.0 Starts Here; IndicatorFile:setup.iwf}
+}
+
+
+//==============================================================================
+//	_setup.iwf		InstallWizard setup file
+//
+//	This setup file is used by InstallWizard 3.0 setups. The setup author
+//  modifies this file to describe the application to be installed.
+//
+//  Each key section of this setup file is described above the section. For
+//  more information about the syntax of setup files, see the comments the
+//  bottom of this file.
+//==============================================================================
+
+//==============================================================================
+//	Configurations section
+//
+//	Configurations represent different installation options that are given to
+//	the user during the configurations step.  Configurations are made up of
+//  groups.  Each group listed in a configuration will be enabled (a groups
+//	subgroups will not be enabled) if that configuration is applied.
+//
+//	Format:	<Configuration ID> {Group: <Group ID>; Group <Group ID>; ...}
+//
+//==============================================================================
+
+//==============================================================================
+//	Groups section
+//
+//	Group are logical collections of files.  They can contain both implicit and
+//	explicit files.  Implicit files are loading during the setup from a directory
+//	on the source media.  Explicit files are loaded from the Files section.
+//
+//	Format: <Group ID> {Details: <Boolean>; Name: <String>; Description: <String>
+//						Subgroup: <Group ID>; Icon: <Enumeration>; Implicit:
+//						<Boolean>; Recurse: <Boolean>; SourceDisk: <Source Disk ID>;
+//						RelativeSourceDirectory: <String>; Destination:
+//						<Destination ID>; KeepSourceStructure: <Boolean>}
+//
+//==============================================================================
+
+//==============================================================================
+//	Files section
+//
+//	Each files section belongs to a group, so the section name must match a
+//	<Group ID>.  Also, much of the file information can be read from the file
+//	during installation (e.g Size, SourceModifiedDate), and no not have to be
+//	specified here.
+//
+//	Format: <Source Path> {SourceDisk: <Source Disk ID>; Destination:
+//			<Destination ID>; RenameTo: <String>; Description: <String>;
+//			Size: <Integer>; Version: <String>; SourceModifiedDate: <Date/Time>;
+//			Hidden: <String>; System: <String>; Archive: <String>: ReadOnly:
+//			<String>; InstallCondition: <Enumeration>;
+//			RemoveCondition: <Enumeration>; SelfRegistering: <Boolean>;
+//			ReferenceCounting: <Boolean>; AddApplicationPath: <Boolean>}
+//
+//==============================================================================
+
+//==============================================================================
+//	Shortcuts section
+//
+//	Shortcuts are the .LNK files that normally reside in the start menu directory.
+//	These shortcuts then appear when the user clicks the Start button on the
+//	task bar. Shortcuts are linked to a file and are installed and removed as
+//	that file is installed and removed.
+//
+//	Format: <Source Path> {Destination: <Destination ID>; Caption: <String>;
+//		Arguments: <String>; IconIndex: <Integer>;
+//		InstallCondition: <Enumeration>; RemoveCondition: <Enumeration>}
+//
+//==============================================================================
+
+//==============================================================================
+//	Destination section
+//	This section contains information about each destination where files and
+//	shortcuts will be installed on the end user's machine.  There are three
+//	types of destinations: predefined destinations, special destination
+//	and specified destinations.  Entries under this section must be not be
+//	predefined destinations.
+//
+//	Predefined Destinations: None, Windows, System, Temp, ProgramFiles,
+//		StartMenu, Startup, StartMenuPrograms, Desktop,
+//		SendTo, CommonStartMenu, CommonStartMenuPrograms,
+//		Fonts, CommonFiles, Help
+//
+//	Special Destination: Primary, ShortcutPrimary - these are defined for you
+//						 if not defined in this section
+//
+//	Format:	<Destination ID>	{Subdirectory: <String>; Parent: <Destination ID>;
+//								 InstallCondition: <Enumeration>;
+//								 RemoveCondition: <Enumeration>}
+//
+//==============================================================================
+
+//==============================================================================
+//	Source Disks section
+//
+//	This section specifies the number of source disks that the setup uses.
+//	Source disks can be CDs, diskettes, or even hard drive locations. The
+//	<Source Disk ID> is always a number so that disks can be iterated.
+//
+//	Format:	<Source Disk ID>	{Label: <String>; Description: <String>;
+//								 IndicatorFile: <String>}
+//
+//==============================================================================
+
+//==============================================================================
+//  About the setup file syntax:
+//
+//	Directives:	This file understands #include, #define, #undef, #ifdef, #else
+//				#endif
+//
+//	Symbols:	_DEBUG, DEBUG, _UNICODE, and UNICODE symbols will be automatically
+//				defined when this file is read by InstallWizard
+//
+//	Comments:	Inline comments (slash-slash) and Block comments (star-slash)
+//				can be used.
+//
+//	Merging:	Duplicate sections and entries are automatically merged into
+//				a single item (e.g. if you #include a file with a groups section
+//				and you have a groups section in this file, they will be merged
+//				into a single groups section).
+//
+//	Quotation:	Quotes can be used to create a string literal.  Double-quotes
+//				in a string literal are replaced with a real quote.
+//				"This is a ""string"" literal" -> This is a "string" literal
+//
+//	Whitespace:	Tabs, returns, and spaces are ignored, except in values.  This
+//				allows values such as description to not have to be quoted.
+//
+//	Values:		Values can be <Boolean>, <String>, <Integer>, <Integer64>, and
+//				<Enumeration>. Value types such as Boolean can be represented
+//				in many ways (Yes, No, Y, N, True, False, T, F etc.).
+//
+//
+//	NOTE: Please see the 'InstallWizard Setup File Format.doc' for specific
+//		  section, entry, and tag requirements/features.
+//	Copyright (C), 1994-1998, Jetstream Software, Inc. All rights reserved.
+//==============================================================================

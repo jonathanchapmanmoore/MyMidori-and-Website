@@ -1,0 +1,30 @@
+0, Let's take a quick look at how to derive one C++ 
+4, class from another. The Demo1 application has 
+7, several classes, one of which is called CShape. Class 
+15, CShape has one data member, m_szName, a 
+19, constructor, a destructor, and two member functions, 
+22, MemFunction1 and MemFunction2. Let's create a new class 
+28, derived from CShape. In ClassView, right-click Demo1 
+33, Classes. On the context menu, select New Class. 
+42, In the dialog box, type CRectangle in the Name box. 
+55, Change the .h and .cpp filenames to Shape.h and 
+69, Shape.cpp. Set Class Type to Generic Class. A 
+82, generic class is one that is not derived from an MFC 
+86, class. In the Base Class(es) box, click the 
+89, highlighted area below Derived From and type CShape. 
+100, Then click OK. Visual C++ creates the class. Here's 
+108, the code for the new class. Notice the class 
+113, heading: "class CRectangle : public CShape". This syntax 
+120, shows that the new class derives publicly from 
+122, the old one. I introduced the "public" access 
+125, specifier in Chapter 4. The new class has its own 
+129, constructor and destructor and the new class also 
+134, inherits the members of its base class. Thus class 
+138, CRectangle has an inherited m_szName data member and 
+142, two inherited member functions, MemFunction1 and 
+145, MemFunction2. You don't see these inherited items 
+148, listed in class CRectangle, but they're there by 
+151, inheritance. That's the basic procedure in Visual C++ 
+156, for creating a new class derived from an existing 
+158, class.
+159, END

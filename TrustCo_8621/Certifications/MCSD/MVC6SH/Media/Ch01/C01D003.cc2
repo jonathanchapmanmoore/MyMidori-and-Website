@@ -1,0 +1,40 @@
+0, Visual C++ has two kinds of windows. They behave 
+5, differently, so a quick tour will help you 
+8, understand how to use them effectively. The two kinds of 
+11, windows are document windows and dockable windows. 
+15, This document window contains a source code file 
+17, ready to edit. But document windows can contain 
+20, other things too. If you open a menu resource for 
+23, editing you see a menu editor document like this 
+34, one. You can minimize or maximize a document 
+42, window, or you can tile or cascade all open document 
+54, windows in the available space. Note that you cannot 
+58, drag a document window outside the Visual C++ 
+63, window. In general, use the Window menu to manipulate 
+75, document windows. The window menu also lists all open 
+78, document windows. Unlike document windows, dockable 
+83, windows are part of the working toolset in Visual 
+86, C++. Dockable windows include the Workspace window, 
+95, the Output window and the debug windows.The debug 
+104, windows are available only when the debugger is 
+106, running. Dockable windows also include the menu bar 
+120, and the toolbars. Dockable windows stay on top of 
+126, all document windows, so they sometimes get in 
+128, the way. But you can redock a dockable window to 
+132, another side of the Visual C++ window, like this.
+146, Dockable windows can also float: just double-click the 
+149, window's frame, like this, and, unlike a document 
+154, window, you can drag a dockable window outside of 
+157, Visual C++. Double-click a floating window's title 
+170, bar to redock the window. To gain more working 
+177, space in Visual C++, you can close any open dockable 
+181, windows. Click the window's close box, the small 
+184, 'x'. For example, closing the Output window leaves 
+191, more room for editing code. Reopen a closed 
+194, dockable window from the View menu or from the Standard 
+206, toolbar. Whereas document windows are controlled from 
+217, the Window menu, dockable windows are controlled 
+222, from the View menu. Now you know how to work with 
+227, both types of windows in Visual C++: document 
+231, windows and dockable windows.
+233, END

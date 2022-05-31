@@ -1,0 +1,132 @@
+0, MFC applications usually include toolbars. A 
+4, toolbar is a window that contains buttons used to issue 
+6, commands in the program. Toolbars usually appear 
+9, just below your program's menu bar, but MFC lets 
+12, you write code to "dock" a toolbar to a given side 
+15, of the window. Or you can allow the user to dock 
+18, the toolbar to any desired side. The 
+48, buttons on a toolbar are usually quick shortcuts for 
+51, commands already on the menu. To work with toolbars, 
+54, use the Toolbar editor. We will add a toolbar to 
+57, the Demo1 program and edit the program's existing 
+60, toolbar as well. Each toolbar in a program is 
+63, identified by a toolbar resource. This resource contains 
+67, the bitmap images for the toolbar's buttons. Let's 
+69, open the Demo1 program's existing toolbar resource 
+73, in the Toolbar editor. In the Workspace window, 
+77, select the ResourceView tab. If the Demo1 Resources 
+83, folder is not open, click the plus sign in front 
+86, of it to open it. Open the Toolbar folder and 
+90, double-click the IDR_MAINFRAME toolbar resource ID. 
+97, This opens the resource in a Toolbar editor window. 
+100, We will edit the bitmap for the first button, on the 
+102, left end of this toolbar. The toolbar editor has 
+107, two working toolbars of its own, the Graphics 
+110, toolbar and the Color palette. These are positioned to 
+118, the right of the Toolbar editor's work area. They 
+120, provide the tools and colors you need for creating 
+122, and editing toolbar buttons. The first button on 
+127, the toolbar we're editing shows the icon of a 
+129, document page. To demonstrate editing an existing 
+133, toolbar, let's fill the page image with red. On the 
+137, Color Palette, click the red box to select red as 
+139, the current foreground color. This selection is 
+145, indicated in the upper left corner of the Color 
+147, Palette. On the Graphics toolbar, click the pouring 
+150, paint bucket icon. This tool lets you fill an area 
+155, with color. Now click inside the page image on the 
+159, first toolbar button. The interior fills with red. 
+165, The Toolbar editor's Graphics toolbar contains 
+167, many useful tools, including an Airbrush tool. 
+174, You will want to experiment with these tools. To save the 
+177, edited toolbar, select Save on the File menu. To 
+185, close the Toolbar editor, select Close on the File 
+187, menu. Now let's create a new toolbar with three 
+193, buttons: one with the image of a rectangle, one 
+196, with the image of an ellipse, and one with a freehand 
+198, drawing. To create the new toolbar resource, 
+202, select Resource on the Insert menu. In the Insert 
+208, Resource dialog box, double-click Toolbar. The Toolbar 
+213, editor opens with the image of one blank button. 
+216, This will be the first of our three buttons. In 
+219, ResourceView, the Toolbar folder now contains the ID 
+222, of the new toolbar resource: IDR_TOOLBAR1. Let's 
+227, change the name to IDR_MYTOOLBAR. In 
+232, ResourceView, right-click the IDR_TOOLBAR1 resource ID  
+235, in the Toolbar folder. On the context menu, select 
+239, Properties. In the Properties window, rename the 
+243, resource in the ID box. The Properties window for a 
+256, toolbar resource doesn't include many properties. But 
+259, notice that it does show a thumbnail image of the 
+262, toolbar in the Preview box. The Toolbar editor is 
+266, divided into three panes. The upper pane shows the 
+271, whole toolbar as a 3D image. Currently it has only 
+274, one button, but as soon as you start editing the 
+276, current button, a second, blank button appears. 
+279, The currently selected button is shown by a fuzzy 
+281, border. The left pane shows the image of the current 
+285, button in its actual size, without 3D. And the 
+289, right pane shows an enlarged image of the current 
+293, button. This is our work area. On the Graphics 
+296, toolbar, select the Rectangle tool. It's the small 
+301, unfilled rectangle. In the right pane, use the 
+304, selected tool to draw a rectangle on the enlarged button 
+307, image. Because we have red selected on the Color 
+318, Palette, our rectangle is drawn in red. If you 
+321, don't like the results, you can always use the Undo 
+324, command on the Edit menu to erase the last bit of 
+328, drawing you did. At this point, a new second button 
+337, image has appeared in the toolbar in the upper 
+339, pane. To create the second button, click it in the 
+342, upper pane. The Toolbar editor's work area now shows 
+348, the new button. On the Graphics toolbar, select 
+352, the Ellipse tool. In the right pane, use the 
+358, selected tool to draw an ellipse or circle on the 
+361, enlarged button image. In the upper pane, click the new 
+372, third button that has appeared there. On the 
+376, Graphics toolbar, select the Pencil tool. In the right 
+381, pane, draw a freeform image with the pencil. If 
+393, you like, you can draw part of the image in red, 
+395, then select a new color and draw another part of the 
+401, image in that color. You already know how to fill 
+410, a bounded area with a color if desired. These 
+413, capabilities allow you to draw fairly sophisticated 
+415, images. With the buttons drawn, we next need to 
+419, assign each one a command ID. When the user clicks a 
+422, button, Windows sends a command to the appropriate 
+424, window. The command includes the command ID and 
+427, MFC uses it to execute a handler for the command. To 
+432, edit a button's properties, select the button in 
+435, the upper pane. Then select Properties on the View 
+438, menu. In the Properties window, select or type 
+444, the command ID in the ID box. You can also change 
+458, the button's size and assign a prompt to it. 
+473, The prompt appears in the status bar when the user 
+475, rests the cursor on the button without clicking it. 
+479, You can see this effect using one of the toolbars 
+481, in Visual C++. To also give the toolbar button a 
+486, tooltip, add the tooltip text after the prompt 
+490, string, preceded by \n. When the user rests the 
+504, cursor over the toolbar button, a small yellow tooltip 
+507, box displays near the button to explain its 
+510, purpose. Set properties for the other buttons in the 
+513, same way. We will skip that in this demonstration. Now 
+519, let's rearrange the buttons on the toolbar by 
+521, dragging the third button to first position. Point to 
+524, the third button and drag it just to the left of 
+528, the first button. Drop it there to insert it in 
+534, that position. As a finishing touch, let's put a bit 
+538, of space between the first and second buttons. 
+540, This allows you to group buttons on the toolbar. 
+543, Point to the second button and drag it about halfway 
+548, over the third button. You can close up that space 
+554, again by dragging the second button to the left, 
+557, just over the edge of the first button. By the way, 
+561, to delete a toolbar button, just drag it off the 
+564, toolbar and let go. Save the toolbar and close the 
+579, Toolbar editor. Creating the toolbar resource is 
+584, not the whole story. You still must write some 
+587, code to load the resource and make the toolbar appear 
+589, in your program. This coding task is described in 
+592, Chapter 18.
+593, END

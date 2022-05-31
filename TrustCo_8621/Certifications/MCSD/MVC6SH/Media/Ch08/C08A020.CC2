@@ -1,0 +1,59 @@
+0, In this animation, you will see what tasks are 
+3, accomplished in each of the three phases in the life 
+5, cycle of an MFC application. When a user 
+9, double-clicks an MFC application icon or an executable file 
+14, name in Explorer, Windows responds by loading the 
+17, application image into memory, constructing the 
+20, application object, and then calling the WinMain 
+23, function, which is the entry for all Windows-based 
+26, applications. The CWinApp class is responsible for 
+30, initialization, running, and termination for an 
+33, application. An MFC application must have one and 
+38, only one object of a class derived from CWinApp. 
+43, WinMain initializes the application object by calling 
+46, the application's InitInstance member function. 
+51, WinMain then calls the application object's Run 
+54, member function to run the Windows message pump. In 
+58, the message pump, the application's commands and 
+60, events are received and dispatched to the 
+63, appropriate handler. On termination of the application, 
+67, WinMain calls AFXWinTerm, then executes a return to 
+72, end the application. Now let's look at the 
+75, initialization phase in more detail. The application 
+78, object's InitInstance function is where much 
+81, of the application's initialization occurs. The 
+85, application's registry key is set here, as well as, 
+88, for backward compatibility, the loading of any 
+90, .ini files associated with the application. In 
+95, addition, it is in the InitInstance function that the 
+98, application's data, and views on that data, are 
+100, initialized. Along with the CWinApp class, the 
+104, CDocument, CView, CFrameWnd, and CDocTemplate classes 
+109, work together to support the MFC document/view 
+112, architecture. The CDocTemplate class binds a specific 
+116, document, view, and frame object to define a 
+120, particular document template object for an application. 
+124, Applications may have multiple document templates 
+126, defined. The actual construction of the document, 
+130, view, and frame entity does not occur until the 
+134, CWinApp::ProcessShellCommand function is called in the 
+138, InitInstance function. This function will attempt 
+141, to create a document object based upon a file 
+144, name specified on the command line of the 
+146, application. If a file name is specified, the framework uses 
+151, the CDocTemplate manager to determine
+153, what frame and view objects need to be created 
+156, on that data. At this point, the application now 
+159, has a valid document, view, and frame window. Next, 
+164, the application's message pump is started, 
+167, allowing it to process messages coming from the operating 
+169, system and the user. The message pump continues 
+173, to run until the WM_QUIT message is received, at 
+177, which point the Run function calls ExitInstance, 
+181, freeing resources and doing any additional cleanup 
+183, required. The return code from ExitInstance is 
+187, returned to WinMain, which finally calls AfxWinTerm to 
+192, exit the application. This animation has 
+195, demonstrated the three phases in the life cycle of an 
+198, application: initialization, running and termination.
+204, END

@@ -1,0 +1,68 @@
+0, One of the Windows resource types that you can 
+3, edit with Visual C++ is called an accelerator. An 
+6, accelerator is a key combination that causes a 
+8, command to be carried out. For example, on the Visual 
+12, C++ File menu, the Open command is associated with 
+17, the accelerator combination Ctrl+O. Pressing that 
+21, key combination displays the Open dialog box so the 
+24, user can specify a file to open. The accelerator 
+30, works even if there is no corresponding menu 
+32, command. The accelerator might duplicate the action of 
+35, a command on a menu, but the accelerator does not 
+37, actually involve the menu in any way. In an earlier 
+41, demonstration, we added menus to the Demo1 
+43, application. At that time, we listed an accelerator 
+47, combination beside the Hamburger item on our Food menu. 
+55, Now we need to create the accelerator 
+56, itself. Visual C++ stores its accelerator resources
+60, in one or more accelerator tables. An accelerator
+63, table can hold many distinct accelerators. 
+66, When you use AppWizard to create your MFC project, 
+69, the wizard creates an accelerator resource whose ID 
+71, is IDR_MAINFRAME. We'll use the Visual C++ 
+80, Accelerator editor to add an accelerator to that 
+83, resource. To open the IDR_MAINFRAME accelerator resource 
+90, for editing, double-click the IDR_MAINFRAME
+94, resource ID. The resource opens in an 
+98, Accelerator editor window. To add the 
+101, accelerator for the Hamburger command-the 
+103, key combination Ctrl+H, right click anywhere in the 
+107, Accelerator editor. Select New Accelerator. In the 
+118, Accel Properties window, use the ID box to select 
+120, ID_FOOD_HAMBURGER, the command ID for the Hamburger 
+132, command. If the command ID didn't exist yet, you 
+137, could instead type it in the ID box. Next, tab to 
+141, the Key box and type an upper-case H. In the 
+147, Modifiers box, confirm that Ctrl is selected and the 
+151, other options are not. We want users to press the 
+153, Ctrl key along with the H key. In the Type box, 
+158, confirm that VirtKey is selected instead of ASCII. The 
+161, key combination we're defining is for the command, 
+164, signified by VirtKey, or "virtual key," rather 
+167, than for typing an ASCII character. Close the 
+170, Accelerator editor by first closing the Accel Properties 
+173, dialog box, then select Close on the  
+178, File menu. If prompted to save, click Yes. To test 
+189, the accelerator, build the application and run 
+191, it. If you already have defined a command handler 
+194, for the accelerator, you can hold down the Ctrl key and 
+197, press the H key to activate the command. This course 
+200, covers command handlers in Chapter 10. Here is a 
+204, version of the demo and application for which there is a 
+206, handler for the Hamburger command on the Food 
+209, Sub menu underneath the order menu. If I click CtrlH, the 
+216, command executes. It's conventional to list the key combination 
+221, of an accelerator beside the corresponding menu 
+223, command, if one exists. The Hamburger menu shows 
+230, the text Hamburger, then a tab for separation, and 
+233, finally the text Ctrl+H. Note that listing the 
+237, accelerator text on the menu does not create the 
+239, accelerator. You must do that with the Accelerator 
+241, editor. Listing the key combination on the menu simply 
+245, gives the user a way to learn or look up the 
+247, accelerator. Not all commands have accelerators, but 
+251, it's a good programming practice to add accelerators 
+253, for the most commonly used commands. This helps 
+255, users who prefer to use the keyboard rather than the 
+258, mouse. 
+259, END

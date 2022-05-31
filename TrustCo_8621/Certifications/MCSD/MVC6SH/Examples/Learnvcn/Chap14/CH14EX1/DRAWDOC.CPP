@@ -1,0 +1,145 @@
+// DrawDoc.cpp : implementation of the CMyDrawDoc class
+//
+
+#include "stdafx.h"
+#include "MyDraw.h"
+
+#include "DrawDoc.h"
+
+#ifdef _DEBUG
+#define new DEBUG_NEW
+#undef THIS_FILE
+static char THIS_FILE[] = __FILE__;
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+// CMyDrawDoc
+
+IMPLEMENT_DYNCREATE(CMyDrawDoc, CDocument)
+
+BEGIN_MESSAGE_MAP(CMyDrawDoc, CDocument)
+	//{{AFX_MSG_MAP(CMyDrawDoc)
+		// NOTE - the ClassWizard will add and remove mapping macros here.
+		//    DO NOT EDIT what you see in these blocks of generated code!
+	//}}AFX_MSG_MAP
+END_MESSAGE_MAP()
+
+/////////////////////////////////////////////////////////////////////////////
+// CMyDrawDoc construction/destruction
+
+CMyDrawDoc::CMyDrawDoc()
+{
+	// TODO: add one-time construction code here
+	// Set the array's initial size.
+	m_listShapes.SetSize(30, 10);
+}
+
+CMyDrawDoc::~CMyDrawDoc()
+{
+}
+
+BOOL CMyDrawDoc::OnNewDocument()
+{
+	if (!CDocument::OnNewDocument())
+		return FALSE;
+
+	// TODO: add reinitialization code here
+	// (SDI documents will reuse this document)
+
+	return TRUE;
+}
+
+
+
+/////////////////////////////////////////////////////////////////////////////
+// CMyDrawDoc serialization
+
+void CMyDrawDoc::Serialize(CArchive& ar)
+{
+	if (ar.IsStoring())
+	{
+		// TODO: add storing code here
+	}
+	else
+	{
+		// TODO: add loading code here
+	}
+}
+
+/////////////////////////////////////////////////////////////////////////////
+// CMyDrawDoc diagnostics
+
+#ifdef _DEBUG
+void CMyDrawDoc::AssertValid() const
+{
+	CDocument::AssertValid();
+}
+
+void CMyDrawDoc::Dump(CDumpContext& dc) const
+{
+	CDocument::Dump(dc);
+}
+#endif //_DEBUG
+
+/////////////////////////////////////////////////////////////////////////////
+// CMyDrawDoc commands
+
+CShape* CMyDrawDoc::CreateShape(ShpType st)
+{
+    ASSERT(st >= shpRectangle && st <= shpEllipse);
+
+    switch(st)
+    {
+    case shpRectangle:
+        {
+            CShpRectangle* pRectangle = new CShpRectangle;
+            ASSERT(pRectangle != NULL);
+			// Add to end of array, growing array if needed.
+            m_listShapes.Add(pRectangle);
+        }
+        break;
+    case shpEllipse:
+        {
+            CShpEllipse* pEllipse = new CShpEllipse;
+            ASSERT(pEllipse != NULL);
+            m_listShapes.Add(pEllipse);
+        }
+        break;
+    default: ;  // Nothing
+    }
+
+    // Return the object just created
+	// CObArray::GetSize returns number of elements in array.
+    if(m_listShapes.GetSize() > 0)   
+		// CObArray::GetAt returns CObject* at specified array index.
+		// CObArray::GetUpperBound returns highest index in array.
+        return (CShape*)m_listShapes.GetAt(m_listShapes.GetUpperBound());     
+    else
+        return NULL;
+}
+
+void CMyDrawDoc::DeleteLatestShape()
+{
+    ASSERT(m_listShapes.GetSize() > 0);
+	// First, retrieve the latest shape added to the array.
+    CShape* pShape = (CShape*)m_listShapes.GetAt(m_listShapes.GetUpperBound());
+	// Next, remove the element from the array.
+	// CObArray::RemoveAt removes CObject* at specified array index.
+	m_listShapes.RemoveAt(m_listShapes.GetUpperBound());
+	// Finally, delete the object retrieved earlier.
+    delete pShape;
+}
+
+void CMyDrawDoc::DeleteAllShapes()
+{
+	m_listShapes.RemoveAll();
+}
+
+void CMyDrawDoc::DeleteContents() 
+{
+	// TODO: Add your specialized code here and/or call the base class
+    DeleteAllShapes();
+    UpdateAllViews(NULL);
+	
+	CDocument::DeleteContents();
+}

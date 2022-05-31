@@ -1,0 +1,36 @@
+0, In Visual C++, it's often better to store text 
+4, strings as Windows string resources rather than 
+6, hard-coding the strings in your program. For example, 
+10, if you display error messages in a dialog or 
+12, message box, you can use a string previously stored in a 
+15, string resource. Among other things, this makes 
+18, it easier to produce a version of your program 
+20, whose text is in another language. How do you use 
+24, these string resources? Suppose you have a string 
+27, resource that contains the text "This is an error 
+29, message." That resource has an ID, perhaps something 
+33, like IDS_ERR1. If you want to display a message box 
+37, containing that string, you can call the 
+39, AfxMessageBox function--an MFC global function--and pass 
+43, the string ID as a parameter instead of specifying 
+47, a hard-coded string literal. The typical use of a 
+50, string in the string table looks like this. String 
+60, resources are stored in your program's one and 
+62, only string table, which can store many strings. 
+71, Each entry in the table contains three
+73, elements: an ID, the integer value of that 
+76, ID, and a caption--the text of the string. The 
+79, default string table already contains many strings used 
+81, by MFC. To add a new string, right-click anywhere in 
+86, the String Editor window and select New String. In the 
+92, String Properties window, change the default ID 
+95, to IDS_ERR1. In the Caption box, type "This is an 
+111, error message." Visual C++ assigns an integer value 
+122, for the ID, and you supply the string text. Close 
+126, the String editor by first closing the String properties 
+129, dialog box. Then click Close on the File 
+134, menu. If prompted to save, click Yes. Here's a 
+144, version of the Demo1 application that uses our string 
+147, resource in a message box. Use string resources 
+153, liberally rather than hard-coding strings.
+157, END

@@ -1,0 +1,171 @@
+0, WizardBar is a handy little Visual C++ tool that 
+3, packs a lot of functionality into a space-saving 
+5, toolbar. WizardBar combines the most common actions 
+9, you can take from ClassView and ClassWizard. So 
+13, having WizardBar available lets you close the large 
+15, Workspace window if you need more working space. 
+20, And where the large ClassWizard dialog box covers 
+22, much of your screen, WizardBar lets you keep your 
+28, code in view while you're using the WizardBar 
+30, commands. Most of what you might need is there on a 
+32, little toolbar. Use WizardBar for the following 
+41, purposes: to see at a glance where you are in your 
+44, source code, to navigate to a particular class or 
+49, function in your project, and to add new classes and 
+54, functions easily. WizardBar can add: handler 
+61, functions for Windows messages, functions that override 
+65, MFC virtual functions, and ordinary class member 
+68, functions. When you are in the middle of a long 
+71, function, a glance at WizardBar shows your 
+73, context--where you are in your code. If you're working in 
+79, the OnDraw function, for instance, the function name 
+82, appears in one of the combo boxes on the 
+84, WizardBar toolbar. Even if the function name isn't visible 
+91, in the text editor, you know where the cursor is. 
+105, As long as you're working in the text editor or 
+107, the Dialog editor, WizardBar tracks where you are 
+110, in the code, so it knows which class you're in and 
+113, which function in that class. If you switch to 
+118, another part of Visual C++, such as the Menu editor, 
+129, WizardBar commands are still available, but 
+133, WizardBar dims to show that it can't currently track 
+135, your context until you return to editing source code 
+138, or dialogs. As you can see here, the WizardBar 
+148, toolbar contains four controls: three combo boxes and 
+153, an Action button that includes a drop-down menu 
+156, of available commands. From left to right, the 
+159, combo boxes are called the Class box, the Filter box, 
+166, and the Members box. If you forget a box's name 
+171, and purpose, rest the cursor on the box to see a 
+174, tooltip. Let's look at the combo boxes and see what 
+177, they do. To see what function your cursor is 
+180, in, look at the Members box on the right. Here we are 
+184, in the OnDraw function. To jump directly to the 
+187, definition of a different function, open the 
+189, Members combo box and select the function you want. To 
+195, see what class your cursor is in, look at the Class 
+198, box on the left. Here we are in the CDemo1View 
+202, class. To switch to a different class, open the Class 
+206, combo box and select the class you want. Notice 
+212, that this does not open a file containing the class. 
+215, To do that, select a function in the Members box, 
+223, which now contains members of the class you 
+225, chose. You can also get to any global items in your 
+229, code, such as global functions: select "(Globals)" in 
+232, the Class box. Any global items are listed in the 
+239, Members box. Let's go back to where we were. 
+251, Using the Filter box in the middle of the toolbar, 
+253, you can exercise some control over what's displayed 
+255, in the Members box. Open the Filter combo box and 
+259, select an object, such as a command ID. Instead of 
+266, displaying all member functions of the current 
+268, class, as it does by default, the Members box now 
+271, displays the name of the member function responsible 
+273, for processing a particular command, the 
+276, command's "handler function." If your code doesn't contain 
+279, a handler for the object, you can use the Members 
+282, box to add one. Let's select ID_APP_EXIT in the 
+286, Filter box. That's the command ID for the Exit 
+292, command on the File menu. Then select COMMAND in the 
+296, Members box. The Add Member Function dialog box 
+302, opens. At this point, you can add a command handler 
+304, that overrides MFC's default handler for the Exit 
+307, command on the File menu. Now let's look at 
+315, WizardBar's Action button, which doubles as a button and 
+318, a menu. First, let's look at the button part. 
+322, Click this "magic wand" button to execute the default 
+326, command immediately. The current default action 
+329, depends on which combo box has the focus. The box 
+332, that has the focus is the last one you made a 
+334, selection in. You can also double-click a box to set focus 
+338, to it. What happens when you click the Action button 
+341, depends on what file is open in the text editor. If 
+343, it's the .h file, the Action button takes you to 
+347, the definition in the .cpp file for the function 
+350, listed in the Members box. If you're already in the 
+354, .cpp file, you go to the function declaration in 
+357, the .h file. You can click the button repeatedly 
+362, to toggle back and forth. I won't review all 
+368, possible default actions here, but you can learn more by 
+371, checking the Help index for WizardBar. The rules 
+374, for the default action can be hard to remember, so 
+377, WizardBar's Action button also includes a menu of 
+379, possible actions, many more of them than just the 
+382, default action. The Action menu's contents change 
+385, depending on the context and what you're allowed 
+387, to do in that context. If you don't see the 
+390, command you want, try clicking a different combo box to 
+392, change the focus. For example, if you want to 
+395, delete the function the cursor is in but the Delete 
+397, command is missing from the Action menu, 
+400, double-click the Members box to give it the focus. Then 
+403, you will find the Delete command on the Action menu. 
+406, Let's look at the Action menu: However, in order to capture 
+411, the Action menu for this demonstration, I will first have to undock 
+414, the Wizard Bar. I will also close the workspace window. To open  
+430,  the Action menu, click the downward-facing arrow beside the 
+433, Action button. The default action appears in boldface 
+438, on the menu. The menu always contains several go-to 
+441, commands. Use the Go To Function Declaration 
+453, command to get to the function's prototype within its 
+456, class's definition in the .h file. Use the Go To 
+463, Function Definition command to get to the 
+468, function's code in the .cpp implementation file. Use the Go 
+473, To Class Definition command to get to the start 
+480, of the class definition in the .h file. The Go To 
+483, Next Function and Go To Previous Function commands 
+489, step through the current class's functions in 
+491, order, as they appear in the currently open file. If 
+494, it's a .h file displaying a class definition, you 
+498, step through the function prototypes in the class. 
+511, If the file is a .cpp file, you step from function 
+518, definition to function definition. There is also 
+531, an Open Include File command that lets you open any 
+535, include file that the current file includes. The 
+547, remaining functions on the Action menu let you add 
+550, or delete classes or functions. Let's add three 
+553, functions to the view class in the Demo1 program. 
+557, First, select CDemo1View in the Class box if it is 
+561, not already selected. Then use the menu to give the 
+564, command you want. For starters, we'll create a 
+568, class member function to handle the WM_LBUTTONDOWN 
+570, Windows message. On the Action menu, select Add 
+574, Windows Message Handler. In the dialog box, find your 
+578, message in the New Windows Messages/Events box 
+581, and double-click it. The function name OnLButtonDown 
+590, appears in the Existing Messages/Handlers box. 
+594, Click the Edit Existing button to go to the newly 
+596, added function, where you can enter its code. Next, 
+603, we will create a member function that overrides a 
+605, virtual function--the OnInitialUpdate function 
+608, defined in CDemo1View's base class, CView. On the 
+611, Action menu, select Add Virtual Function. In the New 
+620, Virtual Functions box, double-click OnInitialUpdate, 
+629, which is added to the list in the Existing 
+630, Virtual Function Overrides box. Click Edit Existing to 
+637, go to the function's definition. Finally, we'll 
+641, create a class helper function called DoMyTask. On 
+646, the Action menu, select Add Member Function. In the 
+655, Add Member Function dialog, type void or a 
+658, function return type, such as int, in the Function Type 
+661, box. Then type the rest of the function's prototype 
+669, in the Function Declaration box. Select the 
+685, appropriate degree of visibility for the new function: 
+687, public, protected, or private. These access 
+690, specifiers were covered in Chapter 4. If the function is 
+694, to be static or virtual, check the appropriate 
+696, boxes. Click OK to go to the new function. The last 
+709, WizardBar task we will cover is the Delete command, 
+712, which deletes the function listed in the Members 
+714, box. Delete is only available if the Members box 
+717, has the focus. On the Action menu, select Delete. 
+733, If Delete is not on the menu, set the
+735,  focus to the Members box, then try the 
+737, command again. Visual C++ deletes the function 
+741, prototype in the .h file, but it only comments out the 
+745, function definition in the .cpp file. This lets you 
+748, keep the code around in case you change your 
+750, mind. To delete it for good, press the Delete key. 
+757, That's WizardBar. For more information, check the 
+759, Help index for WizardBar.
+761, END

@@ -1,0 +1,55 @@
+:Base MVC6SH.HLP
+:Title Microsoft Visual C++ 6.0 Starts Here
+1 Getting Started
+2 Take the Tour=tour
+2 System Requirements=sys_req
+1 Getting Around
+2 Using the Navigation Pane=nav_area
+2 Viewing Content in the Topic Pane=topic_area
+3 Displaying Multimedia and Additional Information=display_multimedia
+3 Viewing Animations, Demonstrations and Expert Points of View=marissa
+2 Choosing a Display Mode=display_modes
+1 Working Through the Course
+2 Introducing the Course=introducing_the_course
+2 An Overview of Course Content=course_content
+2 Course Components=course_components
+1 Finding Information
+2 Putting the Index to Work=Index
+2 Using Find to Refine Your Search=Find
+2 Using Boolean Operators=Boolean
+2 Viewing the Glossary=Glossary
+2 Revisiting Topics Using the History Window=History
+1 Taking Notes, Adding Bookmarks, and Printing
+2 Creating Notebook Entries=notebook_entries
+2 Printing Notes and Notebook Entries=Notebook_print
+2 Printing Topics and Other Information=print
+1 Find Out About Toolbar Buttons, Menus, and Windows
+2 "What's This?" - Help about Toolbars, Menus, and Windows=whats_this
+2 The Toolbar Buttons=The_Toolbars
+2 The Menu Commands=Menus
+2 The Shortcut Menus=shortcut
+1 Removing Microsoft Visual C++ 6.0 Starts Here
+2 Using Setup to Uninstall=setup_uninstall
+2 Using the Control Panel to Uninstall=cp_uninstall
+1 Fixing Computer Problems
+2 Increasing System Performance=trouble4_a
+2 Audio Problems
+3 I got an error message about my sound=trouble1_1_1
+3 I can't hear any sounds=trouble1_1_2
+3 Checking Your Sound Card=trouble1_1_2a
+3 My sounds are "scratchy"=trouble1_1_4
+3 My sounds are cut off=trouble1_1_5
+3 My sounds "skip"=trouble1_1_5a
+2 Video Problems
+3 Checking and Changing Video Settings=trouble2_a
+3 The display driver supports less than 256 colors=trouble2_1
+3 My machine "hangs"=trouble2_3
+1 When You Need Technical Support
+2 When You Have a Question=tech_support1
+2 Simple Questions=tech_support2
+2 Complex Questions=tech_support3
+2 Non-Urgent Questions=tech_support4
+2 Additional Support Needs=tech_support5
+2 Other Support Options=tech_support6
+2 Product Training and Consultation=tech_support7
+2 Support Outside of the US and Canada=tech_support8

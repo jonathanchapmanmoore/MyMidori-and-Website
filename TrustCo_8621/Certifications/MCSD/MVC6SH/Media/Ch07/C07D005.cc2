@@ -1,0 +1,123 @@
+0, This demonstration shows how to create an MFC 
+5, application project and explains how to choose from 
+7, the wealth of available options. The creation 
+10, process has two parts: creating the project and setting 
+14, its options. Select New on the Visual C++ File menu. 
+23, In the New dialog box, select the Projects tab and 
+26, select MFC AppWizard (exe) from the list of 
+31, project types. Next, type a name in the Project Name 
+35, box, for example, Demo2. AppWizard bases class and 
+44, filenames on this name. Use the Location box to 
+48, specify a directory location for your project, for 
+50, example, C:\Programs. You can use the browse 
+54, button to look for the location. The Create New 
+68, Workspace option is selected by default. Visual C++ lets 
+72, you put more than one project into a workspace, 
+75, but in this course we will always accept the default: 
+78, one workspace, one project. The Platforms box is 
+82, set to Win32, for a 32-bit Windows program that 
+85, runs on Intel machines. Win32 is probably the only 
+89, option available on your machine. We will always 
+91, accept that default in this course. When you have set 
+94, these creation parameters, click OK. In the 
+100, option-setting phase, set your program's option in the 
+103, AppWizard "pages" that Visual C++ opens once you 
+106, complete the New dialog box. The options you set 
+109, determine what features your program will have and 
+111, what files AppWizard will create to get you 
+113, started. On the first AppWizard page, choose an 
+116, application type. You have three options. A single 
+125, document, or SDI application, can work with only one 
+128, document at a time--like the Windows NotePad accessory. 
+152, A multiple document, or MDI, application can work 
+156, with several documents at the same time--like 
+158, Microsoft Word. The third option, a dialog-based 
+172, application, uses a dialog box as your program's 
+176, entire user interface. This is perfect for many simple 
+180, applications, such as the MFC Tracer utility. In 
+186, this course, we will mostly write single document 
+189, applications. With either the single document or 
+197, multiple document options, you can also use the MFC 
+201, document/view architecture---or bypass it. You will 
+204, begin learning the benefits and techniques of 
+206, document/view in Chapter 8. If you want your program's 
+209, resources to be in, say, French, you can also 
+213, specify this on the first AppWizard page. As you change 
+223, options, the illustrations in the dialog box often 
+226, change to show what your program will look like. 
+236, When you finish setting options on a page, click 
+238, the Next button to move on. If you change your mind 
+243, about an option, you can use the Back button to 
+245, visit any earlier page, including the New dialog 
+248, box. Note that the contents of later pages can 
+256, depend on what options you choose on earlier pages. 
+260, I will show you the options most commonly used 
+262, in this course. Exercises at the end of each 
+265, chapter often invite you to explore other AppWizard 
+268, options. On the second AppWizard page, specify 
+272, database options. Since this course does not cover 
+276, database programming, we will always click the 
+279, Next button to move to the next page. On the third 
+282, AppWizard page, specify compound document and 
+285, compound file options. You can also make your program an 
+288, automation client and enable it to contain 
+291, ActiveX controls. These are advanced options not covered 
+294, in this course. We will always accept the default 
+297, options on this page, with one exception. We will 
+300, always clear the ActiveX controls box. On the fourth 
+310, AppWizard page, specify a variety of optional 
+312, program features, such as toolbars, status bars, 
+315, printing, a three-dimensional appearance to controls in 
+318, dialog boxes, and more. Choose the options that 
+321, fit your program plans. For example, suppose you 
+324, intend to supply a context-sensitive Help file for 
+327, your program. In that case, check the 
+329, Context-Sensitive Help box. Visual C++ will provide the 
+333, basic files you need and include a Help build in the 
+336, usual build process. The Advanced button lets you 
+342, specify a file extension if your program will save and 
+344, open files. We will usually accept the defaults on 
+347, this page, but in one example program we will use 
+350, the Advanced button. You can also specify window 
+352, styles. On the fifth AppWizard page, choose between a 
+359, program that looks and works like the Windows 
+360, Explorer and a more standard program appearance. 
+365, Windows Explorer has a tree control in the left pane 
+369, and a list control in the right pane. We will almost 
+372, always use the MFC Standard appearance in this 
+374, course. This page also asks if you want helpful "To 
+379, Do" comments embedded in your code. We will always 
+382, accept this option because AppWizard generates a 
+384, large number of project files, and these comments 
+387, help you find the places in the files where you need 
+389, to add code. On the sixth and final AppWizard 
+397, page, you can modify the names of the classes that the 
+400, wizard will create for you. You can also specify 
+403, what files will house your classes. And you can 
+406, change the base class of the view class.
+409,  In the upper box on this page, select the 
+411, class you want to adjust. For example, you might 
+415, prefer to use short filenames and to derive your 
+418, view class from the MFC class CScrollView instead 
+421, of the default CView. In the examples for this 
+439, course, we will usually shorten the filenames here 
+441, because of a problem with long filenames on some 
+443, CD-ROM  drives. From the sixth page, you can only  
+447, go back or click the Finish button. When you click 
+454, Finish, the New Project Information dialog box lets you 
+457, review the choices you have made in the wizard 
+459, pages. Click Cancel if you discover a mistake here 
+462, and want to go back and change something. Otherwise, 
+465, click OK to create your application, complete 
+468, with all of the options you chose. AppWizard creates 
+474, a workspace file, a project file, and numerous 
+476, other files containing your basic MFC classes, ready 
+479, to be developed with your application-specific 
+482, code. One useful file created is Readme.txt, which 
+492, describes the files and options you have chosen. 
+495, It is a very handy reference. Your new project workspace 
+499, becomes the current workspace, ready to use. 
+503, ClassView displays a list of the classes that the wizard 
+508, created for you. You are now ready to create your 
+511, own first MFC project. 
+514, END

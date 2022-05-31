@@ -1,0 +1,41 @@
+// STLoadData.idl : IDL source for STLoadData.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (STLoadData.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+	[
+		object,
+		uuid(241A7771-6888-11D3-934F-0080C7FA0C3E),
+		dual,
+		helpstring("IUploadStockData Interface"),
+		pointer_default(unique)
+	]
+	interface IUploadStockData : IDispatch
+	{
+		[id(1), helpstring("method UploadRecord")] HRESULT UploadRecord([in] BSTR fund, [in] DATE date, [in] double price, [in] BSTR uplBy, [in] DATE uplDate);
+		[id(2), helpstring("method ConnectToDatabase")] HRESULT ConnectToDatabase();
+		[id(3), helpstring("method Disconnect")] HRESULT Disconnect();
+	};
+
+[
+	uuid(241A7765-6888-11D3-934F-0080C7FA0C3E),
+	version(1.0),
+	helpstring("STLoadData 1.0 Type Library")
+]
+library STLOADDATALib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(241A7772-6888-11D3-934F-0080C7FA0C3E),
+		helpstring("UploadStockData Class")
+	]
+	coclass UploadStockData
+	{
+		[default] interface IUploadStockData;
+	};
+};

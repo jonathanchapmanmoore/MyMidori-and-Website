@@ -1,0 +1,26 @@
+HKCR
+{
+	STLoadData.UploadStockData.1 = s 'UploadStockData Class'
+	{
+		CLSID = s '{241A7772-6888-11D3-934F-0080C7FA0C3E}'
+	}
+	STLoadData.UploadStockData = s 'UploadStockData Class'
+	{
+		CLSID = s '{241A7772-6888-11D3-934F-0080C7FA0C3E}'
+		CurVer = s 'STLoadData.UploadStockData.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {241A7772-6888-11D3-934F-0080C7FA0C3E} = s 'UploadStockData Class'
+		{
+			ProgID = s 'STLoadData.UploadStockData.1'
+			VersionIndependentProgID = s 'STLoadData.UploadStockData'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{241A7765-6888-11D3-934F-0080C7FA0C3E}'
+		}
+	}
+}
