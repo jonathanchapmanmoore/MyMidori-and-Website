@@ -74,6 +74,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo", "Samples\XSD\Demo.cs
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup1.vdproj", "{23E4C84C-9F0C-45A7-A91B-BEF5019C5728}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Scripting.Core", "Framework\Microsoft.Scripting.Core\Microsoft.Scripting.Core.csproj", "{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1167,6 +1169,66 @@ Global
 		{23E4C84C-9F0C-45A7-A91B-BEF5019C5728}.v2Release|x64.Build.0 = Release
 		{23E4C84C-9F0C-45A7-A91B-BEF5019C5728}.v2Release|x86.ActiveCfg = Release
 		{23E4C84C-9F0C-45A7-A91B-BEF5019C5728}.v2Release|x86.Build.0 = Release
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.Debug|Any CPU.ActiveCfg = Silverlight3Debug|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.Debug|Any CPU.Build.0 = Silverlight3Debug|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.Debug|x64.ActiveCfg = Silverlight3Debug|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.Debug|x64.Build.0 = Silverlight3Debug|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.Debug|x86.ActiveCfg = Silverlight3Debug|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.Debug|x86.Build.0 = Silverlight3Debug|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.FxCop|Any CPU.ActiveCfg = FxCop|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.FxCop|Any CPU.Build.0 = FxCop|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.FxCop|x64.ActiveCfg = FxCop|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.FxCop|x64.Build.0 = FxCop|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.FxCop|x86.ActiveCfg = FxCop|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.FxCop|x86.Build.0 = FxCop|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.Release|Any CPU.ActiveCfg = Silverlight3Release|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.Release|Any CPU.Build.0 = Silverlight3Release|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.Release|x64.ActiveCfg = Silverlight3Release|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.Release|x64.Build.0 = Silverlight3Release|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.Release|x86.ActiveCfg = Silverlight3Release|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.Release|x86.Build.0 = Silverlight3Release|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.Releasex64|Any CPU.ActiveCfg = Silverlight3Release|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.Releasex64|Any CPU.Build.0 = Silverlight3Release|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.Releasex64|x64.ActiveCfg = Silverlight3Release|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.Releasex64|x64.Build.0 = Silverlight3Release|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.Releasex64|x86.ActiveCfg = Silverlight3Release|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.Releasex64|x86.Build.0 = Silverlight3Release|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.Silverlight3Debug|Any CPU.ActiveCfg = Silverlight3Debug|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.Silverlight3Debug|Any CPU.Build.0 = Silverlight3Debug|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.Silverlight3Debug|x64.ActiveCfg = Silverlight3Debug|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.Silverlight3Debug|x64.Build.0 = Silverlight3Debug|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.Silverlight3Debug|x86.ActiveCfg = Silverlight3Debug|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.Silverlight3Debug|x86.Build.0 = Silverlight3Debug|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.Silverlight3Release|Any CPU.ActiveCfg = Silverlight3Release|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.Silverlight3Release|Any CPU.Build.0 = Silverlight3Release|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.Silverlight3Release|x64.ActiveCfg = Silverlight3Release|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.Silverlight3Release|x64.Build.0 = Silverlight3Release|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.Silverlight3Release|x86.ActiveCfg = Silverlight3Release|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.Silverlight3Release|x86.Build.0 = Silverlight3Release|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.Silverlight4Debug|Any CPU.ActiveCfg = Silverlight3Release|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.Silverlight4Debug|Any CPU.Build.0 = Silverlight3Release|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.Silverlight4Debug|x64.ActiveCfg = Silverlight3Release|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.Silverlight4Debug|x64.Build.0 = Silverlight3Release|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.Silverlight4Debug|x86.ActiveCfg = Silverlight3Release|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.Silverlight4Debug|x86.Build.0 = Silverlight3Release|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.Silverlight4Release|Any CPU.ActiveCfg = Silverlight3Release|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.Silverlight4Release|Any CPU.Build.0 = Silverlight3Release|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.Silverlight4Release|x64.ActiveCfg = Silverlight3Release|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.Silverlight4Release|x64.Build.0 = Silverlight3Release|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.Silverlight4Release|x86.ActiveCfg = Silverlight3Release|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.Silverlight4Release|x86.Build.0 = Silverlight3Release|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.v2Debug|Any CPU.ActiveCfg = v2Debug|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.v2Debug|Any CPU.Build.0 = v2Debug|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.v2Debug|x64.ActiveCfg = v2Debug|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.v2Debug|x64.Build.0 = v2Debug|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.v2Debug|x86.ActiveCfg = v2Debug|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.v2Debug|x86.Build.0 = v2Debug|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.v2Release|Any CPU.ActiveCfg = v2Release|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.v2Release|Any CPU.Build.0 = v2Release|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.v2Release|x64.ActiveCfg = v2Release|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.v2Release|x64.Build.0 = v2Release|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.v2Release|x86.ActiveCfg = v2Release|Any CPU
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4}.v2Release|x86.Build.0 = v2Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1190,6 +1252,7 @@ Global
 		{02FF0909-F5AD-48CF-A86A-345E721B7E40} = {2C2E3280-EE08-4DC4-A3CC-06C3A8136F75}
 		{FC488574-CC6B-434F-8672-5C3FBAB59569} = {B820DCA0-9D9E-4B67-B3C3-62C2B923A7D0}
 		{23E4C84C-9F0C-45A7-A91B-BEF5019C5728} = {11E71B4D-E457-4254-90D4-9A815E3BF115}
+		{2AE75F5A-CD1F-4925-9647-AF4D1C282FB4} = {2C2E3280-EE08-4DC4-A3CC-06C3A8136F75}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5B01929A-8968-4B0C-A10E-675AEA202CBD}
