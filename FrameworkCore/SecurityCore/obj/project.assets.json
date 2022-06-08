@@ -696,11 +696,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Windows\\Midori\\Framework-w-Website\\FrameworkCore\\SecurityCore\\SecurityCore.csproj",
+      "projectUniqueName": "D:\\WRK-V1.2\\WPF\\Midori\\Framework-w-Website\\FrameworkCore\\SecurityCore\\SecurityCore.csproj",
       "projectName": "SecurityCore",
-      "projectPath": "D:\\Windows\\Midori\\Framework-w-Website\\FrameworkCore\\SecurityCore\\SecurityCore.csproj",
+      "projectPath": "D:\\WRK-V1.2\\WPF\\Midori\\Framework-w-Website\\FrameworkCore\\SecurityCore\\SecurityCore.csproj",
       "packagesPath": "C:\\Users\\JonathanMoore\\.nuget\\packages\\",
-      "outputPath": "D:\\Windows\\Midori\\Framework-w-Website\\FrameworkCore\\SecurityCore\\obj\\",
+      "outputPath": "D:\\WRK-V1.2\\WPF\\Midori\\Framework-w-Website\\FrameworkCore\\SecurityCore\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
