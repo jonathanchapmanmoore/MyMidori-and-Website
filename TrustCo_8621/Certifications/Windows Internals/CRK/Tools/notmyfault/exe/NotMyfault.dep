@@ -1,6 +1,0 @@
-# Microsoft Developer Studio Generated Dependency File, included by NotMyfault.mak
-
-.\notmyfault.c : \
-	".\IOCTLCMD.H"\
-	".\notmyfault.h"\
-	

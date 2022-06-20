@@ -26,7 +26,7 @@ namespace System.Extensions.Compact
   /// <summary>
   /// Provides methods for turning the display on and off on a smart client.
   /// </summary>
-  public static class Video
+  public abstract class Video
   {
     /// <summary>
     /// Turn the display off.

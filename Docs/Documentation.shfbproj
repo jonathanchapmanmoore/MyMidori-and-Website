@@ -13,7 +13,7 @@
     <RootNamespace>Documentation1</RootNamespace>
     <Name>Documentation</Name>
     <!-- SHFB properties -->
-    <FrameworkVersion>.NET Framework 4.5</FrameworkVersion>
+    <FrameworkVersion>.NET Framework 4.6.2</FrameworkVersion>
     <OutputPath>.\Help\</OutputPath>
     <HtmlHelpName>Documentation1</HtmlHelpName>
     <Language>en-US</Language>
@@ -27,29 +27,17 @@
       <Argument Key="maxVersionParts" Value="" xmlns="" />
     </TransformComponentArguments>
     <DocumentationSources>
-      <DocumentationSource sourceFile="..\..\XML\CodeDOM.dll.CodeAnalysisLog.xml" />
-      <DocumentationSource sourceFile="..\..\XML\CodeDOM.xml" />
-      <DocumentationSource sourceFile="..\..\XML\Collections.dll.CodeAnalysisLog.xml" />
-      <DocumentationSource sourceFile="..\..\XML\Collections.xml" />
-      <DocumentationSource sourceFile="..\..\XML\Compact.xml" />
-      <DocumentationSource sourceFile="..\..\XML\Data.dll.CodeAnalysisLog.xml" />
-      <DocumentationSource sourceFile="..\..\XML\Data.xml" />
-      <DocumentationSource sourceFile="..\..\XML\Drawing.xml" />
-      <DocumentationSource sourceFile="..\..\XML\Security.dll.CodeAnalysisLog.xml" />
-      <DocumentationSource sourceFile="..\..\XML\Security.xml" />
-      <DocumentationSource sourceFile="..\..\XML\Text.xml" />
-      <DocumentationSource sourceFile="..\..\XML\Xsd.xml" />
-      <DocumentationSource sourceFile="..\..\Distro\CodeDOM.dll" />
-      <DocumentationSource sourceFile="..\..\Distro\Collections.dll" />
-      <DocumentationSource sourceFile="..\..\Distro\Compact.dll" />
-      <DocumentationSource sourceFile="..\..\Distro\Data.dll" />
-      <DocumentationSource sourceFile="..\..\Distro\Drawing.dll" />
-      <DocumentationSource sourceFile="..\..\Distro\Security.dll" />
-      <DocumentationSource sourceFile="..\..\Distro\Text.dll" />
-      <DocumentationSource sourceFile="..\..\Distro\Xsd.dll" />
+      <DocumentationSource sourceFile="..\Artifacts\CodeDOM.dll" />
+      <DocumentationSource sourceFile="..\Artifacts\Collections.dll" />
+      <DocumentationSource sourceFile="..\Artifacts\Compact.dll" />
+      <DocumentationSource sourceFile="..\Artifacts\Data.dll" />
+      <DocumentationSource sourceFile="..\Artifacts\Drawing.dll" />
+      <DocumentationSource sourceFile="..\Artifacts\Security.dll" />
+      <DocumentationSource sourceFile="..\Artifacts\Text.dll" />
+      <DocumentationSource sourceFile="..\Artifacts\Xsd.dll" />
     </DocumentationSources>
-    <HelpFileFormat>HtmlHelp1, MSHelpViewer, Website</HelpFileFormat>
-    <SyntaxFilters>AllButUsage</SyntaxFilters>
+    <HelpFileFormat>HtmlHelp1</HelpFileFormat>
+    <SyntaxFilters>All</SyntaxFilters>
     <PresentationStyle>VS2013</PresentationStyle>
     <CleanIntermediates>True</CleanIntermediates>
     <KeepLogFile>True</KeepLogFile>
