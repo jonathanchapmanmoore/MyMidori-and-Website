@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<!-- TemplateBeginEditable name="head_title" -->
+<title>Dante's Inferno:</title>
+<!-- TemplateEndEditable -->
+<link rel="stylesheet" type="text/css" href="../css/dante.css">
+<!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+</head>
+<body>
+	<div id="leftLogo"></div>
+	<div id="inferno"><a href="../index.cfm"></a></div>
+	<div id="rightLogo"></div>
+	<br clear="left" />
+	<div id="mainBody">
+		<h1><!-- TemplateBeginEditable name="page_heading" -->Dante's <em>Inferno</em>: Home <!-- TemplateEndEditable --></h1>
+   		<!-- TemplateBeginEditable name="main_content" -->
+		
+		<p>Body text goes here.</p>
+		 
+		<!-- TemplateEndEditable -->
+	</div>
+</body>
+</html>
