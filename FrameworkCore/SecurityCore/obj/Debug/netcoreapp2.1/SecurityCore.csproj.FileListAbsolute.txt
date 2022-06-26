@@ -1,9 +1,0 @@
-B:\NetFoundation\Verve Kits\verve patch\Framework\FrameworkCore\SecurityCore\bin\Debug\netcoreapp2.1\SecurityCore.deps.json
-B:\NetFoundation\Verve Kits\verve patch\Framework\FrameworkCore\SecurityCore\bin\Debug\netcoreapp2.1\SecurityCore.dll
-B:\NetFoundation\Verve Kits\verve patch\Framework\FrameworkCore\SecurityCore\bin\Debug\netcoreapp2.1\SecurityCore.pdb
-B:\NetFoundation\Verve Kits\verve patch\Framework\FrameworkCore\SecurityCore\obj\Debug\netcoreapp2.1\SecurityCore.csprojAssemblyReference.cache
-B:\NetFoundation\Verve Kits\verve patch\Framework\FrameworkCore\SecurityCore\obj\Debug\netcoreapp2.1\SecurityCore.csproj.CoreCompileInputs.cache
-B:\NetFoundation\Verve Kits\verve patch\Framework\FrameworkCore\SecurityCore\obj\Debug\netcoreapp2.1\SecurityCore.AssemblyInfoInputs.cache
-B:\NetFoundation\Verve Kits\verve patch\Framework\FrameworkCore\SecurityCore\obj\Debug\netcoreapp2.1\SecurityCore.AssemblyInfo.cs
-B:\NetFoundation\Verve Kits\verve patch\Framework\FrameworkCore\SecurityCore\obj\Debug\netcoreapp2.1\SecurityCore.dll
-B:\NetFoundation\Verve Kits\verve patch\Framework\FrameworkCore\SecurityCore\obj\Debug\netcoreapp2.1\SecurityCore.pdb

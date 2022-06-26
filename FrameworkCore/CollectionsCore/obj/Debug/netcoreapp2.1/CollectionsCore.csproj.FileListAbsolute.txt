@@ -1,9 +1,0 @@
-B:\NetFoundation\Verve Kits\verve patch\Framework\FrameworkCore\CollectionsCore\bin\Debug\netcoreapp2.1\CollectionsCore.deps.json
-B:\NetFoundation\Verve Kits\verve patch\Framework\FrameworkCore\CollectionsCore\bin\Debug\netcoreapp2.1\CollectionsCore.dll
-B:\NetFoundation\Verve Kits\verve patch\Framework\FrameworkCore\CollectionsCore\bin\Debug\netcoreapp2.1\CollectionsCore.pdb
-B:\NetFoundation\Verve Kits\verve patch\Framework\FrameworkCore\CollectionsCore\obj\Debug\netcoreapp2.1\CollectionsCore.csprojAssemblyReference.cache
-B:\NetFoundation\Verve Kits\verve patch\Framework\FrameworkCore\CollectionsCore\obj\Debug\netcoreapp2.1\CollectionsCore.csproj.CoreCompileInputs.cache
-B:\NetFoundation\Verve Kits\verve patch\Framework\FrameworkCore\CollectionsCore\obj\Debug\netcoreapp2.1\CollectionsCore.AssemblyInfoInputs.cache
-B:\NetFoundation\Verve Kits\verve patch\Framework\FrameworkCore\CollectionsCore\obj\Debug\netcoreapp2.1\CollectionsCore.AssemblyInfo.cs
-B:\NetFoundation\Verve Kits\verve patch\Framework\FrameworkCore\CollectionsCore\obj\Debug\netcoreapp2.1\CollectionsCore.dll
-B:\NetFoundation\Verve Kits\verve patch\Framework\FrameworkCore\CollectionsCore\obj\Debug\netcoreapp2.1\CollectionsCore.pdb
