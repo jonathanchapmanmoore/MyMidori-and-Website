@@ -4,9 +4,9 @@ The build Singularity execute 'congifugre.cmd' then from the Singularity prompt 
 'msb Distro\World.proj'
 
 
-![Singularity1](images/VirtualBox_Windows_XP_Professional_14_06_2022_07_35_59.png)
-![Singularity2](images/VirtualBox_Windows_XP_Professional_14_06_2022_10_07_51.png)
-![Singularity3](images/VirtualBox_Windows_XP_Professional_24_05_2022_16_51_38.png)
+![Singularity1](Images/VirtualBox_Windows_XP_Professional_14_06_2022_07_35_59.png)
+![Singularity2](Images/VirtualBox_Windows_XP_Professional_14_06_2022_10_07_51.png)
+![Singularity3](Images/VirtualBox_Windows_XP_Professional_24_05_2022_16_51_38.png)
 
 
 
