@@ -1,8 +1,0 @@
-.686p
-.model flat
-SoloSpacer SEGMENT DWORD MEMORY FLAT READ WRITE
-REPEAT 8388608
-QWORD ?
-ENDM
-SoloSpacer ENDS
-end
