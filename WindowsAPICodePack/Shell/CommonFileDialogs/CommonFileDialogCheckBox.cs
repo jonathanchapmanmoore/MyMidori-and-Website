@@ -3,7 +3,7 @@
 using System;
 using System.Diagnostics;
 
-namespace Microsoft.WindowsAPICodePack.Dialogs.Controls
+namespace Microsoft.Windows.Dialogs.Controls
 {
     /// <summary>
     /// Creates the check button controls used by the Common File Dialog.

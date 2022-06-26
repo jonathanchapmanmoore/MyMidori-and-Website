@@ -3,7 +3,7 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace Microsoft.WindowsAPICodePack.Sensors
+namespace Microsoft.Windows.Sensors
 {
     /// <summary>
     /// A COM interop events interface for the ISensorManager object

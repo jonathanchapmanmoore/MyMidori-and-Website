@@ -4,7 +4,7 @@ using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace Microsoft.WindowsAPICodePack.Sensors
+namespace Microsoft.Windows.Sensors
 {
     /// <summary>
     /// A COM interop wrapper for the ISensorCollection interface

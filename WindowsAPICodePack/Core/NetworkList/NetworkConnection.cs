@@ -5,13 +5,13 @@ using System.Collections;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace Microsoft.WindowsAPICodePack.Net
+namespace Microsoft.Windows.Net
 {
     /// <summary>
     /// Represents a connection to a network.
     /// </summary>
     /// <remarks> A collection containing instances of this class is obtained by calling
-    /// the <see cref="P:Microsoft.WindowsAPICodePack.Net.Network.Connections"/> property.</remarks>
+    /// the <see cref="P:Microsoft.Windows.Net.Network.Connections"/> property.</remarks>
     public class NetworkConnection
     {
         #region Private Fields

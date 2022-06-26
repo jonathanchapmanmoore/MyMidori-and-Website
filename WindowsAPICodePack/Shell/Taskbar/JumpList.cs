@@ -5,11 +5,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Text;
-using Microsoft.WindowsAPICodePack.Shell;
-using Microsoft.WindowsAPICodePack.Shell.Resources;
+using Microsoft.Windows.Shell;
+using Microsoft.Windows.Shell.Resources;
 using MS.WindowsAPICodePack.Internal;
 
-namespace Microsoft.WindowsAPICodePack.Taskbar
+namespace Microsoft.Windows.Taskbar
 {
     /// <summary>
     /// Represents an instance of a Taskbar button jump list.

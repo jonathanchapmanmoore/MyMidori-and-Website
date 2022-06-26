@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Microsoft.WindowsAPICodePack.ExtendedLinguisticServices
+namespace Microsoft.Windows.ExtendedLinguisticServices
 {
 
     internal static class InteropTools

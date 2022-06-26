@@ -6,7 +6,7 @@ using MS.WindowsAPICodePack.Internal;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
 
-namespace Microsoft.WindowsAPICodePack.Shell.Interop
+namespace Microsoft.Windows.Shell.Interop
 {
 
     internal static class ShellObjectWatcherNativeMethods

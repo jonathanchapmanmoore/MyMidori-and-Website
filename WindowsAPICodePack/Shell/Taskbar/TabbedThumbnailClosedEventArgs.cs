@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows;
 
-namespace Microsoft.WindowsAPICodePack.Taskbar
+namespace Microsoft.Windows.Taskbar
 {
     /// <summary>
     /// Event args for when close is selected on a tabbed thumbnail proxy window.

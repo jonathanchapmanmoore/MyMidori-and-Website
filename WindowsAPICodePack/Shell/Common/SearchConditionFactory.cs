@@ -4,11 +4,11 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Runtime.InteropServices;
-using Microsoft.WindowsAPICodePack.Shell.PropertySystem;
+using Microsoft.Windows.Shell.PropertySystem;
 using MS.WindowsAPICodePack.Internal;
-using Microsoft.WindowsAPICodePack.Shell.Resources;
+using Microsoft.Windows.Shell.Resources;
 
-namespace Microsoft.WindowsAPICodePack.Shell
+namespace Microsoft.Windows.Shell
 {
     /// <summary>
     /// Provides methods for creating or resolving a condition tree 
@@ -27,7 +27,7 @@ namespace Microsoft.WindowsAPICodePack.Shell
         /// <remarks>
         /// The search will only work for files that are indexed, as well as the specific properties are indexed. To find 
         /// the properties that are indexed, look for the specific property's property description and 
-        /// <see cref="P:Microsoft.WindowsAPICodePack.Shell.PropertySystem.ShellPropertyDescription.TypeFlags"/> property for IsQueryable flag.
+        /// <see cref="P:Microsoft.Windows.Shell.PropertySystem.ShellPropertyDescription.TypeFlags"/> property for IsQueryable flag.
         /// </remarks>
         public static SearchCondition CreateLeafCondition(string propertyName, string value, SearchConditionOperation operation)
         {
@@ -49,7 +49,7 @@ namespace Microsoft.WindowsAPICodePack.Shell
         /// <remarks>
         /// The search will only work for files that are indexed, as well as the specific properties are indexed. To find 
         /// the properties that are indexed, look for the specific property's property description and 
-        /// <see cref="P:Microsoft.WindowsAPICodePack.Shell.PropertySystem.ShellPropertyDescription.TypeFlags"/> property for IsQueryable flag.
+        /// <see cref="P:Microsoft.Windows.Shell.PropertySystem.ShellPropertyDescription.TypeFlags"/> property for IsQueryable flag.
         /// </remarks>
         public static SearchCondition CreateLeafCondition(string propertyName, DateTime value, SearchConditionOperation operation)
         {
@@ -70,7 +70,7 @@ namespace Microsoft.WindowsAPICodePack.Shell
         /// <remarks>
         /// The search will only work for files that are indexed, as well as the specific properties are indexed. To find 
         /// the properties that are indexed, look for the specific property's property description and 
-        /// <see cref="P:Microsoft.WindowsAPICodePack.Shell.PropertySystem.ShellPropertyDescription.TypeFlags"/> property for IsQueryable flag.
+        /// <see cref="P:Microsoft.Windows.Shell.PropertySystem.ShellPropertyDescription.TypeFlags"/> property for IsQueryable flag.
         /// </remarks>
         public static SearchCondition CreateLeafCondition(string propertyName, int value, SearchConditionOperation operation)
         {
@@ -91,7 +91,7 @@ namespace Microsoft.WindowsAPICodePack.Shell
         /// <remarks>
         /// The search will only work for files that are indexed, as well as the specific properties are indexed. To find 
         /// the properties that are indexed, look for the specific property's property description and 
-        /// <see cref="P:Microsoft.WindowsAPICodePack.Shell.PropertySystem.ShellPropertyDescription.TypeFlags"/> property for IsQueryable flag.
+        /// <see cref="P:Microsoft.Windows.Shell.PropertySystem.ShellPropertyDescription.TypeFlags"/> property for IsQueryable flag.
         /// </remarks>
         public static SearchCondition CreateLeafCondition(string propertyName, bool value, SearchConditionOperation operation)
         {
@@ -112,7 +112,7 @@ namespace Microsoft.WindowsAPICodePack.Shell
         /// <remarks>
         /// The search will only work for files that are indexed, as well as the specific properties are indexed. To find 
         /// the properties that are indexed, look for the specific property's property description and 
-        /// <see cref="P:Microsoft.WindowsAPICodePack.Shell.PropertySystem.ShellPropertyDescription.TypeFlags"/> property for IsQueryable flag.
+        /// <see cref="P:Microsoft.Windows.Shell.PropertySystem.ShellPropertyDescription.TypeFlags"/> property for IsQueryable flag.
         /// </remarks>
         public static SearchCondition CreateLeafCondition(string propertyName, double value, SearchConditionOperation operation)
         {
@@ -174,7 +174,7 @@ namespace Microsoft.WindowsAPICodePack.Shell
         /// <remarks>
         /// The search will only work for files that are indexed, as well as the specific properties are indexed. To find 
         /// the properties that are indexed, look for the specific property's property description and 
-        /// <see cref="P:Microsoft.WindowsAPICodePack.Shell.PropertySystem.ShellPropertyDescription.TypeFlags"/> property for IsQueryable flag.
+        /// <see cref="P:Microsoft.Windows.Shell.PropertySystem.ShellPropertyDescription.TypeFlags"/> property for IsQueryable flag.
         /// </remarks>
         public static SearchCondition CreateLeafCondition(PropertyKey propertyKey, string value, SearchConditionOperation operation)
         {
@@ -200,7 +200,7 @@ namespace Microsoft.WindowsAPICodePack.Shell
         /// <remarks>
         /// The search will only work for files that are indexed, as well as the specific properties are indexed. To find 
         /// the properties that are indexed, look for the specific property's property description and 
-        /// <see cref="P:Microsoft.WindowsAPICodePack.Shell.PropertySystem.ShellPropertyDescription.TypeFlags"/> property for IsQueryable flag.
+        /// <see cref="P:Microsoft.Windows.Shell.PropertySystem.ShellPropertyDescription.TypeFlags"/> property for IsQueryable flag.
         /// </remarks>
         public static SearchCondition CreateLeafCondition(PropertyKey propertyKey, DateTime value, SearchConditionOperation operation)
         {
@@ -225,7 +225,7 @@ namespace Microsoft.WindowsAPICodePack.Shell
         /// <remarks>
         /// The search will only work for files that are indexed, as well as the specific properties are indexed. To find 
         /// the properties that are indexed, look for the specific property's property description and 
-        /// <see cref="P:Microsoft.WindowsAPICodePack.Shell.PropertySystem.ShellPropertyDescription.TypeFlags"/> property for IsQueryable flag.
+        /// <see cref="P:Microsoft.Windows.Shell.PropertySystem.ShellPropertyDescription.TypeFlags"/> property for IsQueryable flag.
         /// </remarks>
         public static SearchCondition CreateLeafCondition(PropertyKey propertyKey, bool value, SearchConditionOperation operation)
         {
@@ -250,7 +250,7 @@ namespace Microsoft.WindowsAPICodePack.Shell
         /// <remarks>
         /// The search will only work for files that are indexed, as well as the specific properties are indexed. To find 
         /// the properties that are indexed, look for the specific property's property description and 
-        /// <see cref="P:Microsoft.WindowsAPICodePack.Shell.PropertySystem.ShellPropertyDescription.TypeFlags"/> property for IsQueryable flag.
+        /// <see cref="P:Microsoft.Windows.Shell.PropertySystem.ShellPropertyDescription.TypeFlags"/> property for IsQueryable flag.
         /// </remarks>
         public static SearchCondition CreateLeafCondition(PropertyKey propertyKey, double value, SearchConditionOperation operation)
         {
@@ -275,7 +275,7 @@ namespace Microsoft.WindowsAPICodePack.Shell
         /// <remarks>
         /// The search will only work for files that are indexed, as well as the specific properties are indexed. To find 
         /// the properties that are indexed, look for the specific property's property description and 
-        /// <see cref="P:Microsoft.WindowsAPICodePack.Shell.PropertySystem.ShellPropertyDescription.TypeFlags"/> property for IsQueryable flag.
+        /// <see cref="P:Microsoft.Windows.Shell.PropertySystem.ShellPropertyDescription.TypeFlags"/> property for IsQueryable flag.
         /// </remarks>
         public static SearchCondition CreateLeafCondition(PropertyKey propertyKey, int value, SearchConditionOperation operation)
         {

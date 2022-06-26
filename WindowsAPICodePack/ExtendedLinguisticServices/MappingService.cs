@@ -4,9 +4,9 @@ using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Threading;
-using Microsoft.WindowsAPICodePack.ExtendedLinguisticServices.Resources;
+using Microsoft.Windows.ExtendedLinguisticServices.Resources;
 
-namespace Microsoft.WindowsAPICodePack.ExtendedLinguisticServices
+namespace Microsoft.Windows.ExtendedLinguisticServices
 {
 
     /// <summary>

@@ -2,7 +2,7 @@
 
 using System;
 
-namespace Microsoft.WindowsAPICodePack.Sensors
+namespace Microsoft.Windows.Sensors
 {
     /// <summary>
     /// An attribute which is applied on <see cref="Sensor"/>-derived types. Provides essential metadata

@@ -2,9 +2,9 @@
 
 using System;
 using System.Windows;
-using Microsoft.WindowsAPICodePack.Shell.Resources;
+using Microsoft.Windows.Shell.Resources;
 
-namespace Microsoft.WindowsAPICodePack.Taskbar
+namespace Microsoft.Windows.Taskbar
 {
     /// <summary>
     /// Thumbnail toolbar manager class for adding a thumbnail toolbar with a specified set of buttons 
@@ -25,8 +25,8 @@ namespace Microsoft.WindowsAPICodePack.Taskbar
         /// <exception cref="System.ArgumentException">If the number of buttons exceed the maximum allowed capacity (7).</exception>
         /// <exception cref="System.ArgumentException">If the Window Handle passed in invalid</exception>
         /// <remarks>After a toolbar has been added to a thumbnail, buttons can be altered only through various 
-        /// properties on the <see cref="T:Microsoft.WindowsAPICodePack.Taskbar.ThumbnailToolBarButton"/>. While individual buttons cannot be added or removed, 
-        /// they can be shown and hidden through <see cref="P:Microsoft.WindowsAPICodePack.Taskbar.ThumbnailToolBarButton.Visible"/> as needed. 
+        /// properties on the <see cref="T:Microsoft.Windows.Taskbar.ThumbnailToolBarButton"/>. While individual buttons cannot be added or removed, 
+        /// they can be shown and hidden through <see cref="P:Microsoft.Windows.Taskbar.ThumbnailToolBarButton.Visible"/> as needed. 
         /// The toolbar itself cannot be removed without re-creating the window itself.
         /// </remarks>
         public void AddButtons(IntPtr windowHandle, params ThumbnailToolBarButton[] buttons)

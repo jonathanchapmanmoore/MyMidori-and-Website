@@ -10,8 +10,8 @@ using System.Security;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Microsoft.WindowsAPICodePack.Shell")]
-[assembly: AssemblyDescription("WindowsAPICodePack for Shell")]
+[assembly: AssemblyTitle("Microsoft.Windows.Shell")]
+[assembly: AssemblyDescription("Windows for Shell")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microsoft")]
 [assembly: AssemblyProduct("Microsoft Windows API Code Pack for .NET Framework")]
@@ -19,7 +19,7 @@ using System.Security;
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
-[assembly: InternalsVisibleTo("Microsoft.WindowsAPICodePack.ShellExtensions")]
+[assembly: InternalsVisibleTo("Microsoft.Windows.ShellExtensions")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 

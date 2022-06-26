@@ -4,7 +4,7 @@ using System;
 using System.Runtime.InteropServices;
 using System.Security;
 
-namespace Microsoft.WindowsAPICodePack.Shell
+namespace Microsoft.Windows.Shell
 {
     /// <summary>
     /// Internal class that contains interop declarations for 

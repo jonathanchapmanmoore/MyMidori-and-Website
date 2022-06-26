@@ -2,7 +2,7 @@
 
 using System;
 
-namespace Microsoft.WindowsAPICodePack.Dialogs
+namespace Microsoft.Windows.Dialogs
 {
     // ContentProperty allows us to specify the text 
     // of the button as the child text of

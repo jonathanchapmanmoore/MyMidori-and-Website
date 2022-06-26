@@ -2,9 +2,9 @@
 
 using System;
 using System.Diagnostics;
-using Microsoft.WindowsAPICodePack.Resources;
+using Microsoft.Windows.Resources;
 
-namespace Microsoft.WindowsAPICodePack.Dialogs
+namespace Microsoft.Windows.Dialogs
 {
     /// <summary>
     /// Abstract base class for all dialog controls

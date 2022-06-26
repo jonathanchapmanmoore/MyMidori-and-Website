@@ -5,21 +5,21 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
-using Microsoft.WindowsAPICodePack.Shell;
-using Microsoft.WindowsAPICodePack.Shell.Resources;
+using Microsoft.Windows.Shell;
+using Microsoft.Windows.Shell.Resources;
 using MS.WindowsAPICodePack.Internal;
 using System.Text;
 using System.Linq;
-using Microsoft.WindowsAPICodePack.Shell.Interop;
+using Microsoft.Windows.Shell.Interop;
 
-namespace Microsoft.WindowsAPICodePack.Controls.WindowsForms
+namespace Microsoft.Windows.Controls.WindowsForms
 {
     /// <summary>
     /// This class is a wrapper around the Windows Explorer Browser control.
     /// </summary>
     public sealed class ExplorerBrowser :
         System.Windows.Forms.UserControl,
-        Microsoft.WindowsAPICodePack.Controls.IServiceProvider,
+        Microsoft.Windows.Controls.IServiceProvider,
         IExplorerPaneVisibility,
         IExplorerBrowserEvents,
         ICommDlgBrowser3,
@@ -389,7 +389,7 @@ namespace Microsoft.WindowsAPICodePack.Controls.WindowsForms
         /// <param name="riid">requested interface guid</param>
         /// <param name="ppvObject">caller-allocated memory for interface pointer</param>
         /// <returns></returns>
-        HResult Microsoft.WindowsAPICodePack.Controls.IServiceProvider.QueryService(
+        HResult Microsoft.Windows.Controls.IServiceProvider.QueryService(
             ref Guid guidService, ref Guid riid, out IntPtr ppvObject)
         {
             HResult hr = HResult.Ok;

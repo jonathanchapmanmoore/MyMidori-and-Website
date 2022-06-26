@@ -6,11 +6,11 @@ using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using System.Windows.Media;
-using Microsoft.WindowsAPICodePack.Shell;
-using Microsoft.WindowsAPICodePack.Shell.Resources;
+using Microsoft.Windows.Shell;
+using Microsoft.Windows.Shell.Resources;
 using MS.WindowsAPICodePack.Internal;
 
-namespace Microsoft.WindowsAPICodePack.Taskbar
+namespace Microsoft.Windows.Taskbar
 {
     internal static class TaskbarWindowManager
     {

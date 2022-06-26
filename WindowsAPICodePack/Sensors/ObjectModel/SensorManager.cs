@@ -4,10 +4,10 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Threading;
-using Microsoft.WindowsAPICodePack.Sensors.Resources;
+using Microsoft.Windows.Sensors.Resources;
 using MS.WindowsAPICodePack.Internal;
 
-namespace Microsoft.WindowsAPICodePack.Sensors
+namespace Microsoft.Windows.Sensors
 {
     /// <summary>
     /// Specifies the types of change in sensor availability.

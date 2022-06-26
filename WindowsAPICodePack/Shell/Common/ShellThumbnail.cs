@@ -5,10 +5,10 @@ using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Interop;
 using System.Windows.Media.Imaging;
-using Microsoft.WindowsAPICodePack.Shell.Resources;
+using Microsoft.Windows.Shell.Resources;
 using MS.WindowsAPICodePack.Internal;
 
-namespace Microsoft.WindowsAPICodePack.Shell
+namespace Microsoft.Windows.Shell
 {
     /// <summary>
     /// Represents a thumbnail or an icon for a ShellObject.

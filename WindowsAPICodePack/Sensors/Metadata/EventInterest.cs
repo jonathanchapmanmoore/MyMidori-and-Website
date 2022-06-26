@@ -2,7 +2,7 @@
 
 using System;
 
-namespace Microsoft.WindowsAPICodePack.Sensors
+namespace Microsoft.Windows.Sensors
 {
     /// <summary>
     /// Contains a list of well known event interest types. This class will be removed once wrappers are developed.

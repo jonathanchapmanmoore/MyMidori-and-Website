@@ -5,9 +5,9 @@ using System.Linq.Expressions;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
-using Microsoft.WindowsAPICodePack.Shell.Resources;
+using Microsoft.Windows.Shell.Resources;
 
-namespace Microsoft.WindowsAPICodePack.Shell.PropertySystem
+namespace Microsoft.Windows.Shell.PropertySystem
 {
 
     /// <summary>

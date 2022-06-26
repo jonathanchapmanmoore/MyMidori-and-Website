@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-using Microsoft.WindowsAPICodePack.ShellExtensions.Interop;
-using Microsoft.WindowsAPICodePack.ShellExtensions.Resources;
-using Microsoft.WindowsAPICodePack.Shell;
+using Microsoft.Windows.ShellExtensions.Interop;
+using Microsoft.Windows.ShellExtensions.Resources;
+using Microsoft.Windows.Shell;
 
-namespace Microsoft.WindowsAPICodePack.ShellExtensions
+namespace Microsoft.Windows.ShellExtensions
 {
     /// <summary>
     /// This is the base class for all WinForms-based preview handlers and provides their basic functionality.

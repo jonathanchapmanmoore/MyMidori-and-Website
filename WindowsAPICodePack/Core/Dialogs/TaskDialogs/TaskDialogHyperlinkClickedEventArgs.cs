@@ -2,7 +2,7 @@
 
 using System;
 
-namespace Microsoft.WindowsAPICodePack.Dialogs
+namespace Microsoft.Windows.Dialogs
 {
     /// <summary>
     /// Defines event data associated with a HyperlinkClick event.

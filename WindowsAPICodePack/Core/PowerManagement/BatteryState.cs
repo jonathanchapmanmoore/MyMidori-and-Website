@@ -1,9 +1,9 @@
 ﻿//Copyright (c) Microsoft Corporation.  All rights reserved.
 
 using System;
-using Microsoft.WindowsAPICodePack.Resources;
+using Microsoft.Windows.Resources;
 
-namespace Microsoft.WindowsAPICodePack.ApplicationServices
+namespace Microsoft.Windows.ApplicationServices
 {
     /// <summary>
     /// A snapshot of the state of the battery.

@@ -3,7 +3,7 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace Microsoft.WindowsAPICodePack.ExtendedLinguisticServices
+namespace Microsoft.Windows.ExtendedLinguisticServices
 {
 
     [Flags]

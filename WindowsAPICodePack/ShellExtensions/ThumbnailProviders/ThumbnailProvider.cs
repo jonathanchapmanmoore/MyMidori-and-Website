@@ -4,12 +4,12 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using Microsoft.Win32;
-using Microsoft.WindowsAPICodePack.Shell;
-using Microsoft.WindowsAPICodePack.ShellExtensions.Interop;
-using Microsoft.WindowsAPICodePack.ShellExtensions.Resources;
-using Microsoft.WindowsAPICodePack.Taskbar;
+using Microsoft.Windows.Shell;
+using Microsoft.Windows.ShellExtensions.Interop;
+using Microsoft.Windows.ShellExtensions.Resources;
+using Microsoft.Windows.Taskbar;
 
-namespace Microsoft.WindowsAPICodePack.ShellExtensions
+namespace Microsoft.Windows.ShellExtensions
 {
     /// <summary>
     /// This is the base class for all thumbnail providers and provides their basic functionality.

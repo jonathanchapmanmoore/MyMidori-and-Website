@@ -2,11 +2,11 @@
 
 using System;
 using System.Collections.Generic;
-using Microsoft.WindowsAPICodePack.Controls.WindowsForms;
-using Microsoft.WindowsAPICodePack.Shell;
-using Microsoft.WindowsAPICodePack.Shell.Resources;
+using Microsoft.Windows.Controls.WindowsForms;
+using Microsoft.Windows.Shell;
+using Microsoft.Windows.Shell.Resources;
 
-namespace Microsoft.WindowsAPICodePack.Controls
+namespace Microsoft.Windows.Controls
 {
 
     /// <summary>

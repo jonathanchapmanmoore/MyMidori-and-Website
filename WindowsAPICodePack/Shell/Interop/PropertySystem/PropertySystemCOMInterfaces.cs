@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using MS.WindowsAPICodePack.Internal;
 
-namespace Microsoft.WindowsAPICodePack.Shell.PropertySystem
+namespace Microsoft.Windows.Shell.PropertySystem
 {
     // Disable warning if a method declaration hides another inherited from a parent COM interface
     // To successfully import a COM interface, all inherited methods need to be declared again with 

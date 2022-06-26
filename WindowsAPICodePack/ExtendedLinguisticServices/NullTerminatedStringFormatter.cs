@@ -3,7 +3,7 @@
 using System;
 using System.Text;
 
-namespace Microsoft.WindowsAPICodePack.ExtendedLinguisticServices
+namespace Microsoft.Windows.ExtendedLinguisticServices
 {
 
     /// <summary>

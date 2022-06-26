@@ -3,7 +3,7 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace Microsoft.WindowsAPICodePack.ApplicationServices
+namespace Microsoft.Windows.ApplicationServices
 {
     internal static class PowerManagementNativeMethods
     {

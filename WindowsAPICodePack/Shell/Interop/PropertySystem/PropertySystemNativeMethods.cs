@@ -4,7 +4,7 @@ using System;
 using System.Runtime.InteropServices;
 using MS.WindowsAPICodePack.Internal;
 
-namespace Microsoft.WindowsAPICodePack.Shell.PropertySystem
+namespace Microsoft.Windows.Shell.PropertySystem
 {
     internal static class PropertySystemNativeMethods
     {

@@ -2,7 +2,7 @@
 
 using System;
 
-namespace Microsoft.WindowsAPICodePack.Shell
+namespace Microsoft.Windows.Shell
 {
     /// <summary>
     /// Represents a link to existing FileSystem or Virtual item.

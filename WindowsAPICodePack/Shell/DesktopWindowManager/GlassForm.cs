@@ -4,7 +4,7 @@ using System.Windows.Forms;
 using MS.WindowsAPICodePack.Internal;
 
 
-namespace Microsoft.WindowsAPICodePack.Shell
+namespace Microsoft.Windows.Shell
 {
     /// <summary>
     /// Windows Glass Form

@@ -3,9 +3,9 @@
 using System;
 using System.Windows;
 using System.Windows.Interop;
-using Microsoft.WindowsAPICodePack.Taskbar;
+using Microsoft.Windows.Taskbar;
 
-namespace Microsoft.WindowsAPICodePack.Shell.PropertySystem
+namespace Microsoft.Windows.Shell.PropertySystem
 {
     /// <summary>
     /// Helper class to modify properties for a given window

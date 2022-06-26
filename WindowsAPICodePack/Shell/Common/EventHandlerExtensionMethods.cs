@@ -5,7 +5,7 @@ using System.Text;
 using System.Diagnostics;
 using System.Threading;
 
-namespace Microsoft.WindowsAPICodePack.Shell
+namespace Microsoft.Windows.Shell
 {
     /// <summary>
     /// Provides extension methods for raising events safely.

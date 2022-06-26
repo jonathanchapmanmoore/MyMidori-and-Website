@@ -3,9 +3,9 @@
 using System;
 using System.Collections.Generic;
 using System.Reflection;
-using Microsoft.WindowsAPICodePack.Shell.Resources;
+using Microsoft.Windows.Shell.Resources;
 
-namespace Microsoft.WindowsAPICodePack.Shell
+namespace Microsoft.Windows.Shell
 {
     /// <summary>
     /// Contains the GUID identifiers for well-known folders.

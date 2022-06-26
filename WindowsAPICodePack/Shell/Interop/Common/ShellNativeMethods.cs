@@ -4,7 +4,7 @@ using System;
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace Microsoft.WindowsAPICodePack.Shell
+namespace Microsoft.Windows.Shell
 {
     internal static class ShellNativeMethods
     {

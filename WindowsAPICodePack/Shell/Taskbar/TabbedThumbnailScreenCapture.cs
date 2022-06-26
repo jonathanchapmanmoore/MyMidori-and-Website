@@ -7,9 +7,9 @@ using System.Windows;
 using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using Microsoft.WindowsAPICodePack.Shell;
+using Microsoft.Windows.Shell;
 
-namespace Microsoft.WindowsAPICodePack.Taskbar
+namespace Microsoft.Windows.Taskbar
 {
     /// <summary>
     /// Helper class to capture a control or window as System.Drawing.Bitmap

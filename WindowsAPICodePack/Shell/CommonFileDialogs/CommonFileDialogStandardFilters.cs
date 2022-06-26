@@ -1,8 +1,8 @@
 //Copyright (c) Microsoft Corporation.  All rights reserved.
 
-using Microsoft.WindowsAPICodePack.Shell.Resources;
+using Microsoft.Windows.Shell.Resources;
 
-namespace Microsoft.WindowsAPICodePack.Dialogs
+namespace Microsoft.Windows.Dialogs
 {
     /// <summary>
     /// Defines the class of commonly used file filters.

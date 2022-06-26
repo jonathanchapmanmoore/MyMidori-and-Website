@@ -2,9 +2,9 @@
 
 using System;
 using System.Runtime.InteropServices;
-using Microsoft.WindowsAPICodePack.Resources;
+using Microsoft.Windows.Resources;
 
-namespace Microsoft.WindowsAPICodePack.Shell.PropertySystem
+namespace Microsoft.Windows.Shell.PropertySystem
 {
     /// <summary>
     /// Defines a unique key for a Shell Property

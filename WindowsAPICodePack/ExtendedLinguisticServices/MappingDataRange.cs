@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 
-namespace Microsoft.WindowsAPICodePack.ExtendedLinguisticServices
+namespace Microsoft.Windows.ExtendedLinguisticServices
 {
 
     /// <summary>

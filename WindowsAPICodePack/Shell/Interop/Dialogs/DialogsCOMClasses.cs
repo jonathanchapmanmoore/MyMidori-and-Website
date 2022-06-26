@@ -2,9 +2,9 @@
 
 using System;
 using System.Runtime.InteropServices;
-using Microsoft.WindowsAPICodePack.Shell;
+using Microsoft.Windows.Shell;
 
-namespace Microsoft.WindowsAPICodePack.Dialogs
+namespace Microsoft.Windows.Dialogs
 {
 
     // Dummy base interface for CommonFileDialog coclasses.

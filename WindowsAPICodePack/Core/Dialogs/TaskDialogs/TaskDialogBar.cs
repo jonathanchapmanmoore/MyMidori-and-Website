@@ -1,7 +1,7 @@
 //Copyright (c) Microsoft Corporation.  All rights reserved.
 
 
-namespace Microsoft.WindowsAPICodePack.Dialogs
+namespace Microsoft.Windows.Dialogs
 {
     /// <summary>
     /// Defines a common class for all task dialog bar controls, such as the progress and marquee bars.

@@ -1,7 +1,7 @@
 ﻿//Copyright (c) Microsoft Corporation.  All rights reserved.
 
 
-namespace Microsoft.WindowsAPICodePack.Controls
+namespace Microsoft.Windows.Controls
 {
     /// <summary>
     /// The direction argument for Navigate

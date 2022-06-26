@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Microsoft.WindowsAPICodePack.ShellExtensions
+namespace Microsoft.Windows.ShellExtensions
 {
     /// <summary>    
     /// This class attribute is applied to a Preview Handler to specify registration parameters.

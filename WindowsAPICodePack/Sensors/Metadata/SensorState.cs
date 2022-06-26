@@ -1,6 +1,6 @@
 ﻿// Copyright (c) Microsoft Corporation.  All rights reserved.
 
-namespace Microsoft.WindowsAPICodePack.Sensors
+namespace Microsoft.Windows.Sensors
 {
     /// <summary>
     /// The state of the sensor

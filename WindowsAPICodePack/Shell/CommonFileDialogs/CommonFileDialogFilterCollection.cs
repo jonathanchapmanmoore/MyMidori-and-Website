@@ -1,9 +1,9 @@
 //Copyright (c) Microsoft Corporation.  All rights reserved.
 
 using System.Collections.ObjectModel;
-using Microsoft.WindowsAPICodePack.Shell;
+using Microsoft.Windows.Shell;
 
-namespace Microsoft.WindowsAPICodePack.Dialogs
+namespace Microsoft.Windows.Dialogs
 {
     /// <summary>
     /// Provides a strongly typed collection for file dialog filters.

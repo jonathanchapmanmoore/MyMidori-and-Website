@@ -3,9 +3,9 @@
 using System;
 using System.Collections.ObjectModel;
 using System.Linq;
-using Microsoft.WindowsAPICodePack.Resources;
+using Microsoft.Windows.Resources;
 
-namespace Microsoft.WindowsAPICodePack.Dialogs
+namespace Microsoft.Windows.Dialogs
 {
     /// <summary>
     /// Strongly typed collection for dialog controls.

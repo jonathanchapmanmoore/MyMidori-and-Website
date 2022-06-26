@@ -4,9 +4,9 @@ using System;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Windows.Markup;
-using Microsoft.WindowsAPICodePack.Shell.Resources;
+using Microsoft.Windows.Shell.Resources;
 
-namespace Microsoft.WindowsAPICodePack.Dialogs.Controls
+namespace Microsoft.Windows.Dialogs.Controls
 {
     /// <summary>
     /// Represents a radio button list for the Common File Dialog.

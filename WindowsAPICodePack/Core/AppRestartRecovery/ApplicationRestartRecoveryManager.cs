@@ -2,10 +2,10 @@
 
 using System;
 using System.Runtime.InteropServices;
-using Microsoft.WindowsAPICodePack.Resources;
+using Microsoft.Windows.Resources;
 using MS.WindowsAPICodePack.Internal;
 
-namespace Microsoft.WindowsAPICodePack.ApplicationServices
+namespace Microsoft.Windows.ApplicationServices
 {
     /// <summary>
     /// Provides access to the Application Restart and Recovery

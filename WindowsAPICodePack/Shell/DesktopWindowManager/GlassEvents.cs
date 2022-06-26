@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Microsoft.WindowsAPICodePack.Shell
+namespace Microsoft.Windows.Shell
 {
     /// <summary>
     /// Event argument for The GlassAvailabilityChanged event

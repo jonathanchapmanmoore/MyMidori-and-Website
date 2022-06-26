@@ -4,10 +4,10 @@ using System;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
-using Microsoft.WindowsAPICodePack.Resources;
+using Microsoft.Windows.Resources;
 using MS.WindowsAPICodePack.Internal;
 
-namespace Microsoft.WindowsAPICodePack.Dialogs
+namespace Microsoft.Windows.Dialogs
 {
     /// <summary>
     /// Encapsulates the native logic required to create, 

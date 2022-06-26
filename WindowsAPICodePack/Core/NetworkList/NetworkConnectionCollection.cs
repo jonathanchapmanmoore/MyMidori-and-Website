@@ -7,7 +7,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace Microsoft.WindowsAPICodePack.Net
+namespace Microsoft.Windows.Net
 {
     /// <summary>
     /// An enumerable collection of <see cref="NetworkConnection"/> objects.

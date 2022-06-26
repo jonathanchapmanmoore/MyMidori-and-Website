@@ -3,10 +3,10 @@
 using System;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
-using Microsoft.WindowsAPICodePack.Shell.Resources;
+using Microsoft.Windows.Shell.Resources;
 using MS.WindowsAPICodePack.Internal;
 
-namespace Microsoft.WindowsAPICodePack.Shell.PropertySystem
+namespace Microsoft.Windows.Shell.PropertySystem
 {
     /// <summary>
     /// Defines a partial class that implements helper methods for retrieving Shell properties

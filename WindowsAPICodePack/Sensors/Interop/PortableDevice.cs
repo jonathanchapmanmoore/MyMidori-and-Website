@@ -3,10 +3,10 @@
 using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-using Microsoft.WindowsAPICodePack.Shell.PropertySystem;
+using Microsoft.Windows.Shell.PropertySystem;
 using MS.WindowsAPICodePack.Internal;
 
-namespace Microsoft.WindowsAPICodePack.Sensors
+namespace Microsoft.Windows.Sensors
 {
     /// <summary>
     /// Holds a collection of PROPERTYKEY values. This interface can be retrieved from a method 

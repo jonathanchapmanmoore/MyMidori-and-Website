@@ -3,7 +3,7 @@
 using System;
 using System.Threading;
 
-namespace Microsoft.WindowsAPICodePack.ApplicationServices
+namespace Microsoft.Windows.ApplicationServices
 {
     /// <summary>
     /// This class keeps track of the current state of each type of event.  

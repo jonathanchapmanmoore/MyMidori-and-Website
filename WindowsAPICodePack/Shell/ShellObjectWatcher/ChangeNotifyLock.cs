@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Runtime.InteropServices;
 using System.Diagnostics;
-using Microsoft.WindowsAPICodePack.Shell.Interop;
+using Microsoft.Windows.Shell.Interop;
 using MS.WindowsAPICodePack.Internal;
 
-namespace Microsoft.WindowsAPICodePack.Shell
+namespace Microsoft.Windows.Shell
 {
     internal class ChangeNotifyLock
     {

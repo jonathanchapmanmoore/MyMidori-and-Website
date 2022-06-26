@@ -5,7 +5,7 @@ using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Windows.Markup;
 
-namespace Microsoft.WindowsAPICodePack.Dialogs.Controls
+namespace Microsoft.Windows.Dialogs.Controls
 {
     /// <summary>
     /// Defines the menu controls for the Common File Dialog.

@@ -3,7 +3,7 @@
 using System;
 using MS.WindowsAPICodePack.Internal;
 
-namespace Microsoft.WindowsAPICodePack.Shell.PropertySystem
+namespace Microsoft.Windows.Shell.PropertySystem
 {
     /// <summary>
     /// Defines the enumeration values for a property type.

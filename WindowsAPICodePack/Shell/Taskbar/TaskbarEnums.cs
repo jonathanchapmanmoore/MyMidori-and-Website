@@ -1,6 +1,6 @@
 ﻿//Copyright (c) Microsoft Corporation.  All rights reserved.
 
-namespace Microsoft.WindowsAPICodePack.Taskbar
+namespace Microsoft.Windows.Taskbar
 {
 
     internal enum TaskbarProxyWindowType

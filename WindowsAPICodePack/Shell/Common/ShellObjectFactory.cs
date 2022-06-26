@@ -3,12 +3,12 @@
 using System;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
-using Microsoft.WindowsAPICodePack.Shell.Resources;
+using Microsoft.Windows.Shell.Resources;
 using MS.WindowsAPICodePack.Internal;
 using System.Linq;
 using System.Threading;
 
-namespace Microsoft.WindowsAPICodePack.Shell
+namespace Microsoft.Windows.Shell
 {
     internal static class ShellObjectFactory
     {

@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 
-namespace Microsoft.WindowsAPICodePack.Dialogs
+namespace Microsoft.Windows.Dialogs
 {
     ///<summary>
     /// Encapsulates additional configuration needed by NativeTaskDialog

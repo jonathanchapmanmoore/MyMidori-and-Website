@@ -3,7 +3,7 @@
 using System;
 using System.Runtime.InteropServices.ComTypes;
 
-namespace Microsoft.WindowsAPICodePack.Sensors
+namespace Microsoft.Windows.Sensors
 {
     /// <summary>
     /// Represents all the data from a single sensor data report.

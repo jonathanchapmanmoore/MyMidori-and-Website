@@ -8,14 +8,14 @@ using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Interop;
 using System.Windows.Markup;
-using Microsoft.WindowsAPICodePack.Controls;
-using Microsoft.WindowsAPICodePack.Dialogs.Controls;
-using Microsoft.WindowsAPICodePack.Shell;
-using Microsoft.WindowsAPICodePack.Shell.Resources;
+using Microsoft.Windows.Controls;
+using Microsoft.Windows.Dialogs.Controls;
+using Microsoft.Windows.Shell;
+using Microsoft.Windows.Shell.Resources;
 using MS.WindowsAPICodePack.Internal;
 using System.Collections.Generic;
 
-namespace Microsoft.WindowsAPICodePack.Dialogs
+namespace Microsoft.Windows.Dialogs
 {
     /// <summary>
     /// Defines the abstract base class for the common file dialogs.

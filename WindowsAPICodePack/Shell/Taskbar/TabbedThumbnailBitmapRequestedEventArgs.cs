@@ -5,7 +5,7 @@ using System.Drawing;
 using System.Windows;
 using System.Windows.Media.Imaging;
 
-namespace Microsoft.WindowsAPICodePack.Taskbar
+namespace Microsoft.Windows.Taskbar
 {
     /// <summary>
     /// Event args for the TabbedThumbnailBitmapRequested event. The event allows applications to

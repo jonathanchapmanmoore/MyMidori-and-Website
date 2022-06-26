@@ -9,8 +9,8 @@ using System.Resources;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Microsoft.WindowsAPICodePack")]
-[assembly: AssemblyDescription("WindowsAPICodePack Core")]
+[assembly: AssemblyTitle("Microsoft.Windows")]
+[assembly: AssemblyDescription("Windows Core")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microsoft")]
 [assembly: AssemblyProduct("Microsoft Windows API Code Pack for .NET Framework")]
@@ -19,9 +19,9 @@ using System.Resources;
 [assembly: AssemblyCulture("")]
 
 
-[assembly: InternalsVisibleTo("Microsoft.WindowsAPICodePack.Shell")]
-[assembly: InternalsVisibleTo("Microsoft.WindowsAPICodePack.Sensors")]
-[assembly: InternalsVisibleTo("Microsoft.WindowsAPICodePack.ShellExtensions")]
+[assembly: InternalsVisibleTo("Microsoft.Windows.Shell")]
+[assembly: InternalsVisibleTo("Microsoft.Windows.Sensors")]
+[assembly: InternalsVisibleTo("Microsoft.Windows.ShellExtensions")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 

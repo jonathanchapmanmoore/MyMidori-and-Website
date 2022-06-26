@@ -5,9 +5,9 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
-using Microsoft.WindowsAPICodePack.Shell;
+using Microsoft.Windows.Shell;
 
-namespace Microsoft.WindowsAPICodePack.Dialogs
+namespace Microsoft.Windows.Dialogs
 {
     /// <summary>
     /// Creates a Vista or Windows 7 Common File Dialog, allowing the user to select one or more files.

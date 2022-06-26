@@ -2,7 +2,7 @@
 
 using System.Runtime.InteropServices;
 
-namespace Microsoft.WindowsAPICodePack.Sensors
+namespace Microsoft.Windows.Sensors
 {
 
     internal static class SensorNativeMethods

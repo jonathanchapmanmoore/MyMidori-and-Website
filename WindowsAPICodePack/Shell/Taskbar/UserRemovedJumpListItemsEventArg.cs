@@ -3,7 +3,7 @@
 using System;
 using System.Collections;
 
-namespace Microsoft.WindowsAPICodePack.Taskbar
+namespace Microsoft.Windows.Taskbar
 {
     /// <summary>
     /// Event arguments for when the user is notified of items

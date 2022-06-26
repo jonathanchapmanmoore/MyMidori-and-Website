@@ -1,7 +1,7 @@
 ﻿//Copyright (c) Microsoft Corporation.  All rights reserved.
 
 using System;
-namespace Microsoft.WindowsAPICodePack.ApplicationServices
+namespace Microsoft.Windows.ApplicationServices
 {
     /// <summary>
     /// Enumeration of execution states.

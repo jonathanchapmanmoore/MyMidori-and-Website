@@ -8,8 +8,8 @@ using System.Resources;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Microsoft.WindowsAPICodePack.Sensors")]
-[assembly: AssemblyDescription("WindowsAPICodePack for Sensors")]
+[assembly: AssemblyTitle("Microsoft.Windows.Sensors")]
+[assembly: AssemblyDescription("Windows for Sensors")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microsoft")]
 [assembly: AssemblyProduct("Microsoft Windows API Code Pack for .NET Framework")]

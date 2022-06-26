@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using MS.WindowsAPICodePack.Internal;
 using System.Threading;
-using Microsoft.WindowsAPICodePack.Shell.Resources;
+using Microsoft.Windows.Shell.Resources;
 
-namespace Microsoft.WindowsAPICodePack.Shell
+namespace Microsoft.Windows.Shell
 {
     internal static class MessageListenerFilter
     {

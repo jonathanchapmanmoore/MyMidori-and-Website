@@ -3,12 +3,12 @@
 using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-using Microsoft.WindowsAPICodePack.Shell;
+using Microsoft.Windows.Shell;
 using MS.WindowsAPICodePack.Internal;
 using System.Text;
-using Microsoft.WindowsAPICodePack.Shell.Interop;
+using Microsoft.Windows.Shell.Interop;
 
-namespace Microsoft.WindowsAPICodePack.Controls
+namespace Microsoft.Windows.Controls
 {
 
     internal enum ShellViewGetItemObject

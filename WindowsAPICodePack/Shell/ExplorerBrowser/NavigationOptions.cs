@@ -1,7 +1,7 @@
 ﻿//Copyright (c) Microsoft Corporation.  All rights reserved.
-using Microsoft.WindowsAPICodePack.Controls.WindowsForms;
+using Microsoft.Windows.Controls.WindowsForms;
 
-namespace Microsoft.WindowsAPICodePack.Controls
+namespace Microsoft.Windows.Controls
 {
 
     /// <summary>

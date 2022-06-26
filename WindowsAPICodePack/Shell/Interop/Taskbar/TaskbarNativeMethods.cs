@@ -2,11 +2,11 @@
 
 using System;
 using System.Runtime.InteropServices;
-using Microsoft.WindowsAPICodePack.Shell;
-using Microsoft.WindowsAPICodePack.Shell.PropertySystem;
+using Microsoft.Windows.Shell;
+using Microsoft.Windows.Shell.PropertySystem;
 using MS.WindowsAPICodePack.Internal;
 
-namespace Microsoft.WindowsAPICodePack.Taskbar
+namespace Microsoft.Windows.Taskbar
 {
     #region Enums
     internal enum KnownDestinationCategory

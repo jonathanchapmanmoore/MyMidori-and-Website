@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Microsoft.WindowsAPICodePack.Shell
+namespace Microsoft.Windows.Shell
 {
     /// <summary>
     /// Base class for the Event Args for change notifications raised by <typeparamref name="ShellObjectWatcher"/>.

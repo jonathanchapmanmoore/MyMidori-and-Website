@@ -6,7 +6,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.InteropServices;
 using MS.WindowsAPICodePack.Internal;
 
-namespace Microsoft.WindowsAPICodePack.Shell
+namespace Microsoft.Windows.Shell
 {
     /// <summary>
     /// Defines properties for known folders that identify the path of standard known folders.

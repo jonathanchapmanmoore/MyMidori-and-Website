@@ -3,7 +3,7 @@
 using System;
 using System.Threading;
 
-namespace Microsoft.WindowsAPICodePack.ExtendedLinguisticServices
+namespace Microsoft.Windows.ExtendedLinguisticServices
 {
 
     /// <summary>

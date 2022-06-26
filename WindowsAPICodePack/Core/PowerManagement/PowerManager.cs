@@ -2,11 +2,11 @@
 
 using System;
 using System.Diagnostics.CodeAnalysis;
-using Microsoft.WindowsAPICodePack.Resources;
+using Microsoft.Windows.Resources;
 using MS.WindowsAPICodePack.Internal;
 using System.ComponentModel;
 
-namespace Microsoft.WindowsAPICodePack.ApplicationServices
+namespace Microsoft.Windows.ApplicationServices
 {
     /// <summary>
     /// Enables registration for 

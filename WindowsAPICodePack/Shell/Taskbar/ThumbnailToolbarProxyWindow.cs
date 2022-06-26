@@ -2,10 +2,10 @@
 
 using System;
 using System.Windows.Forms;
-using Microsoft.WindowsAPICodePack.Shell.Resources;
+using Microsoft.Windows.Shell.Resources;
 using MS.WindowsAPICodePack.Internal;
 
-namespace Microsoft.WindowsAPICodePack.Taskbar
+namespace Microsoft.Windows.Taskbar
 {
     internal class ThumbnailToolbarProxyWindow : NativeWindow, IDisposable
     {

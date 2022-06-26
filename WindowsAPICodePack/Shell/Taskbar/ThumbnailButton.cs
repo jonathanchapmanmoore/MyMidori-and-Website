@@ -2,10 +2,10 @@
 
 using System;
 using System.Drawing;
-using Microsoft.WindowsAPICodePack.Shell;
+using Microsoft.Windows.Shell;
 using MS.WindowsAPICodePack.Internal;
 
-namespace Microsoft.WindowsAPICodePack.Taskbar
+namespace Microsoft.Windows.Taskbar
 {
     /// <summary>
     /// Represents a taskbar thumbnail button in the thumbnail toolbar.

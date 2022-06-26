@@ -2,7 +2,7 @@
 
 using System;
 
-namespace Microsoft.WindowsAPICodePack.Net
+namespace Microsoft.Windows.Net
 {
     /// <summary>
     /// Represents a network on the local machine. 

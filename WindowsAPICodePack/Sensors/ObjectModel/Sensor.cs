@@ -3,12 +3,12 @@
 using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
-using Microsoft.WindowsAPICodePack.Sensors.Resources;
-using Microsoft.WindowsAPICodePack.Shell.PropertySystem;
+using Microsoft.Windows.Sensors.Resources;
+using Microsoft.Windows.Shell.PropertySystem;
 using MS.WindowsAPICodePack.Internal;
 using System.Linq;
 
-namespace Microsoft.WindowsAPICodePack.Sensors
+namespace Microsoft.Windows.Sensors
 {
     /// <summary>
     /// Represents the method that will handle the DataReportChanged event.

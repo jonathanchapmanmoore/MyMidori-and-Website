@@ -1,6 +1,6 @@
 // Copyright (c) Microsoft Corporation.  All rights reserved.
 
-namespace Microsoft.WindowsAPICodePack.Shell
+namespace Microsoft.Windows.Shell
 {
     /// <summary>
     /// Represents the different retrieval options for the thumbnail or icon,

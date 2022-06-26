@@ -4,13 +4,13 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using Microsoft.Win32;
-using Microsoft.WindowsAPICodePack.Shell;
-using Microsoft.WindowsAPICodePack.Shell.Interop;
-using Microsoft.WindowsAPICodePack.ShellExtensions.Interop;
-using Microsoft.WindowsAPICodePack.ShellExtensions.Resources;
+using Microsoft.Windows.Shell;
+using Microsoft.Windows.Shell.Interop;
+using Microsoft.Windows.ShellExtensions.Interop;
+using Microsoft.Windows.ShellExtensions.Resources;
 using MS.WindowsAPICodePack.Internal;
 
-namespace Microsoft.WindowsAPICodePack.ShellExtensions
+namespace Microsoft.Windows.ShellExtensions
 {
     /// <summary>
     /// This is the base class for all preview handlers and provides their basic functionality.

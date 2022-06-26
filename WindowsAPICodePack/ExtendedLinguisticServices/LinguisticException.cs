@@ -9,7 +9,7 @@ using System.Runtime.ConstrainedExecution;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 
-namespace Microsoft.WindowsAPICodePack.ExtendedLinguisticServices
+namespace Microsoft.Windows.ExtendedLinguisticServices
 {
 
     /// <summary>

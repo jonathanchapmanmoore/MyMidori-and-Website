@@ -1,9 +1,9 @@
 // Copyright (c) Microsoft Corporation.  All rights reserved.
 
 using System.Runtime.InteropServices;
-using Microsoft.WindowsAPICodePack.Shell.PropertySystem;
+using Microsoft.Windows.Shell.PropertySystem;
 
-namespace Microsoft.WindowsAPICodePack.Shell
+namespace Microsoft.Windows.Shell
 {
     /// <summary>
     /// Stores information about how to sort a column that is displayed in the folder view.

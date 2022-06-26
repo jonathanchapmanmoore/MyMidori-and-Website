@@ -3,7 +3,7 @@
 using System;
 using MS.WindowsAPICodePack.Internal;
 
-namespace Microsoft.WindowsAPICodePack.Net
+namespace Microsoft.Windows.Net
 {
     /// <summary>
     /// Provides access to objects that represent networks and network connections.

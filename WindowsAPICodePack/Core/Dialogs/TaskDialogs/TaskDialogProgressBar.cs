@@ -1,8 +1,8 @@
 //Copyright (c) Microsoft Corporation.  All rights reserved.
 
-using Microsoft.WindowsAPICodePack.Resources;
+using Microsoft.Windows.Resources;
 
-namespace Microsoft.WindowsAPICodePack.Dialogs
+namespace Microsoft.Windows.Dialogs
 {
     /// <summary>
     /// Provides a visual representation of the progress of a long running operation.

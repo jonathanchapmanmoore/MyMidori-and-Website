@@ -5,8 +5,8 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Reflection;
 using System.Runtime.InteropServices;
-using Microsoft.WindowsAPICodePack.Resources;
-using Microsoft.WindowsAPICodePack.Shell.PropertySystem;
+using Microsoft.Windows.Resources;
+using Microsoft.Windows.Shell.PropertySystem;
 
 namespace MS.WindowsAPICodePack.Internal
 {

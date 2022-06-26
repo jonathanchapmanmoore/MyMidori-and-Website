@@ -1,8 +1,8 @@
 ﻿//Copyright (c) Microsoft Corporation.  All rights reserved.
 
-using Microsoft.WindowsAPICodePack.Shell;
+using Microsoft.Windows.Shell;
 
-namespace Microsoft.WindowsAPICodePack.Taskbar
+namespace Microsoft.Windows.Taskbar
 {
     /// <summary>
     /// Represents a jump list item.

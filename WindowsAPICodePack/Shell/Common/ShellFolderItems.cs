@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using MS.WindowsAPICodePack.Internal;
 
-namespace Microsoft.WindowsAPICodePack.Shell
+namespace Microsoft.Windows.Shell
 {
     class ShellFolderItems : IEnumerator<ShellObject>
     {

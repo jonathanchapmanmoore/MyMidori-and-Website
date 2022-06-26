@@ -5,9 +5,9 @@ using System.Collections;
 using System.Runtime.InteropServices;
 using System.Threading;
 using System.Windows.Forms;
-using Microsoft.WindowsAPICodePack.Resources;
+using Microsoft.Windows.Resources;
 
-namespace Microsoft.WindowsAPICodePack.ApplicationServices
+namespace Microsoft.Windows.ApplicationServices
 {
     /// <summary>
     /// This class generates .NET events based on Windows messages.  

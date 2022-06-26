@@ -4,10 +4,10 @@ using System;
 using System.ComponentModel;
 using System.Text;
 using System.Windows.Forms;
-using Microsoft.WindowsAPICodePack.Shell;
+using Microsoft.Windows.Shell;
 using MS.WindowsAPICodePack.Internal;
 
-namespace Microsoft.WindowsAPICodePack.Controls.WindowsForms
+namespace Microsoft.Windows.Controls.WindowsForms
 {
     /// <summary>
     /// Implements a CommandLink button that can be used in 

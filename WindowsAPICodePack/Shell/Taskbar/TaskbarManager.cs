@@ -4,9 +4,9 @@ using System;
 using System.Diagnostics;
 using System.Windows.Interop;
 using MS.WindowsAPICodePack.Internal;
-using Microsoft.WindowsAPICodePack.Shell.Resources;
+using Microsoft.Windows.Shell.Resources;
 
-namespace Microsoft.WindowsAPICodePack.Taskbar
+namespace Microsoft.Windows.Taskbar
 {
     /// <summary>
     /// Represents an instance of the Windows taskbar

@@ -2,9 +2,9 @@
 using System.IO;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
-using Microsoft.WindowsAPICodePack.ShellExtensions.Resources;
+using Microsoft.Windows.ShellExtensions.Resources;
 
-namespace Microsoft.WindowsAPICodePack.ShellExtensions
+namespace Microsoft.Windows.ShellExtensions
 {
     /// <summary>
     /// A wrapper for the native IStream object.

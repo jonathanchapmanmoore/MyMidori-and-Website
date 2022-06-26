@@ -1,6 +1,6 @@
 ﻿//Copyright (c) Microsoft Corporation.  All rights reserved.
 
-namespace Microsoft.WindowsAPICodePack.ApplicationServices
+namespace Microsoft.Windows.ApplicationServices
 {
     /// <summary>
     /// The <see cref="System.Delegate"/> that represents the callback method invoked

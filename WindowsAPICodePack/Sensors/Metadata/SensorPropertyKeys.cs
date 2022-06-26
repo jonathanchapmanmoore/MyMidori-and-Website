@@ -1,9 +1,9 @@
 ﻿// Copyright (c) Microsoft Corporation.  All rights reserved.
 
 using System;
-using Microsoft.WindowsAPICodePack.Shell.PropertySystem;
+using Microsoft.Windows.Shell.PropertySystem;
 
-namespace Microsoft.WindowsAPICodePack.Sensors
+namespace Microsoft.Windows.Sensors
 {
     /// <summary>
     /// Sensor Property Key identifiers. This class will be removed once wrappers are developed.

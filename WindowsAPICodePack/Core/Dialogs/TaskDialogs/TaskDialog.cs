@@ -3,10 +3,10 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Microsoft.WindowsAPICodePack.Resources;
+using Microsoft.Windows.Resources;
 using MS.WindowsAPICodePack.Internal;
 
-namespace Microsoft.WindowsAPICodePack.Dialogs
+namespace Microsoft.Windows.Dialogs
 {
     /// <summary>
     /// Encapsulates a new-to-Vista Win32 TaskDialog window 

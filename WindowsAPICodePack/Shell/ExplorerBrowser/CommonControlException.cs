@@ -2,7 +2,7 @@
 using System.Runtime.InteropServices;
 using MS.WindowsAPICodePack.Internal;
 
-namespace Microsoft.WindowsAPICodePack.Controls
+namespace Microsoft.Windows.Controls
 {
     /// <summary>
     /// An exception thrown when an error occurs while dealing with Control objects.

@@ -5,7 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 
-namespace Microsoft.WindowsAPICodePack.Taskbar
+namespace Microsoft.Windows.Taskbar
 {
     /// <summary>
     /// Represents a collection of custom categories

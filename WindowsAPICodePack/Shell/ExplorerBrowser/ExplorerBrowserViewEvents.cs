@@ -2,8 +2,8 @@
 
 using System;
 using System.Runtime.InteropServices;
-using Microsoft.WindowsAPICodePack.Controls;
-using Microsoft.WindowsAPICodePack.Controls.WindowsForms;
+using Microsoft.Windows.Controls;
+using Microsoft.Windows.Controls.WindowsForms;
 
 namespace MS.WindowsAPICodePack.Internal
 {

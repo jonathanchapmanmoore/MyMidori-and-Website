@@ -3,8 +3,8 @@
 using System;
 using System.Runtime.InteropServices;
 using System.Security;
-using Microsoft.WindowsAPICodePack.Shell.Interop;
-using Microsoft.WindowsAPICodePack.Shell;
+using Microsoft.Windows.Shell.Interop;
+using Microsoft.Windows.Shell;
 
 namespace MS.WindowsAPICodePack.Internal
 {

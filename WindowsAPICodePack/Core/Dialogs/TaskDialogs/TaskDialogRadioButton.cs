@@ -1,6 +1,6 @@
 //Copyright (c) Microsoft Corporation.  All rights reserved.
 
-namespace Microsoft.WindowsAPICodePack.Dialogs
+namespace Microsoft.Windows.Dialogs
 {
     /// <summary>
     /// Defines a radio button that can be hosted in by a 
@@ -19,7 +19,7 @@ namespace Microsoft.WindowsAPICodePack.Dialogs
         /// </summary>
         /// <param name="name">The name for this control.</param>
         /// <param name="text">The value for this controls 
-        /// <see cref="P:Microsoft.WindowsAPICodePack.Dialogs.TaskDialogButtonBase.Text"/> property.</param>
+        /// <see cref="P:Microsoft.Windows.Dialogs.TaskDialogButtonBase.Text"/> property.</param>
         public TaskDialogRadioButton(string name, string text) : base(name, text) { }
     }
 }

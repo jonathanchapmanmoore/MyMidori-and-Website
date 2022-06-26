@@ -2,10 +2,10 @@
 using System.Windows.Interop;
 using System.Windows.Media;
 using MS.WindowsAPICodePack.Internal;
-using Microsoft.WindowsAPICodePack.Shell.Interop;
+using Microsoft.Windows.Shell.Interop;
 using System.Windows;
 
-namespace Microsoft.WindowsAPICodePack.Shell
+namespace Microsoft.Windows.Shell
 {
 
     /// <summary>

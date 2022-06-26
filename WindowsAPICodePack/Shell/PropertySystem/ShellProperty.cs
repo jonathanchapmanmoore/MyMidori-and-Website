@@ -4,10 +4,10 @@ using System;
 using System.Diagnostics;
 using System.Reflection;
 using System.Runtime.InteropServices;
-using Microsoft.WindowsAPICodePack.Shell.Resources;
+using Microsoft.Windows.Shell.Resources;
 using MS.WindowsAPICodePack.Internal;
 
-namespace Microsoft.WindowsAPICodePack.Shell.PropertySystem
+namespace Microsoft.Windows.Shell.PropertySystem
 {
     /// <summary>
     /// Defines a strongly-typed property object. 

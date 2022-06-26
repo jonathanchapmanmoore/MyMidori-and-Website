@@ -1,7 +1,7 @@
 ﻿//Copyright (c) Microsoft Corporation.  All rights reserved.
 
 using System;
-namespace Microsoft.WindowsAPICodePack.Net
+namespace Microsoft.Windows.Net
 {
     /// <summary>
     /// Specifies types of network connectivity.

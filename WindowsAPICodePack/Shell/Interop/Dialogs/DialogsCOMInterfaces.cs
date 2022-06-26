@@ -3,11 +3,11 @@
 using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-using Microsoft.WindowsAPICodePack.Shell;
-using Microsoft.WindowsAPICodePack.Shell.PropertySystem;
+using Microsoft.Windows.Shell;
+using Microsoft.Windows.Shell.PropertySystem;
 using MS.WindowsAPICodePack.Internal;
 
-namespace Microsoft.WindowsAPICodePack.Dialogs
+namespace Microsoft.Windows.Dialogs
 {
     // Disable warning if a method declaration hides another inherited from a parent COM interface
     // To successfully import a COM interface, all inherited methods need to be declared again with 

@@ -1,8 +1,8 @@
 ﻿//Copyright (c) Microsoft Corporation.  All rights reserved.
 
-using Microsoft.WindowsAPICodePack.Shell;
-using Microsoft.WindowsAPICodePack.Shell.PropertySystem;
-namespace Microsoft.WindowsAPICodePack.Taskbar
+using Microsoft.Windows.Shell;
+using Microsoft.Windows.Shell.PropertySystem;
+namespace Microsoft.Windows.Taskbar
 {
     /// <summary>
     /// Interface for jump list items

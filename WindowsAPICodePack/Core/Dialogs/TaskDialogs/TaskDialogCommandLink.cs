@@ -3,7 +3,7 @@
 using System;
 using System.Globalization;
 
-namespace Microsoft.WindowsAPICodePack.Dialogs
+namespace Microsoft.Windows.Dialogs
 {
     /// <summary>
     /// Represents a command-link. 

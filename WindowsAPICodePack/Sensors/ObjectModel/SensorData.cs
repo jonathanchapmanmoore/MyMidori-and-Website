@@ -3,10 +3,10 @@
 using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
-using Microsoft.WindowsAPICodePack.Shell.PropertySystem;
+using Microsoft.Windows.Shell.PropertySystem;
 using MS.WindowsAPICodePack.Internal;
 
-namespace Microsoft.WindowsAPICodePack.Sensors
+namespace Microsoft.Windows.Sensors
 {
     /// <summary>
     /// Defines a mapping of data field identifiers to the data returned in a sensor report.

@@ -3,13 +3,13 @@
 using System;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
-using Microsoft.WindowsAPICodePack.Shell;
-using Microsoft.WindowsAPICodePack.Shell.PropertySystem;
-using Microsoft.WindowsAPICodePack.Shell.Resources;
+using Microsoft.Windows.Shell;
+using Microsoft.Windows.Shell.PropertySystem;
+using Microsoft.Windows.Shell.Resources;
 using MS.WindowsAPICodePack.Internal;
 using System.Text;
 
-namespace Microsoft.WindowsAPICodePack.Dialogs
+namespace Microsoft.Windows.Dialogs
 {
     /// <summary>
     /// Creates a Vista or Windows 7 Common File Dialog, allowing the user to select the filename and location for a saved file.

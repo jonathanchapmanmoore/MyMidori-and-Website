@@ -3,9 +3,9 @@
 using System;
 using System.Runtime.InteropServices;
 using MS.WindowsAPICodePack.Internal;
-using Microsoft.WindowsAPICodePack.Shell.Resources;
+using Microsoft.Windows.Shell.Resources;
 
-namespace Microsoft.WindowsAPICodePack.Shell.PropertySystem
+namespace Microsoft.Windows.Shell.PropertySystem
 {
     /// <summary>
     /// Creates a property writer capable of setting multiple properties for a given ShellObject.

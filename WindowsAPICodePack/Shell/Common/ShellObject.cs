@@ -4,12 +4,12 @@ using System;
 using System.IO;
 using System.Runtime.InteropServices;
 using System.Security.Cryptography;
-using Microsoft.WindowsAPICodePack.Shell.PropertySystem;
-using Microsoft.WindowsAPICodePack.Shell.Resources;
+using Microsoft.Windows.Shell.PropertySystem;
+using Microsoft.Windows.Shell.Resources;
 using MS.WindowsAPICodePack.Internal;
 using System.Runtime.InteropServices.ComTypes;
 
-namespace Microsoft.WindowsAPICodePack.Shell
+namespace Microsoft.Windows.Shell
 {
     /// <summary>
     /// The base class for all Shell objects in Shell Namespace.

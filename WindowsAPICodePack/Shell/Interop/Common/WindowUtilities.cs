@@ -1,11 +1,11 @@
 ﻿//Copyright (c) Microsoft Corporation.  All rights reserved.
 
 using System;
-using Microsoft.WindowsAPICodePack.Taskbar;
+using Microsoft.Windows.Taskbar;
 using MS.WindowsAPICodePack.Internal;
-using Microsoft.WindowsAPICodePack.Shell.Interop;
+using Microsoft.Windows.Shell.Interop;
 
-namespace Microsoft.WindowsAPICodePack.Shell
+namespace Microsoft.Windows.Shell
 {
 
     internal static class WindowUtilities

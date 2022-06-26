@@ -3,7 +3,7 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace Microsoft.WindowsAPICodePack.Sensors
+namespace Microsoft.Windows.Sensors
 {
     /// <summary>
     /// Defines an exception specific to the sensors.
@@ -12,7 +12,7 @@ namespace Microsoft.WindowsAPICodePack.Sensors
     public class SensorPlatformException : Exception
     {
         /// <summary>
-        /// Initializes a new instance of the Microsoft.WindowsAPICodePack.Sensors.SensorPlatformException class
+        /// Initializes a new instance of the Microsoft.Windows.Sensors.SensorPlatformException class
         ///  with the specified context and the serialization information.
         /// </summary>
         /// <param name="info">The System.Runtime.Serialization.SerializationInfo associated with this exception.</param>
@@ -23,7 +23,7 @@ namespace Microsoft.WindowsAPICodePack.Sensors
         }
 
         /// <summary>
-        /// Initializes a new instance of the Microsoft.WindowsAPICodePack.Sensors.SensorPlatformException 
+        /// Initializes a new instance of the Microsoft.Windows.Sensors.SensorPlatformException 
         /// class with the specified detailed description.
         /// </summary>
         /// <param name="message">A detailed description of the error.</param>
@@ -33,7 +33,7 @@ namespace Microsoft.WindowsAPICodePack.Sensors
         }
 
         /// <summary>
-        /// Initializes a new instance of the Microsoft.WindowsAPICodePack.Sensors.SensorPlatformException class
+        /// Initializes a new instance of the Microsoft.Windows.Sensors.SensorPlatformException class
         /// with the last Win32 error that occurred.
         /// </summary>
         public SensorPlatformException()
@@ -42,7 +42,7 @@ namespace Microsoft.WindowsAPICodePack.Sensors
         }
 
         /// <summary>
-        /// Initializes a new instance of the Microsoft.WindowsAPICodePack.Sensors.SensorPlatformException class
+        /// Initializes a new instance of the Microsoft.Windows.Sensors.SensorPlatformException class
         /// with the specified detailed description and the specified exception.
         /// </summary>
         /// <param name="message">A detailed description of the error.</param>

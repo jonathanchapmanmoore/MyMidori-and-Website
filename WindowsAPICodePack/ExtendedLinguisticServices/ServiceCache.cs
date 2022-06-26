@@ -6,7 +6,7 @@ using System.Runtime.ConstrainedExecution;
 using System.Runtime.InteropServices;
 using System.Threading;
 
-namespace Microsoft.WindowsAPICodePack.ExtendedLinguisticServices
+namespace Microsoft.Windows.ExtendedLinguisticServices
 {
     // This singleton object is correctly finalized on appdomain unload.    
     internal class ServiceCache : CriticalFinalizerObject

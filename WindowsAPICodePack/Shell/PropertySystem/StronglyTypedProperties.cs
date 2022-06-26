@@ -4,7 +4,7 @@ using System;
 using System.Collections;
 using System.Runtime.InteropServices.ComTypes;
 
-namespace Microsoft.WindowsAPICodePack.Shell.PropertySystem
+namespace Microsoft.Windows.Shell.PropertySystem
 {
 
     /// <summary>

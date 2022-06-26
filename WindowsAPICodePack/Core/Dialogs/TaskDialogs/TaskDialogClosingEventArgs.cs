@@ -2,7 +2,7 @@
 
 using System.ComponentModel;
 
-namespace Microsoft.WindowsAPICodePack.Dialogs
+namespace Microsoft.Windows.Dialogs
 {
     /// <summary>
     /// Data associated with <see cref="TaskDialog.Closing"/> event.

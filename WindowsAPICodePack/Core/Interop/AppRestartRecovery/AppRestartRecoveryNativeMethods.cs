@@ -4,7 +4,7 @@ using System;
 using System.Runtime.InteropServices;
 using MS.WindowsAPICodePack.Internal;
 
-namespace Microsoft.WindowsAPICodePack.ApplicationServices
+namespace Microsoft.Windows.ApplicationServices
 {
     internal static class AppRestartRecoveryNativeMethods
     {

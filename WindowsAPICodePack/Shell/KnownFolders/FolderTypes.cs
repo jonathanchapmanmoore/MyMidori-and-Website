@@ -2,9 +2,9 @@
 
 using System;
 using System.Collections.Generic;
-using Microsoft.WindowsAPICodePack.Shell.Resources;
+using Microsoft.Windows.Shell.Resources;
 
-namespace Microsoft.WindowsAPICodePack.Shell
+namespace Microsoft.Windows.Shell
 {
     /// <summary>
     /// The FolderTypes values represent a view template applied to a folder, 

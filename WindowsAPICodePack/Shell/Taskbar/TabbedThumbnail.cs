@@ -8,11 +8,11 @@ using System.Windows;
 using System.Windows.Forms;
 using System.Windows.Interop;
 using System.Windows.Media.Imaging;
-using Microsoft.WindowsAPICodePack.Shell;
-using Microsoft.WindowsAPICodePack.Shell.Resources;
+using Microsoft.Windows.Shell;
+using Microsoft.Windows.Shell.Resources;
 using MS.WindowsAPICodePack.Internal;
 
-namespace Microsoft.WindowsAPICodePack.Taskbar
+namespace Microsoft.Windows.Taskbar
 {
     /// <summary>
     /// Represents a tabbed thumbnail on the taskbar for a given window or a control.

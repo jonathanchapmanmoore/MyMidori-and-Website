@@ -5,7 +5,7 @@ using System.Windows;
 using System.Windows.Forms;
 using MS.WindowsAPICodePack.Internal;
 
-namespace Microsoft.WindowsAPICodePack.Taskbar
+namespace Microsoft.Windows.Taskbar
 {
     internal sealed class TabbedThumbnailProxyWindow : Form, IDisposable
     {

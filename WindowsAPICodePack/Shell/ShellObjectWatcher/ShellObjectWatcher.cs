@@ -3,9 +3,9 @@
 using System;
 using System.ComponentModel;
 using System.Threading;
-using Microsoft.WindowsAPICodePack.Shell.Resources;
+using Microsoft.Windows.Shell.Resources;
 
-namespace Microsoft.WindowsAPICodePack.Shell
+namespace Microsoft.Windows.Shell
 {
     /// <summary>
     /// Listens for changes in/on a ShellObject and raises events when they occur.

@@ -1,9 +1,9 @@
 ﻿//Copyright (c) Microsoft Corporation.  All rights reserved.
 
 using System;
-using Microsoft.WindowsAPICodePack.Shell;
+using Microsoft.Windows.Shell;
 
-namespace Microsoft.WindowsAPICodePack.Shell.PropertySystem
+namespace Microsoft.Windows.Shell.PropertySystem
 {
     /// <summary>
     /// Defines the properties used by a Shell Property.

@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
-using Microsoft.WindowsAPICodePack.Shell;
+using Microsoft.Windows.Shell;
 using MS.WindowsAPICodePack.Internal;
-using Microsoft.WindowsAPICodePack.Shell.Interop;
+using Microsoft.Windows.Shell.Interop;
 
-namespace Microsoft.WindowsAPICodePack.ShellExtensions.Interop
+namespace Microsoft.Windows.ShellExtensions.Interop
 {
     internal static class HandlerNativeMethods
     {

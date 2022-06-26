@@ -8,11 +8,11 @@ using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Forms;
 using MS.WindowsAPICodePack.Internal;
-using Microsoft.WindowsAPICodePack.Shell.Interop;
-using Microsoft.WindowsAPICodePack.Shell.Resources;
-using Microsoft.WindowsAPICodePack.Shell;
+using Microsoft.Windows.Shell.Interop;
+using Microsoft.Windows.Shell.Resources;
+using Microsoft.Windows.Shell;
 
-namespace Microsoft.WindowsAPICodePack.Taskbar
+namespace Microsoft.Windows.Taskbar
 {
     /// <summary>
     /// Represents the main class for adding and removing tabbed thumbnails on the Taskbar

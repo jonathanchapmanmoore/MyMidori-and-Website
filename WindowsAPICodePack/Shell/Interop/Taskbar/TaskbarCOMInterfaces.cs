@@ -4,7 +4,7 @@ using System;
 using System.Runtime.InteropServices;
 using MS.WindowsAPICodePack.Internal;
 
-namespace Microsoft.WindowsAPICodePack.Taskbar
+namespace Microsoft.Windows.Taskbar
 {
     [ComImportAttribute()]
     [GuidAttribute("6332DEBF-87B5-4670-90C0-5E57B408A49E")]

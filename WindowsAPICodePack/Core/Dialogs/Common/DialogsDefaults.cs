@@ -1,7 +1,7 @@
 ﻿//Copyright (c) Microsoft Corporation.  All rights reserved.
 
-using Microsoft.WindowsAPICodePack.Resources;
-namespace Microsoft.WindowsAPICodePack.Dialogs
+using Microsoft.Windows.Resources;
+namespace Microsoft.Windows.Dialogs
 {
     internal static class DialogsDefaults
     {

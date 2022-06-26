@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Threading;
 using MS.WindowsAPICodePack.Internal;
-using Microsoft.WindowsAPICodePack.Shell.Interop;
-using Microsoft.WindowsAPICodePack.Shell.Resources;
+using Microsoft.Windows.Shell.Interop;
+using Microsoft.Windows.Shell.Resources;
 
-namespace Microsoft.WindowsAPICodePack.Shell
+namespace Microsoft.Windows.Shell
 {
     internal class MessageListener : IDisposable
     {

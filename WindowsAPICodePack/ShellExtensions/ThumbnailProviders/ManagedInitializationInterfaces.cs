@@ -1,8 +1,8 @@
 ﻿using System.Drawing;
 using System.IO;
-using Microsoft.WindowsAPICodePack.Shell;
+using Microsoft.Windows.Shell;
 
-namespace Microsoft.WindowsAPICodePack.ShellExtensions
+namespace Microsoft.Windows.ShellExtensions
 {
     /// <summary>
     /// This interface exposes the <see cref="ConsructBitmap"/> function for initializing the 

@@ -3,9 +3,9 @@
 using System;
 using System.Collections.ObjectModel;
 using System.Text;
-using Microsoft.WindowsAPICodePack.Shell;
+using Microsoft.Windows.Shell;
 
-namespace Microsoft.WindowsAPICodePack.Dialogs
+namespace Microsoft.Windows.Dialogs
 {
     /// <summary>
     /// Stores the file extensions used when filtering files in File Open and File Save dialogs.

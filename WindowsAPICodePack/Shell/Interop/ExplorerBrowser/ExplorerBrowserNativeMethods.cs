@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using System.Security;
 using MS.WindowsAPICodePack.Internal;
 
-namespace Microsoft.WindowsAPICodePack.Controls
+namespace Microsoft.Windows.Controls
 {
     /// <summary>
     /// Internal class that contains interop declarations for 

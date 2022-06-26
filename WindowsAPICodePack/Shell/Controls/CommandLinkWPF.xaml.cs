@@ -7,7 +7,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using MS.WindowsAPICodePack.Internal;
 
-namespace Microsoft.WindowsAPICodePack.Controls.WindowsPresentationFoundation
+namespace Microsoft.Windows.Controls.WindowsPresentationFoundation
 {
     /// <summary>
     /// Implements a CommandLink button that can be used in WPF user interfaces.
