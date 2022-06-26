@@ -1,3 +1,0 @@
-Welcome to the Dante quiz. This ungraded exercise is intended to give you an idea of how much you have learned.
-
-To log in, provide your full username (username@university.edu) and click Submit.
