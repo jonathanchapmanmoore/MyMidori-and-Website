@@ -3,5 +3,5 @@ The Goal Of this Framework in to make an Operating System out of Singularity. Pl
 The build Singularity execute 'congifugre.cmd' then from the Singularity prompt placed on the desktop type 
 'msb Distro\World.prj'
 
-![Singularity1](images/VirtualBox_Windows XP Professional_14_06_2022_10_07_51.png)
-![Singularity2](images/VirtualBox_Windows XP Professional_14_06_2022_07_35_59.png)
+![Singularity1](Images/VirtualBox_Windows XP Professional_14_06_2022_10_07_51.png)
+![Singularity2](Images/VirtualBox_Windows XP Professional_14_06_2022_07_35_59.png)
