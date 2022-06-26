@@ -78,7 +78,7 @@ Sub CreateIcon(base)
 	oShellLink.Arguments = "/k " & Chr(34) & "base\setenv.cmd" & Chr(34)
 	oShellLink.WindowStyle = 1
 	'Define what icon the shortcut should use. Here we use the explorer.exe icon.
-	oShellLink.IconLocation = runningFrom & "\windows.ico"
+	oShellLink.IconLocation = runningFrom & "\Windows.ico"
 	oShellLink.Description = "Singularity environment build window"
 	oShellLink.WorkingDirectory = runningFrom
 	oShellLink.Save
