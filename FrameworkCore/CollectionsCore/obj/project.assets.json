@@ -696,11 +696,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ftp.hp.com\\private\\midori\\Framework-w-Website\\FrameworkCore\\CollectionsCore\\CollectionsCore.csproj",
+      "projectUniqueName": "D:\\mnt\\X\\startup\\midori\\Framework-w-Website\\FrameworkCore\\CollectionsCore\\CollectionsCore.csproj",
       "projectName": "CollectionsCore",
-      "projectPath": "D:\\ftp.hp.com\\private\\midori\\Framework-w-Website\\FrameworkCore\\CollectionsCore\\CollectionsCore.csproj",
+      "projectPath": "D:\\mnt\\X\\startup\\midori\\Framework-w-Website\\FrameworkCore\\CollectionsCore\\CollectionsCore.csproj",
       "packagesPath": "C:\\Users\\JonathanMoore\\.nuget\\packages\\",
-      "outputPath": "D:\\ftp.hp.com\\private\\midori\\Framework-w-Website\\FrameworkCore\\CollectionsCore\\obj\\",
+      "outputPath": "D:\\mnt\\X\\startup\\midori\\Framework-w-Website\\FrameworkCore\\CollectionsCore\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
