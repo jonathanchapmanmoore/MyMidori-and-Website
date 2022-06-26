@@ -1,6 +1,6 @@
 //Copyright (c) Microsoft Corporation.  All rights reserved.
 
-using Microsoft.Windows.Resources;
+using Microsoft.Windows.Core.Resources;
 
 namespace Microsoft.Windows.Dialogs
 {

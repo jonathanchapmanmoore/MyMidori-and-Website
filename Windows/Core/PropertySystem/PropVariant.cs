@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Reflection;
 using System.Runtime.InteropServices;
-using Microsoft.Windows.Resources;
+using Microsoft.Windows.Core.Resources;
 using Microsoft.Windows.Shell.PropertySystem;
 
 namespace MS.WindowsAPICodePack.Internal

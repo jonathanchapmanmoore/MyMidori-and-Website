@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
 using System.Runtime.InteropServices;
 using MS.WindowsAPICodePack.Internal;
-using Microsoft.Windows.Resources;
+using Microsoft.Windows.Core.Resources;
 
 namespace Microsoft.Windows.ApplicationServices
 {    

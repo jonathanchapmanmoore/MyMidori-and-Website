@@ -3,7 +3,7 @@
 using System;
 using System.Collections.ObjectModel;
 using System.Linq;
-using Microsoft.Windows.Resources;
+using Microsoft.Windows.Core.Resources;
 
 namespace Microsoft.Windows.Dialogs
 {

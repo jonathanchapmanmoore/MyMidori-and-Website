@@ -5,7 +5,7 @@ using System.Collections;
 using System.Runtime.InteropServices;
 using System.Threading;
 using System.Windows.Forms;
-using Microsoft.Windows.Resources;
+using Microsoft.Windows.Core.Resources;
 
 namespace Microsoft.Windows.ApplicationServices
 {

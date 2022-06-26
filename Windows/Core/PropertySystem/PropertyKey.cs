@@ -2,7 +2,7 @@
 
 using System;
 using System.Runtime.InteropServices;
-using Microsoft.Windows.Resources;
+using Microsoft.Windows.Core.Resources;
 
 namespace Microsoft.Windows.Shell.PropertySystem
 {

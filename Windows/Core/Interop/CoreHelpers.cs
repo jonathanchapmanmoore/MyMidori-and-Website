@@ -3,7 +3,7 @@
 using System;
 using System.Globalization;
 using System.Text;
-using Microsoft.Windows.Resources;
+using Microsoft.Windows.Core.Resources;
 
 namespace MS.WindowsAPICodePack.Internal
 {
