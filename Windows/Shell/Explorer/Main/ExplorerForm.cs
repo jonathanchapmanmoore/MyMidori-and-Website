@@ -8,15 +8,15 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using Microsoft.WindowsAPICodePack.Shell;
+using Microsoft.Windows.Shell;
 using System.Windows.Forms.Integration;
 using System.Reflection;
 using System.Runtime.InteropServices;
-using Microsoft.WindowsAPICodePack.Controls;
+using Microsoft.Windows.Controls;
 using System.Threading;
 
-namespace Microsoft.WindowsAPICodePack.Samples
-{
+namespace Microsoft.Windows.Explorer
+{ 
     public partial class ExplorerBrowserTestForm : Form
     {
         System.Windows.Forms.Timer uiDecoupleTimer = new System.Windows.Forms.Timer();

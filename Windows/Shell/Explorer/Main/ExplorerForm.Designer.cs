@@ -1,7 +1,7 @@
 ﻿//Copyright (c) Microsoft Corporation.  All rights reserved.
 
 
-namespace Microsoft.WindowsAPICodePack.Samples
+namespace Microsoft.Windows.Explorer
 {
     partial class ExplorerBrowserTestForm
     {
@@ -462,7 +462,7 @@ namespace Microsoft.WindowsAPICodePack.Samples
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.SplitContainer splitContainer3;
-        private Microsoft.WindowsAPICodePack.Controls.WindowsForms.ExplorerBrowser explorerBrowser;
+        private Microsoft.Windows.Controls.WindowsForms.ExplorerBrowser explorerBrowser;
         private System.Windows.Forms.PropertyGrid navigationPropertyGrid;
         private System.Windows.Forms.PropertyGrid contentPropertyGrid;
         private System.Windows.Forms.PropertyGrid visibilityPropertyGrid;

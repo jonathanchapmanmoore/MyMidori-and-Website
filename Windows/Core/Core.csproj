@@ -8,8 +8,8 @@
     <ProjectGuid>{2E1FB0DF-F9BB-4909-9F32-2D9D022A8E57}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Microsoft.Windows.Core</RootNamespace>
-    <AssemblyName>Microsoft.Windows.Core</AssemblyName>
+    <RootNamespace>Microsoft.Windows</RootNamespace>
+    <AssemblyName>Microsoft.Windows</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>

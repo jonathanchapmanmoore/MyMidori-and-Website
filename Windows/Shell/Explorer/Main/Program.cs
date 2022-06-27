@@ -3,8 +3,8 @@
 using System;
 using System.Windows.Forms;
 
-namespace Microsoft.WindowsAPICodePack.Samples
-{
+namespace Microsoft.Windows.Explorer
+{ 
     static class Program
     {
         /// <summary>

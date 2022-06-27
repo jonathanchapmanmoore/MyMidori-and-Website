@@ -1,6 +1,6 @@
 ﻿//Copyright (c) Microsoft Corporation.  All rights reserved.
 
-using Microsoft.Windows.Core.Resources;
+using Microsoft.Windows.Resources;
 namespace Microsoft.Windows.ApplicationServices
 {
     /// <summary>

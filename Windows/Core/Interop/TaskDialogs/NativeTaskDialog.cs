@@ -4,7 +4,7 @@ using System;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
-using Microsoft.Windows.Core.Resources;
+using Microsoft.Windows.Resources;
 using MS.WindowsAPICodePack.Internal;
 
 namespace Microsoft.Windows.Dialogs

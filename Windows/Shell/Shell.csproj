@@ -8,8 +8,8 @@
     <ProjectGuid>{AA0C00CB-8699-4F37-BFAE-40CA87ACC06D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Microsoft.WindowsAPICodePack.Shell</RootNamespace>
-    <AssemblyName>Microsoft.WindowsAPICodePack.Shell</AssemblyName>
+    <RootNamespace>Microsoft.Windows.Shell</RootNamespace>
+    <AssemblyName>Microsoft.Windows.Shell</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>
@@ -41,7 +41,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\Microsoft.WindowsAPICodePack.Shell.XML</DocumentationFile>
+    <DocumentationFile>bin\Debug\Microsoft.Windows.Shell.xml</DocumentationFile>
     <CodeAnalysisRules>
     </CodeAnalysisRules>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
@@ -180,22 +180,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DesktopWindowManager\GlassWindow.cs" />
-    <Compile Include="ExplorerBrowser\CommonControlException.cs" />
-    <Compile Include="ExplorerBrowser\ExplorerBrowser.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ExplorerBrowser\ExplorerBrowser.WPF.xaml.cs">
-      <DependentUpon>ExplorerBrowser.WPF.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ExplorerBrowser\ExplorerBrowserContentOptions.cs" />
-    <Compile Include="ExplorerBrowser\ExplorerBrowserEvents.cs" />
-    <Compile Include="ExplorerBrowser\ExplorerBrowserViewEvents.cs" />
-    <Compile Include="ExplorerBrowser\NavigationLog.cs" />
-    <Compile Include="ExplorerBrowser\ExplorerBrowserEnums.cs" />
-    <Compile Include="ExplorerBrowser\ExplorerBrowserPaneVisibility.cs" />
-    <Compile Include="ExplorerBrowser\NavigationLogEnums.cs" />
-    <Compile Include="ExplorerBrowser\NavigationLogEvents.cs" />
-    <Compile Include="ExplorerBrowser\NavigationOptions.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Interop\Common\IntPtrExtensions.cs" />
     <Compile Include="Interop\Common\ShellNativeStructs.cs" />
@@ -329,16 +313,9 @@
   <ItemGroup>
     <None Include="Design\ShellThumbnailClassDiagram.cd" />
     <None Include="Design\ShellObjects.cd" />
-    <None Include="ExplorerBrowser\ExplorerBrowserDiagram.cd" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="Controls\CommandLinkWPF.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="ExplorerBrowser\ExplorerBrowser.WPF.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
