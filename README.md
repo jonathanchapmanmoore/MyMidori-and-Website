@@ -11,8 +11,6 @@ To build Singularity execute 'congifugre.cmd' then from the Singularity prompt p
 ### My Windows 2003 SP1 Build from Source for Testing Purposes only.
 ![Singularity4](Images/VirtualBox_Windows_Server_2003_30_04_2022_15_52_56.png)
 
-### My Gift to the University of Washington
-![Singularity4](Images/uwgift.jpg)
 
 
 
