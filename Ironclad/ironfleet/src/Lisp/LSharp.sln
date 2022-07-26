@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LSharp", "LSharp\LSharp.csproj", "{419E259F-E9C0-4E01-BA19-709FE84DEAD5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LSharp.Interpreter", "LSharp.Interpreter\LSharp.Interpreter.csproj", "{8141886D-307B-4030-9320-8821B859AF66}"
@@ -17,7 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LSharp.Web", "LSharp.Web\LS
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "LSharp.Web.Tests", "LSharp.Web.Tests\", "{4A751B46-A7A5-48C5-AA36-9EA69D6EE9C1}"
 	ProjectSection(WebsiteProperties) = preProject
-		TargetFramework = "3.5"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
 		Debug.AspNetCompiler.VirtualPath = "/LSharp.Web.Tests"
 		Debug.AspNetCompiler.PhysicalPath = "LSharp.Web.Tests\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\LSharp.Web.Tests\"

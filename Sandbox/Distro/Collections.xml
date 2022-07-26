@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Collections</name>
+    </assembly>
+    <members>
+        <member name="T:System.Extensions.Collections.ObjectModel.Dictionary`2">
+            <summary>
+            Provides the base class for a generic dictionary.
+            </summary>
+            <typeparam name="TKey">The type of the keys in the dictionary.</typeparam>
+            <typeparam name="TValue">The type of the values in the dictionary.</typeparam>
+        </member>
+        <member name="F:System.Extensions.Collections.ObjectModel.Dictionary`2.items">
+            <summary>
+            Stores the internal dictionary.
+            </summary>
+        </member>
+        <member name="M:System.Extensions.Collections.ObjectModel.Dictionary`2.#ctor">
+            <summary>
+            Initializes a new instance of the Dictionary class with the default key comparer.
+            </summary>
+        </member>
+        <member name="M:System.Extensions.Collections.ObjectModel.Dictionary`2.#ctor(System.Collections.Generic.IEqualityComparer{`0})">
+            <summary>
+            Initializes a new instance of the Dictionary class with the specified key comparer.
+            </summary>
+            <param name="comparer">The comparer to use when testing for equality on keys.</param>
+        </member>
+        <member name="P:System.Extensions.Collections.ObjectModel.Dictionary`2.Values">
+            <summary>
+            Gets a collection containing the values in the Dictionary.
+            </summary>
+        </member>
+        <member name="P:System.Extensions.Collections.ObjectModel.Dictionary`2.Count">
+            <summary>
+            Gets the number of key/value pairs contained in the Dictionary.
+            </summary>
+        </member>
+        <member name="P:System.Extensions.Collections.ObjectModel.Dictionary`2.IsReadOnly">
+            <summary>
+            Gets a value indicating whether the Dictionary is read-only.
+            </summary>
+        </member>
+        <member name="P:System.Extensions.Collections.ObjectModel.Dictionary`2.Keys">
+            <summary>
+            Gets a collection containing the keys in the Dictionary.
+            </summary>
+        </member>
+        <member name="P:System.Extensions.Collections.ObjectModel.Dictionary`2.Item(`0)">
+            <summary>
+            Gets or sets the value associated with the specified key.
+            </summary>
+            <param name="key">The key of the element to get or set.</param>
+            <returns>The value associated with the specified key.  If the specified key is not found, a get operation throws an exception, and a set operation creates a new element with the specified key.</returns>
+        </member>
+        <member name="M:System.Extensions.Collections.ObjectModel.Dictionary`2.Add(`0,`1)">
+            <summary>
+            Adds an item to the Dictionary.
+            </summary>
+            <param name="key">The key of the item to add.</param>
+            <param name="value">The item to add.</param>
+        </member>
+        <member name="M:System.Extensions.Collections.ObjectModel.Dictionary`2.Remove(`0)">
+            <summary>
+            Removes an item from the Dictionary.
+            </summary>
+            <param name="key">The key of the item to remove.</param>
+            <returns><b>True</b> if it was removed, <b>false</b> otherwise.</returns>
+        </member>
+        <member name="M:System.Extensions.Collections.ObjectModel.Dictionary`2.Clear">
+            <summary>
+            Removes all objects from the Dictionary.
+            </summary>
+        </member>
+        <member name="M:System.Extensions.Collections.ObjectModel.Dictionary`2.ContainsKey(`0)">
+            <summary>
+            Determines whether the Dictionary contains the specified key.
+            </summary>
+            <param name="key">The key to locate.</param>
+            <returns><b>True</b> if the Dictionary contains an element with the specified key, <b>false</b> otherwise.</returns>
+        </member>
+        <member name="M:System.Extensions.Collections.ObjectModel.Dictionary`2.TryGetValue(`0,`1@)">
+            <summary>
+            Gets the value associated with the specified key.
+            </summary>
+            <param name="key">The key of the item to get.</param>
+            <param name="value">The item if found, otherwise the default value for the type.</param>
+            <returns><b>True</b> if the item is found, <b>false</b> otherwise.</returns>
+        </member>
+        <member name="M:System.Extensions.Collections.ObjectModel.Dictionary`2.GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through the Dictionary.
+            </summary>
+            <returns>The enumerator.</returns>
+        </member>
+        <member name="M:System.Extensions.Collections.ObjectModel.Dictionary`2.Contains(System.Collections.Generic.KeyValuePair{`0,`1})">
+            <summary>
+            Determines whether the Dictionary contains a specified item by using the default equality comparer.
+            </summary>
+            <param name="item">The item to look for.</param>
+            <returns><b>True</b> if found, <b>false</b> otherwise.</returns>
+        </member>
+        <member name="M:System.Extensions.Collections.ObjectModel.Dictionary`2.CopyTo(System.Collections.Generic.KeyValuePair{`0,`1}[],System.Int32)">
+            <summary>
+            Copies the elements of the Dictionary to an array, starting at the specified array index.
+            </summary>
+            <param name="array">The one-dimensional that is the destination of the elements copied from the Dictionary.  The array must have zero-based indexing.</param>
+            <param name="arrayIndex">The zero-based index in <em>array</em> at which copying begins.</param>
+        </member>
+        <member name="M:System.Extensions.Collections.ObjectModel.Dictionary`2.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#Add(System.Collections.Generic.KeyValuePair{`0,`1})">
+            <summary>
+            Adds a <see cref="T:System.Collections.Generic.KeyValuePair`2"/> to the dictionary.
+            </summary>
+            <param name="item">The item to add.</param>
+        </member>
+        <member name="M:System.Extensions.Collections.ObjectModel.Dictionary`2.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#Remove(System.Collections.Generic.KeyValuePair{`0,`1})">
+            <summary>
+            Removes a <see cref="T:System.Collections.Generic.KeyValuePair`2"/> to the dictionary.
+            </summary>
+            <param name="item">The item to remove.</param>
+            <returns><b>True</b> if successful, <b>false</b> otherwise.</returns>
+        </member>
+        <member name="M:System.Extensions.Collections.ObjectModel.Dictionary`2.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through the Dictionary.
+            </summary>
+            <returns>The enumerator.</returns>
+        </member>
+        <member name="M:System.Extensions.Collections.ObjectModel.Dictionary`2.ClearItems">
+            <summary>
+            Removes all objects from the Dictionary.
+            </summary>
+        </member>
+        <member name="M:System.Extensions.Collections.ObjectModel.Dictionary`2.ClearItemsByRemoving">
+            <summary>
+            Removes all objects from the Dictionary by calling Remove on each of them.
+            </summary>
+        </member>
+        <member name="M:System.Extensions.Collections.ObjectModel.Dictionary`2.AddItem(`0,`1)">
+            <summary>
+            Adds an item to the Dictionary.
+            </summary>
+            <param name="key">The key of the item to add.</param>
+            <param name="value">The item to add.</param>
+        </member>
+        <member name="M:System.Extensions.Collections.ObjectModel.Dictionary`2.RemoveItem(`0)">
+            <summary>
+            Removes an item from the Dictionary.
+            </summary>
+            <param name="key">The key of the item to remove.</param>
+        </member>
+        <member name="M:System.Extensions.Collections.ObjectModel.Dictionary`2.SetItem(`0,`1)">
+            <summary>
+            Replaces the item with the specified key.
+            </summary>
+            <param name="key">The key of the item to replace.</param>
+            <param name="value">The item to replace it with.</param>
+        </member>
+    </members>
+</doc>

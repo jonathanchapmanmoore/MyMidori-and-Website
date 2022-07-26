@@ -4,6 +4,11 @@
         <name>LSharp.Libraries</name>
     </assembly>
     <members>
+        <member name="T:LSharp.Libraries.Sound">
+            <summary>
+            Summary description for Sound.
+            </summary>
+        </member>
         <member name="T:LSharp.Libraries.TrustAllCertificatePolicy">
             <summary>
             Provides a completely open certificate policy that accepts any
@@ -19,11 +24,6 @@
             <param name="req"></param>
             <param name="problem"></param>
             <returns></returns>
-        </member>
-        <member name="T:LSharp.Libraries.Sound">
-            <summary>
-            Summary description for Sound.
-            </summary>
         </member>
     </members>
 </doc>

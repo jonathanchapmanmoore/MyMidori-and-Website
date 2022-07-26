@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Compact</name>
+    </assembly>
+    <members>
+        <member name="T:System.Extensions.Compact.Video">
+            <summary>
+            Provides methods for turning the display on and off on a smart client.
+            </summary>
+        </member>
+        <member name="M:System.Extensions.Compact.Video.PowerOff">
+            <summary>
+            Turn the display off.
+            </summary>
+        </member>
+        <member name="M:System.Extensions.Compact.Video.PowerOn">
+            <summary>
+            Turn the display on.
+            </summary>
+        </member>
+    </members>
+</doc>
